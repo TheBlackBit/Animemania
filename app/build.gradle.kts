@@ -33,7 +33,3 @@ android {
         }
     }
 }
-
-dependencies {
-    implementation(libs.androidx.lifecycle.runtime)
-}
