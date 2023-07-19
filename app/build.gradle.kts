@@ -33,3 +33,10 @@ android {
         }
     }
 }
+
+dependencies {
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+}
