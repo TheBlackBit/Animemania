@@ -17,6 +17,7 @@ class AndroidFeaturePlugin : Plugin<Project> {
             }
             uiDependencies()
             androidTestDependencies()
+            rxDependencies()
         }
     }
 }
