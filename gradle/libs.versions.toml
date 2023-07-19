@@ -20,7 +20,6 @@ material-material = { group = "com.google.android.material", name = "material", 
 rx-java-3 = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rxJava"}
 paging-runtime = {group = "androidx.paging", name = "paging-runtime", version.ref = "paging3"}
 paging-rxjava3 = {group = "androidx.paging", name = "paging-rxjava3", version.ref = "paging3"}
-rx-java-3 = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rxJava" }
 navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation-component" }
 navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation-component" }
 #Test dependencies
