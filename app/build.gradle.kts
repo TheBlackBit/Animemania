@@ -36,4 +36,6 @@ android {
 
 dependencies {
     implementation(libs.androidx.lifecycle.runtime)
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
 }
