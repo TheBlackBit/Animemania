@@ -8,12 +8,14 @@ androidxTestExt = "1.1.5"
 espressoCore = "3.5.1"
 androidGradlePlugin = "8.0.2"
 material = "1.9.0"
+rxJava = "3.1.5"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
 androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 app-compat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat"}
 material-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+rx-java-3 = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rxJava"}
 #Test dependencies
 junit-4 = { group = "junit", name = "junit", version.ref = "junit4"}
 #Instrumentation test dependencies
