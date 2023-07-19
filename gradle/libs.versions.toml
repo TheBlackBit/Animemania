@@ -1,0 +1,29 @@
+[versions]
+ktx = "1.10.1"
+kotlin = "1.8.0"
+lifecycleRuntimeKtx = "2.6.1"
+appcompat = "1.6.1"
+junit4 = "4.13.2"
+androidxTestExt = "1.1.5"
+espressoCore = "3.5.1"
+androidGradlePlugin = "8.0.2"
+material = "1.9.0"
+
+[libraries]
+androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
+androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+app-compat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat"}
+material-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+#Test dependencies
+junit-4 = { group = "junit", name = "junit", version.ref = "junit4"}
+#Instrumentation test dependencies
+androidtest-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestExt"}
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore"}
+#BuildSrc dependencies
+android-tools-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+gradlePlugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin"}
