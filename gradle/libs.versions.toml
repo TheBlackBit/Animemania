@@ -9,6 +9,7 @@ espressoCore = "3.5.1"
 androidGradlePlugin = "8.0.2"
 material = "1.9.0"
 rxJava = "3.1.5"
+paging3 = "3.1.1"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -16,8 +17,11 @@ androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-r
 app-compat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat"}
 material-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 rx-java-3 = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rxJava"}
+paging-runtime = {group = "androidx.paging", name = "paging-runtime", version.ref = "paging3"}
+paging-rxjava3 = {group = "androidx.paging", name = "paging-rxjava3", version.ref = "paging3"}
 #Test dependencies
 junit-4 = { group = "junit", name = "junit", version.ref = "junit4"}
+paging-common = {group = "androidx.paging", name = "paging-common", version.ref = "paging3" }
 #Instrumentation test dependencies
 androidtest-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestExt"}
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore"}
