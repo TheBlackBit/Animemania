@@ -4,7 +4,7 @@ import org.gradle.kotlin.dsl.dependencies
 internal fun Project.androidTestDependencies() {
 
     dependencies {
-        "implementation"(libsCatalog.findLibrary("androidtest.junit").get())
-        "implementation"(libsCatalog.findLibrary("espresso.core").get())
+        "androidTestImplementation"(libsCatalog.findLibrary("androidtest.junit").get())
+        "androidTestImplementation"(libsCatalog.findLibrary("espresso.core").get())
     }
 }
