@@ -5,16 +5,16 @@ import androidx.paging.PagingDataAdapter
 import com.theblackbit.animemania.android.common.extensions.viewForViewDataBinding
 import com.theblackbit.animemania.android.feature.home.R
 import com.theblackbit.animemania.android.feature.home.databinding.ItemDataBinding
-import com.theblackbit.animemania.android.model.Data
+import com.theblackbit.animemania.android.model.Collection
 
 class DataAdapter(diffCallback: DataDiffCallback) :
-    PagingDataAdapter<Data, DataViewHolder>(
+    PagingDataAdapter<Collection, DataViewHolder>(
         diffCallback,
     ) {
 
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
-        getItem(position)?.let { data ->
-            holder.bind(data)
+        getItem(position)?.let { collection ->
+            holder.bind(collection)
         }
     }
 

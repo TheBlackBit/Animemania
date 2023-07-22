@@ -1,15 +1,15 @@
 package com.theblackbit.animemania.android.home.adapter
 
 import androidx.recyclerview.widget.DiffUtil
-import com.theblackbit.animemania.android.model.Data
+import com.theblackbit.animemania.android.model.Collection
 
-class DataDiffCallback : DiffUtil.ItemCallback<com.theblackbit.animemania.android.model.Data>() {
+class DataDiffCallback : DiffUtil.ItemCallback<Collection>() {
 
-    override fun areItemsTheSame(oldItem: com.theblackbit.animemania.android.model.Data, newItem: com.theblackbit.animemania.android.model.Data): Boolean {
-        return oldItem.id == newItem.id
+    override fun areItemsTheSame(oldItem: Collection, newItem: Collection): Boolean {
+        return oldItem.collectionId == newItem.collectionId
     }
 
-    override fun areContentsTheSame(oldItem: com.theblackbit.animemania.android.model.Data, newItem: com.theblackbit.animemania.android.model.Data): Boolean {
-        return oldItem == newItem
+    override fun areContentsTheSame(oldItem: Collection, newItem: Collection): Boolean {
+        return oldItem.hashCode() == newItem.hashCode()
     }
 }

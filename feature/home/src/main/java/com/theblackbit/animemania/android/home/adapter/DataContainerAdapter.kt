@@ -1,13 +1,10 @@
 package com.theblackbit.animemania.android.home.adapter
 
 import android.view.ViewGroup
-import androidx.lifecycle.Lifecycle
-import androidx.paging.PagingData
 import androidx.recyclerview.widget.RecyclerView
 import com.theblackbit.animemania.android.common.extensions.viewForViewDataBinding
 import com.theblackbit.animemania.android.feature.home.R
 import com.theblackbit.animemania.android.feature.home.databinding.ItemDataContainerBinding
-import com.theblackbit.animemania.android.model.Data
 
 class DataContainerAdapter(
     private val data: List<Pair<DataAdapter, String>>,
@@ -29,9 +26,5 @@ class DataContainerAdapter(
         data[position].let { data ->
             holder.bind(data.second, data.first)
         }
-    }
-
-    fun submitDataToAdapter(position: Int, lifecycle: Lifecycle, pagingData: PagingData<com.theblackbit.animemania.android.model.Data>) {
-        data[position].first.submitData(lifecycle, pagingData)
     }
 }
