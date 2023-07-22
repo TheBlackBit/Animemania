@@ -8,7 +8,7 @@ import com.theblackbit.animemania.android.feature.home.databinding.ItemDataBindi
 import com.theblackbit.animemania.android.model.Data
 
 class DataAdapter(diffCallback: DataDiffCallback) :
-    PagingDataAdapter<com.theblackbit.animemania.android.model.Data, DataViewHolder>(
+    PagingDataAdapter<Data, DataViewHolder>(
         diffCallback,
     ) {
 

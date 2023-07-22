@@ -15,6 +15,7 @@ navigation-component = "2.5.3"
 glide = "4.15.1"
 mockito = "3.9.0"
 coroutinesTest = "1.5.2"
+room = "2.5.2"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -30,6 +31,10 @@ paging-rxjava3 = {group = "androidx.paging", name = "paging-rxjava3", version.re
 navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation-component" }
 navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation-component" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room"}
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room"}
+room-guava = { group = "androidx.room", name = "room-guava", version.ref = "room"}
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room"}
 #Test dependencies
 junit-4 = { group = "junit", name = "junit", version.ref = "junit4"}
 paging-common = { group = "androidx.paging", name = "paging-common", version.ref = "paging3" }
@@ -37,6 +42,7 @@ koin-test = { group = "io.insert-koin", name = "koin-test", version.ref = "koin"
 koin-test-junit4 = { group = "io.insert-koin", name = "koin-test-junit4", version.ref = "koin"}
 mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest" }
+room-testing = { group = "androidx.room", name = "room-testing", version.ref = "room" }
 #Instrumentation test dependencies
 androidtest-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestExt" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
