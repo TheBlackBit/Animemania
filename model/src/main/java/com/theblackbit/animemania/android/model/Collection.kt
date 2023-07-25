@@ -6,6 +6,7 @@ data class Collection(
     val averageRating: String,
     val startDate: String,
     val endDate: String,
+    val typeOfContent: List<TypeOfContent>,
     val episodeCount: String,
     val miniPosterImageUrl: String,
     val bigPosterImageUrl: String,
