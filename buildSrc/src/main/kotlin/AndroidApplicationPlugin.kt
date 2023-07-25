@@ -31,8 +31,6 @@ class AndroidApplicationPlugin : Plugin<Project> {
             uiDependencies()
             testDependencies()
             androidTestDependencies()
-
-
         }
     }
 }
