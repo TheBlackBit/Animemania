@@ -14,16 +14,18 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/core" />
-            <option value="$PROJECT_DIR$/core/common" />
             <option value="$PROJECT_DIR$/core/data" />
             <option value="$PROJECT_DIR$/core/domain" />
+            <option value="$PROJECT_DIR$/core/model" />
+            <option value="$PROJECT_DIR$/core/resources" />
+            <option value="$PROJECT_DIR$/core/testing" />
             <option value="$PROJECT_DIR$/core/util" />
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/character" />
+            <option value="$PROJECT_DIR$/feature/common" />
             <option value="$PROJECT_DIR$/feature/detail" />
             <option value="$PROJECT_DIR$/feature/home" />
             <option value="$PROJECT_DIR$/feature/search" />
-            <option value="$PROJECT_DIR$/resources" />
           </set>
         </option>
       </GradleProjectSettings>

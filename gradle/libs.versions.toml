@@ -1,39 +1,68 @@
 [versions]
 ktx = "1.10.1"
 kotlin = "1.8.0"
-lifecycleRuntimeKtx = "2.6.1"
+lifecycleVersion = "2.6.1"
 appcompat = "1.6.1"
 junit4 = "4.13.2"
 androidxTestExt = "1.1.5"
-espressoCore = "3.5.1"
+espresso = "3.5.1"
 androidGradlePlugin = "8.0.2"
 material = "1.9.0"
 rxJava = "3.1.5"
 koin = "3.4.2"
+koinTest = "3.4.1"
 paging3 = "3.1.1"
 navigation-component = "2.5.3"
+glide = "4.15.1"
+mockito = "3.9.0"
+coroutinesTest = "1.5.2"
+room = "2.5.2"
+rxAndroid = "3.0.2"
+test = "1.5.0"
+fragmentVersion = "1.6.0"
+testing = "1.4.0"
+dataBinding = "8.0.2"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
-androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleVersion" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion" }
 app-compat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-rx-java-3 = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rxJava"}
-koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin"}
-koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin"}
-paging-runtime = {group = "androidx.paging", name = "paging-runtime", version.ref = "paging3"}
-paging-rxjava3 = {group = "androidx.paging", name = "paging-rxjava3", version.ref = "paging3"}
+rx-java-3 = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rxJava" }
+rxandroid = { group = "io.reactivex.rxjava3", name = "rxandroid", version.ref = "rxAndroid" }
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+paging-runtime = { group = "androidx.paging", name = "paging-runtime", version.ref = "paging3" }
+paging-rxjava3 = { group = "androidx.paging", name = "paging-rxjava3", version.ref = "paging3" }
 navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation-component" }
 navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation-component" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-guava = { group = "androidx.room", name = "room-guava", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+databinding-runtime = { group = "androidx.databinding", name = "databinding-runtime", version.ref = "dataBinding" }
 #Test dependencies
-junit-4 = { group = "junit", name = "junit", version.ref = "junit4"}
-paging-common = {group = "androidx.paging", name = "paging-common", version.ref = "paging3" }
-koin-test = { group = "io.insert-koin", name = "koin-test", version.ref = "koin"}
-koin-test-junit4 = { group = "io.insert-koin", name = "koin-test-junit4", version.ref = "koin"}
+junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
+paging-common = { group = "androidx.paging", name = "paging-common", version.ref = "paging3" }
+mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest" }
+room-testing = { group = "androidx.room", name = "room-testing", version.ref = "room" }
 #Instrumentation test dependencies
 androidtest-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestExt" }
-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
-koin-android-test = { group = "io.insert-koin", name = "koin-android-test", version.ref = "koin"}
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+espresso-contrib = { group = "androidx.test.espresso", name = "espresso-contrib", version.ref = "espresso" }
+espresso-intent = { group = "androidx.test.espresso", name = "espresso-intents", version.ref = "espresso" }
+espresso-web = { group = "androidx.test.espresso", name = "espresso-web", version.ref = "espresso" }
+koin-android-test = { group = "io.insert-koin", name = "koin-android-test", version.ref = "koinTest" }
+testing-core = { group = "androidx.test", name = "core", version.ref = "testing" }
+testing-runner = { group = "androidx.test", name = "runner", version.ref = "testing" }
+testing-rules = { group = "androidx.test", name = "rules", version.ref = "testing" }
+databinding-compiler = { group = "androidx.databinding", name = "databinding-compiler", version.ref = "dataBinding" }
+#Debug dependencies
+fragment-testing = { group = "androidx.fragment", name = "fragment-testing", version.ref = "fragmentVersion" }
+
 #BuildSrc dependencies
 android-tools-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
 gradlePlugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
