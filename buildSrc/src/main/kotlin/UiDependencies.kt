@@ -9,6 +9,8 @@ internal fun Project.uiDependencies() {
         "implementation"(libsCatalog.findLibrary("lifecycle.viewmodel.ktx").get())
         "implementation"(libsCatalog.findLibrary("app.compat").get())
         "implementation"(libsCatalog.findLibrary("glide").get())
-        "implementation"(project(":resources"))
+        "implementation"(libsCatalog.findLibrary("databinding.runtime").get())
+        "implementation"(project(":core:resources"))
+
     }
 }

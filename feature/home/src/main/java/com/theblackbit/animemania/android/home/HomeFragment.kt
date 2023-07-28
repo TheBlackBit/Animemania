@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
+import com.theblackbit.animemania.android.core.resources.R
 import com.theblackbit.animemania.android.feature.home.databinding.FragmentHomeBinding
 import com.theblackbit.animemania.android.home.adapter.HomeTabAdapter
-import com.theblackbit.animemania.android.resources.R
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding

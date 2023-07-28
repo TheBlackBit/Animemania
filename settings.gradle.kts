@@ -26,6 +26,5 @@ include(":feature:home")
 include(":feature:detail")
 include(":feature:character")
 include(":feature:search")
-include(":resources")
-include(":model")
-
+include(":core:resources")
+include(":core:model")

@@ -38,7 +38,5 @@ dependencies {
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui.ktx)
     implementation(project(":core:domain"))
-    implementation(project(":model"))
-    implementation(project(":feature:common"))
     implementation(project(":feature:home"))
 }

@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Animemania</string>
-    <string name="anime">Anime</string>
-    <string name="manga">Manga</string>
-    <string name="trending_week">Trending for this week</string>
-    <string name="most_anticipated">Most anticipated</string>
-    <string name="top_rated">Top rated</string>
-    <string name="most_popular">Most popular</string>
-</resources>

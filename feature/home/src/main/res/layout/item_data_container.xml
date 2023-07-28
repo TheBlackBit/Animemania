@@ -32,8 +32,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:nestedScrollingEnabled="false"
             android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
             tools:listitem="@layout/item_data"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             />

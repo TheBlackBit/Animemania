@@ -2,8 +2,8 @@ package com.theblackbit.animemania.android.home.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.theblackbit.animemania.android.home.AnimeTabFragment
-import com.theblackbit.animemania.android.home.MangaTabFragment
+import com.theblackbit.animemania.android.home.pagertabs.AnimeTabFragment
+import com.theblackbit.animemania.android.home.pagertabs.MangaTabFragment
 
 class HomeTabAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 

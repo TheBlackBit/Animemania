@@ -3,5 +3,5 @@ plugins {
 }
 
 android {
-    namespace = "com.theblackbit.animemania.android.core.common"
+    namespace = "com.theblackbit.animemania.android.feature.common"
 }

@@ -10,6 +10,6 @@ class DataDiffCallback : DiffUtil.ItemCallback<Collection>() {
     }
 
     override fun areContentsTheSame(oldItem: Collection, newItem: Collection): Boolean {
-        return oldItem.hashCode() == newItem.hashCode()
+        return oldItem == newItem
     }
 }

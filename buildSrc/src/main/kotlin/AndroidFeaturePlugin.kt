@@ -16,6 +16,7 @@ class AndroidFeaturePlugin : Plugin<Project> {
                 buildFeatures.dataBinding = true
                 buildFeatures.viewBinding = true
 
+
             }
             uiDependencies()
             androidTestDependencies()
@@ -23,7 +24,7 @@ class AndroidFeaturePlugin : Plugin<Project> {
             dependencies {
                 "implementation"(project(":core:domain"))
                 "implementation"(project(":core:util"))
-                "implementation"(project(":model"))
+                "implementation"(project(":core:model"))
             }
         }
     }

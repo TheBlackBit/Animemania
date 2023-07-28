@@ -5,7 +5,7 @@ lifecycleVersion = "2.6.1"
 appcompat = "1.6.1"
 junit4 = "4.13.2"
 androidxTestExt = "1.1.5"
-espressoCore = "3.5.1"
+espresso = "3.5.1"
 androidGradlePlugin = "8.0.2"
 material = "1.9.0"
 rxJava = "3.1.5"
@@ -21,6 +21,7 @@ rxAndroid = "3.0.2"
 test = "1.5.0"
 fragmentVersion = "1.6.0"
 testing = "1.4.0"
+dataBinding = "8.0.2"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -41,6 +42,7 @@ room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-guava = { group = "androidx.room", name = "room-guava", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+databinding-runtime = { group = "androidx.databinding", name = "databinding-runtime", version.ref = "dataBinding" }
 #Test dependencies
 junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
 paging-common = { group = "androidx.paging", name = "paging-common", version.ref = "paging3" }
@@ -49,11 +51,15 @@ kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-cor
 room-testing = { group = "androidx.room", name = "room-testing", version.ref = "room" }
 #Instrumentation test dependencies
 androidtest-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestExt" }
-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+espresso-contrib = { group = "androidx.test.espresso", name = "espresso-contrib", version.ref = "espresso" }
+espresso-intent = { group = "androidx.test.espresso", name = "espresso-intents", version.ref = "espresso" }
+espresso-web = { group = "androidx.test.espresso", name = "espresso-web", version.ref = "espresso" }
 koin-android-test = { group = "io.insert-koin", name = "koin-android-test", version.ref = "koinTest" }
 testing-core = { group = "androidx.test", name = "core", version.ref = "testing" }
 testing-runner = { group = "androidx.test", name = "runner", version.ref = "testing" }
 testing-rules = { group = "androidx.test", name = "rules", version.ref = "testing" }
+databinding-compiler = { group = "androidx.databinding", name = "databinding-compiler", version.ref = "dataBinding" }
 #Debug dependencies
 fragment-testing = { group = "androidx.fragment", name = "fragment-testing", version.ref = "fragmentVersion" }
 

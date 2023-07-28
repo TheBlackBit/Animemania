@@ -15,8 +15,11 @@
     <androidx.cardview.widget.CardView
         android:layout_width="150dp"
         android:layout_height="200dp"
-        android:layout_marginHorizontal="16dp"
-        app:cardCornerRadius="10dp">
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:cardElevation="2dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="8dp"
+        app:cardCornerRadius="8dp">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -26,18 +29,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:contentDescription="@{name}"
+                android:background="?attr/colorSurface"
+                android:scaleType="centerCrop"
                 app:loadImage="@{url}"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/background_item"/>
             <TextView
+                android:id="@+id/tv_collection_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:layout_margin="4dp"
                 android:gravity="center"
-                android:maxLines="1"
+                android:maxLines="2"
                 android:text="@{name}"
                 android:textColor="?attr/colorOnSurface"
                 android:textAppearance="?attr/textAppearanceLabelMedium"
