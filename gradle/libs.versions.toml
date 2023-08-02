@@ -22,6 +22,7 @@ test = "1.5.0"
 fragmentVersion = "1.6.0"
 testing = "1.4.0"
 dataBinding = "8.0.2"
+arcView = "1.4.7"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -43,6 +44,7 @@ room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-guava = { group = "androidx.room", name = "room-guava", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 databinding-runtime = { group = "androidx.databinding", name = "databinding-runtime", version.ref = "dataBinding" }
+arcView = { group = "io.github.florent37", name = "shapeofview", version.ref = "arcView" }
 #Test dependencies
 junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
 paging-common = { group = "androidx.paging", name = "paging-common", version.ref = "paging3" }
@@ -60,6 +62,7 @@ testing-core = { group = "androidx.test", name = "core", version.ref = "testing"
 testing-runner = { group = "androidx.test", name = "runner", version.ref = "testing" }
 testing-rules = { group = "androidx.test", name = "rules", version.ref = "testing" }
 databinding-compiler = { group = "androidx.databinding", name = "databinding-compiler", version.ref = "dataBinding" }
+navigation-testing = {group = "androidx.navigation", name = "navigation-testing", version.ref = "navigation-component"}
 #Debug dependencies
 fragment-testing = { group = "androidx.fragment", name = "fragment-testing", version.ref = "fragmentVersion" }
 

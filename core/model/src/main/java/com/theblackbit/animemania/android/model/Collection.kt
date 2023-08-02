@@ -1,5 +1,9 @@
 package com.theblackbit.animemania.android.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Collection(
     val collectionId: String,
     val name: String,
@@ -12,5 +16,5 @@ data class Collection(
     val miniPosterImageUrl: String,
     val bigPosterImageUrl: String,
     val status: StatusOfEmission,
-    val overview: String,
-)
+    val synopsis: String,
+) : Parcelable

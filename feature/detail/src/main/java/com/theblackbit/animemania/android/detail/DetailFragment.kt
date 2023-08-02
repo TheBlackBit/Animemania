@@ -1,0 +1,102 @@
+package com.theblackbit.animemania.android.detail
+
+import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.Fragment
+import com.google.android.material.tabs.TabLayoutMediator
+import com.theblackbit.animemania.android.common.FragmentBindingCreator
+import com.theblackbit.animemania.android.detail.adapter.DetailTabAdapter
+import com.theblackbit.animemania.android.detail.pagertabs.OverviewTabFragment
+import com.theblackbit.animemania.android.detail.pagertabs.OverviewTabFragment.Companion.END_DATE
+import com.theblackbit.animemania.android.detail.pagertabs.OverviewTabFragment.Companion.GENRES
+import com.theblackbit.animemania.android.detail.pagertabs.OverviewTabFragment.Companion.START_DATE
+import com.theblackbit.animemania.android.detail.pagertabs.OverviewTabFragment.Companion.STATE
+import com.theblackbit.animemania.android.detail.pagertabs.OverviewTabFragment.Companion.SYNOPSIS
+import com.theblackbit.animemania.android.detail.pagertabs.chapter.ChaptersTabFragment
+import com.theblackbit.animemania.android.detail.pagertabs.character.CharactersTabFragment
+import com.theblackbit.animemania.android.feature.detail.R
+import com.theblackbit.animemania.android.feature.detail.databinding.FragmentDetailBinding
+import com.theblackbit.animemania.android.core.resources.R as resourcesR
+
+class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>() {
+    override val layoutId: Int
+        get() = R.layout.fragment_detail
+
+    private lateinit var detailTabAdapter: DetailTabAdapter
+
+    companion object {
+        const val COLLECTION_ID = "collection_id"
+        const val COVER_IMAGE = "cover_image"
+        const val POSTER_IMAGE = "poster_image"
+        const val TITLE = "title"
+        const val RATING = "rating"
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        arguments?.apply {
+            val collectionId = getString(COLLECTION_ID, "")
+            val coverImageVal = getString(COVER_IMAGE, "")
+            val posterImageVal = getString(POSTER_IMAGE, "")
+            val titleVal = getString(TITLE, "")
+            val ratingVal = getString(RATING, "")
+            val state = getString(STATE, "")
+            val startDate = getString(START_DATE, "")
+            val endDate = getString(END_DATE, "")
+            val genres = getString(GENRES, "")
+            val overview = getString(SYNOPSIS, "")
+
+            binding.apply {
+                coverImage = coverImageVal
+                posterImage = posterImageVal
+                title = titleVal
+                rating = ratingVal
+            }
+            configViewPagerWithTabs(
+                collectionId = collectionId,
+                state = state,
+                startDate = startDate,
+                endDate = endDate,
+                genres = genres,
+                overview = overview,
+            )
+            configTabLayout()
+        }
+    }
+
+    private fun configViewPagerWithTabs(
+        collectionId: String,
+        state: String,
+        startDate: String,
+        endDate: String,
+        genres: String,
+        overview: String,
+
+    ) {
+        detailTabAdapter = DetailTabAdapter(
+            this,
+            listOf<Fragment>(
+                OverviewTabFragment.createFragment(
+                    state = state,
+                    startDate = startDate,
+                    endDate = endDate,
+                    genres = genres,
+                    synopsis = overview,
+                ),
+                ChaptersTabFragment.createFragment(collectionId),
+                CharactersTabFragment.createFragment(collectionId),
+            ),
+        )
+        binding.vpInfo.adapter = detailTabAdapter
+    }
+
+    private fun configTabLayout() {
+        TabLayoutMediator(binding.tlDetail, binding.vpInfo) { tab, position ->
+            tab.text = when (position) {
+                1 -> getString(resourcesR.string.chapters)
+                2 -> getString(resourcesR.string.characters)
+                else -> getString(resourcesR.string.overview)
+            }
+        }.attach()
+    }
+}

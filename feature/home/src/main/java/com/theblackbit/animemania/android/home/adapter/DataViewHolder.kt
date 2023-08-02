@@ -6,7 +6,6 @@ import com.theblackbit.animemania.android.model.Collection
 
 class DataViewHolder(
     private val binding: ItemDataBinding,
-
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(collection: Collection) {

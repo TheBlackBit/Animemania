@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="coverImage"
+            type="String" />
+
+        <variable
+            name="posterImage"
+            type="String" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="rating"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/background"
+        app:layoutDescription="@xml/motion_collapse_anim">
+
+        <FrameLayout
+            android:id="@+id/fl_top_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/colorSurface"
+            android:alpha="0.7"
+            android:elevation="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/coverCollapse"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cover_collapse_height"
+            android:background="?attr/background"
+            android:scaleType="centerCrop"
+            app:loadImage="@{coverImage}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="@dimen/back_icon_width"
+            android:layout_height="@dimen/back_icon_height"
+            android:layout_margin="@dimen/back_icon_margin_start"
+            android:background="@drawable/rounded_bg"
+            android:backgroundTint="?attr/colorSurface"
+            android:padding="@dimen/back_icon_padding"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/colorOnBackground"
+            tools:ignore="ContentDescription" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cover"
+            android:layout_width="@dimen/image_cover_width"
+            android:layout_height="@dimen/image_cover_height"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/image_cover_margin_start"
+            android:background="?attr/colorSurface"
+            android:elevation="@dimen/image_cover_elevation"
+            android:transformPivotX="120dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/coverCollapse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/coverCollapse">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:loadImage="@{posterImage}"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <io.github.florent37.shapeofview.shapes.RoundRectView
+            android:id="@+id/roundedContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rounded_container_height"
+            android:elevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/coverCollapse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/coverCollapse"
+            app:shape_roundRect_topLeftRadius="@dimen/rounded_container_top_left_radius_start"
+            app:shape_roundRect_topRightRadius="@dimen/rounded_container_top_right_radius_start">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/colorSurface" />
+        </io.github.florent37.shapeofview.shapes.RoundRectView>
+
+        <TextView
+            android:id="@+id/tv_title_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tv_title_name_margin_start"
+            android:layout_marginEnd="@dimen/tv_title_name_margin_end"
+            android:layout_marginTop="@dimen/tv_title_name_margin_top"
+            android:text="@{title}"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceTitleLarge"
+            android:textColor="?attr/colorOnBackground"
+            android:textFontWeight="800"
+            app:layout_constraintStart_toEndOf="@id/cover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/roundedContainer" />
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:elevation="10dp"
+            android:text="@{rating}"
+            android:textAppearance="?attr/textAppearanceHeadlineSmall"
+            android:textColor="@color/lime_green"
+            android:textFontWeight="600"
+            app:layout_constraintStart_toStartOf="@id/tv_title_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_name" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_detail_info"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:background="?attr/colorSurface"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/roundedContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tl_detail"
+                android:layout_marginTop="16dp"
+                android:background="#00FFFFFF"
+                app:tabSelectedTextAppearance="@style/textAppearanceTabLayoutSelected"
+                app:tabSelectedTextColor="?attr/colorPrimary"
+                app:tabTextAppearance="@style/textAppearanceTabLayoutUnSelected"
+                app:tabTextColor="?attr/colorOnSurface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/colorSurface">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vp_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:background="?attr/colorSurface"/>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

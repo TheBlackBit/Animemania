@@ -16,7 +16,10 @@ android {
             isDebuggable = false
             isMinifyEnabled = true
             isShrinkResources = true
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
+            )
         }
 
         getByName("debug") {
@@ -29,7 +32,7 @@ android {
 
     packaging {
         resources {
-            resources.excludes.add("/META-INF/{AL2.0,LGPL2.1}")
+            excludes.add("/META-INF/{AL2.0,LGPL2.1}")
         }
     }
 }
@@ -39,4 +42,5 @@ dependencies {
     implementation(libs.navigation.ui.ktx)
     implementation(project(":core:domain"))
     implementation(project(":feature:home"))
+    implementation(project(":feature:detail"))
 }

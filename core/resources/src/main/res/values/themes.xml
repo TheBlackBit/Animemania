@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.Animemania" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Material 3 colors -->
@@ -6,7 +6,7 @@
         <item name="colorOnPrimary">@color/gray_0</item>
         <item name="colorSecondary">@color/red_6</item>
         <item name="colorOnSecondary">@color/gray_0</item>
-        <item name="colorTertiary">@color/gray_7</item>
+        <item name="colorTertiary">#616B74</item>
         <item name="colorOnTertiary">@color/gray_0</item>
         <item name="background">@color/gray_9</item>
         <item name="backgroundColor">@color/gray_9</item>
@@ -33,9 +33,10 @@
 
         <!-- Status and Navigation bar color. -->
         <item name="android:navigationBarColor">?attr/background</item>
-        <item name="android:statusBarColor">?attr/background</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">false</item>
-        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>>
+        <item name="android:windowLightNavigationBar">false</item>>
     </style>
 
     <style name="displayLarge" parent="@android:style/TextAppearance">
@@ -113,11 +114,11 @@
     </style>
 
     <style name="textAppearanceTabLayoutSelected" parent="@android:style/TextAppearance">
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="textAppearanceTabLayoutUnSelected" parent="@android:style/TextAppearance">
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">14sp</item>
     </style>
 </resources>
