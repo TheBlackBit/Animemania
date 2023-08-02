@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:constraintSetStart="@id/start"
+        app:constraintSetEnd="@id/end"
+        motion:duration="1000"
+        motion:motionInterpolator="linear">
+        <OnSwipe
+            app:onTouchUp="stop"
+            app:dragDirection="dragUp"
+            app:moveWhenScrollAtTop="true"
+            app:touchAnchorSide="top"
+            app:touchAnchorId="@id/ll_detail_info"
+            motion:maxVelocity="20"
+            motion:maxAcceleration="20"
+            />
+
+        <KeyFrameSet>
+            <KeyAttribute
+                app:framePosition="20"
+                app:motionTarget="@id/cover"
+                android:rotation="90"
+                android:elevation="0dp"
+                />
+
+        </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/coverCollapse"
+            android:layout_width="match_parent"
+            android:alpha="1.0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="@dimen/cover_collapse_height"/>
+
+        <Constraint
+            android:id="@+id/backIcon"
+            android:layout_width="@dimen/back_icon_width"
+            android:layout_height="@dimen/back_icon_height"
+            android:layout_marginStart="@dimen/back_icon_margin_start"
+            android:layout_marginTop="@dimen/back_icon_margin_top"
+            android:elevation="@dimen/back_icon_elevation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/cover"
+            android:layout_width="@dimen/image_cover_width"
+            android:layout_height="@dimen/image_cover_height"
+            android:elevation="@dimen/image_cover_elevation"
+            android:rotation="0"
+            android:layout_marginStart="@dimen/image_cover_margin_start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/coverCollapse"
+            app:layout_constraintTop_toBottomOf="@id/coverCollapse"/>
+
+        <Constraint
+            android:id="@+id/roundedContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rounded_container_height"
+            android:elevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/coverCollapse"
+            app:layout_constraintBottom_toBottomOf="@id/coverCollapse"
+            >
+            <CustomAttribute
+                app:attributeName="topLeftRadius"
+                app:customDimension="@dimen/rounded_container_top_left_radius_start"/>
+
+            <CustomAttribute
+                app:attributeName="topRightRadius"
+                app:customDimension="@dimen/rounded_container_top_right_radius_start"/>
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/tv_title_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/roundedContainer"
+            android:elevation="0dp"
+            app:layout_constraintStart_toEndOf="@id/cover"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/tv_title_name_margin_end"
+            android:layout_marginStart="@dimen/tv_title_name_margin_start"
+            android:layout_marginTop="@dimen/tv_title_name_margin_top"/>
+
+        <Constraint
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:layout_marginTop="8dp"
+            android:alpha="1"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_name"
+            app:layout_constraintStart_toStartOf="@id/tv_title_name"/>
+
+
+        <Constraint
+            android:id="@+id/ll_detail_info"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:elevation="0dp"
+            app:layout_constraintTop_toBottomOf="@id/roundedContainer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/coverCollapse"
+            android:layout_width="match_parent"
+            android:alpha="0.8"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="@dimen/cover_collapse_height"/>
+
+        <Constraint
+            android:id="@+id/backIcon"
+            android:layout_width="@dimen/back_icon_width"
+            android:layout_height="@dimen/back_icon_height"
+            android:layout_marginStart="@dimen/back_icon_margin_start"
+            android:layout_marginTop="@dimen/back_icon_margin_top"
+            android:elevation="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/cover"
+            android:layout_width="@dimen/image_cover_width"
+            android:layout_height="@dimen/image_cover_height"
+            android:elevation="0dp"
+            android:rotation="0"
+            android:alpha="0.5"
+            android:layout_marginStart="@dimen/image_cover_margin_start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/coverCollapse"
+            app:layout_constraintTop_toBottomOf="@id/coverCollapse"
+            />
+
+        <Constraint
+            android:id="@+id/roundedContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/rounded_container_height"
+            android:elevation="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <CustomAttribute
+                app:attributeName="topLeftRadius"
+                app:customDimension="0dp"/>
+
+            <CustomAttribute
+                app:attributeName="topRightRadius"
+                app:customDimension="0dp"/>
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/tv_title_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/backIcon"
+            app:layout_constraintBottom_toBottomOf="@id/backIcon"
+            app:layout_constraintStart_toEndOf="@id/backIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/tv_title_name_margin_start"
+            android:layout_marginEnd="@dimen/tv_title_name_margin_end"
+            android:elevation="8dp" />
+
+        <Constraint
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:layout_marginTop="8dp"
+            android:alpha="0"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_name"
+            app:layout_constraintStart_toStartOf="@id/tv_title_name"/>
+
+        <Constraint
+            android:id="@+id/ll_detail_info"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:elevation="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </ConstraintSet>
+
+</MotionScene>

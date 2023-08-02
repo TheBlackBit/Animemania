@@ -31,6 +31,7 @@ class AnimeTabFragment : CollectionTabFragment() {
                             notifyInitDataCollected(index, categories)
                             submitDataIntoAdapter(index, data)
                         },
+                        // TODO: SHOW NO DATA
                         { error -> error.printStackTrace() },
                     ),
             )
