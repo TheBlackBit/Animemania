@@ -16,8 +16,6 @@ class AndroidFeaturePlugin : Plugin<Project> {
                 defaultConfig.vectorDrawables.useSupportLibrary = true
                 buildFeatures.dataBinding = true
                 buildFeatures.viewBinding = true
-
-
             }
             uiDependencies()
             androidTestDependencies()

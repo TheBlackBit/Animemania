@@ -15,6 +15,7 @@ paging3 = "3.1.1"
 navigation-component = "2.5.3"
 glide = "4.15.1"
 mockito = "3.9.0"
+mockitoInline = "5.2.0"
 coroutinesTest = "1.5.2"
 room = "2.5.2"
 rxAndroid = "3.0.2"
@@ -23,6 +24,11 @@ fragmentVersion = "1.6.0"
 testing = "1.4.0"
 dataBinding = "8.0.2"
 arcView = "1.4.7"
+retrofit = "2.9.0"
+gson = "2.10.1"
+rxJava3Adapter = "3.0.0"
+secrets = "2.0.1"
+okhttp = "4.10.0"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -45,10 +51,16 @@ room-guava = { group = "androidx.room", name = "room-guava", version.ref = "room
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 databinding-runtime = { group = "androidx.databinding", name = "databinding-runtime", version.ref = "dataBinding" }
 arcView = { group = "io.github.florent37", name = "shapeofview", version.ref = "arcView" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit"}
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit"}
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson"}
+rxjava3-retrofit-adapter = { group = "com.github.akarnokd", name = "rxjava3-retrofit-adapter", version.ref = "rxJava3Adapter"}
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
 #Test dependencies
 junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
 paging-common = { group = "androidx.paging", name = "paging-common", version.ref = "paging3" }
 mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+mockito-inline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockitoInline" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest" }
 room-testing = { group = "androidx.room", name = "room-testing", version.ref = "room" }
 #Instrumentation test dependencies
@@ -74,3 +86,4 @@ gradlePlugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", ve
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secrets"}
