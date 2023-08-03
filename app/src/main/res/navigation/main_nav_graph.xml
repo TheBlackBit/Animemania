@@ -10,9 +10,8 @@
         android:name="com.theblackbit.animemania.android.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
-
         <action
-            android:id="@+id/action_homeFragment_to_detailFragment"
+            android:id="@id/action_homeFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
     </fragment>
     <fragment

@@ -38,9 +38,8 @@ android {
 }
 
 dependencies {
-    implementation(libs.navigation.fragment.ktx)
-    implementation(libs.navigation.ui.ktx)
     implementation(project(":core:domain"))
+    implementation(project(":core:model"))
     implementation(project(":feature:home"))
     implementation(project(":feature:detail"))
 }
