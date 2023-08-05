@@ -30,11 +30,11 @@ import com.theblackbit.animemania.android.core.testing.data.manga.mostWantedMang
 import com.theblackbit.animemania.android.core.testing.data.manga.popularMangaData
 import com.theblackbit.animemania.android.core.testing.data.manga.topRatedMangaData
 import com.theblackbit.animemania.android.core.testing.data.manga.trendingMangaData
+import com.theblackbit.animemania.android.core.testing.di.collectAnimeCategoriesUseCaseModuleTest
+import com.theblackbit.animemania.android.core.testing.di.collectAnimeDataUseCaseTestModule
+import com.theblackbit.animemania.android.core.testing.di.collectMangaCategoriesUseCaseModuleTest
+import com.theblackbit.animemania.android.core.testing.di.collectMangaDataUseCaseTestModule
 import com.theblackbit.animemania.android.feature.home.R
-import com.theblackbit.animemania.android.home.di.collectAnimeCategoriesUseCaseModuleTest
-import com.theblackbit.animemania.android.home.di.collectAnimeDataUseCaseTestModule
-import com.theblackbit.animemania.android.home.di.collectMangaCategoriesUseCaseModuleTest
-import com.theblackbit.animemania.android.home.di.collectMangaDataUseCaseTestModule
 import com.theblackbit.animemania.android.home.di.homeViewModelModule
 import org.hamcrest.Matchers.not
 import org.junit.Rule

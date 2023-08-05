@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
+import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_ID
 import com.theblackbit.animemania.android.common.FragmentBindingCreator
-import com.theblackbit.animemania.android.detail.DetailFragment.Companion.COLLECTION_ID
 import com.theblackbit.animemania.android.feature.detail.R
 import com.theblackbit.animemania.android.feature.detail.databinding.FragmentTabChaptersBinding
 import com.theblackbit.animemania.android.model.Chapter
@@ -56,7 +56,7 @@ class ChaptersTabFragment : FragmentBindingCreator<FragmentTabChaptersBinding>()
                         addElementToRecyclerView(chapters)
                     }, { error ->
                         error.printStackTrace()
-                        // TODO: SHOW NO DATA
+                        // TODO: SHOW NO DATA AND TEST WHEN DATA
                     }),
             )
         }

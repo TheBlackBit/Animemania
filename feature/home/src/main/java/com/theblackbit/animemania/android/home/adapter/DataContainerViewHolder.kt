@@ -7,7 +7,10 @@ class DataContainerViewHolder(
     private val binding: ItemDataContainerBinding,
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(categoryName: String, dataAdapter: DataAdapter) {
+    fun bind(
+        categoryName: String,
+        dataAdapter: DataAdapter,
+    ) {
         with(binding) {
             containerDataName = categoryName
             binding.rvDataContainer.adapter = dataAdapter

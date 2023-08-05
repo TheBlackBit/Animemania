@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
+import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_ID
 import com.theblackbit.animemania.android.common.FragmentBindingCreator
-import com.theblackbit.animemania.android.detail.DetailFragment
 import com.theblackbit.animemania.android.feature.detail.R
 import com.theblackbit.animemania.android.feature.detail.databinding.FragmentTabCharactersBinding
 import com.theblackbit.animemania.android.model.Character
@@ -33,7 +33,7 @@ class CharactersTabFragment : FragmentBindingCreator<FragmentTabCharactersBindin
             val bundle = Bundle()
 
             bundle.apply {
-                putString(DetailFragment.COLLECTION_ID, collectionId)
+                putString(COLLECTION_ID, collectionId)
             }
 
             fragment.arguments = bundle
@@ -49,7 +49,7 @@ class CharactersTabFragment : FragmentBindingCreator<FragmentTabCharactersBindin
 
     private fun startToCollectChapters() {
         arguments?.apply {
-            val collectionId = getString(DetailFragment.COLLECTION_ID, "")
+            val collectionId = getString(COLLECTION_ID, "")
             dataDisposable.add(
                 viewModel.startToCollectCharacters(collectionId, viewModel.viewModelScope)
                     .subscribe({ characters ->
@@ -57,7 +57,7 @@ class CharactersTabFragment : FragmentBindingCreator<FragmentTabCharactersBindin
                         addElementToRecyclerView(characters)
                     }, { error ->
                         error.printStackTrace()
-                        // TODO: SHOW NO DATA
+                        // TODO: SHOW NO DATA AND TEST
                     }),
             )
         }

@@ -20,6 +20,8 @@ class CollectionViewModel(
     private val collectMangaCategoriesUseCase: CollectCategoriesUseCase,
 ) : ViewModel() {
 
+    var initDataCollected = false
+
     fun startToCollectAnimeCategories(): Single<List<Category>> =
         collectAnimeCategoriesUseCase.collect()
 

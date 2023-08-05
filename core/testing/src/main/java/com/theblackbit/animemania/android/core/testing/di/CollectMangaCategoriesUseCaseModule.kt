@@ -1,8 +1,8 @@
-package com.theblackbit.animemania.android.home.di
+package com.theblackbit.animemania.android.core.testing.di
 
+import com.theblackbit.animemania.android.core.testing.domain.usecase.CollectMangaCategoriesUseCaseTest
 import com.theblackbit.animemania.android.domain.di.MANGA_CATEGORY_QUALIFIER
 import com.theblackbit.animemania.android.domain.usecase.CollectCategoriesUseCase
-import com.theblackbit.animemania.android.home.domain.usecase.CollectMangaCategoriesUseCaseTest
 import org.koin.core.qualifier.named
 import org.koin.dsl.bind
 import org.koin.dsl.module

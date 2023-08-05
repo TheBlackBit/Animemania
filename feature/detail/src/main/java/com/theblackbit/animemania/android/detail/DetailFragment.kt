@@ -1,35 +1,41 @@
 package com.theblackbit.animemania.android.detail
 
 import android.os.Bundle
+import android.transition.TransitionInflater
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayoutMediator
+import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_ID
+import com.theblackbit.animemania.android.common.BundleKeys.COVER_IMAGE
+import com.theblackbit.animemania.android.common.BundleKeys.END_DATE
+import com.theblackbit.animemania.android.common.BundleKeys.GENRES
+import com.theblackbit.animemania.android.common.BundleKeys.POSTER_IMAGE
+import com.theblackbit.animemania.android.common.BundleKeys.RATING
+import com.theblackbit.animemania.android.common.BundleKeys.START_DATE
+import com.theblackbit.animemania.android.common.BundleKeys.STATE
+import com.theblackbit.animemania.android.common.BundleKeys.SYNOPSIS
+import com.theblackbit.animemania.android.common.BundleKeys.TITLE
 import com.theblackbit.animemania.android.common.FragmentBindingCreator
+import com.theblackbit.animemania.android.common.OnBackNavigation
 import com.theblackbit.animemania.android.detail.adapter.DetailTabAdapter
 import com.theblackbit.animemania.android.detail.pagertabs.OverviewTabFragment
-import com.theblackbit.animemania.android.detail.pagertabs.OverviewTabFragment.Companion.END_DATE
-import com.theblackbit.animemania.android.detail.pagertabs.OverviewTabFragment.Companion.GENRES
-import com.theblackbit.animemania.android.detail.pagertabs.OverviewTabFragment.Companion.START_DATE
-import com.theblackbit.animemania.android.detail.pagertabs.OverviewTabFragment.Companion.STATE
-import com.theblackbit.animemania.android.detail.pagertabs.OverviewTabFragment.Companion.SYNOPSIS
 import com.theblackbit.animemania.android.detail.pagertabs.chapter.ChaptersTabFragment
 import com.theblackbit.animemania.android.detail.pagertabs.character.CharactersTabFragment
 import com.theblackbit.animemania.android.feature.detail.R
 import com.theblackbit.animemania.android.feature.detail.databinding.FragmentDetailBinding
 import com.theblackbit.animemania.android.core.resources.R as resourcesR
 
-class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>() {
+class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>(), OnBackNavigation {
     override val layoutId: Int
         get() = R.layout.fragment_detail
 
     private lateinit var detailTabAdapter: DetailTabAdapter
 
-    companion object {
-        const val COLLECTION_ID = "collection_id"
-        const val COVER_IMAGE = "cover_image"
-        const val POSTER_IMAGE = "poster_image"
-        const val TITLE = "title"
-        const val RATING = "rating"
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        sharedElementEnterTransition =
+            TransitionInflater.from(context).inflateTransition(android.R.transition.move)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -47,10 +53,12 @@ class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>() {
             val overview = getString(SYNOPSIS, "")
 
             binding.apply {
+                cover.transitionName = collectionId
                 coverImage = coverImageVal
                 posterImage = posterImageVal
                 title = titleVal
                 rating = ratingVal
+                bacKNavigation = this@DetailFragment
             }
             configViewPagerWithTabs(
                 collectionId = collectionId,
@@ -98,5 +106,9 @@ class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>() {
                 else -> getString(resourcesR.string.overview)
             }
         }.attach()
+    }
+
+    override fun backNavigation(view: View) {
+        findNavController().popBackStack()
     }
 }

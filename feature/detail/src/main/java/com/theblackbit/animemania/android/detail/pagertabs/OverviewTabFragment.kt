@@ -2,6 +2,11 @@ package com.theblackbit.animemania.android.detail.pagertabs
 
 import android.os.Bundle
 import android.view.View
+import com.theblackbit.animemania.android.common.BundleKeys.END_DATE
+import com.theblackbit.animemania.android.common.BundleKeys.GENRES
+import com.theblackbit.animemania.android.common.BundleKeys.START_DATE
+import com.theblackbit.animemania.android.common.BundleKeys.STATE
+import com.theblackbit.animemania.android.common.BundleKeys.SYNOPSIS
 import com.theblackbit.animemania.android.common.FragmentBindingCreator
 import com.theblackbit.animemania.android.feature.detail.R
 import com.theblackbit.animemania.android.feature.detail.databinding.FragmentTabOverviewBinding
@@ -12,12 +17,6 @@ class OverviewTabFragment : FragmentBindingCreator<FragmentTabOverviewBinding>()
         get() = R.layout.fragment_tab_overview
 
     companion object {
-
-        const val STATE: String = "state"
-        const val START_DATE: String = "startDate"
-        const val END_DATE: String = "endDate"
-        const val GENRES: String = "genres"
-        const val SYNOPSIS: String = "overview"
 
         fun createFragment(
             state: String,

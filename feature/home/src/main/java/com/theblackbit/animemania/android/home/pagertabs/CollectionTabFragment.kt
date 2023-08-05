@@ -2,8 +2,22 @@ package com.theblackbit.animemania.android.home.pagertabs
 
 import android.os.Bundle
 import android.view.View
+import androidx.cardview.widget.CardView
+import androidx.navigation.fragment.FragmentNavigatorExtras
+import androidx.navigation.fragment.findNavController
 import androidx.paging.PagingData
+import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_ID
+import com.theblackbit.animemania.android.common.BundleKeys.COVER_IMAGE
+import com.theblackbit.animemania.android.common.BundleKeys.END_DATE
+import com.theblackbit.animemania.android.common.BundleKeys.GENRES
+import com.theblackbit.animemania.android.common.BundleKeys.POSTER_IMAGE
+import com.theblackbit.animemania.android.common.BundleKeys.RATING
+import com.theblackbit.animemania.android.common.BundleKeys.START_DATE
+import com.theblackbit.animemania.android.common.BundleKeys.STATE
+import com.theblackbit.animemania.android.common.BundleKeys.SYNOPSIS
+import com.theblackbit.animemania.android.common.BundleKeys.TITLE
 import com.theblackbit.animemania.android.common.FragmentBindingCreator
+import com.theblackbit.animemania.android.core.resources.R
 import com.theblackbit.animemania.android.feature.home.databinding.FragmentTabContentBinding
 import com.theblackbit.animemania.android.home.CollectionViewModel
 import com.theblackbit.animemania.android.home.adapter.DataAdapter
@@ -26,23 +40,66 @@ abstract class CollectionTabFragment : FragmentBindingCreator<FragmentTabContent
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.rvData.adapter = DataContainerAdapter(dataForAdapter)
-        fetchCollectionsByCategory()
+        val initDataCollected = viewModel.initDataCollected
+        binding.initDataCollected = initDataCollected
+        if (!initDataCollected) {
+            binding.rvData.adapter = DataContainerAdapter(dataForAdapter)
+            fetchCollectionsByCategory()
+        }
     }
 
     protected fun populateRecyclerView(categories: List<Category>) {
         categories.forEach { category ->
             dataForAdapter.add(
                 Pair(
-                    DataAdapter(DataDiffCallback()),
+                    DataAdapter(
+                        DataDiffCallback(),
+                        object : DataAdapter.OnClickCollection {
+                            override fun onClick(collection: Collection, cardView: CardView) {
+                                navigateToDetail(collection, cardView)
+                            }
+                        },
+                    ),
                     category.categoryName,
                 ),
             )
         }
     }
 
+    private fun navigateToDetail(collection: Collection, cardView: CardView) {
+        val bundle = Bundle()
+        val extras = FragmentNavigatorExtras(
+            cardView to collection.collectionId,
+        )
+        bundle
+            .apply {
+                putString(COLLECTION_ID, collection.collectionId)
+                putString(TITLE, collection.name)
+                putString(COVER_IMAGE, collection.bigPosterImageUrl)
+                putString(POSTER_IMAGE, collection.miniPosterImageUrl)
+                putString(RATING, collection.averageRating)
+                putString(STATE, collection.status.name)
+                putString(START_DATE, collection.startDate)
+                putString(END_DATE, collection.endDate)
+                putString(
+                    GENRES,
+                    collection.genre.joinToString(separator = " \u25CF ") { it.name },
+                )
+                putString(SYNOPSIS, collection.synopsis)
+            }
+        findNavController().navigate(
+            R.id.action_homeFragment_to_detailFragment,
+            bundle,
+            null,
+            extras,
+        )
+    }
+
     protected fun notifyInitDataCollected(index: Int, categories: List<Category>) {
-        if (index == categories.lastIndex) binding.initDataCollected = true
+        if (index == categories.lastIndex) {
+            binding.initDataCollected = true
+            viewModel.initDataCollected = true
+        }
     }
 
     protected fun submitDataIntoAdapter(index: Int, pagingData: PagingData<Collection>) {

@@ -17,11 +17,12 @@ abstract class FragmentBindingCreator<T : ViewDataBinding> : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, layoutId, container, false)
+        if (!::binding.isInitialized) {
+            binding = DataBindingUtil.inflate(inflater, layoutId, container, false)
+        }
         binding.also {
             it.lifecycleOwner = viewLifecycleOwner
         }
-
         return binding.root
     }
 }

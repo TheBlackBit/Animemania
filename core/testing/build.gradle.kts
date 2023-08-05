@@ -15,5 +15,8 @@ dependencies {
     implementation(libs.espresso.contrib)
     implementation(libs.espresso.intent)
     implementation(libs.espresso.web)
+    implementation(libs.paging.runtime)
+    implementation(libs.paging.rxjava3)
     implementation(project(":core:model"))
+    implementation(project(":core:domain"))
 }

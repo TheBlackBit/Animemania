@@ -1,4 +1,4 @@
-package com.theblackbit.animemania.android.home.domain.usecase
+package com.theblackbit.animemania.android.core.testing.domain.usecase
 
 import androidx.paging.PagingData
 import com.theblackbit.animemania.android.core.testing.data.CATEGORY_MOST_WANTED_ID
