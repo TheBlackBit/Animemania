@@ -8,6 +8,7 @@ import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.matcher.ViewMatchers
+import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -93,6 +94,44 @@ class HomeToDetailNavigationTest : KoinTest {
                 3 -> testPopularMangaDetailNavigation(parentIndex)
             }
         }
+    }
+
+    @Test
+    fun backNavigationFromDetailToHome() {
+        ActivityScenario.launch(MainActivity::class.java)
+        onView(ViewMatchers.isRoot()).perform(WaitFor(5000L))
+        onView(withId(homeR.id.rv_data))
+            .perform(
+                RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
+                    0,
+                ),
+            )
+            .perform(
+                ScrollToPositionChildRecyclerView(
+                    parentRecyclerViewId = homeR.id.rv_data,
+                    positionOfChildRecyclerView = 0,
+                    positionOfViewInChildRecyclerView = 0,
+                    childRecyclerViewId = homeR.id.rv_data_container,
+                ),
+            )
+            .perform(
+                ClickItemOnChildRecyclerViewItem<DataViewHolder>(
+                    parentRecyclerViewId = homeR.id.rv_data,
+                    positionOfChildRecyclerView = 0,
+                    positionOfViewInChildRecyclerView = 0,
+                    childRecyclerViewId = homeR.id.rv_data_container,
+                ),
+            )
+
+        onView(ViewMatchers.isRoot()).perform(WaitFor(200L))
+
+        onView(withId(R.id.backIcon))
+            .perform(click())
+
+        onView(ViewMatchers.isRoot()).perform(WaitFor(200L))
+
+        onView(withText("Animemania"))
+            .check(matches(isDisplayed()))
     }
 
     private fun testTrendingAnimeDetailNavigation(parentIndex: Int) {

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.transition.TransitionInflater
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayoutMediator
 import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_ID
 import com.theblackbit.animemania.android.common.BundleKeys.COVER_IMAGE
@@ -16,6 +17,7 @@ import com.theblackbit.animemania.android.common.BundleKeys.STATE
 import com.theblackbit.animemania.android.common.BundleKeys.SYNOPSIS
 import com.theblackbit.animemania.android.common.BundleKeys.TITLE
 import com.theblackbit.animemania.android.common.FragmentBindingCreator
+import com.theblackbit.animemania.android.common.OnBackNavigation
 import com.theblackbit.animemania.android.detail.adapter.DetailTabAdapter
 import com.theblackbit.animemania.android.detail.pagertabs.OverviewTabFragment
 import com.theblackbit.animemania.android.detail.pagertabs.chapter.ChaptersTabFragment
@@ -24,7 +26,7 @@ import com.theblackbit.animemania.android.feature.detail.R
 import com.theblackbit.animemania.android.feature.detail.databinding.FragmentDetailBinding
 import com.theblackbit.animemania.android.core.resources.R as resourcesR
 
-class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>() {
+class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>(), OnBackNavigation {
     override val layoutId: Int
         get() = R.layout.fragment_detail
 
@@ -56,6 +58,7 @@ class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>() {
                 posterImage = posterImageVal
                 title = titleVal
                 rating = ratingVal
+                bacKNavigation = this@DetailFragment
             }
             configViewPagerWithTabs(
                 collectionId = collectionId,
@@ -103,5 +106,9 @@ class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>() {
                 else -> getString(resourcesR.string.overview)
             }
         }.attach()
+    }
+
+    override fun backNavigation(view: View) {
+        findNavController().popBackStack()
     }
 }

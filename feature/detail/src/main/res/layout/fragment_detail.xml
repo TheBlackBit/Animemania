@@ -19,6 +19,10 @@
         <variable
             name="rating"
             type="String" />
+
+        <variable
+            name="bacKNavigation"
+            type="com.theblackbit.animemania.android.common.OnBackNavigation" />
     </data>
 
     <androidx.constraintlayout.motion.widget.MotionLayout
@@ -56,6 +60,7 @@
             android:background="@drawable/rounded_bg"
             android:backgroundTint="?attr/colorSurface"
             android:padding="@dimen/back_icon_padding"
+            android:onClick="@{bacKNavigation::backNavigation}"
             android:src="@drawable/baseline_arrow_back_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
