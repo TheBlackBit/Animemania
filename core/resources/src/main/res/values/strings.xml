@@ -12,6 +12,7 @@
     <string name="finished">Finished: </string>
     <string name="synopsis">Synopsis</string>
     <string name="no_synopsis">There aren\'t synopsis yet!</string>
+    <string name="no_info_yet">No information yet!</string>
     <string name="overview">Overview</string>
     <string name="chapters">Chapters</string>
     <string name="characters">Characters</string>

@@ -38,6 +38,7 @@ import com.theblackbit.animemania.android.core.testing.data.chapter.chaptersData
 import com.theblackbit.animemania.android.core.testing.data.character.charactersData
 import com.theblackbit.animemania.android.core.testing.di.collectChaptersUseCaseTestModule
 import com.theblackbit.animemania.android.core.testing.di.collectCharactersUseCaseTestModule
+import com.theblackbit.animemania.android.core.testing.domain.usecase.ID_COLLECTION_DATA
 import com.theblackbit.animemania.android.detail.di.chapterTabViewModelModule
 import com.theblackbit.animemania.android.detail.di.characterTabViewModelModule
 import com.theblackbit.animemania.android.detail.pagertabs.chapter.ChapterViewHolder
@@ -65,7 +66,7 @@ class DetailFragmentTest : KoinTest {
     )
 
     private val collectionAnimeTest = Collection(
-        collectionId = "44081",
+        collectionId = ID_COLLECTION_DATA,
         name = "Demon Slayer: Kimetsu no Yaiba - Entertainment District Arc",
         averageRating = "87.44%",
         startDate = "2021/12/05",
@@ -157,6 +158,7 @@ class DetailFragmentTest : KoinTest {
             .perform(click())
 
         onView(withId(detailRes.id.pb_chapter))
+            .check(matches(isDisplayed()))
 
         onView(ViewMatchers.isRoot()).perform(WaitFor(3000L))
 
@@ -211,6 +213,18 @@ class DetailFragmentTest : KoinTest {
                     ),
                 )
         }
+    }
+
+    @Test
+    fun testChaptersTabNoData() {
+        launchFragment(collectionAnimeTest.copy(collectionId = "1"))
+        onView(withText(R.string.chapters))
+            .perform(click())
+
+        onView(ViewMatchers.isRoot()).perform(WaitFor(200L))
+
+        onView(withText(R.string.no_info_yet))
+            .check(matches(isDisplayed()))
     }
 
     @Test
@@ -276,25 +290,37 @@ class DetailFragmentTest : KoinTest {
         }
     }
 
-    private fun launchFragment() {
+    @Test
+    fun testCharactersTabNoData() {
+        launchFragment(collectionAnimeTest.copy(collectionId = "1"))
+        onView(withText(R.string.characters))
+            .perform(click())
+
+        onView(ViewMatchers.isRoot()).perform(WaitFor(200L))
+
+        onView(withText(R.string.no_info_yet))
+            .check(matches(isDisplayed()))
+    }
+
+    private fun launchFragment(collection: Collection = collectionAnimeTest) {
         launchFragmentInContainer<DetailFragment>(
             themeResId = R.style.Theme_Animemania,
             fragmentArgs = Bundle()
                 .apply {
-                    putString(COLLECTION_ID, collectionAnimeTest.collectionId)
-                    putString(TITLE, collectionAnimeTest.startDate)
-                    putString(COVER_IMAGE, collectionAnimeTest.bigPosterImageUrl)
-                    putString(POSTER_IMAGE, collectionAnimeTest.miniPosterImageUrl)
-                    putString(TITLE, collectionAnimeTest.name)
-                    putString(RATING, collectionAnimeTest.averageRating)
-                    putString(STATE, collectionAnimeTest.status.name)
-                    putString(START_DATE, collectionAnimeTest.startDate)
-                    putString(END_DATE, collectionAnimeTest.endDate)
+                    putString(COLLECTION_ID, collection.collectionId)
+                    putString(TITLE, collection.startDate)
+                    putString(COVER_IMAGE, collection.bigPosterImageUrl)
+                    putString(POSTER_IMAGE, collection.miniPosterImageUrl)
+                    putString(TITLE, collection.name)
+                    putString(RATING, collection.averageRating)
+                    putString(STATE, collection.status.name)
+                    putString(START_DATE, collection.startDate)
+                    putString(END_DATE, collection.endDate)
                     putString(
                         GENRES,
-                        collectionAnimeTest.genre.joinToString(separator = " \u25CF ") { it.name },
+                        collection.genre.joinToString(separator = " \u25CF ") { it.name },
                     )
-                    putString(SYNOPSIS, collectionAnimeTest.synopsis)
+                    putString(SYNOPSIS, collection.synopsis)
                 },
         )
 

@@ -13,7 +13,6 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 class CharactersTabViewModel(
     private val charactersUseCase: CollectCharactersUseCase,
 ) : ViewModel() {
-    // TODO: ADD UNIT TEST
     fun startToCollectCharacters(
         collectionId: String,
         scope: CoroutineScope,

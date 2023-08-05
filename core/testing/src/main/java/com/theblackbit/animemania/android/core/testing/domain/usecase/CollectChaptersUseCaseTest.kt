@@ -7,9 +7,15 @@ import com.theblackbit.animemania.android.model.Chapter
 import io.reactivex.rxjava3.core.Flowable
 import java.util.concurrent.TimeUnit
 
+const val ID_COLLECTION_DATA = "44081"
+
 class CollectChaptersUseCaseTest : CollectChaptersUseCase {
     override fun collect(collectionId: String): Flowable<PagingData<Chapter>> {
-        return Flowable.just(PagingData.from(chaptersData))
-            .delay(1, TimeUnit.SECONDS)
+        return if (collectionId == ID_COLLECTION_DATA) {
+            Flowable.just(PagingData.from(chaptersData))
+                .delay(1, TimeUnit.SECONDS)
+        } else {
+            Flowable.just(PagingData.empty())
+        }
     }
 }
