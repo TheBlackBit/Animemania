@@ -9,7 +9,11 @@ import java.util.concurrent.TimeUnit
 
 class CollectCharacterUseCaseTest : CollectCharactersUseCase {
     override fun collect(collectionId: String): Flowable<PagingData<Character>> {
-        return Flowable.just(PagingData.from(charactersData))
-            .delay(1, TimeUnit.SECONDS)
+        return if (collectionId == ID_COLLECTION_DATA) {
+            Flowable.just(PagingData.from(charactersData))
+                .delay(1, TimeUnit.SECONDS)
+        } else {
+            Flowable.just(PagingData.empty())
+        }
     }
 }

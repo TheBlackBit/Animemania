@@ -44,6 +44,13 @@ class ChaptersTabFragment : FragmentBindingCreator<FragmentTabChaptersBinding>()
         super.onViewCreated(view, savedInstanceState)
         initRecyclerView()
         startToCollectChapters()
+        adapter.addLoadStateListener { loadState ->
+            if (loadState.append.endOfPaginationReached) {
+                if (adapter.itemCount < 1) {
+                    showNoDataView()
+                }
+            }
+        }
     }
 
     private fun startToCollectChapters() {
@@ -56,10 +63,13 @@ class ChaptersTabFragment : FragmentBindingCreator<FragmentTabChaptersBinding>()
                         addElementToRecyclerView(chapters)
                     }, { error ->
                         error.printStackTrace()
-                        // TODO: SHOW NO DATA AND TEST WHEN DATA
                     }),
             )
         }
+    }
+
+    private fun showNoDataView() {
+        binding.showNoData = true
     }
 
     private fun initAdapter(): ChaptersAdapter {

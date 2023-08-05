@@ -31,7 +31,6 @@ class MangaTabFragment : CollectionTabFragment() {
                             notifyInitDataCollected(index, categories)
                             submitDataIntoAdapter(index, data)
                         },
-                        // TODO: SHOW NO DATA AND TESTA
                         { error -> error.printStackTrace() },
                     ),
             )

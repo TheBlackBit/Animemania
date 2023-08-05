@@ -13,7 +13,6 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 class ChapterTabViewModel(
     private val chaptersUseCase: CollectChaptersUseCase,
 ) : ViewModel() {
-    // TODO: ADD UNIT TEST
     fun startToCollectChapters(
         collectionId: String,
         scope: CoroutineScope,
