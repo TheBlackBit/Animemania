@@ -23,5 +23,10 @@ gradlePlugin {
             id = "theblackbit.animemania.android.feature"
             implementationClass = "AndroidFeaturePlugin"
         }
+
+        register("androidRoom") {
+            id = "theblackbit.animemania.android.room"
+            implementationClass = "AndroidRoomPlugin"
+        }
     }
 }
