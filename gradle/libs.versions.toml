@@ -29,6 +29,7 @@ gson = "2.10.1"
 rxJava3Adapter = "3.0.0"
 secrets = "2.0.1"
 okhttp = "4.10.0"
+coreTesting = "2.2.0"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -49,6 +50,7 @@ room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-guava = { group = "androidx.room", name = "room-guava", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-rxjava3 = { group = "androidx.room", name = "room-rxjava3", version.ref = "room" }
 databinding-runtime = { group = "androidx.databinding", name = "databinding-runtime", version.ref = "dataBinding" }
 arcView = { group = "io.github.florent37", name = "shapeofview", version.ref = "arcView" }
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit"}
@@ -63,6 +65,7 @@ mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mo
 mockito-inline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockitoInline" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest" }
 room-testing = { group = "androidx.room", name = "room-testing", version.ref = "room" }
+core-testing = { group = "androidx.arch.core", name = "core-testing", version.ref = "coreTesting" }
 #Instrumentation test dependencies
 androidtest-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestExt" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }

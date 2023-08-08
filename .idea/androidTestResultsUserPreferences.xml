@@ -3,6 +3,48 @@
   <component name="AndroidTestResultsUserPreferences">
     <option name="androidTestResultsTableState">
       <map>
+        <entry key="-2012821710">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi&#10; Redmi Note 9S" value="120" />
+                  <entry key="d36ea1a" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
+        <entry key="-1993360173">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi&#10; Redmi Note 9S" value="120" />
+                  <entry key="d36ea1a" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
+        <entry key="-1927449967">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi&#10; Redmi Note 9S" value="120" />
+                  <entry key="d36ea1a" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
         <entry key="-1723073391">
           <value>
             <AndroidTestResultsTableState>
@@ -32,6 +74,20 @@
           </value>
         </entry>
         <entry key="-1539936207">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi&#10; Redmi Note 9S" value="120" />
+                  <entry key="d36ea1a" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
+        <entry key="-1423565823">
           <value>
             <AndroidTestResultsTableState>
               <option name="preferredColumnWidths">
@@ -89,6 +145,20 @@
             </AndroidTestResultsTableState>
           </value>
         </entry>
+        <entry key="-859715165">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi&#10; Redmi Note 9S" value="120" />
+                  <entry key="d36ea1a" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
         <entry key="-751193659">
           <value>
             <AndroidTestResultsTableState>
@@ -133,7 +203,34 @@
             </AndroidTestResultsTableState>
           </value>
         </entry>
+        <entry key="-349756787">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi&#10; Redmi Note 9S" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
         <entry key="-261950530">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi&#10; Redmi Note 9S" value="120" />
+                  <entry key="d36ea1a" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
+        <entry key="-254581002">
           <value>
             <AndroidTestResultsTableState>
               <option name="preferredColumnWidths">
@@ -155,6 +252,20 @@
                   <entry key="Duration" value="90" />
                   <entry key="Pixel_4_API_26" value="120" />
                   <entry key="Tests" value="360" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
+        <entry key="166113973">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi&#10; Redmi Note 9S" value="120" />
+                  <entry key="d36ea1a" value="120" />
                 </map>
               </option>
             </AndroidTestResultsTableState>
@@ -218,6 +329,21 @@
             </AndroidTestResultsTableState>
           </value>
         </entry>
+        <entry key="712804968">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Resizable_Experimental_API_33" value="120" />
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi&#10; Redmi Note 9S" value="120" />
+                  <entry key="d36ea1a" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
         <entry key="1203207717">
           <value>
             <AndroidTestResultsTableState>
@@ -246,6 +372,20 @@
             </AndroidTestResultsTableState>
           </value>
         </entry>
+        <entry key="1375973877">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi&#10; Redmi Note 9S" value="120" />
+                  <entry key="d36ea1a" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
         <entry key="1377133657">
           <value>
             <AndroidTestResultsTableState>
@@ -253,6 +393,20 @@
                 <map>
                   <entry key="Duration" value="90" />
                   <entry key="Pixel_4_API_26" value="120" />
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi&#10; Redmi Note 9S" value="120" />
+                  <entry key="d36ea1a" value="120" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
+        <entry key="1543555334">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
                   <entry key="Tests" value="360" />
                   <entry key="Xiaomi&#10; Redmi Note 9S" value="120" />
                   <entry key="d36ea1a" value="120" />
@@ -284,6 +438,20 @@
                   <entry key="Duration" value="90" />
                   <entry key="Pixel_4_API_26" value="120" />
                   <entry key="Tests" value="360" />
+                </map>
+              </option>
+            </AndroidTestResultsTableState>
+          </value>
+        </entry>
+        <entry key="1742296607">
+          <value>
+            <AndroidTestResultsTableState>
+              <option name="preferredColumnWidths">
+                <map>
+                  <entry key="Duration" value="90" />
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi&#10; Redmi Note 9S" value="120" />
+                  <entry key="d36ea1a" value="120" />
                 </map>
               </option>
             </AndroidTestResultsTableState>
