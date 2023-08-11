@@ -11,6 +11,7 @@ val chapterList = listOf(
         number = 1,
         seasonNumber = 1,
         imageUrl = "url/to/image1.jpg",
+        pageNumber = 1,
     ),
     ChapterEntity(
         chapterId = 2,
@@ -20,6 +21,7 @@ val chapterList = listOf(
         number = 2,
         seasonNumber = 1,
         imageUrl = "url/to/image2.jpg",
+        pageNumber = 1,
     ),
     ChapterEntity(
         chapterId = 3,
@@ -29,6 +31,7 @@ val chapterList = listOf(
         number = 3,
         seasonNumber = 1,
         imageUrl = "url/to/image3.jpg",
+        pageNumber = 1,
     ),
     ChapterEntity(
         chapterId = 4,
@@ -38,6 +41,7 @@ val chapterList = listOf(
         number = 4,
         seasonNumber = 1,
         imageUrl = "url/to/image4.jpg",
+        pageNumber = 1,
     ),
     ChapterEntity(
         chapterId = 5,
@@ -47,6 +51,7 @@ val chapterList = listOf(
         number = 1,
         seasonNumber = 1,
         imageUrl = "url/to/image5.jpg",
+        pageNumber = 1,
     ),
     ChapterEntity(
         chapterId = 6,
@@ -56,6 +61,7 @@ val chapterList = listOf(
         number = 2,
         seasonNumber = 1,
         imageUrl = "url/to/image6.jpg",
+        pageNumber = 1,
     ),
     ChapterEntity(
         chapterId = 7,
@@ -65,6 +71,7 @@ val chapterList = listOf(
         number = 1,
         seasonNumber = 2,
         imageUrl = "url/to/image7.jpg",
+        pageNumber = 1,
     ),
     ChapterEntity(
         chapterId = 8,
@@ -74,6 +81,7 @@ val chapterList = listOf(
         number = 1,
         seasonNumber = 1,
         imageUrl = "url/to/image8.jpg",
+        pageNumber = 1,
     ),
     ChapterEntity(
         chapterId = 9,
@@ -83,6 +91,7 @@ val chapterList = listOf(
         number = 2,
         seasonNumber = 1,
         imageUrl = "url/to/image9.jpg",
+        pageNumber = 1,
     ),
     ChapterEntity(
         chapterId = 10,
@@ -92,5 +101,6 @@ val chapterList = listOf(
         number = 1,
         seasonNumber = 2,
         imageUrl = "url/to/image10.jpg",
+        pageNumber = 1,
     ),
 )

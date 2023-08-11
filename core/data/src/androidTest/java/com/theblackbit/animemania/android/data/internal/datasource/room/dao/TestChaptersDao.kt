@@ -13,6 +13,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
+// TODO: RUN TEST
 @RunWith(AndroidJUnit4::class)
 class TestChaptersDao {
 
@@ -40,7 +41,7 @@ class TestChaptersDao {
     fun testInsertAndCollectChapters() {
         val collectionId = 1
         chapterDao.insertChapters(chapterList)
-        chapterDao.getChaptersByCollection(collectionId)
+        chapterDao.getChaptersByCollection(collectionId, 1)
             .test()
             .assertValue { chapterEntities ->
                 chapterEntities.isNotEmpty() &&
@@ -55,7 +56,7 @@ class TestChaptersDao {
         val collectionId = 1
         chapterDao.insertChapters(chapterList)
         chapterDao.deleteChaptersByCollection(collectionId)
-        chapterDao.getChaptersByCollection(collectionId)
+        chapterDao.getChaptersByCollection(collectionId, 1)
             .test()
             .assertValue { chapterEntities ->
                 chapterEntities.isEmpty()

@@ -1,7 +1,8 @@
 package com.theblackbit.animemania.android.data.external.repository
 
 import com.theblackbit.animemania.android.data.external.datasource.kitsuapi.KitsuCharacterDataSource
-import com.theblackbit.animemania.android.data.external.datasource.response.charactersresponse.CharacterData
+import com.theblackbit.animemania.android.data.external.datasource.response.charactersresponse.CharacterResponse
+import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
 import org.junit.Assert.assertEquals
 import org.junit.Before
@@ -12,17 +13,22 @@ import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
 import org.mockito.junit.MockitoJUnitRunner
 
+// TODO: RUN UNIT TEST
 @RunWith(MockitoJUnitRunner::class)
 class CharactersByKitsuRepositoryImplTest {
 
     private lateinit var charactersByKitsuRepository: CharactersByKitsuRepositoryImpl
 
     @Mock
+    lateinit var safeApiRequest: SafeApiRequest
+
+    @Mock
     lateinit var kitsuCharacterDataSource: KitsuCharacterDataSource
 
     @Before
     fun setup() {
-        charactersByKitsuRepository = CharactersByKitsuRepositoryImpl(kitsuCharacterDataSource)
+        charactersByKitsuRepository =
+            CharactersByKitsuRepositoryImpl(kitsuCharacterDataSource, safeApiRequest)
     }
 
     @Test
@@ -31,7 +37,7 @@ class CharactersByKitsuRepositoryImplTest {
         val collectionId = "12345"
         val pageNumber = "1"
         val pageOffset = "0"
-        val expectedCharacterData = CharacterData(null, null, null)
+        val expectedCharacterData = CharacterResponse(emptyList())
 
         `when`(
             kitsuCharacterDataSource.getCollectionCharacters(
@@ -47,7 +53,7 @@ class CharactersByKitsuRepositoryImplTest {
             collectionId = collectionId,
             pageNumber = pageNumber,
             pageOffset = pageOffset,
-        ).blockingGet()
+        ).blockingGet() as SafeApiRequest.ApiResultHandle.Success
 
         verify(kitsuCharacterDataSource).getCollectionCharacters(
             mediaType = mediaType,
@@ -56,6 +62,6 @@ class CharactersByKitsuRepositoryImplTest {
             pageOffset = pageOffset,
         )
 
-        assertEquals(expectedCharacterData, actualCharacterData)
+        assertEquals(expectedCharacterData, actualCharacterData.value)
     }
 }

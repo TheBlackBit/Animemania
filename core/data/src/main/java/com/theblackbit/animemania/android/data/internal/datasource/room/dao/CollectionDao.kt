@@ -19,12 +19,13 @@ interface CollectionDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertCollectionCategoryJoinEntities(collectionCategoryJoinEntities: List<CollectionCategoryJoinEntity>)
 
+    // TODO: TEST LIMIT
     @Transaction
-    @Query("SELECT * from collectioncategoryjoinentity where pageNumber =:pageNumber AND categoryId =:categoryId")
+    @Query("SELECT * from collectioncategoryjoinentity where pageNumber =:pageNumber AND categoryId =:categoryId limit 20")
     fun collectPagedCollectionsByCategory(
         pageNumber: Int,
         categoryId: Int,
-    ): Single<List<CollectionCategoryJoin>>
+    ): Single<CollectionCategoryJoin>
 
     @Query("DELETE from collectioncategoryjoinentity where categoryId=:categoryId")
     fun clearCollectioncategoryjoinentity(

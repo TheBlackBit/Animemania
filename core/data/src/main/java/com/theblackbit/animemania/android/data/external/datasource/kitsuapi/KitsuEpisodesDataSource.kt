@@ -1,7 +1,6 @@
 package com.theblackbit.animemania.android.data.external.datasource.kitsuapi
 
 import com.theblackbit.animemania.android.data.external.datasource.kitsuapi.KitsuSort.NUMBER
-import com.theblackbit.animemania.android.data.external.datasource.response.episodesresponse.EpisodesResponse
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -14,5 +13,5 @@ interface KitsuEpisodesDataSource {
         @Query("sort") sort: String = NUMBER,
         @Query("page[limit]") pageNumber: String,
         @Query("page[offset]") pageOffset: String,
-    ): Single<EpisodesResponse>
+    ): Single<Any>
 }

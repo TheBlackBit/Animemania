@@ -11,7 +11,7 @@ material = "1.9.0"
 rxJava = "3.1.5"
 koin = "3.4.2"
 koinTest = "3.4.1"
-paging3 = "3.1.1"
+paging3 = "3.2.0"
 navigation-component = "2.5.3"
 glide = "4.15.1"
 mockito = "3.9.0"
@@ -61,6 +61,8 @@ okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor",
 #Test dependencies
 junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
 paging-common = { group = "androidx.paging", name = "paging-common", version.ref = "paging3" }
+
+paging-testing = { group = "androidx.paging", name = "paging-testing", version.ref = "paging3" }
 mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
 mockito-inline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockitoInline" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest" }

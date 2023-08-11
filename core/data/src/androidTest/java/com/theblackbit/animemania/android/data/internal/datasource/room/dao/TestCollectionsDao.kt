@@ -3,6 +3,7 @@ package com.theblackbit.animemania.android.data.internal.datasource.room.dao
 import android.content.Context
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
+import androidx.room.rxjava3.EmptyResultSetException
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.theblackbit.animemania.android.data.internal.datasource.room.AnimeManiaRoom
@@ -67,13 +68,11 @@ class TestCollectionsDao {
         )
             .test()
             .assertValue { collectionCategory ->
-                collectionCategory.isNotEmpty() &&
-                    collectionCategory.all { collectionJoin ->
-                        collectionJoin.collectionCategoryJoinEntity.pageNumber == pageNumber &&
-                            collectionJoin.collectionCategoryJoinEntity.categoryId == categoryId &&
-                            collectionJoin.collections.all { collection ->
-                                collection.collectionType == collectionType
-                            }
+                collectionCategory.collections.isNotEmpty() &&
+                    collectionCategory.collectionCategoryJoinEntity.pageNumber == pageNumber &&
+                    collectionCategory.collectionCategoryJoinEntity.categoryId == categoryId &&
+                    collectionCategory.collections.all { collectionJoin ->
+                        collectionJoin.collectionType == collectionType
                     }
             }
     }
@@ -106,8 +105,8 @@ class TestCollectionsDao {
             categoryId = categoryId,
         )
             .test()
-            .assertValue { collectionCategory ->
-                collectionCategory.isEmpty()
+            .assertError {
+                it is EmptyResultSetException
             }
     }
 }

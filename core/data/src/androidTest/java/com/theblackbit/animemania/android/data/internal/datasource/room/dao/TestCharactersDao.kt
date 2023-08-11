@@ -20,6 +20,10 @@ class TestCharactersDao {
 
     private lateinit var characterDao: CharacterDao
 
+    private val collectionId = 1
+    private val page = 1
+
+    // TODO: RUN TEST
     @get:Rule
     var instantTaskExecutorRule: InstantTaskExecutorRule = InstantTaskExecutorRule()
 
@@ -38,9 +42,8 @@ class TestCharactersDao {
 
     @Test
     fun testInsertAndCollectCharacters() {
-        val collectionId = 1
         characterDao.insertCharacters(characterList)
-        characterDao.getCharactersByCollectionId(collectionId)
+        characterDao.getCharactersByCollectionId(collectionId, page = page)
             .test()
             .assertValue { characterEntity ->
                 characterEntity.isNotEmpty() &&
@@ -52,10 +55,9 @@ class TestCharactersDao {
 
     @Test
     fun testDeleteCharacters() {
-        val collectionId = 1
         characterDao.insertCharacters(characterList)
         characterDao.deleteCharactersByCollectionId(collectionId)
-        characterDao.getCharactersByCollectionId(collectionId)
+        characterDao.getCharactersByCollectionId(collectionId, page = page)
             .test()
             .assertValue { characterEntities ->
                 characterEntities.isEmpty()
