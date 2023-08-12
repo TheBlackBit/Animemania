@@ -9,9 +9,9 @@ data class CharacterData(
 )
 
 // TODO: ADD UNIT TEST
-fun CharacterData.toCharacterEntity(page: Int, collectionId: Int): CharacterEntity {
+fun CharacterData.toCharacterEntity(page: Int, collectionId: String): CharacterEntity {
     return CharacterEntity(
-        characterId = id?.toIntOrNull() ?: -1,
+        characterId = id ?: "-1",
         name = attributes?.name ?: "",
         imageUrl = attributes?.image?.original ?: "",
         collectionId = collectionId,

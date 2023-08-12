@@ -4,7 +4,7 @@ import com.theblackbit.animemania.android.data.internal.datasource.room.entity.C
 
 val collectionList = listOf(
     CollectionEntity(
-        collectionId = 1,
+        collectionId = "1",
         name = "Collection 1",
         averageRating = "4.5",
         startDate = "2023-08-01",
@@ -19,7 +19,7 @@ val collectionList = listOf(
         categoryId = 1,
     ),
     CollectionEntity(
-        collectionId = 2,
+        collectionId = "2",
         name = "Collection 2",
         averageRating = "4.2",
         startDate = "2023-09-01",
@@ -34,7 +34,7 @@ val collectionList = listOf(
         categoryId = 1,
     ),
     CollectionEntity(
-        collectionId = 3,
+        collectionId = "3",
         name = "Collection 3",
         averageRating = "3.8",
         startDate = "2023-07-15",
@@ -49,7 +49,7 @@ val collectionList = listOf(
         categoryId = 1,
     ),
     CollectionEntity(
-        collectionId = 4,
+        collectionId = "4",
         name = "Collection 4",
         averageRating = "4.7",
         startDate = "2023-10-01",
@@ -64,7 +64,7 @@ val collectionList = listOf(
         categoryId = 1,
     ),
     CollectionEntity(
-        collectionId = 5,
+        collectionId = "5",
         name = "Collection 5",
         averageRating = "3.5",
         startDate = "2023-08-15",
@@ -79,7 +79,7 @@ val collectionList = listOf(
         categoryId = 1,
     ),
     CollectionEntity(
-        collectionId = 6,
+        collectionId = "6",
         name = "Collection 6",
         averageRating = "4.0",
         startDate = "2023-10-15",
@@ -94,7 +94,7 @@ val collectionList = listOf(
         categoryId = 2,
     ),
     CollectionEntity(
-        collectionId = 7,
+        collectionId = "7",
         name = "Collection 7",
         averageRating = "4.8",
         startDate = "2023-09-15",
@@ -109,7 +109,7 @@ val collectionList = listOf(
         categoryId = 2,
     ),
     CollectionEntity(
-        collectionId = 8,
+        collectionId = "8",
         name = "Collection 8",
         averageRating = "3.2",
         startDate = "2023-07-01",
@@ -124,7 +124,7 @@ val collectionList = listOf(
         categoryId = 2,
     ),
     CollectionEntity(
-        collectionId = 9,
+        collectionId = "9",
         name = "Collection 9",
         averageRating = "4.4",
         startDate = "2023-11-01",
@@ -139,7 +139,7 @@ val collectionList = listOf(
         categoryId = 2,
     ),
     CollectionEntity(
-        collectionId = 10,
+        collectionId = "10",
         name = "Collection 10",
         averageRating = "3.9",
         startDate = "2023-10-01",

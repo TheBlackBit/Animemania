@@ -19,7 +19,7 @@ class MangaChaptersByKitsuRepositoryImpl(
                 mangaId = collectionId,
                 pageLimit = pageLimit,
                 pageOffset = pageOffset,
-            )
+            ).map { it }
         }
     }
 }

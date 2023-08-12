@@ -1,4 +1,4 @@
-package com.theblackbit.animemania.android.data.pagingsource.episode
+package com.theblackbit.animemania.android.data.pagingsource.chapter
 
 import androidx.paging.PagingState
 import androidx.paging.rxjava3.RxPagingSource
@@ -8,7 +8,7 @@ import com.theblackbit.animemania.android.data.external.repository.EpisodesByKit
 import com.theblackbit.animemania.android.data.internal.datasource.room.entity.ChapterEntity
 import com.theblackbit.animemania.android.data.internal.datasource.room.entity.toChapterModel
 import com.theblackbit.animemania.android.data.internal.repository.ChapterLocalRepository
-import com.theblackbit.animemania.android.data.pagingsource.collection.anime.AnimePagingSourceFactory
+import com.theblackbit.animemania.android.data.pagingsource.chapter.ChapterPagingSourceFactory.Companion.CHAPTER_PAGE_LIMIT
 import com.theblackbit.animemania.android.model.Chapter
 import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
@@ -19,12 +19,8 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 class EpisodePagingSource(
     private val localRepository: ChapterLocalRepository,
     private val remoteRepository: EpisodesByKitsuRepository,
-    private val collectionId: Int,
+    private val collectionId: String,
 ) : RxPagingSource<Int, Chapter>() {
-
-    companion object {
-        const val PAGE_LIMIT = 20
-    }
 
     override fun getRefreshKey(state: PagingState<Int, Chapter>): Int? {
         return state.anchorPosition
@@ -36,8 +32,8 @@ class EpisodePagingSource(
 
         return remoteRepository
             .getCollectionEpisodes(
-                collectionId.toString(),
-                PAGE_LIMIT.toString(),
+                collectionId,
+                CHAPTER_PAGE_LIMIT.toString(),
                 pageOffset.toString(),
             )
             .subscribeOn(Schedulers.io())
@@ -50,7 +46,7 @@ class EpisodePagingSource(
     }
 
     private fun validPageOffset(currentPage: Int): String? {
-        return if (currentPage == 1) null else ((currentPage - 1) * AnimePagingSourceFactory.PAGE_LIMIT).toString()
+        return if (currentPage == 1) null else ((currentPage - 1) * CHAPTER_PAGE_LIMIT).toString()
     }
 
     private fun handleApiResult(

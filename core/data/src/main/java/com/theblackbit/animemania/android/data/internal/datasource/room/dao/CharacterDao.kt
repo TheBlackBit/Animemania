@@ -14,8 +14,8 @@ interface CharacterDao {
 
     // TODO: TEST LIMIT
     @Query("SELECT * from characterentity WHERE collectionID =:collectionId AND page =:page limit 20")
-    fun getCharactersByCollectionId(collectionId: Int, page: Int): Single<List<CharacterEntity>>
+    fun getCharactersByCollectionId(collectionId: String, page: Int): Single<List<CharacterEntity>>
 
     @Query("DELETE FROM characterentity WHERE collectionID =:collectionId")
-    fun deleteCharactersByCollectionId(collectionId: Int)
+    fun deleteCharactersByCollectionId(collectionId: String)
 }

@@ -11,11 +11,11 @@ class ChapterRoomRepository(
         chapterDao.insertChapters(chapters)
     }
 
-    override fun getChaptersByCollection(collectionId: Int, pageNumber: Int): Single<List<ChapterEntity>> {
+    override fun getChaptersByCollection(collectionId: String, pageNumber: Int): Single<List<ChapterEntity>> {
         return chapterDao.getChaptersByCollection(collectionId, pageNumber)
     }
 
-    override fun deleteChaptersByCollection(collectionId: Int) {
+    override fun deleteChaptersByCollection(collectionId: String) {
         chapterDao.deleteChaptersByCollection(collectionId)
     }
 }

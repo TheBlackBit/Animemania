@@ -19,7 +19,7 @@ class AnimeEpisodesByKitsuRepository(
                 collectionId = collectionId,
                 pageNumber = pageNumber,
                 pageOffset = pageOffset,
-            )
+            ).map { it }
         }
     }
 }

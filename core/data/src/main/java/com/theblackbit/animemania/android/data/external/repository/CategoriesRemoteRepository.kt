@@ -4,5 +4,5 @@ import com.theblackbit.animemania.android.data.external.datasource.categories.Ca
 import io.reactivex.rxjava3.core.Single
 
 interface CategoriesRemoteRepository {
-    fun getCategoriesByCollectionType(): Single<List<Categories>>
+    fun getCategories(): Single<List<Categories>>
 }

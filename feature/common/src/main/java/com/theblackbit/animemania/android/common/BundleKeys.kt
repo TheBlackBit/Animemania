@@ -2,6 +2,7 @@ package com.theblackbit.animemania.android.common
 
 object BundleKeys {
     const val COLLECTION_ID = "collection_id"
+    const val COLLECTION_TYPE = "collection_type"
     const val COVER_IMAGE = "cover_image"
     const val POSTER_IMAGE = "poster_image"
     const val TITLE = "title"

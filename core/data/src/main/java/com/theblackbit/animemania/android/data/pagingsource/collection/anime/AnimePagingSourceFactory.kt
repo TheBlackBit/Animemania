@@ -15,10 +15,6 @@ class AnimePagingSourceFactory(
     private val animeRemoteRepository: AnimeRemoteRepository,
 ) {
 
-    companion object {
-        const val PAGE_LIMIT = 20
-    }
-
     fun getAnimePagingSource(categoryId: Int): RxPagingSource<Int, Collection> {
         return when (categoryId) {
             TRENDING_ANIME_ID -> TrendingAnimePagingSource(

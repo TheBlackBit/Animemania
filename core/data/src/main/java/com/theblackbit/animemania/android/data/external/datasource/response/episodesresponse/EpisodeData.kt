@@ -8,9 +8,10 @@ data class EpisodeData(
     val type: String?,
 )
 
-fun EpisodeData.toChapterEntity(page: Int, collectionId: Int): ChapterEntity {
+// TODO: ADD TEST
+fun EpisodeData.toChapterEntity(page: Int, collectionId: String): ChapterEntity {
     return ChapterEntity(
-        chapterId = id?.toIntOrNull() ?: -1,
+        chapterId = id ?: "-1",
         title = attributes?.canonicalTitle ?: "",
         synopsis = attributes?.synopsis ?: "",
         collectionId = collectionId,

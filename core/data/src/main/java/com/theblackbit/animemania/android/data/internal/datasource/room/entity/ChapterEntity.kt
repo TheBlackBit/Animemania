@@ -7,10 +7,10 @@ import com.theblackbit.animemania.android.model.Chapter
 @Entity
 data class ChapterEntity(
     @PrimaryKey
-    val chapterId: Int,
+    val chapterId: String,
     val title: String,
     val synopsis: String,
-    val collectionId: Int,
+    val collectionId: String,
     val number: Int,
     val seasonNumber: Int,
     val imageUrl: String,
@@ -19,7 +19,7 @@ data class ChapterEntity(
 
 fun ChapterEntity.toChapterModel(): Chapter {
     return Chapter(
-        id = chapterId.toString(),
+        id = chapterId,
         title = title,
         synopsis = synopsis,
         number = number.toString(),

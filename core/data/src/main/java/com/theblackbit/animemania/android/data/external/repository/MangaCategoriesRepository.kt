@@ -7,7 +7,7 @@ import io.reactivex.rxjava3.core.Single
 // TODO: ADD UNIT TEST
 class MangaCategoriesRepository : CategoriesRemoteRepository {
 
-    override fun getCategoriesByCollectionType(): Single<List<Categories>> {
+    override fun getCategories(): Single<List<Categories>> {
         return Single.just(
             mangaCategories,
         )

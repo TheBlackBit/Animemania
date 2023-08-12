@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayoutMediator
 import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_ID
+import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_TYPE
 import com.theblackbit.animemania.android.common.BundleKeys.COVER_IMAGE
 import com.theblackbit.animemania.android.common.BundleKeys.END_DATE
 import com.theblackbit.animemania.android.common.BundleKeys.GENRES
@@ -24,6 +25,7 @@ import com.theblackbit.animemania.android.detail.pagertabs.chapter.ChaptersTabFr
 import com.theblackbit.animemania.android.detail.pagertabs.character.CharactersTabFragment
 import com.theblackbit.animemania.android.feature.detail.R
 import com.theblackbit.animemania.android.feature.detail.databinding.FragmentDetailBinding
+import com.theblackbit.animemania.android.model.CollectionType
 import com.theblackbit.animemania.android.core.resources.R as resourcesR
 
 class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>(), OnBackNavigation {
@@ -51,6 +53,7 @@ class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>(), OnBackNa
             val endDate = getString(END_DATE, "")
             val genres = getString(GENRES, "")
             val overview = getString(SYNOPSIS, "")
+            val collectionType = getString(COLLECTION_TYPE, "")
 
             binding.apply {
                 cover.transitionName = collectionId
@@ -67,13 +70,22 @@ class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>(), OnBackNa
                 endDate = endDate,
                 genres = genres,
                 overview = overview,
+                collectionType = getValidCollectionType(collectionType),
             )
             configTabLayout()
         }
     }
 
+    private fun getValidCollectionType(collectionType: String?): CollectionType {
+        return when (collectionType) {
+            CollectionType.MANGA.name -> CollectionType.MANGA
+            else -> CollectionType.ANIME
+        }
+    }
+
     private fun configViewPagerWithTabs(
         collectionId: String,
+        collectionType: CollectionType,
         state: String,
         startDate: String,
         endDate: String,
@@ -91,8 +103,8 @@ class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>(), OnBackNa
                     genres = genres,
                     synopsis = overview,
                 ),
-                ChaptersTabFragment.createFragment(collectionId),
-                CharactersTabFragment.createFragment(collectionId),
+                ChaptersTabFragment.createFragment(collectionId, collectionType),
+                CharactersTabFragment.createFragment(collectionId, collectionType),
             ),
         )
         binding.vpInfo.adapter = detailTabAdapter

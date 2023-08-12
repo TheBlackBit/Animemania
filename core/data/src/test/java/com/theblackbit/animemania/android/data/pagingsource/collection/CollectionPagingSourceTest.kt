@@ -66,7 +66,7 @@ class CollectionPagingSourceTest {
                 CollectionCategoryJoin(
                     collectionCategoryJoinEntity = CollectionCategoryJoinEntity(
                         categoryId = categoryId,
-                        collectionId = 1,
+                        collectionId = "1",
                         pageNumber = pageNumber,
                     ),
                     collections = collectionEntities,
@@ -118,7 +118,7 @@ class CollectionPagingSourceTest {
                 CollectionCategoryJoin(
                     collectionCategoryJoinEntity = CollectionCategoryJoinEntity(
                         categoryId = categoryId,
-                        collectionId = 1,
+                        collectionId = "1",
                         pageNumber = pageNumber,
                     ),
                     collections = collectionEntities,
@@ -176,7 +176,7 @@ class CollectionPagingSourceTest {
                 CollectionCategoryJoin(
                     collectionCategoryJoinEntity = CollectionCategoryJoinEntity(
                         categoryId = categoryId,
-                        collectionId = 1,
+                        collectionId = "1",
                         pageNumber = pageNumber,
                     ),
                     collections = collectionEntities,

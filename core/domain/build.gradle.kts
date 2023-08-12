@@ -9,6 +9,7 @@ android {
 dependencies {
     implementation(project(":core:model"))
     implementation(project(":core:util"))
+    implementation(project(":core:data"))
     implementation(libs.paging.runtime)
     implementation(libs.paging.rxjava3)
 }

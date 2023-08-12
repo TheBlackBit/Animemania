@@ -5,8 +5,10 @@ import android.view.View
 import androidx.cardview.widget.CardView
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
+import androidx.paging.LoadState
 import androidx.paging.PagingData
 import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_ID
+import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_TYPE
 import com.theblackbit.animemania.android.common.BundleKeys.COVER_IMAGE
 import com.theblackbit.animemania.android.common.BundleKeys.END_DATE
 import com.theblackbit.animemania.android.common.BundleKeys.GENRES
@@ -25,10 +27,13 @@ import com.theblackbit.animemania.android.home.adapter.DataContainerAdapter
 import com.theblackbit.animemania.android.home.adapter.DataDiffCallback
 import com.theblackbit.animemania.android.model.Category
 import com.theblackbit.animemania.android.model.Collection
+import com.theblackbit.animemania.android.model.CollectionType
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-abstract class CollectionTabFragment : FragmentBindingCreator<FragmentTabContentBinding>() {
+abstract class CollectionTabFragment(
+    private val collectionType: CollectionType,
+) : FragmentBindingCreator<FragmentTabContentBinding>() {
 
     protected val dataDisposable = CompositeDisposable()
 
@@ -64,6 +69,12 @@ abstract class CollectionTabFragment : FragmentBindingCreator<FragmentTabContent
                 ),
             )
         }
+
+        dataForAdapter.last().first.addLoadStateListener { loadState ->
+            if (loadState.refresh is LoadState.NotLoading) {
+                hideProgress()
+            }
+        }
     }
 
     private fun navigateToDetail(collection: Collection, cardView: CardView) {
@@ -86,6 +97,7 @@ abstract class CollectionTabFragment : FragmentBindingCreator<FragmentTabContent
                     collection.genre.joinToString(separator = " \u25CF ") { it.name },
                 )
                 putString(SYNOPSIS, collection.synopsis)
+                putString(COLLECTION_TYPE, collectionType.name)
             }
         findNavController().navigate(
             R.id.action_homeFragment_to_detailFragment,
@@ -95,15 +107,13 @@ abstract class CollectionTabFragment : FragmentBindingCreator<FragmentTabContent
         )
     }
 
-    protected fun notifyInitDataCollected(index: Int, categories: List<Category>) {
-        if (index == categories.lastIndex) {
-            binding.initDataCollected = true
-            viewModel.initDataCollected = true
-        }
-    }
-
     protected fun submitDataIntoAdapter(index: Int, pagingData: PagingData<Collection>) {
         dataForAdapter[index].first.submitData(lifecycle, pagingData)
+    }
+
+    private fun hideProgress() {
+        binding.initDataCollected = true
+        viewModel.initDataCollected = true
     }
 
     override fun onDestroyView() {

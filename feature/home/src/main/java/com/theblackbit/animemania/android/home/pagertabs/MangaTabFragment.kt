@@ -3,8 +3,9 @@ package com.theblackbit.animemania.android.home.pagertabs
 import androidx.lifecycle.viewModelScope
 import com.theblackbit.animemania.android.feature.home.R
 import com.theblackbit.animemania.android.model.Category
+import com.theblackbit.animemania.android.model.CollectionType
 
-class MangaTabFragment : CollectionTabFragment() {
+class MangaTabFragment : CollectionTabFragment(CollectionType.MANGA) {
 
     override val layoutId: Int
         get() = R.layout.fragment_tab_content
@@ -28,7 +29,6 @@ class MangaTabFragment : CollectionTabFragment() {
                 )
                     .subscribe(
                         { data ->
-                            notifyInitDataCollected(index, categories)
                             submitDataIntoAdapter(index, data)
                         },
                         { error -> error.printStackTrace() },

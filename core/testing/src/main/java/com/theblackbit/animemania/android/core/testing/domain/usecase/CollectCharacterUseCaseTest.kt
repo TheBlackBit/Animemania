@@ -8,7 +8,8 @@ import io.reactivex.rxjava3.core.Flowable
 import java.util.concurrent.TimeUnit
 
 class CollectCharacterUseCaseTest : CollectCharactersUseCase {
-    override fun collect(collectionId: String): Flowable<PagingData<Character>> {
+
+    override fun collect(collectionId: String, mediaType: String): Flowable<PagingData<Character>> {
         return if (collectionId == ID_COLLECTION_DATA) {
             Flowable.just(PagingData.from(charactersData))
                 .delay(1, TimeUnit.SECONDS)

@@ -7,10 +7,10 @@ import com.theblackbit.animemania.android.model.Character
 @Entity
 data class CharacterEntity(
     @PrimaryKey
-    val characterId: Int,
+    val characterId: String,
     val name: String,
     val imageUrl: String,
-    val collectionId: Int,
+    val collectionId: String,
     val overView: String,
     val page: Int,
 )
@@ -18,7 +18,7 @@ data class CharacterEntity(
 // TODO: ADD UNIT TEST
 fun CharacterEntity.toCharacterModel(): Character {
     return Character(
-        id = characterId.toString(),
+        id = characterId,
         name = name,
         imageUrl = imageUrl,
         overView = overView,

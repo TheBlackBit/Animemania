@@ -5,7 +5,6 @@ import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
 
 interface CharacterByKitsuRepository {
-
     fun getCollectionCharacters(
         mediaType: String,
         collectionId: String,

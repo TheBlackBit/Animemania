@@ -14,12 +14,21 @@ import com.theblackbit.animemania.android.data.di.external.loggingInterceptorMod
 import com.theblackbit.animemania.android.data.di.external.mangaCategoriesRepositoryModule
 import com.theblackbit.animemania.android.data.di.external.mangaChaptersRepositoryModule
 import com.theblackbit.animemania.android.data.di.external.mangaRepositoryModule
-import com.theblackbit.animemania.android.data.di.internal.categoryLocalRepositoryModule
-import com.theblackbit.animemania.android.data.di.internal.chapterLocalRepositoryModule
-import com.theblackbit.animemania.android.data.di.internal.characterLocalRepositoryModule
-import com.theblackbit.animemania.android.data.di.internal.collectionLocalRepositoryModule
+import com.theblackbit.animemania.android.data.di.internal.categoryDaoModule
+import com.theblackbit.animemania.android.data.di.internal.categoryRoomRepositoryModule
+import com.theblackbit.animemania.android.data.di.internal.chapterDaoModule
+import com.theblackbit.animemania.android.data.di.internal.chapterRoomRepositoryModule
+import com.theblackbit.animemania.android.data.di.internal.characterDaoModule
+import com.theblackbit.animemania.android.data.di.internal.characterRoomRepositoryModule
+import com.theblackbit.animemania.android.data.di.internal.collectionDaoModule
+import com.theblackbit.animemania.android.data.di.internal.collectionRoomRepositoryModule
 import com.theblackbit.animemania.android.data.di.internal.roomDbModule
+import com.theblackbit.animemania.android.data.di.pagingsource.animePagingSourceFactoryModule
+import com.theblackbit.animemania.android.data.di.pagingsource.chapterPagingSourceFactoryModule
+import com.theblackbit.animemania.android.data.di.pagingsource.characterFactoryPagingSourceModule
+import com.theblackbit.animemania.android.data.di.pagingsource.mangaPagingSourceFactory
 import com.theblackbit.animemania.android.detail.di.chapterTabViewModelModule
+import com.theblackbit.animemania.android.detail.di.characterTabViewModelModule
 import com.theblackbit.animemania.android.domain.di.collectAnimeCategoriesUseCaseModule
 import com.theblackbit.animemania.android.domain.di.collectAnimeUseCaseModule
 import com.theblackbit.animemania.android.domain.di.collectChaptersUseCaseModule
@@ -28,6 +37,7 @@ import com.theblackbit.animemania.android.domain.di.collectMangaCategoriesUseCas
 import com.theblackbit.animemania.android.domain.di.collectMangaUseCaseModule
 import com.theblackbit.animemania.android.home.di.homeViewModelModule
 import com.theblackbit.animemania.android.util.di.safeApiRequestModule
+import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.startKoin
 
 class Animemania : Application() {
@@ -35,6 +45,8 @@ class Animemania : Application() {
         super.onCreate()
 
         startKoin {
+            androidContext(this@Animemania)
+
             modules(
                 listOf(
                     safeApiRequestModule,
@@ -52,11 +64,18 @@ class Animemania : Application() {
                     mangaChaptersRepositoryModule,
                     charactersRepositoryModule,
                     roomDbModule,
-                    categoryLocalRepositoryModule,
-                    chapterLocalRepositoryModule,
-                    collectionLocalRepositoryModule,
-                    characterLocalRepositoryModule,
-                    charactersRepositoryModule,
+                    categoryDaoModule,
+                    chapterDaoModule,
+                    collectionDaoModule,
+                    characterDaoModule,
+                    collectionRoomRepositoryModule,
+                    categoryRoomRepositoryModule,
+                    chapterRoomRepositoryModule,
+                    characterRoomRepositoryModule,
+                    animePagingSourceFactoryModule,
+                    mangaPagingSourceFactory,
+                    characterFactoryPagingSourceModule,
+                    chapterPagingSourceFactoryModule,
                     collectAnimeUseCaseModule,
                     collectMangaUseCaseModule,
                     collectAnimeCategoriesUseCaseModule,
@@ -65,7 +84,7 @@ class Animemania : Application() {
                     collectCharactersUseCaseModule,
                     homeViewModelModule,
                     chapterTabViewModelModule,
-                    chapterTabViewModelModule,
+                    characterTabViewModelModule,
                 ),
             )
         }

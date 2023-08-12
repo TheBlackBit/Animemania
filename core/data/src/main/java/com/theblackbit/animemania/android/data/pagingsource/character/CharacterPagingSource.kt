@@ -8,7 +8,7 @@ import com.theblackbit.animemania.android.data.external.repository.CharacterByKi
 import com.theblackbit.animemania.android.data.internal.datasource.room.entity.CharacterEntity
 import com.theblackbit.animemania.android.data.internal.datasource.room.entity.toCharacterModel
 import com.theblackbit.animemania.android.data.internal.repository.CharacterLocalRepository
-import com.theblackbit.animemania.android.data.pagingsource.collection.anime.AnimePagingSourceFactory
+import com.theblackbit.animemania.android.data.pagingsource.character.CharacterPagingSourceFactory.Companion.CHARACTER_PAGE_LIMIT
 import com.theblackbit.animemania.android.model.Character
 import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
@@ -19,12 +19,8 @@ class CharacterPagingSource(
     private val localRepository: CharacterLocalRepository,
     private val remoteRepository: CharacterByKitsuRepository,
     private val mediaType: String,
-    private val collectionId: Int,
+    private val collectionId: String,
 ) : RxPagingSource<Int, Character>() {
-
-    companion object {
-        const val PAGE_LIMIT = 20
-    }
 
     override fun getRefreshKey(state: PagingState<Int, Character>): Int? {
         return state.anchorPosition
@@ -37,8 +33,8 @@ class CharacterPagingSource(
         return remoteRepository
             .getCollectionCharacters(
                 mediaType,
-                collectionId.toString(),
-                PAGE_LIMIT.toString(),
+                collectionId,
+                CHARACTER_PAGE_LIMIT.toString(),
                 pageOffset,
             )
             .subscribeOn(Schedulers.io())
@@ -60,13 +56,12 @@ class CharacterPagingSource(
             }
             val characterEntities = result.value.characterData
                 .map { it.toCharacterEntity(page = currentPage, collectionId = collectionId) }
-
             localRepository.insertCharacters(characterEntities)
         }
     }
 
     private fun validPageOffset(currentPage: Int): String? {
-        return if (currentPage == 1) null else ((currentPage - 1) * AnimePagingSourceFactory.PAGE_LIMIT).toString()
+        return if (currentPage == 1) null else ((currentPage - 1) * CHARACTER_PAGE_LIMIT).toString()
     }
 
     private fun toLoadResult(

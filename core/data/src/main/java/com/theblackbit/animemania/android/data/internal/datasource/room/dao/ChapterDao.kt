@@ -15,8 +15,8 @@ interface ChapterDao {
 
     // TODO: TEST LIMIT
     @Query("SELECT * from chapterentity WHERE collectionID =:collectionId AND pageNumber =:pageNumber LIMIT 20")
-    fun getChaptersByCollection(collectionId: Int, pageNumber: Int): Single<List<ChapterEntity>>
+    fun getChaptersByCollection(collectionId: String, pageNumber: Int): Single<List<ChapterEntity>>
 
     @Query("DELETE FROM chapterentity WHERE collectionID =:collectionId")
-    fun deleteChaptersByCollection(collectionId: Int)
+    fun deleteChaptersByCollection(collectionId: String)
 }

@@ -10,7 +10,6 @@ import com.theblackbit.animemania.android.data.internal.datasource.room.entity.C
 import com.theblackbit.animemania.android.data.internal.datasource.room.entity.CollectionEntity
 import com.theblackbit.animemania.android.data.internal.datasource.room.entity.toCollection
 import com.theblackbit.animemania.android.data.internal.repository.CollectionLocalRepository
-import com.theblackbit.animemania.android.data.pagingsource.collection.anime.AnimePagingSourceFactory.Companion.PAGE_LIMIT
 import com.theblackbit.animemania.android.model.Collection
 import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
@@ -21,6 +20,11 @@ open class CollectionPagingSource(
     private val request: (pageLimit: String, pageOffset: String?) -> Single<SafeApiRequest.ApiResultHandle<CollectionResponse>>,
     private val categoryId: Int,
 ) : RxPagingSource<Int, Collection>() {
+
+    companion object {
+        const val COLLECTION_PAGE_LIMIT = 20
+    }
+
     override fun getRefreshKey(state: PagingState<Int, Collection>): Int? {
         return state.anchorPosition
     }
@@ -31,7 +35,7 @@ open class CollectionPagingSource(
 
         return request
             .invoke(
-                PAGE_LIMIT.toString(),
+                COLLECTION_PAGE_LIMIT.toString(),
                 pageOffset,
             )
             .subscribeOn(Schedulers.io())
@@ -66,7 +70,7 @@ open class CollectionPagingSource(
     }
 
     private fun validPageOffset(currentPage: Int): String? {
-        return if (currentPage == 1) null else ((currentPage - 1) * PAGE_LIMIT).toString()
+        return if (currentPage == 1) null else ((currentPage - 1) * COLLECTION_PAGE_LIMIT).toString()
     }
 
     private fun clearCollectionsByCategory() {

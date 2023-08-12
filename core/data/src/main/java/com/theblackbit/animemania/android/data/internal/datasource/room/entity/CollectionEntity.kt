@@ -9,7 +9,7 @@ import com.theblackbit.animemania.android.model.StatusOfEmission
 @Entity
 data class CollectionEntity(
     @PrimaryKey
-    val collectionId: Int,
+    val collectionId: String,
     val name: String,
     val averageRating: String,
     val startDate: String,
@@ -27,7 +27,7 @@ data class CollectionEntity(
 // TODO: REPLACE dates and GENRE AND TEST
 fun CollectionEntity.toCollection(): Collection {
     return Collection(
-        collectionId = collectionId.toString(),
+        collectionId = collectionId,
         name = name,
         averageRating = averageRating,
         startDate = startDate,

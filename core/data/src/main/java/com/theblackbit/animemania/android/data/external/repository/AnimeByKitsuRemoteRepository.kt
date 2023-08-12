@@ -18,7 +18,7 @@ class AnimeByKitsuRemoteRepository(
             kitsuCollectionDataSource.getTrendingCollection(
                 pageLimit = pageLimit,
                 pageOffset = pageOffset,
-            )
+            ).map { it }
         }
     }
 
@@ -30,7 +30,7 @@ class AnimeByKitsuRemoteRepository(
             kitsuCollectionDataSource.getMostWantedCollection(
                 pageLimit = pageLimit,
                 pageOffset = pageOffset,
-            )
+            ).map { it }
         }
     }
 
@@ -42,7 +42,7 @@ class AnimeByKitsuRemoteRepository(
             kitsuCollectionDataSource.getTopRatedCollection(
                 pageLimit = pageLimit,
                 pageOffset = pageOffset,
-            )
+            ).map { it }
         }
     }
 
@@ -54,7 +54,7 @@ class AnimeByKitsuRemoteRepository(
             kitsuCollectionDataSource.getPopularCollection(
                 pageLimit = pageLimit,
                 pageOffset = pageOffset,
-            )
+            ).map { it }
         }
     }
 }

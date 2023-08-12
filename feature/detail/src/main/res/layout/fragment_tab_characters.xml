@@ -25,7 +25,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:visibility="@{hideProgress ? View.VISIBLE : View.GONE}"
-            android:nestedScrollingEnabled="false"
             android:orientation="vertical"
             android:paddingHorizontal="8dp"
             android:clipToPadding="false"

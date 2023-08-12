@@ -20,7 +20,7 @@ class TestCharactersDao {
 
     private lateinit var characterDao: CharacterDao
 
-    private val collectionId = 1
+    private val collectionId = "1"
     private val page = 1
 
     // TODO: RUN TEST
