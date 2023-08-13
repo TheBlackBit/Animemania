@@ -2,7 +2,7 @@ package com.theblackbit.animemania.android.home.pagertabs
 
 import android.os.Bundle
 import android.view.View
-import androidx.cardview.widget.CardView
+import android.widget.ImageView
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
@@ -18,6 +18,7 @@ import com.theblackbit.animemania.android.common.BundleKeys.START_DATE
 import com.theblackbit.animemania.android.common.BundleKeys.STATE
 import com.theblackbit.animemania.android.common.BundleKeys.SYNOPSIS
 import com.theblackbit.animemania.android.common.BundleKeys.TITLE
+import com.theblackbit.animemania.android.common.BundleKeys.TRANSITION_NAME
 import com.theblackbit.animemania.android.common.FragmentBindingCreator
 import com.theblackbit.animemania.android.core.resources.R
 import com.theblackbit.animemania.android.feature.home.databinding.FragmentTabContentBinding
@@ -48,8 +49,8 @@ abstract class CollectionTabFragment(
         val initDataCollected = viewModel.initDataCollected
         binding.initDataCollected = initDataCollected
         if (!initDataCollected) {
-            binding.rvData.adapter = DataContainerAdapter(dataForAdapter)
             fetchCollectionsByCategory()
+            binding.rvData.adapter = DataContainerAdapter(dataForAdapter)
         }
     }
 
@@ -58,12 +59,13 @@ abstract class CollectionTabFragment(
             dataForAdapter.add(
                 Pair(
                     DataAdapter(
-                        DataDiffCallback(),
-                        object : DataAdapter.OnClickCollection {
-                            override fun onClick(collection: Collection, cardView: CardView) {
-                                navigateToDetail(collection, cardView)
+                        diffCallback = DataDiffCallback(),
+                        onClickCollection = object : DataAdapter.OnClickCollection {
+                            override fun onClick(collection: Collection, imageView: ImageView) {
+                                navigateToDetail(collection, imageView, category.categoryId)
                             }
                         },
+                        categoryId = category.categoryId,
                     ),
                     category.categoryName,
                 ),
@@ -77,13 +79,15 @@ abstract class CollectionTabFragment(
         }
     }
 
-    private fun navigateToDetail(collection: Collection, cardView: CardView) {
+    private fun navigateToDetail(collection: Collection, imageView: ImageView, categoryId: Int) {
         val bundle = Bundle()
+        val transitionName = collection.collectionId.plus(categoryId.toString())
         val extras = FragmentNavigatorExtras(
-            cardView to collection.collectionId,
+            imageView to transitionName,
         )
         bundle
             .apply {
+                putString(TRANSITION_NAME, transitionName)
                 putString(COLLECTION_ID, collection.collectionId)
                 putString(TITLE, collection.name)
                 putString(COVER_IMAGE, collection.bigPosterImageUrl)
@@ -99,11 +103,12 @@ abstract class CollectionTabFragment(
                 putString(SYNOPSIS, collection.synopsis)
                 putString(COLLECTION_TYPE, collectionType.name)
             }
+
         findNavController().navigate(
-            R.id.action_homeFragment_to_detailFragment,
-            bundle,
-            null,
-            extras,
+            resId = R.id.action_homeFragment_to_detailFragment,
+            args = bundle,
+            navOptions = null,
+            navigatorExtras = extras,
         )
     }
 

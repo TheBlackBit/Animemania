@@ -74,9 +74,9 @@
             android:layout_height="@dimen/image_cover_height"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/image_cover_margin_start"
-            android:background="?attr/colorSurface"
             android:elevation="@dimen/image_cover_elevation"
             android:transformPivotX="120dp"
+            app:cardBackgroundColor="@android:color/transparent"
             app:cardCornerRadius="12dp"
             app:layout_constraintBottom_toBottomOf="@id/coverCollapse"
             app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +84,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="?attr/colorSurface">
 
                 <ImageView
                     android:id="@+id/imageCover"
@@ -170,6 +171,7 @@
                 android:id="@+id/vp_info"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginVertical="10dp"
                 android:background="?attr/colorSurface"
                 android:nestedScrollingEnabled="false" />
 

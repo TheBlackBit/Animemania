@@ -7,16 +7,18 @@ import com.theblackbit.animemania.android.model.Collection
 class DataViewHolder(
     private val binding: ItemDataBinding,
     private val onClickCollection: DataAdapter.OnClickCollection,
+    private val categoryId: Int,
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(collection: Collection) {
         with(binding) {
             name = collection.name
             url = collection.miniPosterImageUrl
-            binding.cvContainer.transitionName = collection.collectionId
+            binding.ivPoster.transitionName = collection.collectionId.plus(categoryId.toString())
             binding.flCollection.setOnClickListener {
-                onClickCollection.onClick(collection, binding.cvContainer)
+                onClickCollection.onClick(collection, binding.ivPoster)
             }
+            executePendingBindings()
         }
     }
 }

@@ -13,15 +13,15 @@ fun Data.toCollectionEntity(categoryId: Int, collectionType: String): Collection
     return CollectionEntity(
         collectionId = id ?: "-1",
         name = attributes?.canonicalTitle ?: "",
-        averageRating = attributes?.averageRating ?: "",
+        averageRating = (attributes?.averageRating?.plus("%")) ?: "",
         startDate = attributes?.startDate ?: "",
         endDate = attributes?.endDate ?: "",
         genres = "",
         categoryId = categoryId,
         collectionType = collectionType,
         episodeCount = "",
-        miniPosterImageUrl = attributes?.coverImage?.original ?: "",
-        bigPosterImageUrl = attributes?.posterImage?.medium ?: "",
+        miniPosterImageUrl = attributes?.posterImage?.validImage() ?: "",
+        bigPosterImageUrl = attributes?.coverImage?.validImage() ?: "",
         status = attributes?.status ?: "",
         synopsis = attributes?.synopsis ?: "",
     )

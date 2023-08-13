@@ -7,3 +7,7 @@ data class ThumbnailEpisode(
     val medium: String?,
     val original: String?,
 )
+
+fun ThumbnailEpisode.validImage(): String {
+    return original ?: medium ?: large ?: small ?: tiny ?: ""
+}

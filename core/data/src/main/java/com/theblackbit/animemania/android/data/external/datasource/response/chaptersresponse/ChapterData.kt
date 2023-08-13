@@ -17,7 +17,7 @@ fun ChapterData.toChapterEntity(page: Int, collectionId: String): ChapterEntity 
         collectionId = collectionId,
         number = attributes?.number ?: -1,
         seasonNumber = attributes?.volumeNumber ?: -1,
-        imageUrl = attributes?.thumbnail?.medium ?: "",
+        imageUrl = attributes?.thumbnail?.validImage() ?: "",
         pageNumber = page,
     )
 }

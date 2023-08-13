@@ -21,7 +21,7 @@
             <KeyAttribute
                 app:framePosition="20"
                 app:motionTarget="@id/cover"
-                android:rotation="90"
+                android:rotation="125"
                 android:elevation="0dp"
                 />
 
@@ -118,7 +118,7 @@
         <Constraint
             android:id="@+id/coverCollapse"
             android:layout_width="match_parent"
-            android:alpha="0.8"
+            android:alpha="0"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_height="@dimen/cover_collapse_height"/>
@@ -140,7 +140,6 @@
             android:layout_height="@dimen/image_cover_height"
             android:elevation="0dp"
             android:rotation="0"
-            android:alpha="0.5"
             android:layout_marginStart="@dimen/image_cover_margin_start"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/coverCollapse"

@@ -55,6 +55,7 @@ class CharacterPagingSource(
                 localRepository.deleteCharactersByCollectionId(collectionId)
             }
             val characterEntities = result.value.characterData
+                .distinctBy { characterData -> characterData.attributes?.canonicalName }
                 .map { it.toCharacterEntity(page = currentPage, collectionId = collectionId) }
             localRepository.insertCharacters(characterEntities)
         }

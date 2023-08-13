@@ -47,6 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginHorizontal="16dp"
+                android:textFontWeight="700"
                 android:maxLines="1"
                 android:ellipsize="end"
                 android:text="@{name}"

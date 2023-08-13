@@ -16,6 +16,8 @@ class CollectCharactersUseCaseImpl(
         return Pager(
             config = PagingConfig(
                 pageSize = CharacterPagingSourceFactory.CHARACTER_PAGE_LIMIT,
+                initialLoadSize = CharacterPagingSourceFactory.CHARACTER_PAGE_LIMIT,
+                enablePlaceholders = false,
             ),
             pagingSourceFactory = {
                 characterPagingSourceFactory.getCharacterPagingSourceByMediaType(

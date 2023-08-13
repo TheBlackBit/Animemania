@@ -2,7 +2,9 @@ package com.theblackbit.animemania.android.detail
 
 import android.os.Bundle
 import android.transition.TransitionInflater
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayoutMediator
@@ -17,32 +19,48 @@ import com.theblackbit.animemania.android.common.BundleKeys.START_DATE
 import com.theblackbit.animemania.android.common.BundleKeys.STATE
 import com.theblackbit.animemania.android.common.BundleKeys.SYNOPSIS
 import com.theblackbit.animemania.android.common.BundleKeys.TITLE
-import com.theblackbit.animemania.android.common.FragmentBindingCreator
+import com.theblackbit.animemania.android.common.BundleKeys.TRANSITION_NAME
 import com.theblackbit.animemania.android.common.OnBackNavigation
 import com.theblackbit.animemania.android.detail.adapter.DetailTabAdapter
 import com.theblackbit.animemania.android.detail.pagertabs.OverviewTabFragment
 import com.theblackbit.animemania.android.detail.pagertabs.chapter.ChaptersTabFragment
 import com.theblackbit.animemania.android.detail.pagertabs.character.CharactersTabFragment
-import com.theblackbit.animemania.android.feature.detail.R
 import com.theblackbit.animemania.android.feature.detail.databinding.FragmentDetailBinding
 import com.theblackbit.animemania.android.model.CollectionType
 import com.theblackbit.animemania.android.core.resources.R as resourcesR
 
-class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>(), OnBackNavigation {
-    override val layoutId: Int
-        get() = R.layout.fragment_detail
+class DetailFragment : Fragment(), OnBackNavigation {
+
+    private lateinit var binding: FragmentDetailBinding
 
     private lateinit var detailTabAdapter: DetailTabAdapter
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        sharedElementEnterTransition =
-            TransitionInflater.from(context).inflateTransition(android.R.transition.move)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View {
+        if (!::binding.isInitialized) {
+            binding = FragmentDetailBinding.inflate(inflater, container, false)
+        }
+        binding.also {
+            it.lifecycleOwner = viewLifecycleOwner
+        }
+
+        initView()
+
+        return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    private fun initView() {
+        val animation =
+            TransitionInflater.from(context).inflateTransition(android.R.transition.move)
+        sharedElementEnterTransition = animation
+
+        sharedElementReturnTransition = animation
+
         arguments?.apply {
+            val transitionName = getString(TRANSITION_NAME, "")
             val collectionId = getString(COLLECTION_ID, "")
             val coverImageVal = getString(COVER_IMAGE, "")
             val posterImageVal = getString(POSTER_IMAGE, "")
@@ -56,7 +74,7 @@ class DetailFragment : FragmentBindingCreator<FragmentDetailBinding>(), OnBackNa
             val collectionType = getString(COLLECTION_TYPE, "")
 
             binding.apply {
-                cover.transitionName = collectionId
+                imageCover.transitionName = transitionName
                 coverImage = coverImageVal
                 posterImage = posterImageVal
                 title = titleVal

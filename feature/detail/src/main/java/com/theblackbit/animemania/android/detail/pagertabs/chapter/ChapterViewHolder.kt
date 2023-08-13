@@ -9,7 +9,12 @@ class ChapterViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(chapter: Chapter) {
         with(binding) {
-            name = "${chapter.number}. ${chapter.title}"
+            val title = if (chapter.title.isEmpty()) {
+                chapter.number
+            } else {
+                "${chapter.number}. ${chapter.title}"
+            }
+            name = title
             imageUrl = chapter.imageUrl
         }
     }

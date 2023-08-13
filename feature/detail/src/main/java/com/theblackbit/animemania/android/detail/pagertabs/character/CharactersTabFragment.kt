@@ -3,6 +3,7 @@ package com.theblackbit.animemania.android.detail.pagertabs.character
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.viewModelScope
+import androidx.paging.LoadState
 import androidx.paging.PagingData
 import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_ID
 import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_TYPE
@@ -55,6 +56,9 @@ class CharactersTabFragment : FragmentBindingCreator<FragmentTabCharactersBindin
                     showNoDataView()
                 }
             }
+            if (loadState.refresh is LoadState.NotLoading) {
+                hideProgressBar()
+            }
         }
     }
 
@@ -69,7 +73,6 @@ class CharactersTabFragment : FragmentBindingCreator<FragmentTabCharactersBindin
                     scope = viewModel.viewModelScope,
                 )
                     .subscribe({ characters ->
-                        hideProgressBar()
                         addElementToRecyclerView(characters)
                     }, { error ->
                         error.printStackTrace()

@@ -12,8 +12,8 @@ data class CharacterData(
 fun CharacterData.toCharacterEntity(page: Int, collectionId: String): CharacterEntity {
     return CharacterEntity(
         characterId = id ?: "-1",
-        name = attributes?.name ?: "",
-        imageUrl = attributes?.image?.original ?: "",
+        name = attributes?.canonicalName ?: "",
+        imageUrl = attributes?.image?.validImage() ?: "",
         collectionId = collectionId,
         overView = attributes?.description ?: "",
         page = page,

@@ -3,6 +3,6 @@ package com.theblackbit.animemania.android.data.external.datasource.response.cha
 import com.google.gson.annotations.SerializedName
 
 data class CharacterResponse(
-    @SerializedName("data")
+    @SerializedName("included")
     val characterData: List<CharacterData>,
 )

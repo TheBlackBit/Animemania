@@ -3,6 +3,7 @@ package com.theblackbit.animemania.android.detail.pagertabs.chapter
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.viewModelScope
+import androidx.paging.LoadState
 import androidx.paging.PagingData
 import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_ID
 import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_TYPE
@@ -54,6 +55,10 @@ class ChaptersTabFragment : FragmentBindingCreator<FragmentTabChaptersBinding>()
                     showNoDataView()
                 }
             }
+
+            if (loadState.refresh is LoadState.NotLoading) {
+                hideProgressBar()
+            }
         }
     }
 
@@ -70,7 +75,6 @@ class ChaptersTabFragment : FragmentBindingCreator<FragmentTabChaptersBinding>()
                 )
                     .subscribe({ chapters ->
                         addElementToRecyclerView(chapters)
-                        hideProgressBar()
                     }, { error ->
                         error.printStackTrace()
                     }),
