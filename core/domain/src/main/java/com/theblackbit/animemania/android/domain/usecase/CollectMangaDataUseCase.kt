@@ -9,7 +9,6 @@ import com.theblackbit.animemania.android.data.pagingsource.collection.manga.Man
 import com.theblackbit.animemania.android.model.Collection
 import io.reactivex.rxjava3.core.Flowable
 
-// TODO: ADD UNIT TEST
 class CollectMangaDataUseCase(
     private val pagingSourceFactory: MangaPagingSourceFactory,
 ) : CollectCollectionDataUseCase {

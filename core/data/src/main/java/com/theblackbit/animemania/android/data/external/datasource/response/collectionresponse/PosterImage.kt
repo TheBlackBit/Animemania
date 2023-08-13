@@ -8,7 +8,6 @@ data class PosterImage(
     val tiny: String?,
 )
 
-// TODO: ADD UNIT TEST
 fun PosterImage.validImage(): String {
     return large ?: medium ?: original ?: small ?: tiny ?: ""
 }

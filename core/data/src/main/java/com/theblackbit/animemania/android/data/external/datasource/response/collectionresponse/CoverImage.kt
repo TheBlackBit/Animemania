@@ -8,7 +8,6 @@ data class CoverImage(
     val medium: String?,
 )
 
-// TODO: ADD UNIT TEST
 fun CoverImage.validImage(): String {
     return large ?: medium ?: original ?: small ?: tiny ?: ""
 }

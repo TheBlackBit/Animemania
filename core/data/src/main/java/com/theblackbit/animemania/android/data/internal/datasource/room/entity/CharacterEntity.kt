@@ -15,7 +15,6 @@ data class CharacterEntity(
     val page: Int,
 )
 
-// TODO: ADD UNIT TEST
 fun CharacterEntity.toCharacterModel(): Character {
     return Character(
         id = characterId,

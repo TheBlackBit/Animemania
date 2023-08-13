@@ -13,7 +13,6 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-// TODO: RUN TEST
 @RunWith(AndroidJUnit4::class)
 class TestChaptersDao {
 
@@ -39,7 +38,7 @@ class TestChaptersDao {
 
     @Test
     fun testInsertAndCollectChapters() {
-        val collectionId = 1
+        val collectionId = "1"
         chapterDao.insertChapters(chapterList)
         chapterDao.getChaptersByCollection(collectionId, 1)
             .test()
@@ -53,7 +52,7 @@ class TestChaptersDao {
 
     @Test
     fun testDeleteChaptersByCollectionId() {
-        val collectionId = 1
+        val collectionId = "1"
         chapterDao.insertChapters(chapterList)
         chapterDao.deleteChaptersByCollection(collectionId)
         chapterDao.getChaptersByCollection(collectionId, 1)

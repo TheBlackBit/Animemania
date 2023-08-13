@@ -14,8 +14,6 @@ import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.schedulers.Schedulers
 
-// TODO: UNIT TEST AND REFACTOR BOILERPLATE WITH CHAPTER
-
 class EpisodePagingSource(
     private val localRepository: ChapterLocalRepository,
     private val remoteRepository: EpisodesByKitsuRepository,

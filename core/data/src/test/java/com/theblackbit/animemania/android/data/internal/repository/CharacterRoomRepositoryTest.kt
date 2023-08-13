@@ -17,7 +17,7 @@ class CharacterRoomRepositoryTest {
 
     private lateinit var sut: CharacterRoomRepository
 
-    private val collectionId = 1
+    private val collectionId = "1"
 
     private val page = 1
 

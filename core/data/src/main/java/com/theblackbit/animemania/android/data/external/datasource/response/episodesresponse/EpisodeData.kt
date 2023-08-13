@@ -8,7 +8,6 @@ data class EpisodeData(
     val type: String?,
 )
 
-// TODO: ADD TEST
 fun EpisodeData.toChapterEntity(page: Int, collectionId: String): ChapterEntity {
     return ChapterEntity(
         chapterId = id ?: "-1",

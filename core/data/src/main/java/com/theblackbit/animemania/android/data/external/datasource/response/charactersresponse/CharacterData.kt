@@ -8,7 +8,6 @@ data class CharacterData(
     val type: String?,
 )
 
-// TODO: ADD UNIT TEST
 fun CharacterData.toCharacterEntity(page: Int, collectionId: String): CharacterEntity {
     return CharacterEntity(
         characterId = id ?: "-1",

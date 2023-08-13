@@ -10,7 +10,7 @@ val collectionDataList = listOf(
         Attributes(
             "4.75",
             "Title 1",
-            CoverImage("cover1_large", "cover1_original", "cover1_small", "cover1_tiny"),
+            CoverImage("cover1_large", "cover1_original", "cover1_small", "cover1_tiny", "test"),
             "2023-08-01",
             PosterImage(
                 "poster1_large",
@@ -32,7 +32,7 @@ val collectionDataList = listOf(
         Attributes(
             "4.50",
             "Title 2",
-            CoverImage("cover2_large", "cover2_original", "cover2_small", "cover2_tiny"),
+            CoverImage("cover2_large", "cover2_original", "cover2_small", "cover2_tiny", "test"),
             "2023-09-15",
             PosterImage(
                 "poster2_large",
@@ -54,7 +54,7 @@ val collectionDataList = listOf(
         Attributes(
             "4.20",
             "Title 3",
-            CoverImage("cover3_large", "cover3_original", "cover3_small", "cover3_tiny"),
+            CoverImage("cover3_large", "cover3_original", "cover3_small", "cover3_tiny", "test"),
             "2023-10-20",
             PosterImage(
                 "poster3_large",
@@ -76,7 +76,7 @@ val collectionDataList = listOf(
         Attributes(
             "2.65",
             "Title 4",
-            CoverImage("cover4_large", "cover4_original", "cover4_small", "cover4_tiny"),
+            CoverImage("cover4_large", "cover4_original", "cover4_small", "cover4_tiny", "test"),
             "2023-11-04",
             PosterImage(
                 "poster4_large",
@@ -98,7 +98,7 @@ val collectionDataList = listOf(
         Attributes(
             "2.60",
             "Title 5",
-            CoverImage("cover5_large", "cover5_original", "cover5_small", "cover5_tiny"),
+            CoverImage("cover5_large", "cover5_original", "cover5_small", "cover5_tiny", "test"),
             "2023-11-05",
             PosterImage(
                 "poster5_large",
@@ -120,7 +120,7 @@ val collectionDataList = listOf(
         Attributes(
             "2.55",
             "Title 6",
-            CoverImage("cover6_large", "cover6_original", "cover6_small", "cover6_tiny"),
+            CoverImage("cover6_large", "cover6_original", "cover6_small", "cover6_tiny", "test"),
             "2023-11-06",
             PosterImage(
                 "poster6_large",
@@ -142,7 +142,7 @@ val collectionDataList = listOf(
         Attributes(
             "2.50",
             "Title 7",
-            CoverImage("cover7_large", "cover7_original", "cover7_small", "cover7_tiny"),
+            CoverImage("cover7_large", "cover7_original", "cover7_small", "cover7_tiny", "test"),
             "2023-11-07",
             PosterImage(
                 "poster7_large",
@@ -164,7 +164,7 @@ val collectionDataList = listOf(
         Attributes(
             "2.45",
             "Title 8",
-            CoverImage("cover8_large", "cover8_original", "cover8_small", "cover8_tiny"),
+            CoverImage("cover8_large", "cover8_original", "cover8_small", "cover8_tiny", "test"),
             "2023-11-08",
             PosterImage(
                 "poster8_large",
@@ -186,7 +186,7 @@ val collectionDataList = listOf(
         Attributes(
             "2.40",
             "Title 9",
-            CoverImage("cover9_large", "cover9_original", "cover9_small", "cover9_tiny"),
+            CoverImage("cover9_large", "cover9_original", "cover9_small", "cover9_tiny", "test"),
             "2023-11-09",
             PosterImage(
                 "poster9_large",
@@ -208,7 +208,7 @@ val collectionDataList = listOf(
         Attributes(
             "2.35",
             "Title 10",
-            CoverImage("cover10_large", "cover10_original", "cover10_small", "cover10_tiny"),
+            CoverImage("cover10_large", "cover10_original", "cover10_small", "cover10_tiny", "test"),
             "2023-11-10",
             PosterImage(
                 "poster10_large",
@@ -230,7 +230,7 @@ val collectionDataList = listOf(
         Attributes(
             "3.30",
             "Title 11",
-            CoverImage("cover11_large", "cover11_original", "cover11_small", "cover11_tiny"),
+            CoverImage("cover11_large", "cover11_original", "cover11_small", "cover11_tiny", "test"),
             "2023-11-11",
             PosterImage(
                 "poster11_large",
@@ -252,7 +252,7 @@ val collectionDataList = listOf(
         Attributes(
             "3.20",
             "Title 12",
-            CoverImage("cover12_large", "cover12_original", "cover12_small", "cover12_tiny"),
+            CoverImage("cover12_large", "cover12_original", "cover12_small", "cover12_tiny", "test"),
             "2023-11-12",
             PosterImage(
                 "poster12_large",
@@ -274,7 +274,7 @@ val collectionDataList = listOf(
         Attributes(
             "3.10",
             "Title 13",
-            CoverImage("cover13_large", "cover13_original", "cover13_small", "cover13_tiny"),
+            CoverImage("cover13_large", "cover13_original", "cover13_small", "cover13_tiny", "test"),
             "2023-11-13",
             PosterImage(
                 "poster13_large",
@@ -296,7 +296,7 @@ val collectionDataList = listOf(
         Attributes(
             "3.05",
             "Title 14",
-            CoverImage("cover14_large", "cover14_original", "cover14_small", "cover14_tiny"),
+            CoverImage("cover14_large", "cover14_original", "cover14_small", "cover14_tiny", "test"),
             "2023-11-14",
             PosterImage(
                 "poster14_large",
@@ -318,7 +318,7 @@ val collectionDataList = listOf(
         Attributes(
             "2.95",
             "Title 15",
-            CoverImage("cover15_large", "cover15_original", "cover15_small", "cover15_tiny"),
+            CoverImage("cover15_large", "cover15_original", "cover15_small", "cover15_tiny", "test"),
             "2023-11-15",
             PosterImage(
                 "poster15_large",
@@ -340,7 +340,7 @@ val collectionDataList = listOf(
         Attributes(
             "2.90",
             "Title 16",
-            CoverImage("cover16_large", "cover16_original", "cover16_small", "cover16_tiny"),
+            CoverImage("cover16_large", "cover16_original", "cover16_small", "cover16_tiny", "test"),
             "2023-11-16",
             PosterImage(
                 "poster16_large",
@@ -362,7 +362,7 @@ val collectionDataList = listOf(
         Attributes(
             "2.85",
             "Title 17",
-            CoverImage("cover17_large", "cover17_original", "cover17_small", "cover17_tiny"),
+            CoverImage("cover17_large", "cover17_original", "cover17_small", "cover17_tiny", "test"),
             "2023-11-17",
             PosterImage(
                 "poster17_large",
@@ -384,7 +384,7 @@ val collectionDataList = listOf(
         Attributes(
             "2.80",
             "Title 18",
-            CoverImage("cover18_large", "cover18_original", "cover18_small", "cover18_tiny"),
+            CoverImage("cover18_large", "cover18_original", "cover18_small", "cover18_tiny", "test"),
             "2023-11-18",
             PosterImage(
                 "poster18_large",
@@ -406,7 +406,7 @@ val collectionDataList = listOf(
         Attributes(
             "2.75",
             "Title 19",
-            CoverImage("cover19_large", "cover19_original", "cover19_small", "cover19_tiny"),
+            CoverImage("cover19_large", "cover19_original", "cover19_small", "cover19_tiny", "test"),
             "2023-11-19",
             PosterImage(
                 "poster19_large",
@@ -428,7 +428,7 @@ val collectionDataList = listOf(
         Attributes(
             "2.70",
             "Title 20",
-            CoverImage("cover20_large", "cover20_original", "cover20_small", "cover20_tiny"),
+            CoverImage("cover20_large", "cover20_original", "cover20_small", "cover20_tiny", "test"),
             "2023-11-20",
             PosterImage(
                 "poster20_large",

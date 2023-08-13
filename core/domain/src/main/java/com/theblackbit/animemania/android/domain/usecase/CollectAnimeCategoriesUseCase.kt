@@ -5,7 +5,6 @@ import com.theblackbit.animemania.android.data.external.repository.CategoriesRem
 import com.theblackbit.animemania.android.model.Category
 import io.reactivex.rxjava3.core.Single
 
-// TODO: ADD UNIT TEST
 class CollectAnimeCategoriesUseCase(
     private val animeCategoryRepository: CategoriesRemoteRepository,
 ) : CollectCategoriesUseCase {

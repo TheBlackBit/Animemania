@@ -7,7 +7,6 @@ import com.theblackbit.animemania.android.data.internal.repository.ChapterLocalR
 import com.theblackbit.animemania.android.model.Chapter
 import com.theblackbit.animemania.android.model.CollectionType
 
-// TODO: ADD UNIT TEST
 class ChapterPagingSourceFactory(
     private val localRepository: ChapterLocalRepository,
     private val mangaChapters: MangaChaptersByKitsuRepository,

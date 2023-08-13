@@ -14,7 +14,6 @@ import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.schedulers.Schedulers
 
-// TODO: ADD UNIT TEST
 class CharacterPagingSource(
     private val localRepository: CharacterLocalRepository,
     private val remoteRepository: CharacterByKitsuRepository,

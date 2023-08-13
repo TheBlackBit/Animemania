@@ -15,8 +15,6 @@ import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.schedulers.Schedulers
 
-// TODO: ADD UNIT TEST
-
 class ChaptersPagingSource(
     private val localRepository: ChapterLocalRepository,
     private val remoteRepository: MangaChaptersByKitsuRepository,

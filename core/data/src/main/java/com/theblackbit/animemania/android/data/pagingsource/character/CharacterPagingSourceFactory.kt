@@ -5,7 +5,6 @@ import com.theblackbit.animemania.android.data.external.repository.CharacterByKi
 import com.theblackbit.animemania.android.data.internal.repository.CharacterLocalRepository
 import com.theblackbit.animemania.android.model.Character
 
-// TODO: ADD UNIT TEST
 class CharacterPagingSourceFactory(
     private val localRepository: CharacterLocalRepository,
     private val remoteRepository: CharacterByKitsuRepository,

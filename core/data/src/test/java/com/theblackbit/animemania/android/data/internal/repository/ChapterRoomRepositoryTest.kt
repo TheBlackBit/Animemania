@@ -9,7 +9,6 @@ import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.junit.MockitoJUnitRunner
 
-// TODO: RUN TEST
 @RunWith(MockitoJUnitRunner::class)
 class ChapterRoomRepositoryTest {
 
@@ -17,6 +16,8 @@ class ChapterRoomRepositoryTest {
     lateinit var chapterDao: ChapterDao
 
     private lateinit var sut: ChapterRoomRepository
+
+    private val collectionId = "1"
 
     @Before
     fun setUp() {
@@ -33,7 +34,6 @@ class ChapterRoomRepositoryTest {
 
     @Test
     fun testGetChaptersByCollectionByDao() {
-        val collectionId = 1
         sut.getChaptersByCollection(collectionId, 1)
 
         Mockito.verify(chapterDao).getChaptersByCollection(collectionId, 1)
@@ -41,7 +41,6 @@ class ChapterRoomRepositoryTest {
 
     @Test
     fun testDeleteChaptersByCollectionIdByDao() {
-        val collectionId = 1
         sut.deleteChaptersByCollection(collectionId)
 
         Mockito.verify(chapterDao).deleteChaptersByCollection(collectionId)

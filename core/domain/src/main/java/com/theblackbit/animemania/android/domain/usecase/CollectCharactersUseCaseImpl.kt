@@ -8,7 +8,6 @@ import com.theblackbit.animemania.android.data.pagingsource.character.CharacterP
 import com.theblackbit.animemania.android.model.Character
 import io.reactivex.rxjava3.core.Flowable
 
-// TODO: UNIT TEST
 class CollectCharactersUseCaseImpl(
     private val characterPagingSourceFactory: CharacterPagingSourceFactory,
 ) : CollectCharactersUseCase {

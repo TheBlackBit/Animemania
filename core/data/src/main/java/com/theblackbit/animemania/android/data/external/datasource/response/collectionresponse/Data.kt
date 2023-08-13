@@ -8,7 +8,6 @@ data class Data(
     val type: String?,
 )
 
-// TODO:REPLACE GENRES URL EPISODECOUNT AND TEST add toSafeInt
 fun Data.toCollectionEntity(categoryId: Int, collectionType: String): CollectionEntity {
     return CollectionEntity(
         collectionId = id ?: "-1",

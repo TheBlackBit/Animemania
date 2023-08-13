@@ -65,7 +65,6 @@ class ChaptersTabFragment : FragmentBindingCreator<FragmentTabChaptersBinding>()
     private fun startToCollectChapters() {
         arguments?.apply {
             val collectionId = getString(COLLECTION_ID, "")
-            // TODO: FIX THIS
             val collectionType = getString(COLLECTION_TYPE, "")
             dataDisposable.add(
                 viewModel.startToCollectChapters(

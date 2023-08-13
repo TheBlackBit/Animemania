@@ -9,7 +9,6 @@ import com.theblackbit.animemania.android.model.Chapter
 import com.theblackbit.animemania.android.model.CollectionType
 import io.reactivex.rxjava3.core.Flowable
 
-// TODO: ADD UNIT TEST
 class CollectChaptersUseCaseImpl(
     private val chapterPagingSourceFactory: ChapterPagingSourceFactory,
 ) : CollectChaptersUseCase {

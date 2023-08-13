@@ -12,7 +12,6 @@ interface CharacterDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertCharacters(characters: List<CharacterEntity>)
 
-    // TODO: TEST LIMIT
     @Query("SELECT * from characterentity WHERE collectionID =:collectionId AND page =:page limit 20")
     fun getCharactersByCollectionId(collectionId: String, page: Int): Single<List<CharacterEntity>>
 

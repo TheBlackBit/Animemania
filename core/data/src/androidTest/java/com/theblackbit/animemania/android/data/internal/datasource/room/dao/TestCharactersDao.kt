@@ -23,7 +23,6 @@ class TestCharactersDao {
     private val collectionId = "1"
     private val page = 1
 
-    // TODO: RUN TEST
     @get:Rule
     var instantTaskExecutorRule: InstantTaskExecutorRule = InstantTaskExecutorRule()
 
