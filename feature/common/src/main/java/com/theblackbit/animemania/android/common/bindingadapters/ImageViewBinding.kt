@@ -10,7 +10,7 @@ fun ImageView.setImageSrc(url: String?) {
     Glide.with(context)
         .load(url)
         .apply(
-            RequestOptions().dontTransform(), // this line
+            RequestOptions().dontTransform()
         )
         .into(this)
 }

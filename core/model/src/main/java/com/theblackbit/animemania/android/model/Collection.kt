@@ -16,5 +16,5 @@ data class Collection(
     val miniPosterImageUrl: String,
     val bigPosterImageUrl: String,
     val status: String,
-    val synopsis: String,
+    val synopsis: String
 ) : Parcelable

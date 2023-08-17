@@ -26,7 +26,7 @@ val collectionDataList = listOf(
             "videoId1",
         ),
         "id1",
-        "type1",
+        "type1"
     ),
     Data(
         Attributes(
@@ -48,7 +48,7 @@ val collectionDataList = listOf(
             "videoId2",
         ),
         "id2",
-        "type2",
+        "type2"
     ),
     Data(
         Attributes(
@@ -70,7 +70,7 @@ val collectionDataList = listOf(
             "videoId3",
         ),
         "id3",
-        "type3",
+        "type3"
     ),
     Data(
         Attributes(
@@ -92,7 +92,7 @@ val collectionDataList = listOf(
             "videoId4",
         ),
         "id4",
-        "type4",
+        "type4"
     ),
     Data(
         Attributes(
@@ -114,7 +114,7 @@ val collectionDataList = listOf(
             "videoId5",
         ),
         "id5",
-        "type5",
+        "type5"
     ),
     Data(
         Attributes(
@@ -136,7 +136,7 @@ val collectionDataList = listOf(
             "videoId6",
         ),
         "id6",
-        "type6",
+        "type6"
     ),
     Data(
         Attributes(
@@ -158,7 +158,7 @@ val collectionDataList = listOf(
             "videoId7",
         ),
         "id7",
-        "type7",
+        "type7"
     ),
     Data(
         Attributes(
@@ -180,7 +180,7 @@ val collectionDataList = listOf(
             "videoId8",
         ),
         "id8",
-        "type8",
+        "type8"
     ),
     Data(
         Attributes(
@@ -202,7 +202,7 @@ val collectionDataList = listOf(
             "videoId9",
         ),
         "id9",
-        "type9",
+        "type9"
     ),
     Data(
         Attributes(
@@ -224,7 +224,7 @@ val collectionDataList = listOf(
             "videoId10",
         ),
         "id10",
-        "type10",
+        "type10"
     ),
     Data(
         Attributes(
@@ -246,7 +246,7 @@ val collectionDataList = listOf(
             "videoId11",
         ),
         "id11",
-        "type11",
+        "type11"
     ),
     Data(
         Attributes(
@@ -268,7 +268,7 @@ val collectionDataList = listOf(
             "videoId12",
         ),
         "id12",
-        "type12",
+        "type12"
     ),
     Data(
         Attributes(
@@ -290,7 +290,7 @@ val collectionDataList = listOf(
             "videoId13",
         ),
         "id13",
-        "type13",
+        "type13"
     ),
     Data(
         Attributes(
@@ -312,7 +312,7 @@ val collectionDataList = listOf(
             "videoId14",
         ),
         "id14",
-        "type14",
+        "type14"
     ),
     Data(
         Attributes(
@@ -334,7 +334,7 @@ val collectionDataList = listOf(
             "videoId15",
         ),
         "id15",
-        "type15",
+        "type15"
     ),
     Data(
         Attributes(
@@ -356,7 +356,7 @@ val collectionDataList = listOf(
             "videoId16",
         ),
         "id16",
-        "type16",
+        "type16"
     ),
     Data(
         Attributes(
@@ -378,7 +378,7 @@ val collectionDataList = listOf(
             "videoId17",
         ),
         "id17",
-        "type17",
+        "type17"
     ),
     Data(
         Attributes(
@@ -400,7 +400,7 @@ val collectionDataList = listOf(
             "videoId18",
         ),
         "id18",
-        "type18",
+        "type18"
     ),
     Data(
         Attributes(
@@ -422,7 +422,7 @@ val collectionDataList = listOf(
             "videoId19",
         ),
         "id19",
-        "type19",
+        "type19"
     ),
     Data(
         Attributes(
@@ -444,6 +444,6 @@ val collectionDataList = listOf(
             "videoId20",
         ),
         "id20",
-        "type20",
-    ),
+        "type20"
+    )
 )

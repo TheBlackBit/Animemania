@@ -22,7 +22,7 @@ class HasEllipsizeEndAtPositionOnChildRecyclerView(
     private val positionOfChildRecyclerView: Int,
     private val childRecyclerViewId: Int,
     private val positionOfViewInChildRecyclerView: Int,
-    private val textViewId: Int,
+    private val textViewId: Int
 ) : BaseMatcher<View>() {
     override fun describeTo(description: Description?) {
         description?.appendText("Assert TextView if has Ellipsize End at position $positionOfViewInChildRecyclerView in the position $positionOfChildRecyclerView of parent RecyclerView")
@@ -34,7 +34,7 @@ class HasEllipsizeEndAtPositionOnChildRecyclerView(
         val viewHolder = view.getChildRecyclerViewHolder(
             positionOfChildRecyclerView = positionOfChildRecyclerView,
             childRecyclerViewId = childRecyclerViewId,
-            positionOfViewInChildRecyclerView = positionOfViewInChildRecyclerView,
+            positionOfViewInChildRecyclerView = positionOfViewInChildRecyclerView
         )
 
         val textView = viewHolder.itemView.findViewById<View>(textViewId)

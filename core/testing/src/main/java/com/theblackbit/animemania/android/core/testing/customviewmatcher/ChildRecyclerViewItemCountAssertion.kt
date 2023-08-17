@@ -9,7 +9,7 @@ import org.hamcrest.Description
 class ChildRecyclerViewItemCountAssertion(
     private val positionOfChildRecyclerView: Int,
     private val childRecyclerViewId: Int,
-    private val expectedCount: Int,
+    private val expectedCount: Int
 ) : BaseMatcher<View>() {
 
     override fun describeTo(description: Description?) {
@@ -28,7 +28,7 @@ class ChildRecyclerViewItemCountAssertion(
 
         if (innerRecyclerView !is RecyclerView) {
             throw ChildRecyclerViewNotFoundException(
-                message = "The Id of childRecyclerView not correspond to a RecyclerView at position $childRecyclerViewId. Please verify the Id of your child RecyclerView",
+                message = "The Id of childRecyclerView not correspond to a RecyclerView at position $childRecyclerViewId. Please verify the Id of your child RecyclerView"
             )
         }
 

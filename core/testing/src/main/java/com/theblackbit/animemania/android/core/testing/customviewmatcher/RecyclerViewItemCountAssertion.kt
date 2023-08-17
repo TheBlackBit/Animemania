@@ -6,7 +6,7 @@ import org.hamcrest.BaseMatcher
 import org.hamcrest.Description
 
 class RecyclerViewItemCountAssertion(
-    private val expectedCount: Int,
+    private val expectedCount: Int
 ) : BaseMatcher<View>() {
 
     override fun describeTo(description: Description?) {

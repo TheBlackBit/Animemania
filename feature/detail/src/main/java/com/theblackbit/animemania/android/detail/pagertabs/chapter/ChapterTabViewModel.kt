@@ -12,12 +12,12 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class ChapterTabViewModel(
-    private val chaptersUseCase: CollectChaptersUseCase,
+    private val chaptersUseCase: CollectChaptersUseCase
 ) : ViewModel() {
     fun startToCollectChapters(
         collectionId: String,
         collectionType: CollectionType,
-        scope: CoroutineScope,
+        scope: CoroutineScope
     ): Flowable<PagingData<Chapter>> {
         return chaptersUseCase.collect(collectionId, collectionType).cachedIn(scope)
     }

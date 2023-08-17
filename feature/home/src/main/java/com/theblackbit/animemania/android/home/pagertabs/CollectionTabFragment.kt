@@ -32,7 +32,7 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 abstract class CollectionTabFragment(
-    private val collectionType: CollectionType,
+    private val collectionType: CollectionType
 ) : FragmentBindingCreator<FragmentTabContentBinding>() {
 
     protected val dataDisposable = CompositeDisposable()
@@ -61,14 +61,14 @@ abstract class CollectionTabFragment(
                     navigateToDetail(collection, imageView, requestTypeName)
                 }
             },
-            requestTypeName = requestTypeName,
+            requestTypeName = requestTypeName
         )
 
         dataForAdapter.add(
             Pair(
                 dataAdapter,
-                requestTypeName,
-            ),
+                requestTypeName
+            )
         )
 
         dataForAdapter.last().first.addLoadStateListener { loadState ->
@@ -81,12 +81,12 @@ abstract class CollectionTabFragment(
     private fun navigateToDetail(
         collection: Collection,
         imageView: ImageView,
-        requestTypeName: String,
+        requestTypeName: String
     ) {
         val bundle = Bundle()
         val transitionName = collection.collectionId.plus(requestTypeName)
         val extras = FragmentNavigatorExtras(
-            imageView to transitionName,
+            imageView to transitionName
         )
         bundle
             .apply {
@@ -101,7 +101,7 @@ abstract class CollectionTabFragment(
                 putString(END_DATE, collection.endDate)
                 putString(
                     GENRES,
-                    collection.genre.joinToString(separator = " \u25CF ") { it.name },
+                    collection.genre.joinToString(separator = " \u25CF ") { it.name }
                 )
                 putString(SYNOPSIS, collection.synopsis)
                 putString(COLLECTION_TYPE, collectionType.name)
@@ -111,13 +111,13 @@ abstract class CollectionTabFragment(
             resId = R.id.action_homeFragment_to_detailFragment,
             args = bundle,
             navOptions = null,
-            navigatorExtras = extras,
+            navigatorExtras = extras
         )
     }
 
     protected fun submitDataIntoAdapter(
         requestTypeName: String,
-        pagingData: PagingData<Collection>,
+        pagingData: PagingData<Collection>
     ) {
         dataForAdapter.find { it.second == requestTypeName }?.first
             ?.submitData(lifecycle, pagingData)

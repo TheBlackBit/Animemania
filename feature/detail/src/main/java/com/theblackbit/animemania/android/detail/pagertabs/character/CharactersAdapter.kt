@@ -19,7 +19,7 @@ class CharactersAdapter(diffCallBack: CharacterDiffCallBack) :
         val binding =
             ItemCharacterBinding.bind(parent.viewForViewDataBinding(R.layout.item_character))
         return CharactersViewHolder(
-            binding,
+            binding
         )
     }
 }

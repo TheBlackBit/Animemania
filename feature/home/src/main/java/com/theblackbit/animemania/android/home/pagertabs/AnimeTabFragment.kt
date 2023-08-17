@@ -14,19 +14,19 @@ class AnimeTabFragment : CollectionTabFragment(CollectionType.ANIME) {
     override fun fetchCollectionsByRequestType() {
         collectAndFetchRecyclerView(
             RequestType.TRENDING_ANIME,
-            getString(resourcesR.string.trending_week),
+            getString(resourcesR.string.trending_week)
         )
         collectAndFetchRecyclerView(
             RequestType.MOST_ANTICIPATED_ANIME,
-            getString(resourcesR.string.most_anticipated),
+            getString(resourcesR.string.most_anticipated)
         )
         collectAndFetchRecyclerView(
             RequestType.TOP_RATED_ANIME,
-            getString(resourcesR.string.top_rated),
+            getString(resourcesR.string.top_rated)
         )
         collectAndFetchRecyclerView(
             RequestType.POPULAR_ANIME,
-            getString(resourcesR.string.most_popular),
+            getString(resourcesR.string.most_popular)
         )
     }
 
@@ -36,7 +36,7 @@ class AnimeTabFragment : CollectionTabFragment(CollectionType.ANIME) {
             viewModel.startToCollectAnimeData(requestType, viewModel.viewModelScope)
                 .subscribe({ categories ->
                     submitDataIntoAdapter(labelRecyclerView, categories)
-                }, { error -> error.printStackTrace() }),
+                }, { error -> error.printStackTrace() })
         )
     }
 }

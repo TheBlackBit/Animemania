@@ -17,7 +17,7 @@ val collectionList = listOf(
         status = "Ongoing",
         synopsis = "This is the synopsis of Collection 1.",
         page = 1,
-        typeOfRequest = "TRENDING_ANIME",
+        typeOfRequest = "TRENDING_ANIME"
     ),
     CollectionEntity(
         collectionId = "2",
@@ -33,7 +33,7 @@ val collectionList = listOf(
         status = "Completed",
         synopsis = "This is the synopsis of Collection 2.",
         page = 1,
-        typeOfRequest = "TRENDING_ANIME",
+        typeOfRequest = "TRENDING_ANIME"
     ),
     CollectionEntity(
         collectionId = "3",
@@ -49,7 +49,7 @@ val collectionList = listOf(
         status = "Ongoing",
         synopsis = "This is the synopsis of Collection 3.",
         page = 1,
-        typeOfRequest = "TRENDING_ANIME",
+        typeOfRequest = "TRENDING_ANIME"
     ),
     CollectionEntity(
         collectionId = "4",
@@ -65,7 +65,7 @@ val collectionList = listOf(
         status = "Ongoing",
         synopsis = "This is the synopsis of Collection 4.",
         page = 1,
-        typeOfRequest = "TRENDING_MANGA",
+        typeOfRequest = "TRENDING_MANGA"
     ),
     CollectionEntity(
         collectionId = "5",
@@ -81,7 +81,7 @@ val collectionList = listOf(
         status = "Completed",
         synopsis = "This is the synopsis of Collection 5.",
         page = 1,
-        typeOfRequest = "TRENDING_MANGA",
+        typeOfRequest = "TRENDING_MANGA"
     ),
     CollectionEntity(
         collectionId = "6",
@@ -97,7 +97,7 @@ val collectionList = listOf(
         status = "Upcoming",
         synopsis = "This is the synopsis of Collection 6.",
         page = 1,
-        typeOfRequest = "TRENDING_MANGA",
+        typeOfRequest = "TRENDING_MANGA"
     ),
     CollectionEntity(
         collectionId = "7",
@@ -113,7 +113,7 @@ val collectionList = listOf(
         status = "Ongoing",
         synopsis = "This is the synopsis of Collection 7.",
         page = 2,
-        typeOfRequest = "POPULAR_MANGA",
+        typeOfRequest = "POPULAR_MANGA"
     ),
     CollectionEntity(
         collectionId = "8",
@@ -129,7 +129,7 @@ val collectionList = listOf(
         status = "Ongoing",
         synopsis = "This is the synopsis of Collection 8.",
         page = 3,
-        typeOfRequest = "TRENDING_MANGA",
+        typeOfRequest = "TRENDING_MANGA"
     ),
     CollectionEntity(
         collectionId = "9",
@@ -145,7 +145,7 @@ val collectionList = listOf(
         status = "Upcoming",
         synopsis = "This is the synopsis of Collection 9.",
         page = 1,
-        typeOfRequest = "TRENDING_MANGA",
+        typeOfRequest = "TRENDING_MANGA"
     ),
     CollectionEntity(
         collectionId = "10",
@@ -161,6 +161,6 @@ val collectionList = listOf(
         status = "Ongoing",
         synopsis = "This is the synopsis of Collection 10.",
         page = 1,
-        typeOfRequest = "TRENDING_ANIME",
-    ),
+        typeOfRequest = "TRENDING_ANIME"
+    )
 )

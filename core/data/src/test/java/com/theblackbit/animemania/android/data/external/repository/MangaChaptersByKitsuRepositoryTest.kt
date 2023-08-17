@@ -40,21 +40,21 @@ class MangaChaptersByKitsuRepositoryTest {
             kitsuChaptersDataSource.getChapters(
                 mangaId = mangaId,
                 pageLimit = pageNumber,
-                pageOffset = pageOffset,
-            ),
+                pageOffset = pageOffset
+            )
         ).thenReturn(Single.just(expectedEpisodeData))
 
         val actualEpisodesData =
             mangaChaptersByKitsuRepository.getMangaChapters(
                 collectionId = mangaId,
                 pageLimit = pageNumber,
-                pageOffset = pageOffset,
+                pageOffset = pageOffset
             ).blockingGet() as SafeApiRequest.ApiResultHandle.Success
 
         verify(kitsuChaptersDataSource).getChapters(
             mangaId = mangaId,
             pageLimit = pageNumber,
-            pageOffset = pageOffset,
+            pageOffset = pageOffset
         )
 
         assertEquals(expectedEpisodeData, actualEpisodesData.value)

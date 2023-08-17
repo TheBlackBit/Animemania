@@ -7,7 +7,7 @@ import com.theblackbit.animemania.android.model.Collection
 class DataViewHolder(
     private val binding: ItemDataBinding,
     private val onClickCollection: DataAdapter.OnClickCollection,
-    private val requestTypeName: String,
+    private val requestTypeName: String
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(collection: Collection) {

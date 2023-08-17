@@ -12,7 +12,7 @@ class ImageIsCropAtPositionOnChildRecyclerView(
     private val positionOfChildRecyclerView: Int,
     private val childRecyclerViewId: Int,
     private val positionOfViewInChildRecyclerView: Int,
-    private val imageViewId: Int,
+    private val imageViewId: Int
 ) : BaseMatcher<View>() {
     override fun describeTo(description: Description?) {
         description?.appendText("Assert ImageView has ScaleType CenterCrop at position $positionOfViewInChildRecyclerView in the position $positionOfChildRecyclerView of parent RecyclerView")
@@ -24,7 +24,7 @@ class ImageIsCropAtPositionOnChildRecyclerView(
         val viewHolder = view.getChildRecyclerViewHolder(
             positionOfChildRecyclerView = positionOfChildRecyclerView,
             childRecyclerViewId = childRecyclerViewId,
-            positionOfViewInChildRecyclerView = positionOfViewInChildRecyclerView,
+            positionOfViewInChildRecyclerView = positionOfViewInChildRecyclerView
         )
 
         val imageView = viewHolder.itemView.findViewById<View>(imageViewId)

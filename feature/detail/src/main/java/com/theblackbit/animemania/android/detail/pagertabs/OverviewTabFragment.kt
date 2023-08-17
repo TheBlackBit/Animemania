@@ -23,7 +23,7 @@ class OverviewTabFragment : FragmentBindingCreator<FragmentTabOverviewBinding>()
             startDate: String,
             endDate: String,
             genres: String,
-            synopsis: String,
+            synopsis: String
         ): OverviewTabFragment {
             val bundle = Bundle()
 

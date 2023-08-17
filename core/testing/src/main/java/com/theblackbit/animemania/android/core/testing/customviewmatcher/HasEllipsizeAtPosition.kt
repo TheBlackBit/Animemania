@@ -10,7 +10,7 @@ import org.hamcrest.Description
 class HasEllipsizeAtPosition(
     private val position: Int,
     private val ellipsize: TextUtils.TruncateAt,
-    private val textViewId: Int,
+    private val textViewId: Int
 ) : BaseMatcher<View>() {
     override fun describeTo(description: Description?) {
         description?.appendText("Ellipsize of TextView with id $textViewId is ${ellipsize.name} at position $position")

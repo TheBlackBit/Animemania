@@ -7,7 +7,7 @@ import org.hamcrest.BaseMatcher
 import org.hamcrest.Description
 
 class WithImageScaleType(
-    private val scaleType: ImageView.ScaleType,
+    private val scaleType: ImageView.ScaleType
 ) : BaseMatcher<View>() {
     override fun describeTo(description: Description?) {
         description?.appendText("ScaleType for image view is ${scaleType.name}")

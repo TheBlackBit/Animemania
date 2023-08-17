@@ -9,7 +9,7 @@ import org.hamcrest.Description
 class MaxLinesTextView(
     private val position: Int,
     private val maxLines: Int,
-    private val textViewId: Int,
+    private val textViewId: Int
 ) : BaseMatcher<View>() {
     override fun describeTo(description: Description?) {
         description?.appendText("Max Lines of TextView with id $textViewId at position $position is $maxLines")

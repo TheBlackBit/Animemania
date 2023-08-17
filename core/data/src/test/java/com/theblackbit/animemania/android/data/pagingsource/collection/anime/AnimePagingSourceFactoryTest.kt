@@ -25,7 +25,7 @@ class AnimePagingSourceFactoryTest {
     fun setUp() {
         factory = AnimePagingSourceFactory(
             collectionLocalRepository,
-            collectionRemoteRepository,
+            collectionRemoteRepository
         )
     }
 

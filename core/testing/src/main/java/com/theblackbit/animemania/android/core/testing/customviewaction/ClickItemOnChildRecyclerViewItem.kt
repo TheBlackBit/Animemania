@@ -14,7 +14,7 @@ class ClickItemOnChildRecyclerViewItem<T : ViewHolder>(
     private val parentRecyclerViewId: Int,
     private val positionOfChildRecyclerView: Int,
     private val positionOfViewInChildRecyclerView: Int,
-    private val childRecyclerViewId: Int,
+    private val childRecyclerViewId: Int
 ) : ViewAction {
     override fun getDescription(): String {
         return "Click to $positionOfViewInChildRecyclerView child position in the $positionOfChildRecyclerView parent position"
@@ -33,7 +33,7 @@ class ClickItemOnChildRecyclerViewItem<T : ViewHolder>(
 
         val action = RecyclerViewActions.actionOnItemAtPosition<T>(
             positionOfViewInChildRecyclerView,
-            click(),
+            click()
         )
         action.perform(uiController, innerRecyclerView)
     }

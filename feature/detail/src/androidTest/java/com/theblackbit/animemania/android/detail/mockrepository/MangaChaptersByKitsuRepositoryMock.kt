@@ -16,18 +16,18 @@ class MangaChaptersByKitsuRepositoryMock(private val context: Context) :
     override fun getMangaChapters(
         collectionId: String,
         pageLimit: String,
-        pageOffset: String,
+        pageOffset: String
     ): Single<SafeApiRequest.ApiResultHandle<ChaptersResponse>> {
         val delay = if (pageOffset == "null") 1L else 0
         val response = when {
             (pageOffset == "null" && collectionId == VALID_COLLECTION_ID_MANGA) -> jsonFileToKotlinClass(
                 context,
-                "berserk_manga_chapters_response_first_page_test.json",
+                "berserk_manga_chapters_response_first_page_test.json"
             )
 
             (pageOffset == ChapterPagingSourceFactory.CHAPTER_PAGE_LIMIT.toString() && collectionId == VALID_COLLECTION_ID_MANGA) -> jsonFileToKotlinClass(
                 context,
-                "berserk_manga_chapters_response_second_page_test.json",
+                "berserk_manga_chapters_response_second_page_test.json"
             )
 
             else -> ChaptersResponse(emptyList())
@@ -35,8 +35,8 @@ class MangaChaptersByKitsuRepositoryMock(private val context: Context) :
 
         return Single.just<SafeApiRequest.ApiResultHandle<ChaptersResponse>>(
             SafeApiRequest.ApiResultHandle.Success(
-                response,
-            ),
+                response
+            )
         ).delay(delay, TimeUnit.SECONDS)
     }
 }

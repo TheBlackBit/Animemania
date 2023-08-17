@@ -13,19 +13,19 @@ class MangaTabFragment : CollectionTabFragment(CollectionType.MANGA) {
     override fun fetchCollectionsByRequestType() {
         collectAndFetchRecyclerView(
             RequestType.TRENDING_MANGA,
-            getString(com.theblackbit.animemania.android.core.resources.R.string.trending_week),
+            getString(com.theblackbit.animemania.android.core.resources.R.string.trending_week)
         )
         collectAndFetchRecyclerView(
             RequestType.MOST_ANTICIPATED_MANGA,
-            getString(com.theblackbit.animemania.android.core.resources.R.string.most_anticipated),
+            getString(com.theblackbit.animemania.android.core.resources.R.string.most_anticipated)
         )
         collectAndFetchRecyclerView(
             RequestType.TOP_RATED_MANGA,
-            getString(com.theblackbit.animemania.android.core.resources.R.string.top_rated),
+            getString(com.theblackbit.animemania.android.core.resources.R.string.top_rated)
         )
         collectAndFetchRecyclerView(
             RequestType.POPULAR_MANGA,
-            getString(com.theblackbit.animemania.android.core.resources.R.string.most_popular),
+            getString(com.theblackbit.animemania.android.core.resources.R.string.most_popular)
         )
     }
 
@@ -35,7 +35,7 @@ class MangaTabFragment : CollectionTabFragment(CollectionType.MANGA) {
             viewModel.startToCollectMangaData(requestType, viewModel.viewModelScope)
                 .subscribe({ categories ->
                     submitDataIntoAdapter(labelRecyclerView, categories)
-                }, { error -> error.printStackTrace() }),
+                }, { error -> error.printStackTrace() })
         )
     }
 }

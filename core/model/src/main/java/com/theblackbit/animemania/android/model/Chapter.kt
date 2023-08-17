@@ -6,5 +6,5 @@ data class Chapter(
     val synopsis: String,
     val number: String,
     val seasonNumber: String,
-    val imageUrl: String,
+    val imageUrl: String
 )

@@ -82,8 +82,8 @@ class DetailFragmentTest : KoinTest {
             collectChaptersUseCaseModule,
             collectCharactersUseCaseModule,
             chapterTabViewModelModule,
-            characterTabViewModelModule,
-        ),
+            characterTabViewModelModule
+        )
     )
 
     @Test
@@ -114,7 +114,7 @@ class DetailFragmentTest : KoinTest {
     fun testAnimeEpisodesTab() {
         launchFragment(collectionAnimeTest)
         testChapters(
-            firstChapterTitle = "I'm Luffy! The Man Who's Gonna Be King of the Pirates!",
+            firstChapterTitle = "I'm Luffy! The Man Who's Gonna Be King of the Pirates!"
         )
     }
 
@@ -122,7 +122,7 @@ class DetailFragmentTest : KoinTest {
     fun testMangaChaptersTab() {
         launchFragment(collectionMangaTest)
         testChapters(
-            firstChapterTitle = "",
+            firstChapterTitle = ""
         )
     }
 
@@ -186,10 +186,10 @@ class DetailFragmentTest : KoinTest {
                     putString(COLLECTION_TYPE, collection.collectionType.name)
                     putString(
                         GENRES,
-                        collection.genre.joinToString(separator = " \u25CF ") { it.name },
+                        collection.genre.joinToString(separator = " \u25CF ") { it.name }
                     )
                     putString(SYNOPSIS, collection.synopsis)
-                },
+                }
         )
 
         onView(ViewMatchers.isRoot()).perform(WaitFor(2000L))
@@ -273,9 +273,9 @@ class DetailFragmentTest : KoinTest {
             .check(
                 matches(
                     RecyclerViewItemCountAssertion(
-                        10,
-                    ),
-                ),
+                        10
+                    )
+                )
             )
 
         testChapterViewData(chapterTitle = firstChapterTitle, position = 0)
@@ -288,9 +288,9 @@ class DetailFragmentTest : KoinTest {
             .check(
                 matches(
                     RecyclerViewItemCountAssertion(
-                        20,
-                    ),
-                ),
+                        20
+                    )
+                )
             )
     }
 
@@ -303,27 +303,27 @@ class DetailFragmentTest : KoinTest {
                     WithTextAtPosition(
                         text = textValid,
                         position = position,
-                        textViewId = detailRes.id.tv_chapter_title,
-                    ),
-                ),
+                        textViewId = detailRes.id.tv_chapter_title
+                    )
+                )
             )
             .check(
                 matches(
                     MaxLinesTextView(
                         position = position,
                         maxLines = 1,
-                        textViewId = detailRes.id.tv_chapter_title,
-                    ),
-                ),
+                        textViewId = detailRes.id.tv_chapter_title
+                    )
+                )
             )
             .check(
                 matches(
                     HasEllipsizeAtPosition(
                         position = position,
                         ellipsize = TextUtils.TruncateAt.END,
-                        textViewId = detailRes.id.tv_chapter_title,
-                    ),
-                ),
+                        textViewId = detailRes.id.tv_chapter_title
+                    )
+                )
             )
     }
 
@@ -336,7 +336,7 @@ class DetailFragmentTest : KoinTest {
 
     private fun testCharacter(
         firstCharacterName: String,
-        expectedCountFirstPage: Int,
+        expectedCountFirstPage: Int
     ) {
         onView(withText(R.string.characters))
             .perform(click())
@@ -350,9 +350,9 @@ class DetailFragmentTest : KoinTest {
             .check(
                 matches(
                     RecyclerViewItemCountAssertion(
-                        expectedCountFirstPage,
-                    ),
-                ),
+                        expectedCountFirstPage
+                    )
+                )
             )
 
         testCharacterViewData(name = firstCharacterName)
@@ -369,27 +369,27 @@ class DetailFragmentTest : KoinTest {
                     WithTextAtPosition(
                         text = name,
                         position = position,
-                        textViewId = detailRes.id.tv_character_name,
-                    ),
-                ),
+                        textViewId = detailRes.id.tv_character_name
+                    )
+                )
             )
             .check(
                 matches(
                     MaxLinesTextView(
                         position = position,
                         maxLines = 1,
-                        textViewId = detailRes.id.tv_character_name,
-                    ),
-                ),
+                        textViewId = detailRes.id.tv_character_name
+                    )
+                )
             )
             .check(
                 matches(
                     HasEllipsizeAtPosition(
                         position = position,
                         ellipsize = TextUtils.TruncateAt.END,
-                        textViewId = detailRes.id.tv_character_name,
-                    ),
-                ),
+                        textViewId = detailRes.id.tv_character_name
+                    )
+                )
             )
     }
 
@@ -402,14 +402,14 @@ class DetailFragmentTest : KoinTest {
         genre = listOf(
             Genre("Fantasy"),
             Genre("Comedy"),
-            Genre("Action"),
+            Genre("Action")
         ),
         collectionType = CollectionType.ANIME,
         episodeCount = "29736",
         miniPosterImageUrl = "https://media.kitsu.io/anime/poster_images/12/large.jpg",
         bigPosterImageUrl = "https://media.kitsu.io/anime/12/cover_image/large-3e72f400a87b5241780c5082f0582611.jpeg",
         status = "Current",
-        synopsis = "Gol D. Roger was known as the \"Pirate King,\" the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the existence of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece—which promises an unlimited amount of riches and fame—and quite possibly the pinnacle of glory and the title of the Pirate King. Enter Monkey D. Luffy, a 17-year-old boy who defies your standard definition of a pirate. Rather than the popular persona of a wicked, hardened, toothless pirate ransacking villages for fun, Luffy’s reason for being a pirate is one of pure wonder: the thought of an exciting adventure that leads him to intriguing people and ultimately, the promised treasure. Following in the footsteps of his childhood hero, Luffy and his crew travel across the Grand Line, experiencing crazy adventures, unveiling dark mysteries and battling strong enemies, all in order to reach the most coveted of all fortunes—One Piece. [Written by MAL Rewrite]",
+        synopsis = "Gol D. Roger was known as the \"Pirate King,\" the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the existence of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece—which promises an unlimited amount of riches and fame—and quite possibly the pinnacle of glory and the title of the Pirate King. Enter Monkey D. Luffy, a 17-year-old boy who defies your standard definition of a pirate. Rather than the popular persona of a wicked, hardened, toothless pirate ransacking villages for fun, Luffy’s reason for being a pirate is one of pure wonder: the thought of an exciting adventure that leads him to intriguing people and ultimately, the promised treasure. Following in the footsteps of his childhood hero, Luffy and his crew travel across the Grand Line, experiencing crazy adventures, unveiling dark mysteries and battling strong enemies, all in order to reach the most coveted of all fortunes—One Piece. [Written by MAL Rewrite]"
     )
 
     private val collectionMangaTest = Collection(
@@ -421,13 +421,13 @@ class DetailFragmentTest : KoinTest {
         genre = listOf(
             Genre("Fantasy"),
             Genre("Comedy"),
-            Genre("Action"),
+            Genre("Action")
         ),
         collectionType = CollectionType.MANGA,
         episodeCount = "",
         miniPosterImageUrl = "https://media.kitsu.io/manga/8/poster_image/large-f598ed525107bcb69ebda5bf36c6910d.jpeg",
         bigPosterImageUrl = "https://media.kitsu.io/manga/8/cover_image/large-d976a1baf3051d321608d4ebb7da4220.gif",
         status = "Current",
-        synopsis = "His name is Guts, the Black Swordsman, a feared warrior spoken of only in whispers. Bearer of a gigantic sword, an iron hand, and the scars of countless battles and tortures, his flesh is also indelibly marked with The Brand, an unholy symbol that draws the forces of darkness to him and dooms him as their sacrifice. But Guts won't take his fate lying down; he'll cut a crimson swath of carnage through the ranks of the damned—and anyone else foolish enough to oppose him! Accompanied by Puck the Elf, more an annoyance than a companion, Guts relentlessly follows a dark, bloodstained path that leads only to death...or vengeance. (Source: Dark Horse) Notes: - Volumes 1-5 contain the 16 prequel chapters 0A - 0P. - Chapter 83 was omitted from Volume 13 due to the author’s request. - Volume 14 includes “Berserk: The Prototype”. - Due to the author's passing, starting from Chapter 365, the manga is illustrated by Studio Gaga (Miura's assistants) and supervised by Kouji Mori (a close friend of Miura's).",
+        synopsis = "His name is Guts, the Black Swordsman, a feared warrior spoken of only in whispers. Bearer of a gigantic sword, an iron hand, and the scars of countless battles and tortures, his flesh is also indelibly marked with The Brand, an unholy symbol that draws the forces of darkness to him and dooms him as their sacrifice. But Guts won't take his fate lying down; he'll cut a crimson swath of carnage through the ranks of the damned—and anyone else foolish enough to oppose him! Accompanied by Puck the Elf, more an annoyance than a companion, Guts relentlessly follows a dark, bloodstained path that leads only to death...or vengeance. (Source: Dark Horse) Notes: - Volumes 1-5 contain the 16 prequel chapters 0A - 0P. - Chapter 83 was omitted from Volume 13 due to the author’s request. - Volume 14 includes “Berserk: The Prototype”. - Due to the author's passing, starting from Chapter 365, the manga is illustrated by Studio Gaga (Miura's assistants) and supervised by Kouji Mori (a close friend of Miura's)."
     )
 }
