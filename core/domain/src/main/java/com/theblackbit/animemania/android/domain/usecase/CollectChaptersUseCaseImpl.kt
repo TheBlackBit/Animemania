@@ -19,6 +19,8 @@ class CollectChaptersUseCaseImpl(
         return Pager(
             config = PagingConfig(
                 pageSize = ChapterPagingSourceFactory.CHAPTER_PAGE_LIMIT,
+                prefetchDistance = ChapterPagingSourceFactory.CHAPTER_PAGE_LIMIT / 2,
+                enablePlaceholders = true,
             ),
             pagingSourceFactory = {
                 chapterPagingSourceFactory.getChapterPagingSourceCollectionId(

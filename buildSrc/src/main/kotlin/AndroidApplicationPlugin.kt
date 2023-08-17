@@ -28,6 +28,7 @@ class AndroidApplicationPlugin : Plugin<Project> {
                 buildFeatures.viewBinding = true
             }
 
+            rxDependencies()
             coreDependencies()
             uiDependencies()
             testDependencies()

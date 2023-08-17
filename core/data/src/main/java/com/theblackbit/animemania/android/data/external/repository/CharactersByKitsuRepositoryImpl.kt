@@ -21,7 +21,9 @@ class CharactersByKitsuRepositoryImpl(
                 collectionId = collectionId,
                 pageNumber = pageNumber,
                 pageOffset = pageOffset,
-            ).map { it }
+            ).map {
+                it
+            }
         }
     }
 }

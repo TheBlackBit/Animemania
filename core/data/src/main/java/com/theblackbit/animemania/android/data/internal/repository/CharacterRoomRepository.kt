@@ -11,7 +11,10 @@ class CharacterRoomRepository(
         characterDao.insertCharacters(characters)
     }
 
-    override fun getCharactersByCollectionId(collectionId: String, page: Int): Single<List<CharacterEntity>> {
+    override fun getCharactersByCollectionId(
+        collectionId: String,
+        page: Int,
+    ): Single<List<CharacterEntity>> {
         return characterDao.getCharactersByCollectionId(collectionId, page)
     }
 

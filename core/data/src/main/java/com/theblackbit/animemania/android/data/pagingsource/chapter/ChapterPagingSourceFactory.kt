@@ -14,7 +14,7 @@ class ChapterPagingSourceFactory(
 ) {
 
     companion object {
-        const val CHAPTER_PAGE_LIMIT = 20
+        const val CHAPTER_PAGE_LIMIT = 10
     }
 
     fun getChapterPagingSourceCollectionId(

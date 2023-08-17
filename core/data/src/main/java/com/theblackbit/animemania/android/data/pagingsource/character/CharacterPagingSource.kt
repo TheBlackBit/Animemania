@@ -39,7 +39,10 @@ class CharacterPagingSource(
             .subscribeOn(Schedulers.io())
             .concatMap { result ->
                 handleApiResult(currentPage = currentPage, result = result)
-                localRepository.getCharactersByCollectionId(collectionId, currentPage)
+                localRepository.getCharactersByCollectionId(
+                    collectionId = collectionId,
+                    page = currentPage,
+                )
             }
             .map { characterEntities -> toLoadResult(characterEntities, currentPage) }
             .onErrorReturn { LoadResult.Error(it) }
@@ -54,7 +57,6 @@ class CharacterPagingSource(
                 localRepository.deleteCharactersByCollectionId(collectionId)
             }
             val characterEntities = result.value.characterData
-                .distinctBy { characterData -> characterData.attributes?.canonicalName }
                 .map { it.toCharacterEntity(page = currentPage, collectionId = collectionId) }
             localRepository.insertCharacters(characterEntities)
         }

@@ -13,7 +13,7 @@ interface ChapterDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertChapters(chapters: List<ChapterEntity>)
 
-    @Query("SELECT * from chapterentity WHERE collectionID =:collectionId AND pageNumber =:pageNumber LIMIT 20")
+    @Query("SELECT * from chapterentity WHERE collectionID =:collectionId AND pageNumber =:pageNumber")
     fun getChaptersByCollection(collectionId: String, pageNumber: Int): Single<List<ChapterEntity>>
 
     @Query("DELETE FROM chapterentity WHERE collectionID =:collectionId")

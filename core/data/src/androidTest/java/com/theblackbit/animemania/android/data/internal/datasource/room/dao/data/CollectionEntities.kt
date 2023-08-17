@@ -16,7 +16,8 @@ val collectionList = listOf(
         bigPosterImageUrl = "url/to/big/poster1.jpg",
         status = "Ongoing",
         synopsis = "This is the synopsis of Collection 1.",
-        categoryId = 1,
+        page = 1,
+        typeOfRequest = "TRENDING_ANIME",
     ),
     CollectionEntity(
         collectionId = "2",
@@ -31,7 +32,8 @@ val collectionList = listOf(
         bigPosterImageUrl = "url/to/big/poster2.jpg",
         status = "Completed",
         synopsis = "This is the synopsis of Collection 2.",
-        categoryId = 1,
+        page = 1,
+        typeOfRequest = "TRENDING_ANIME",
     ),
     CollectionEntity(
         collectionId = "3",
@@ -46,7 +48,8 @@ val collectionList = listOf(
         bigPosterImageUrl = "url/to/big/poster3.jpg",
         status = "Ongoing",
         synopsis = "This is the synopsis of Collection 3.",
-        categoryId = 1,
+        page = 1,
+        typeOfRequest = "TRENDING_ANIME",
     ),
     CollectionEntity(
         collectionId = "4",
@@ -61,7 +64,8 @@ val collectionList = listOf(
         bigPosterImageUrl = "url/to/big/poster4.jpg",
         status = "Ongoing",
         synopsis = "This is the synopsis of Collection 4.",
-        categoryId = 1,
+        page = 1,
+        typeOfRequest = "TRENDING_MANGA",
     ),
     CollectionEntity(
         collectionId = "5",
@@ -76,7 +80,8 @@ val collectionList = listOf(
         bigPosterImageUrl = "url/to/big/poster5.jpg",
         status = "Completed",
         synopsis = "This is the synopsis of Collection 5.",
-        categoryId = 1,
+        page = 1,
+        typeOfRequest = "TRENDING_MANGA",
     ),
     CollectionEntity(
         collectionId = "6",
@@ -91,7 +96,8 @@ val collectionList = listOf(
         bigPosterImageUrl = "url/to/big/poster6.jpg",
         status = "Upcoming",
         synopsis = "This is the synopsis of Collection 6.",
-        categoryId = 2,
+        page = 1,
+        typeOfRequest = "TRENDING_MANGA",
     ),
     CollectionEntity(
         collectionId = "7",
@@ -106,7 +112,8 @@ val collectionList = listOf(
         bigPosterImageUrl = "url/to/big/poster7.jpg",
         status = "Ongoing",
         synopsis = "This is the synopsis of Collection 7.",
-        categoryId = 2,
+        page = 2,
+        typeOfRequest = "POPULAR_MANGA",
     ),
     CollectionEntity(
         collectionId = "8",
@@ -121,7 +128,8 @@ val collectionList = listOf(
         bigPosterImageUrl = "url/to/big/poster8.jpg",
         status = "Ongoing",
         synopsis = "This is the synopsis of Collection 8.",
-        categoryId = 2,
+        page = 3,
+        typeOfRequest = "TRENDING_MANGA",
     ),
     CollectionEntity(
         collectionId = "9",
@@ -136,7 +144,8 @@ val collectionList = listOf(
         bigPosterImageUrl = "url/to/big/poster9.jpg",
         status = "Upcoming",
         synopsis = "This is the synopsis of Collection 9.",
-        categoryId = 2,
+        page = 1,
+        typeOfRequest = "TRENDING_MANGA",
     ),
     CollectionEntity(
         collectionId = "10",
@@ -151,6 +160,7 @@ val collectionList = listOf(
         bigPosterImageUrl = "url/to/big/poster10.jpg",
         status = "Ongoing",
         synopsis = "This is the synopsis of Collection 10.",
-        categoryId = 2,
+        page = 1,
+        typeOfRequest = "TRENDING_ANIME",
     ),
 )

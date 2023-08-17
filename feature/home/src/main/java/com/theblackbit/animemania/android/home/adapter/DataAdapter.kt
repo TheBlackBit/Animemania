@@ -11,7 +11,7 @@ import com.theblackbit.animemania.android.model.Collection
 class DataAdapter(
     diffCallback: DataDiffCallback,
     private val onClickCollection: OnClickCollection,
-    private val categoryId: Int,
+    private val requestTypeName: String,
 ) :
     PagingDataAdapter<Collection, DataViewHolder>(
         diffCallback,
@@ -28,7 +28,7 @@ class DataAdapter(
         return DataViewHolder(
             binding = binding,
             onClickCollection = onClickCollection,
-            categoryId = categoryId,
+            requestTypeName = requestTypeName,
         )
     }
 

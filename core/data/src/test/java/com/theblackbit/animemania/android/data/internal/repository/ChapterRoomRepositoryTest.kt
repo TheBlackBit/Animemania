@@ -34,7 +34,7 @@ class ChapterRoomRepositoryTest {
 
     @Test
     fun testGetChaptersByCollectionByDao() {
-        sut.getChaptersByCollection(collectionId, 1)
+        sut.getChaptersByCollection(collectionId = collectionId, pageNumber = 1)
 
         Mockito.verify(chapterDao).getChaptersByCollection(collectionId, 1)
     }

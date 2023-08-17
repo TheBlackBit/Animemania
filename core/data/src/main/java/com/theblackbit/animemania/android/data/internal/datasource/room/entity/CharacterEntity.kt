@@ -6,8 +6,8 @@ import com.theblackbit.animemania.android.model.Character
 
 @Entity
 data class CharacterEntity(
-    @PrimaryKey
     val characterId: String,
+    @PrimaryKey
     val name: String,
     val imageUrl: String,
     val collectionId: String,

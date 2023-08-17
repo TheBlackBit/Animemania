@@ -26,7 +26,6 @@ import com.theblackbit.animemania.android.home.CollectionViewModel
 import com.theblackbit.animemania.android.home.adapter.DataAdapter
 import com.theblackbit.animemania.android.home.adapter.DataContainerAdapter
 import com.theblackbit.animemania.android.home.adapter.DataDiffCallback
-import com.theblackbit.animemania.android.model.Category
 import com.theblackbit.animemania.android.model.Collection
 import com.theblackbit.animemania.android.model.CollectionType
 import io.reactivex.rxjava3.disposables.CompositeDisposable
@@ -42,35 +41,35 @@ abstract class CollectionTabFragment(
 
     private val dataForAdapter: ArrayList<Pair<DataAdapter, String>> = ArrayList()
 
-    abstract fun fetchCollectionsByCategory()
+    abstract fun fetchCollectionsByRequestType()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val initDataCollected = viewModel.initDataCollected
         binding.initDataCollected = initDataCollected
         if (!initDataCollected) {
-            fetchCollectionsByCategory()
+            fetchCollectionsByRequestType()
             binding.rvData.adapter = DataContainerAdapter(dataForAdapter)
         }
     }
 
-    protected fun populateRecyclerView(categories: List<Category>) {
-        categories.forEach { category ->
-            dataForAdapter.add(
-                Pair(
-                    DataAdapter(
-                        diffCallback = DataDiffCallback(),
-                        onClickCollection = object : DataAdapter.OnClickCollection {
-                            override fun onClick(collection: Collection, imageView: ImageView) {
-                                navigateToDetail(collection, imageView, category.categoryId)
-                            }
-                        },
-                        categoryId = category.categoryId,
-                    ),
-                    category.categoryName,
-                ),
-            )
-        }
+    protected fun addRecyclerView(requestTypeName: String) {
+        val dataAdapter = DataAdapter(
+            diffCallback = DataDiffCallback(),
+            onClickCollection = object : DataAdapter.OnClickCollection {
+                override fun onClick(collection: Collection, imageView: ImageView) {
+                    navigateToDetail(collection, imageView, requestTypeName)
+                }
+            },
+            requestTypeName = requestTypeName,
+        )
+
+        dataForAdapter.add(
+            Pair(
+                dataAdapter,
+                requestTypeName,
+            ),
+        )
 
         dataForAdapter.last().first.addLoadStateListener { loadState ->
             if (loadState.refresh is LoadState.NotLoading) {
@@ -79,9 +78,13 @@ abstract class CollectionTabFragment(
         }
     }
 
-    private fun navigateToDetail(collection: Collection, imageView: ImageView, categoryId: Int) {
+    private fun navigateToDetail(
+        collection: Collection,
+        imageView: ImageView,
+        requestTypeName: String,
+    ) {
         val bundle = Bundle()
-        val transitionName = collection.collectionId.plus(categoryId.toString())
+        val transitionName = collection.collectionId.plus(requestTypeName)
         val extras = FragmentNavigatorExtras(
             imageView to transitionName,
         )
@@ -93,7 +96,7 @@ abstract class CollectionTabFragment(
                 putString(COVER_IMAGE, collection.bigPosterImageUrl)
                 putString(POSTER_IMAGE, collection.miniPosterImageUrl)
                 putString(RATING, collection.averageRating)
-                putString(STATE, collection.status.name)
+                putString(STATE, collection.status)
                 putString(START_DATE, collection.startDate)
                 putString(END_DATE, collection.endDate)
                 putString(
@@ -112,8 +115,12 @@ abstract class CollectionTabFragment(
         )
     }
 
-    protected fun submitDataIntoAdapter(index: Int, pagingData: PagingData<Collection>) {
-        dataForAdapter[index].first.submitData(lifecycle, pagingData)
+    protected fun submitDataIntoAdapter(
+        requestTypeName: String,
+        pagingData: PagingData<Collection>,
+    ) {
+        dataForAdapter.find { it.second == requestTypeName }?.first
+            ?.submitData(lifecycle, pagingData)
     }
 
     private fun hideProgress() {

@@ -4,12 +4,12 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingSource
 import androidx.paging.testing.TestPager
 import com.theblackbit.animemania.android.data.datatest.collectionDataList
+import com.theblackbit.animemania.android.data.external.datasource.RequestType
 import com.theblackbit.animemania.android.data.external.datasource.response.collectionresponse.CollectionResponse
 import com.theblackbit.animemania.android.data.external.datasource.response.collectionresponse.toCollectionEntity
-import com.theblackbit.animemania.android.data.internal.datasource.room.entity.CollectionCategoryJoin
-import com.theblackbit.animemania.android.data.internal.datasource.room.entity.CollectionCategoryJoinEntity
 import com.theblackbit.animemania.android.data.internal.datasource.room.entity.toCollection
 import com.theblackbit.animemania.android.data.internal.repository.CollectionLocalRepository
+import com.theblackbit.animemania.android.model.CollectionType
 import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -32,45 +32,42 @@ class CollectionPagingSourceTest {
 
     private val pageLimit = 20
 
-    private val categoryId = 1
-
     private val collectionResponse = CollectionResponse(
         collectionData = collectionDataList,
     )
 
-    private val collectionEntities = collectionDataList.map {
-        it.toCollectionEntity(categoryId = categoryId, collectionType = "Anime")
-    }
-
-    private val animeList = collectionEntities.map {
-        it.toCollection()
-    }
-
     @Test
     fun loadReturnsPageWhenOnSuccessfulLoadOfItemKeyedData() = runTest {
+        val collectionEntities = collectionResponse.collectionData.map {
+            it.toCollectionEntity(
+                collectionType = CollectionType.ANIME.collectionName,
+                typeOfRequest = RequestType.TRENDING_ANIME,
+                page = 1,
+            )
+        }
+
+        val animeList = collectionEntities.map {
+            it.toCollection(collectionType = CollectionType.ANIME)
+        }
+
         collectionPagingSource = CollectionPagingSource(
             localRepository = localRepository,
             request = { _, _ ->
                 Single.just(SafeApiRequest.ApiResultHandle.Success(collectionResponse))
             },
-            categoryId = 1,
+            requestType = RequestType.TRENDING_ANIME,
+            collectionType = CollectionType.ANIME,
         )
         val pageNumber = 1
 
-        val collectionCategoriesJoinEntities = mapCollectionEntityToJoinCollectionEntity(pageNumber)
-
         Mockito.`when`(
-            localRepository.collectPagedCollectionsByCategory(pageNumber, categoryId),
+            localRepository.collectPagedCollections(
+                pageNumber,
+                requestType = RequestType.TRENDING_ANIME,
+            ),
         ).thenReturn(
             Single.just(
-                CollectionCategoryJoin(
-                    collectionCategoryJoinEntity = CollectionCategoryJoinEntity(
-                        categoryId = categoryId,
-                        collectionId = "1",
-                        pageNumber = pageNumber,
-                    ),
-                    collections = collectionEntities,
-                ),
+                collectionEntities,
             ),
         )
 
@@ -85,14 +82,9 @@ class CollectionPagingSourceTest {
             refresh(initialKey = pageNumber)
         } as PagingSource.LoadResult.Page
 
-        Mockito.verify(localRepository).clearCollectioncategoryjoinentity(categoryId)
+        Mockito.verify(localRepository).clearCollectionsByRequestType(RequestType.TRENDING_ANIME)
 
-        Mockito.verify(localRepository).clearCollectionEntitiesByCategory(categoryId)
-
-        Mockito.verify(localRepository).insertCollectionEntities(collectionEntities)
-
-        Mockito.verify(localRepository)
-            .insertCollectionCategoryJoinEntities(collectionCategoriesJoinEntities)
+        Mockito.verify(localRepository).insertCollectionsEntities(collectionEntities)
 
         assert(page.data.containsAll(animeList))
     }
@@ -101,28 +93,35 @@ class CollectionPagingSourceTest {
     fun whenLoadSuccessPage2DoesNotClearCache() = runTest {
         val pageNumber = 2
 
-        val collectionCategoriesJoinEntities = mapCollectionEntityToJoinCollectionEntity(pageNumber)
+        val collectionEntities = collectionResponse.collectionData.map {
+            it.toCollectionEntity(
+                collectionType = CollectionType.ANIME.collectionName,
+                typeOfRequest = RequestType.TRENDING_ANIME,
+                page = pageNumber,
+            )
+        }
+
+        val animeList = collectionEntities.map {
+            it.toCollection(collectionType = CollectionType.ANIME)
+        }
 
         collectionPagingSource = CollectionPagingSource(
             localRepository = localRepository,
             request = { _, _ ->
                 Single.just(SafeApiRequest.ApiResultHandle.Success(collectionResponse))
             },
-            categoryId = 1,
+            requestType = RequestType.TRENDING_ANIME,
+            collectionType = CollectionType.ANIME,
         )
 
         Mockito.`when`(
-            localRepository.collectPagedCollectionsByCategory(pageNumber, categoryId),
+            localRepository.collectPagedCollections(
+                pageNumber,
+                requestType = RequestType.TRENDING_ANIME,
+            ),
         ).thenReturn(
             Single.just(
-                CollectionCategoryJoin(
-                    collectionCategoryJoinEntity = CollectionCategoryJoinEntity(
-                        categoryId = categoryId,
-                        collectionId = "1",
-                        pageNumber = pageNumber,
-                    ),
-                    collections = collectionEntities,
-                ),
+                collectionEntities,
             ),
         )
 
@@ -137,14 +136,10 @@ class CollectionPagingSourceTest {
             refresh(initialKey = pageNumber)
         } as PagingSource.LoadResult.Page
 
-        Mockito.verify(localRepository, times(0)).clearCollectioncategoryjoinentity(categoryId)
+        Mockito.verify(localRepository, times(0))
+            .clearCollectionsByRequestType(RequestType.TRENDING_ANIME)
 
-        Mockito.verify(localRepository, times(0)).clearCollectionEntitiesByCategory(categoryId)
-
-        Mockito.verify(localRepository).insertCollectionEntities(collectionEntities)
-
-        Mockito.verify(localRepository)
-            .insertCollectionCategoryJoinEntities(collectionCategoriesJoinEntities)
+        Mockito.verify(localRepository).insertCollectionsEntities(collectionEntities)
 
         assert(page.data.containsAll(animeList))
     }
@@ -153,12 +148,16 @@ class CollectionPagingSourceTest {
     fun whenApiLoadErrorReturnsDataFromCache() = runTest {
         val pageNumber = 1
 
-        val collectionCategoriesJoinEntities = collectionEntities.map {
-            CollectionCategoryJoinEntity(
-                collectionId = it.collectionId,
-                categoryId = categoryId,
-                pageNumber = pageNumber,
+        val collectionEntities = collectionResponse.collectionData.map {
+            it.toCollectionEntity(
+                collectionType = CollectionType.ANIME.collectionName,
+                typeOfRequest = RequestType.TRENDING_ANIME,
+                page = pageNumber,
             )
+        }
+
+        val animeList = collectionEntities.map {
+            it.toCollection(collectionType = CollectionType.ANIME)
         }
 
         collectionPagingSource = CollectionPagingSource(
@@ -166,21 +165,15 @@ class CollectionPagingSourceTest {
             request = { _, _ ->
                 Single.just(SafeApiRequest.ApiResultHandle.ApiError)
             },
-            categoryId = 1,
+            requestType = RequestType.TRENDING_ANIME,
+            collectionType = CollectionType.ANIME,
         )
 
         Mockito.`when`(
-            localRepository.collectPagedCollectionsByCategory(pageNumber, categoryId),
+            localRepository.collectPagedCollections(pageNumber, RequestType.TRENDING_ANIME),
         ).thenReturn(
             Single.just(
-                CollectionCategoryJoin(
-                    collectionCategoryJoinEntity = CollectionCategoryJoinEntity(
-                        categoryId = categoryId,
-                        collectionId = "1",
-                        pageNumber = pageNumber,
-                    ),
-                    collections = collectionEntities,
-                ),
+                collectionEntities,
             ),
         )
 
@@ -195,25 +188,12 @@ class CollectionPagingSourceTest {
             refresh(initialKey = pageNumber)
         } as PagingSource.LoadResult.Page
 
-        Mockito.verify(localRepository, times(0)).clearCollectioncategoryjoinentity(categoryId)
-
-        Mockito.verify(localRepository, times(0)).clearCollectionEntitiesByCategory(categoryId)
-
-        Mockito.verify(localRepository, times(0)).insertCollectionEntities(collectionEntities)
+        Mockito.verify(localRepository, times(0))
+            .clearCollectionsByRequestType(RequestType.TRENDING_ANIME)
 
         Mockito.verify(localRepository, times(0))
-            .insertCollectionCategoryJoinEntities(collectionCategoriesJoinEntities)
+            .insertCollectionsEntities(collectionEntities)
 
         assert(page.data.containsAll(animeList))
-    }
-
-    private fun mapCollectionEntityToJoinCollectionEntity(pageNumber: Int): List<CollectionCategoryJoinEntity> {
-        return collectionEntities.map {
-            CollectionCategoryJoinEntity(
-                collectionId = it.collectionId,
-                categoryId = categoryId,
-                pageNumber = pageNumber,
-            )
-        }
     }
 }

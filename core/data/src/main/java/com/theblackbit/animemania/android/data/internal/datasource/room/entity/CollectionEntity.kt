@@ -1,31 +1,30 @@
 package com.theblackbit.animemania.android.data.internal.datasource.room.entity
 
 import androidx.room.Entity
-import androidx.room.PrimaryKey
 import com.theblackbit.animemania.android.model.Collection
 import com.theblackbit.animemania.android.model.CollectionType
-import com.theblackbit.animemania.android.model.StatusOfEmission
 
-@Entity
+@Entity(
+    primaryKeys = ["collectionId", "typeOfRequest"],
+)
 data class CollectionEntity(
-    @PrimaryKey
     val collectionId: String,
     val name: String,
     val averageRating: String,
     val startDate: String,
     val endDate: String,
     val genres: String,
-    val categoryId: Int,
+    val typeOfRequest: String,
     val collectionType: String,
     val episodeCount: String,
     val miniPosterImageUrl: String,
     val bigPosterImageUrl: String,
     val status: String,
     val synopsis: String,
+    val page: Int,
 )
 
-// TODO: REPLACE dates and GENRE AND TEST
-fun CollectionEntity.toCollection(): Collection {
+fun CollectionEntity.toCollection(collectionType: CollectionType): Collection {
     return Collection(
         collectionId = collectionId,
         name = name,
@@ -33,11 +32,11 @@ fun CollectionEntity.toCollection(): Collection {
         startDate = startDate,
         endDate = endDate,
         genre = emptyList(),
-        collectionType = CollectionType.ANIME,
+        collectionType = collectionType,
         episodeCount = episodeCount,
         miniPosterImageUrl = miniPosterImageUrl,
         bigPosterImageUrl = bigPosterImageUrl,
-        status = StatusOfEmission.CURRENT,
+        status = status,
         synopsis = synopsis,
     )
 }

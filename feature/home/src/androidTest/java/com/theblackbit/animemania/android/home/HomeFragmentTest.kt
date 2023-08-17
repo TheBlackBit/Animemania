@@ -12,14 +12,17 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.theblackbit.animemania.android.core.testing.KoinTestRule
 import com.theblackbit.animemania.android.core.testing.customviewaction.WaitFor
 import com.theblackbit.animemania.android.core.testing.customviewmatcher.WithTextAtPositionOnChildRecyclerView
-import com.theblackbit.animemania.android.core.testing.data.anime.trendingAnimeData
-import com.theblackbit.animemania.android.core.testing.data.manga.trendingMangaData
-import com.theblackbit.animemania.android.core.testing.di.collectAnimeCategoriesUseCaseModuleTest
-import com.theblackbit.animemania.android.core.testing.di.collectAnimeDataUseCaseTestModule
-import com.theblackbit.animemania.android.core.testing.di.collectMangaCategoriesUseCaseModuleTest
-import com.theblackbit.animemania.android.core.testing.di.collectMangaDataUseCaseTestModule
+import com.theblackbit.animemania.android.data.di.internal.collectionDaoModule
+import com.theblackbit.animemania.android.data.di.internal.collectionRoomRepositoryModule
+import com.theblackbit.animemania.android.data.di.internal.roomDbModule
+import com.theblackbit.animemania.android.data.di.pagingsource.animePagingSourceFactoryModule
+import com.theblackbit.animemania.android.data.di.pagingsource.mangaPagingSourceFactoryModule
+import com.theblackbit.animemania.android.domain.di.collectAnimeUseCaseModule
+import com.theblackbit.animemania.android.domain.di.collectMangaUseCaseModule
 import com.theblackbit.animemania.android.feature.home.R
+import com.theblackbit.animemania.android.home.di.animeRemoteRepositoryMock
 import com.theblackbit.animemania.android.home.di.homeViewModelModule
+import com.theblackbit.animemania.android.home.di.mangaRemoteRepositoryMock
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -32,10 +35,15 @@ class HomeFragmentTest : KoinTest {
     @get:Rule
     val koinTestRule = KoinTestRule(
         modules = listOf(
-            collectAnimeDataUseCaseTestModule,
-            collectAnimeCategoriesUseCaseModuleTest,
-            collectMangaDataUseCaseTestModule,
-            collectMangaCategoriesUseCaseModuleTest,
+            roomDbModule,
+            collectionDaoModule,
+            collectionRoomRepositoryModule,
+            animePagingSourceFactoryModule,
+            mangaPagingSourceFactoryModule,
+            animeRemoteRepositoryMock,
+            mangaRemoteRepositoryMock,
+            collectAnimeUseCaseModule,
+            collectMangaUseCaseModule,
             homeViewModelModule,
         ),
     )
@@ -56,7 +64,7 @@ class HomeFragmentTest : KoinTest {
         launchFragmentInContainer<HomeFragment>(
             themeResId = resources.style.Theme_Animemania,
         )
-        testTabWithViewPager("Anime", trendingAnimeData[0].name)
+        testTabWithViewPager("Anime", "One Piece")
     }
 
     @Test
@@ -64,13 +72,25 @@ class HomeFragmentTest : KoinTest {
         launchFragmentInContainer<HomeFragment>(
             themeResId = resources.style.Theme_Animemania,
         )
-        testTabWithViewPager("Manga", trendingMangaData[0].name)
+        testTabWithViewPager("Manga", "Martial Peak")
     }
 
     private fun testTabWithViewPager(tabText: String, contentText: String) {
+        clickToTab(tabText)
+        waitUntilDataFinishedLoad()
+        testFirstElement(contentText)
+    }
+
+    private fun clickToTab(tabText: String) {
         onView(withText(tabText))
             .perform(click())
-        onView(ViewMatchers.isRoot()).perform(WaitFor(6000L))
+    }
+
+    private fun waitUntilDataFinishedLoad() {
+        onView(ViewMatchers.isRoot()).perform(WaitFor(4000L))
+    }
+
+    private fun testFirstElement(contentText: String) {
         onView(withId(R.id.rv_data)).check(
             matches(
                 WithTextAtPositionOnChildRecyclerView(

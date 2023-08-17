@@ -3,6 +3,7 @@ package com.theblackbit.animemania.android.detail.pagertabs.chapter
 import androidx.paging.PagingData
 import com.theblackbit.animemania.android.domain.usecase.CollectChaptersUseCase
 import com.theblackbit.animemania.android.model.Chapter
+import com.theblackbit.animemania.android.model.CollectionType
 import io.reactivex.rxjava3.core.Flowable
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.TestScope
@@ -32,11 +33,11 @@ class ChapterTabViewModelTest {
     @Test
     fun testCollectChapters() {
         val pagingData: Flowable<PagingData<Chapter>> = Flowable.just(PagingData.from(emptyList()))
-        Mockito.`when`(chaptersUseCase.collect("1"))
+        Mockito.`when`(chaptersUseCase.collect("1", CollectionType.ANIME))
             .thenReturn(pagingData)
 
-        chapterTabViewModel.startToCollectChapters("1", testScope)
+        chapterTabViewModel.startToCollectChapters("1", CollectionType.ANIME, testScope)
 
-        Mockito.verify(chaptersUseCase).collect("1")
+        Mockito.verify(chaptersUseCase).collect("1", CollectionType.ANIME)
     }
 }

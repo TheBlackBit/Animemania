@@ -1,10 +1,7 @@
 package com.theblackbit.animemania.android.data.pagingsource.collection.manga
 
 import androidx.paging.PagingSource
-import com.theblackbit.animemania.android.data.external.datasource.categories.MOST_ANTICIPATED_MANGA_ID
-import com.theblackbit.animemania.android.data.external.datasource.categories.POPULAR_MANGA_ID
-import com.theblackbit.animemania.android.data.external.datasource.categories.TOP_RATED_MANGA_ID
-import com.theblackbit.animemania.android.data.external.datasource.categories.TRENDING_MANGA_ID
+import com.theblackbit.animemania.android.data.external.datasource.RequestType
 import com.theblackbit.animemania.android.data.external.repository.MangaRemoteRepository
 import com.theblackbit.animemania.android.data.internal.repository.CollectionLocalRepository
 import com.theblackbit.animemania.android.data.pagingsource.collection.EmptyCollectionPagingSource
@@ -15,38 +12,38 @@ class MangaPagingSourceFactory(
     private val mangaRemoteRepository: MangaRemoteRepository,
 ) {
 
-    fun getMangaPagingSource(categoryId: Int): PagingSource<Int, Collection> {
-        return when (categoryId) {
-            TRENDING_MANGA_ID -> TrendingMangaPagingSource(
+    fun getMangaPagingSource(requestType: RequestType): PagingSource<Int, Collection> {
+        return when (requestType) {
+            RequestType.TRENDING_MANGA -> TrendingMangaPagingSource(
                 localRepository = localRepository,
                 request = { pageLimit, pageOffset ->
                     mangaRemoteRepository.collectTrending(pageLimit, pageOffset)
                 },
-                categoryId = categoryId,
+                requestType = requestType,
             )
 
-            MOST_ANTICIPATED_MANGA_ID -> MostAnticipatedMangaPagingSource(
+            RequestType.MOST_ANTICIPATED_MANGA -> MostAnticipatedMangaPagingSource(
                 localRepository = localRepository,
                 request = { pageLimit, pageOffset ->
                     mangaRemoteRepository.getMostAnticipated(pageLimit, pageOffset)
                 },
-                categoryId = categoryId,
+                requestType = requestType,
             )
 
-            TOP_RATED_MANGA_ID -> TopRatedMangaPagingSource(
+            RequestType.TOP_RATED_MANGA -> TopRatedMangaPagingSource(
                 localRepository = localRepository,
                 request = { pageLimit, pageOffset ->
                     mangaRemoteRepository.getTopRated(pageLimit, pageOffset)
                 },
-                categoryId = categoryId,
+                requestType = requestType,
             )
 
-            POPULAR_MANGA_ID -> PopularMangaPagingSource(
+            RequestType.POPULAR_MANGA -> PopularMangaPagingSource(
                 localRepository = localRepository,
                 request = { pageLimit, pageOffset ->
                     mangaRemoteRepository.getPopular(pageLimit, pageOffset)
                 },
-                categoryId = categoryId,
+                requestType = requestType,
             )
 
             else -> EmptyCollectionPagingSource()

@@ -11,7 +11,7 @@ class CharacterPagingSourceFactory(
 ) {
 
     companion object {
-        const val CHARACTER_PAGE_LIMIT = 20
+        const val CHARACTER_PAGE_LIMIT = 10
     }
 
     fun getCharacterPagingSourceByMediaType(

@@ -1,6 +1,7 @@
 package com.theblackbit.animemania.android.data.external.repository
 
 import com.theblackbit.animemania.android.data.external.datasource.kitsuapi.KitsuCharacterDataSource
+import com.theblackbit.animemania.android.data.external.datasource.response.charactersresponse.CharacterData
 import com.theblackbit.animemania.android.data.external.datasource.response.charactersresponse.CharacterResponse
 import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
@@ -13,7 +14,6 @@ import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
 import org.mockito.junit.MockitoJUnitRunner
 
-// TODO: RUN UNIT TEST
 @RunWith(MockitoJUnitRunner::class)
 class CharactersByKitsuRepositoryImplTest {
 
@@ -37,7 +37,15 @@ class CharactersByKitsuRepositoryImplTest {
         val collectionId = "12345"
         val pageNumber = "1"
         val pageOffset = "0"
-        val expectedCharacterData = CharacterResponse(emptyList())
+        val expectedCharacterData = CharacterResponse(
+            listOf(
+                CharacterData(
+                    attributes = null,
+                    id = null,
+                    type = null,
+                ),
+            ),
+        )
 
         `when`(
             kitsuCharacterDataSource.getCollectionCharacters(

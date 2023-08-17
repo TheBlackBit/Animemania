@@ -1,0 +1,1660 @@
+{
+  "data": [
+    {
+      "id": "c130053v111650",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c130053v111650"
+      },
+      "attributes": {
+        "createdAt": "2018-08-03T03:31:23.956Z",
+        "updatedAt": "2018-08-04T21:43:39.048Z",
+        "role": "Voice Actor",
+        "voiceActor": true,
+        "featured": true,
+        "language": "Japanese"
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c130053v111650/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c130053v111650/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c130053v111650/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c130053v111650/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "410"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c130053v111650/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c130053v111650/person"
+          },
+          "data": {
+            "type": "people",
+            "id": "764"
+          }
+        }
+      }
+    },
+    {
+      "id": "c46068v111950",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c46068v111950"
+      },
+      "attributes": {
+        "createdAt": "2018-07-26T03:46:02.374Z",
+        "updatedAt": "2018-08-04T21:43:41.314Z",
+        "role": "Voice Actor",
+        "voiceActor": true,
+        "featured": true,
+        "language": "Japanese"
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46068v111950/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c46068v111950/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46068v111950/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c46068v111950/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "412"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46068v111950/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c46068v111950/person"
+          },
+          "data": {
+            "type": "people",
+            "id": "996"
+          }
+        }
+      }
+    },
+    {
+      "id": "c46068v111938",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c46068v111938"
+      },
+      "attributes": {
+        "createdAt": "2018-07-26T03:46:02.374Z",
+        "updatedAt": "2018-08-04T21:43:41.263Z",
+        "role": "Voice Actor",
+        "voiceActor": true,
+        "featured": true,
+        "language": "Japanese"
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46068v111938/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c46068v111938/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46068v111938/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c46068v111938/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "412"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46068v111938/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c46068v111938/person"
+          },
+          "data": {
+            "type": "people",
+            "id": "636"
+          }
+        }
+      }
+    },
+    {
+      "id": "c46070v112061",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c46070v112061"
+      },
+      "attributes": {
+        "createdAt": "2018-07-26T03:46:02.374Z",
+        "updatedAt": "2018-08-04T21:43:42.270Z",
+        "role": "Voice Actor",
+        "voiceActor": true,
+        "featured": true,
+        "language": "Japanese"
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46070v112061/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c46070v112061/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46070v112061/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c46070v112061/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "407"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46070v112061/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c46070v112061/person"
+          },
+          "data": {
+            "type": "people",
+            "id": "864"
+          }
+        }
+      }
+    },
+    {
+      "id": "c46071v112121",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c46071v112121"
+      },
+      "attributes": {
+        "createdAt": "2018-07-26T03:46:02.374Z",
+        "updatedAt": "2018-08-04T21:43:42.817Z",
+        "role": "Voice Actor",
+        "voiceActor": true,
+        "featured": true,
+        "language": "Japanese"
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46071v112121/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c46071v112121/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46071v112121/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c46071v112121/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "414"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46071v112121/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c46071v112121/person"
+          },
+          "data": {
+            "type": "people",
+            "id": "1004"
+          }
+        }
+      }
+    },
+    {
+      "id": "c46068v111942",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c46068v111942"
+      },
+      "attributes": {
+        "createdAt": "2018-07-26T03:46:02.374Z",
+        "updatedAt": "2018-08-04T21:43:41.280Z",
+        "role": "Voice Actor",
+        "voiceActor": true,
+        "featured": true,
+        "language": "Japanese"
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46068v111942/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c46068v111942/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46068v111942/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c46068v111942/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "412"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46068v111942/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c46068v111942/person"
+          },
+          "data": {
+            "type": "people",
+            "id": "991"
+          }
+        }
+      }
+    },
+    {
+      "id": "c46285v184520",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c46285v184520"
+      },
+      "attributes": {
+        "createdAt": "2018-07-26T03:46:02.374Z",
+        "updatedAt": "2018-08-04T22:00:51.502Z",
+        "role": "Voice Actor",
+        "voiceActor": true,
+        "featured": false,
+        "language": "Japanese"
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46285v184520/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c46285v184520/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46285v184520/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c46285v184520/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "41334"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46285v184520/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c46285v184520/person"
+          },
+          "data": {
+            "type": "people",
+            "id": "1190"
+          }
+        }
+      }
+    },
+    {
+      "id": "c46462v186900",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c46462v186900"
+      },
+      "attributes": {
+        "createdAt": "2018-07-26T03:46:02.374Z",
+        "updatedAt": "2018-08-04T22:01:22.209Z",
+        "role": "Voice Actor",
+        "voiceActor": true,
+        "featured": false,
+        "language": "Japanese"
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46462v186900/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c46462v186900/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46462v186900/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c46462v186900/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "777"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46462v186900/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c46462v186900/person"
+          },
+          "data": {
+            "type": "people",
+            "id": "985"
+          }
+        }
+      }
+    },
+    {
+      "id": "c130163v188883",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c130163v188883"
+      },
+      "attributes": {
+        "createdAt": "2018-08-03T03:31:25.091Z",
+        "updatedAt": "2018-08-04T22:01:49.604Z",
+        "role": "Voice Actor",
+        "voiceActor": true,
+        "featured": false,
+        "language": "Japanese"
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c130163v188883/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c130163v188883/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c130163v188883/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c130163v188883/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "67699"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c130163v188883/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c130163v188883/person"
+          },
+          "data": {
+            "type": "people",
+            "id": "405"
+          }
+        }
+      }
+    },
+    {
+      "id": "c46316v184924",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c46316v184924"
+      },
+      "attributes": {
+        "createdAt": "2018-07-26T03:46:02.374Z",
+        "updatedAt": "2018-08-04T22:00:56.787Z",
+        "role": "Voice Actor",
+        "voiceActor": true,
+        "featured": false,
+        "language": "Japanese"
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46316v184924/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c46316v184924/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46316v184924/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c46316v184924/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "862"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c46316v184924/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c46316v184924/person"
+          },
+          "data": {
+            "type": "people",
+            "id": "699"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "410",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/410"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:32.268Z",
+        "updatedAt": "2021-09-25T07:38:35.646Z",
+        "slug": "brook",
+        "names": {
+          "en": "Brook",
+          "ja_jp": "ブルック"
+        },
+        "canonicalName": "Brook",
+        "otherNames": [
+          "Dead Bones",
+          "Soul King"
+        ],
+        "name": "Brook",
+        "malId": 5627,
+        "description": "Age: 88; 90 Birthdate: April 3; Aries Height: 2m 66cm (8'8½\") Affiliation: Straw Hat Pirates (previously; Rumbar Pirates) Position: Musician, Swordsman Devil Fruit: Yomi Yomi no Mi (Revive Revive Fruit) Type: Paramecia Bounty: 83,000,000 (previously: 33,000,000)   Brook known as the \"Gentleman Skeleton\", is a pirate inhabiting the Florian Triangle region of the Grand Line. Although he claims to be a gentleman, and talks in the dialect of one, Brook's etiquette has severely degenerated over the course of his isolation. He has awful table manners: he shouts for food while waiting to be served, asks to swap plates with people who have larger servings than he does and eating so messily his entire face is stained. He is also extremely flatulent after meals, but says \"excuse me\" so as to be \"gentlemanly.\" He also loves to tell odd, bone-themed jokes, as well as melodramatic tales, and is very perverted, asking to see Nami and Robin's underwear upon meeting them.   He's a skilled musician (something Luffy has always wanted in his crew since the beginning), fond of playing the violin. Due to his light weight he can not only jump to incredible heights but can run on water by moving his legs furiously. He uses a shikomizue as his main weapon; with it, he is able to make swift iaidÅ� attacks that the enemy cannot notice.",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/410/image/tiny-c2c586b3c1d3893270137af8a712b629.jpeg",
+          "large": "https://media.kitsu.io/character/410/image/large-455586e1536b3d972a0d44da4067e346.jpeg",
+          "small": "https://media.kitsu.io/character/410/image/small-86ba7e9d4885fbc0a4d68beace877c02.jpeg",
+          "medium": "https://media.kitsu.io/character/410/image/medium-1d3cf8757d06e8df113928a4e073a6eb.jpeg",
+          "original": "https://media.kitsu.io/characters/images/410/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/410/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/410/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/410/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/410/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/410/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/410/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/410/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/410/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "412",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/412"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:32.352Z",
+        "updatedAt": "2021-09-25T07:38:40.634Z",
+        "slug": "robin-nico",
+        "names": {
+          "en": "Robin Nico",
+          "ja_jp": "ニコ・ロビン"
+        },
+        "canonicalName": "Robin Nico",
+        "otherNames": [
+          "Devil Child",
+          "Miss All Sunday"
+        ],
+        "name": "Robin Nico",
+        "malId": 61,
+        "description": "Age: 28; 30 Birthdate: February 6, Aquarius Height: 188cm (6'2\")  Sizes: 99 - 59 - 89 Affiliation: Straw Hat Pirates (previously; Baroque Works) Position: Archaeologist Devil Fruit: Hana Hana no Mi (Flower Flower Fruit) Type: Paramecia Bounty:  130,000,000 (previously: 79,000,000; 80,000,000) Robin is the seventh member of Straw Hat's Crew. She had a bounty of 79 million beri (One Piece currency) since she was eight years old, during an incident in which she supposedly destroyed six Buster Call ships through the use of the powers she gained by the eating the Hana Hana no Mi (Flower Flower or Blooming Blooming Fruit). The fruit's power enables her to conjure up multiple replicas of her body parts (most often her arms) upon any surface she is able to see making her very powerful and dexterous as a result.   Robin joined the Straw Hat Pirates after Luffy saved her life, or (how she states it) Luffy forced her to live when she wanted to die. To atone for his crime, Robin demands that Luffy allow her to join his crew, to which he complies leaving every other crew member except Sanji in shock. Although feared at first, she is quickly accepted and viewed as a comrade by the crew.  Robin is actually an archaeologist of talent, and despises anyone who thoughtlessly damages any piece of history. The World Government fears her because she can decipher Poneglyphs (stones marked with glyphs from an ancient language), which contain details capable of reviving ancient weapons that have the power to destroy the world. In reality, Robin has stated that she does not care about ancient weapons, and that her dream is to find the True History written on the Rio Poneglyph.  Robin is a mysterious and serious person who appears quiet and reclusive, and the wisest in the Straw Hat's Crew. She was thought by those around her to be cold and mean, but it was proven that she is actually a kind person who always thinks before she acts. She often only speaks when something interesting or important has happened. She loves to study history, and the comfort and freedom to study and read. She is also quick to point out gross or realistically morbid facts, often creeping out Nami or Usopp. Robin is the wisest and most sensible member of the crew. She has a vast knowledge of the seas and the world, and usually keeps her head during surprising situations, allowing her to logically analyze the situation without losing her cool. This trait makes her different from the other Straw Hats, who often comically react melodramatically to unexpected happenings and hold irrational ideas and conclusions. Despite her attempts to keep herself distant, Robin has fallen for her new friends, and has taken the role of the distant den mother.",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/412/image/tiny-6161926675545c28361d7bed956e9730.jpeg",
+          "large": "https://media.kitsu.io/character/412/image/large-0f15a465b8e259691d630143877d19d8.jpeg",
+          "small": "https://media.kitsu.io/character/412/image/small-ab94d34712179648d8e2cd5913a7ae7f.jpeg",
+          "medium": "https://media.kitsu.io/character/412/image/medium-a101e31ac045fe2c97cfb9decdb9cf45.jpeg",
+          "original": "https://media.kitsu.io/characters/images/412/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/412/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/412/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/412/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/412/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/412/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/412/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/412/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/412/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "407",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/407"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:32.007Z",
+        "updatedAt": "2021-09-25T07:38:27.477Z",
+        "slug": "sanji",
+        "names": {
+          "en": "Sanji",
+          "ja_jp": "サンジ"
+        },
+        "canonicalName": "Sanji",
+        "otherNames": [
+          "Black Leg",
+          "Mr. Prince"
+        ],
+        "name": "Sanji",
+        "malId": 305,
+        "description": "Name: Sanji Age: 19; 21 Birthdate: March 2 ; Pisces Height: 177 cm (5' 9\") Blood Type: RH- Affiliation: Straw Hat Pirates (previously; Baratie) Position: Cook Devil Fruit: none Bounty:177,000,000 (previously: 77,000,000)   Sanji is the chain-smoking chef of the Straw Hat Pirate Crew. He has superb fighting skills that only make use of his legs, in an effort to minimize damage to his hands which would impair his cooking skills.Except a single fight where he uses knives against a fellow chef. Sanji uses an array of powerful and varied kicking moves when he fights. His cooking skills are world class, and he was mentored in both cooking and fighting by Chef \"Red Leg\" Zeff of the Baratie. He was born in the North Blue, but grew up in the East Blue.  Sanji is trash-talking and serious, and usually gruff and impatient, especially around men. This is contrasted by his \"love-cook\" side, as he is very amorous around women. Sanji is completely devoted to any beautiful woman, usually losing all common sense and composure in front of them, then attempting to comically swoon them. This behavior has earned him the nickname \"ero-cook\", or perverted cook. He can also be very chivalrous and gentlemanly around woman, volunteering to help them in various tasks and situations, whether they need help or not. He has sworn to never let insult or injury happen to any woman while he can still stand, even if that woman is trying to kill him. This is often problematic in his fighting as he can't attack female opponents, and would rather die than hurt them. All this is apparently the result of a \"strict upbringing\". To contradict his gentlemanly behavior, Sanji also enjoys seeing women wear skimpy clothing, and can be a voyeur.  His goal in life is to find the All Blue, a legendary ocean, which contains all the fish in the world. As such, it would be paradise for any cook with as much love for his work as Sanji, who holds great respect for the tools, ingredients, and art of cooking. So great is his devotion to his calling, that Sanji will not let any person or creature starve, regardless of them being friend or foe.  Being the crew's chef, he looks out for the health of his crew mates. Sanji respects Luffy as a captain, but often gets angry at him for eating too much, showing disrespect for the aesthetics of cooking, and generally being daft and irresponsible. He is constantly in petty fights with Zoro (sometimes calling him Marimo) over each others' traits and they have developed a rivalry, but have managed to make a devastating team together. He is very protective of the female crew members and Nami likes to take advantage of him, exploiting his extreme servility. Sanji originally wanted to cook Chopper, but has come to respect him as a crew member and friend. He's also good friends with Usopp; they team up and interact often, and Sanji understands him quite well. In short, he cares as much for the crew as any Straw Hat should, but unlike Zoro, Sanji shows these feelings more.  It is revealed that Sanji is the third son of the Vinsmokes, a family of killers. His father and one of the Yonkou, Big Mom, has arranged a marriage between him and the 35th daughter of the Charlotte family, Pudding.",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/407/image/tiny-44149749d013ae0b8e699ad1b14e0ab0.jpeg",
+          "large": "https://media.kitsu.io/character/407/image/large-1abb382eb2363d51722c93fe67c0a5d6.jpeg",
+          "small": "https://media.kitsu.io/character/407/image/small-11c6436c871b44e956be15d9c82a19c0.jpeg",
+          "medium": "https://media.kitsu.io/character/407/image/medium-d1d43fb46a7a4912eee0abd0e212c1c4.jpeg",
+          "original": "https://media.kitsu.io/characters/images/407/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/407/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/407/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/407/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/407/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/407/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/407/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/407/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/407/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "414",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/414"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:32.506Z",
+        "updatedAt": "2021-09-25T07:38:45.580Z",
+        "slug": "chopper-tony-tony",
+        "names": {
+          "en": "Chopper Tony Tony",
+          "ja_jp": "トニートニー・チョッパー"
+        },
+        "canonicalName": "Chopper Tony Tony",
+        "otherNames": [],
+        "name": "Chopper Tony Tony",
+        "malId": 309,
+        "description": "Age: 15, 17 Birthday: December 24 Zodiac sign: Capricorn Affliation: Straw Hat Pirates Position: Doctor Devil Fruit: Hito Hito no Mi (Human Human Fruit) Type: Zoan Bounty:100 (previously: 50)  He is the Straw Hat crew's general physician despite being a reindeer. After a set of unusual circumstances, he ate the Hito Hito no Mi (Human Human Fruit), which permitted him the ability to speak, think, and, to a limited extent, change into a human.  Chopper often acts like a child, but he is an upright friend and companion who will try anything to overcome a task given by his team. He also still has distrust in humankind because of events his youth, where he was treated as a brutal monster. He will often outright insult a human who compliments him while smiling, dancing, and being obviously pleased. He also shows a certain interest in books, but mostly medicine related ones.  Chopper is more or less on a journey to define himself, seeing almost anybody on his crew as a role model. This, combined with his naiveness, often causes him to imitate the other Straw Hats' actions, no matter how obviously silly. Because of this, he often gets involved in the crazy antics of Luffy and Usopp, wholeheartedly believing that what they are doing is sensible and fun. Chopper is one of the most innocent Straw Hat Pirates, and is also very naive, resulting in a tendency to believe anything told to him, even the outrageously fictitious and exaggerated lies of Usopp. Sanji originally wanted to cook Chopper and continues to refer to him as \"the emergency food supply\" to tease him but considers him a friend. Although he is the crew's doctor he wasn't originally hired by Luffy for that purpose. But actually, in Luffy's words, for being \"cool reindeer that can transform.\"",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/414/image/tiny-c4a501fa01cffb08ee427cbd71884d9a.jpeg",
+          "large": "https://media.kitsu.io/character/414/image/large-6dfa80771009c82cf5511dbb11fd363b.jpeg",
+          "small": "https://media.kitsu.io/character/414/image/small-6f8b1e1990a77ac10c5816157d7324be.jpeg",
+          "medium": "https://media.kitsu.io/character/414/image/medium-e0c356780e1c6939bee1f9b5e56ca776.jpeg",
+          "original": "https://media.kitsu.io/characters/images/414/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/414/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/414/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/414/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/414/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/414/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/414/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/414/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/414/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "41334",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/41334"
+      },
+      "attributes": {
+        "createdAt": "2014-07-31T11:13:22.078Z",
+        "updatedAt": "2021-09-26T13:24:36.888Z",
+        "slug": "hyoutauros",
+        "names": {
+          "en": "Hyoutauros",
+          "ja_jp": "ヒョウタウロス"
+        },
+        "canonicalName": "Hyoutauros",
+        "otherNames": [
+          "Leopardtaurus"
+        ],
+        "name": "Hyoutauros",
+        "malId": 99029,
+        "description": "b' First Appearance: Chapter 658; Episode 581 '",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/41334/image/tiny-8854fac7d0823d78a133c9fd2b0e68f8.jpeg",
+          "large": "https://media.kitsu.io/character/41334/image/large-25cfd2760abd21f204168079adf1429e.jpeg",
+          "small": "https://media.kitsu.io/character/41334/image/small-382e1b1faf981fa7c923dd3ec5f32bd3.jpeg",
+          "medium": "https://media.kitsu.io/character/41334/image/medium-498f67b54a124b2c62622b0a84d41d0f.jpeg",
+          "original": "https://media.kitsu.io/characters/images/41334/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41334/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/41334/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41334/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/41334/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41334/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/41334/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41334/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/41334/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "777",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/777"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:38.645Z",
+        "updatedAt": "2021-09-25T07:55:57.440Z",
+        "slug": "fake-chopper",
+        "names": {
+          "en": "Nora Gitsune",
+          "ja_jp": "のらギツネ"
+        },
+        "canonicalName": "Nora Gitsune",
+        "otherNames": [],
+        "name": "Nora Gitsune",
+        "malId": 49823,
+        "description": "Fake Chopper from the Imposter Straw Hat Pirates.  ",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/777/image/tiny-9ad6ce0eb8f697eb2289d1b4e993a9ea.jpeg",
+          "large": "https://media.kitsu.io/character/777/image/large-c6e385a4cc456d0e2cdb7781705022ab.jpeg",
+          "small": "https://media.kitsu.io/character/777/image/small-0ae793a977d1463d53caab1d28cee58a.jpeg",
+          "medium": "https://media.kitsu.io/character/777/image/medium-977de1c64ef7d82367e58a482c3865ee.jpeg",
+          "original": "https://media.kitsu.io/characters/images/777/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/777/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/777/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/777/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/777/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/777/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/777/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/777/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/777/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "67699",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/67699"
+      },
+      "attributes": {
+        "createdAt": "2017-01-22T09:38:20.197Z",
+        "updatedAt": "2021-09-27T08:10:24.013Z",
+        "slug": "reiju-vinsmoke",
+        "names": {
+          "en": "Reiju Vinsmoke",
+          "ja_jp": "ヴィンスモーク・レイジュ"
+        },
+        "canonicalName": "Reiju Vinsmoke",
+        "otherNames": [
+          "Poison Pink"
+        ],
+        "name": "Reiju Vinsmoke",
+        "malId": 142529,
+        "description": "The only known daughter of the Vinsmoke Family, making her both a princess of the Germa Kingdom and a commander in its military arm, Germa 66. She is Sanji's and Yonji's older sister.",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/67699/image/tiny-34e89de8ae26f647b2165a603e2303a3.jpeg",
+          "large": "https://media.kitsu.io/character/67699/image/large-8692d06a5eccc1c5929c5a7629d5a6ff.jpeg",
+          "small": "https://media.kitsu.io/character/67699/image/small-c76e0db005b88c5b8935e302156025e9.jpeg",
+          "medium": "https://media.kitsu.io/character/67699/image/medium-d738b2a8c7da62252e211250f406feec.jpeg",
+          "original": "https://media.kitsu.io/characters/images/67699/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/67699/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/67699/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/67699/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/67699/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/67699/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/67699/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/67699/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/67699/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "862",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/862"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:39.853Z",
+        "updatedAt": "2021-09-25T08:00:11.625Z",
+        "slug": "hody-jones",
+        "names": {
+          "en": "Hody Jones",
+          "ja_jp": "ホーディ・ジョーンズ"
+        },
+        "canonicalName": "Hody Jones",
+        "otherNames": [],
+        "name": "Hody Jones",
+        "malId": 40266,
+        "description": "Hody Jones is a great white shark fishman, the captain of the New Fishman Pirates, and a former soldier of the Neptune Army. He is an admirer and fanatical believer of Arlong's ideals.  Hody is a racist, overly hypocritical, prideful, brutal and vicious natured fishman who, like many of his kind, hates humans for leaving Fisher Tiger to die when he could have been saved (which was not true, as Tiger refused human blood due to being betrayed). He proves this by attacking humans within his reach. He, like Arlong, believes that fishmen are the supreme race, showing his arrogance by attacking Gyro's crew with his hands cuffed, showing them that they could easily be destroyed even with the handicap. He then deliberately released the crew, injured but alive, setting them as examples, telling them to spread the word of the New Fishman Pirates.  Despite the fact that they both looked down on humans, his treatment of humans is even more brutal than Arlong's. He considers his human captives to be expendable and sees them as nothing more than pawns, while Arlong had left humans alone so long as they paid him the \"tribute\" money periodically. Arlong mainly killed humans to make examples of them when they did not pay up and was content with leaving them be, aside from odd acts to make sure the humans knew who was boss, but Hody will use them as part of his plan that will almost ensure their deaths, and threatening to kill them outright if they refuse, giving them very little chance to live altogether.   First Appearance: Chapter 608  (source: One Piece Wikia)",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/862/image/tiny-71066f5feec7adcd8d91a26658a6f3d3.jpeg",
+          "large": "https://media.kitsu.io/character/862/image/large-f0e7c9219ca222355a73728c2056723f.jpeg",
+          "small": "https://media.kitsu.io/character/862/image/small-7fac3944ceff7b7bbba0d0a47f3bfa23.jpeg",
+          "medium": "https://media.kitsu.io/character/862/image/medium-cee7f1783e3fb00fb7f74ce0ba5a1de2.jpeg",
+          "original": "https://media.kitsu.io/characters/images/862/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/862/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/862/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/862/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/862/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/862/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/862/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/862/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/862/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "764",
+      "type": "people",
+      "links": {
+        "self": "https://kitsu.io/api/edge/people/764"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:29.282Z",
+        "updatedAt": "2021-09-25T08:08:36.568Z",
+        "name": "Cho",
+        "malId": "Moved to mappings relationship.",
+        "description": " \n  Birthname  \n Nagashima Shigeru (長島 茂) \n \nHometown: Kounosu, Saitama, Japan \nBlood Type: B \n \nChronology: \n2006-08-24: Changed his stage name from Nagashima Yuuichi (長島 雄一) to Cho (チョー) \n2007: Transferred from Production Baobab to Haikyo \n \nSkills &amp; Abilities: Licensed calligraphy teacher. \n ",
+        "image": {
+          "tiny": "https://media.kitsu.io/person/764/image/tiny-0259387a2e8a562c7ae1e1a4c9ea9b3b.jpeg",
+          "large": "https://media.kitsu.io/person/764/image/large-b806c25edfb678dbdd68ad115f99c72f.jpeg",
+          "small": "https://media.kitsu.io/person/764/image/small-3213df6ae87089294811391dc1ba0406.jpeg",
+          "medium": "https://media.kitsu.io/person/764/image/medium-9ed958a1c15487ec53dda649413c8870.jpeg",
+          "original": "https://media.kitsu.io/people/images/764/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/764/relationships/castings",
+            "related": "https://kitsu.io/api/edge/people/764/castings"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/764/relationships/staff",
+            "related": "https://kitsu.io/api/edge/people/764/staff"
+          }
+        },
+        "voices": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/764/relationships/voices",
+            "related": "https://kitsu.io/api/edge/people/764/voices"
+          }
+        }
+      }
+    },
+    {
+      "id": "996",
+      "type": "people",
+      "links": {
+        "self": "https://kitsu.io/api/edge/people/996"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:32.412Z",
+        "updatedAt": "2021-09-25T08:18:28.039Z",
+        "name": "Anzu Nagai",
+        "malId": "Moved to mappings relationship.",
+        "description": " AniDB",
+        "image": {
+          "tiny": "https://media.kitsu.io/person/996/image/tiny-65f72af0b1518091b7ad5311eb43b39f.jpeg",
+          "large": "https://media.kitsu.io/person/996/image/large-a33747ac44ec24d45a44ea7afbb12e36.jpeg",
+          "small": "https://media.kitsu.io/person/996/image/small-34eb7061d25b8c42bc0f1e5435cd29fb.jpeg",
+          "medium": "https://media.kitsu.io/person/996/image/medium-9e3583055dde1d4c4e8f9b9f956582de.jpeg",
+          "original": "https://media.kitsu.io/people/images/996/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/996/relationships/castings",
+            "related": "https://kitsu.io/api/edge/people/996/castings"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/996/relationships/staff",
+            "related": "https://kitsu.io/api/edge/people/996/staff"
+          }
+        },
+        "voices": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/996/relationships/voices",
+            "related": "https://kitsu.io/api/edge/people/996/voices"
+          }
+        }
+      }
+    },
+    {
+      "id": "636",
+      "type": "people",
+      "links": {
+        "self": "https://kitsu.io/api/edge/people/636"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:27.293Z",
+        "updatedAt": "2021-09-25T08:02:36.515Z",
+        "name": "Yuriko Yamaguchi",
+        "malId": "Moved to mappings relationship.",
+        "description": "  Yuriko Yamaguchi is a Japanese seiyuu who was born in Osaka. Her blood type is B. \n \nPreviously affiliated with 81 Produce, she is presently (as of August 2006) employed and represented by Vi-Vo.  \n \nShe is best known for her role as Nico Robin on One Piece and Nurse Joy in Pokemon.  \n \nHer voice acting coach was the late Hitoshi Takagi. Her hobby is overtone singing. Her nickname is \"Yuruko\".  ",
+        "image": {
+          "tiny": "https://media.kitsu.io/person/636/image/tiny-9604dfc77f4ce8d51c8bf92d59f5eff1.jpeg",
+          "large": "https://media.kitsu.io/person/636/image/large-1a69e0b019c425c3720879a719aecd73.jpeg",
+          "small": "https://media.kitsu.io/person/636/image/small-7c9312bfcc1c2dc85e9262555693202a.jpeg",
+          "medium": "https://media.kitsu.io/person/636/image/medium-4cfd27772d44be55e4e592b7a2d2334e.jpeg",
+          "original": "https://media.kitsu.io/people/images/636/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/636/relationships/castings",
+            "related": "https://kitsu.io/api/edge/people/636/castings"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/636/relationships/staff",
+            "related": "https://kitsu.io/api/edge/people/636/staff"
+          }
+        },
+        "voices": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/636/relationships/voices",
+            "related": "https://kitsu.io/api/edge/people/636/voices"
+          }
+        }
+      }
+    },
+    {
+      "id": "864",
+      "type": "people",
+      "links": {
+        "self": "https://kitsu.io/api/edge/people/864"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:30.663Z",
+        "updatedAt": "2021-09-25T08:13:29.103Z",
+        "name": "Ikue Ootani",
+        "malId": "Moved to mappings relationship.",
+        "description": " \n  Hometown  \n Tokyo, Japan  \nBlood type: B  \n \nHobbies:  \nJapanese dancing \nJazz (vocal) \nModern ballet \n ",
+        "image": {
+          "tiny": "https://media.kitsu.io/person/864/image/tiny-66b552ee714e20767c4f4438b0b5dd62.jpeg",
+          "large": "https://media.kitsu.io/person/864/image/large-af84c05e9e78c82f6066ee8a082f12de.jpeg",
+          "small": "https://media.kitsu.io/person/864/image/small-dc8cfc64254262d29ae8ac2f5f840055.jpeg",
+          "medium": "https://media.kitsu.io/person/864/image/medium-eb763d4486d1bc286c8ef7966900b41c.jpeg",
+          "original": "https://media.kitsu.io/people/images/864/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/864/relationships/castings",
+            "related": "https://kitsu.io/api/edge/people/864/castings"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/864/relationships/staff",
+            "related": "https://kitsu.io/api/edge/people/864/staff"
+          }
+        },
+        "voices": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/864/relationships/voices",
+            "related": "https://kitsu.io/api/edge/people/864/voices"
+          }
+        }
+      }
+    },
+    {
+      "id": "1004",
+      "type": "people",
+      "links": {
+        "self": "https://kitsu.io/api/edge/people/1004"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:32.515Z",
+        "updatedAt": "2021-09-25T08:18:47.330Z",
+        "name": "Kazue Ikura",
+        "malId": "Moved to mappings relationship.",
+        "description": " \n  Hometown  \n Nagano, Japan \nBlood type: O \nHobbies: scuba diving, skiing, swimming \n ",
+        "image": {
+          "tiny": "https://media.kitsu.io/person/1004/image/tiny-cded4ee1a5e2aaa48752d754c5aad1e6.jpeg",
+          "large": "https://media.kitsu.io/person/1004/image/large-625c7f93892b18ed3dab379b74e129f1.jpeg",
+          "small": "https://media.kitsu.io/person/1004/image/small-d7745fbe0271d0b3f259fd6dac263028.jpeg",
+          "medium": "https://media.kitsu.io/person/1004/image/medium-5d79df8bce31db302cbf4b971e135ef2.jpeg",
+          "original": "https://media.kitsu.io/people/images/1004/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/1004/relationships/castings",
+            "related": "https://kitsu.io/api/edge/people/1004/castings"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/1004/relationships/staff",
+            "related": "https://kitsu.io/api/edge/people/1004/staff"
+          }
+        },
+        "voices": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/1004/relationships/voices",
+            "related": "https://kitsu.io/api/edge/people/1004/voices"
+          }
+        }
+      }
+    },
+    {
+      "id": "991",
+      "type": "people",
+      "links": {
+        "self": "https://kitsu.io/api/edge/people/991"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:32.373Z",
+        "updatedAt": "2021-09-25T08:18:15.713Z",
+        "name": "Yuko Kobayashi",
+        "malId": "Moved to mappings relationship.",
+        "description": "",
+        "image": {
+          "tiny": "https://media.kitsu.io/person/991/image/tiny-c98b5d5240f99be42786ad73f866bf03.jpeg",
+          "large": "https://media.kitsu.io/person/991/image/large-19440278d52c1b18a0ccad0c5943696b.jpeg",
+          "small": "https://media.kitsu.io/person/991/image/small-65bb529217979ce9e768a8eed9ecdeba.jpeg",
+          "medium": "https://media.kitsu.io/person/991/image/medium-589960cf67d274b411df5f2947e783dd.jpeg",
+          "original": "https://media.kitsu.io/people/images/991/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/991/relationships/castings",
+            "related": "https://kitsu.io/api/edge/people/991/castings"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/991/relationships/staff",
+            "related": "https://kitsu.io/api/edge/people/991/staff"
+          }
+        },
+        "voices": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/991/relationships/voices",
+            "related": "https://kitsu.io/api/edge/people/991/voices"
+          }
+        }
+      }
+    },
+    {
+      "id": "1190",
+      "type": "people",
+      "links": {
+        "self": "https://kitsu.io/api/edge/people/1190"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:36.401Z",
+        "updatedAt": "2021-09-25T08:26:53.968Z",
+        "name": "Kouhei Fukuhara",
+        "malId": "Moved to mappings relationship.",
+        "description": "  Non-anime roles: \nFlammole the Moleroid in \"Rockman ZX\" (Japanese) \nMusha Gundam Mk-II in \"Gundam Musou Special\" (VG/PS2) (Japanese) \nU.M.N Staff in \"Xenosaga Episode II: Jenseits von Gut und Bose\" (VG) (Japanese) \n \nCV: http://www.aoni.co.jp/actor/ha/pdf/fukuhara-kouhei.pdf \n \nSource: http://www.animenewsnetwork.com/encyclopedia/people.php?id=32111\n  ",
+        "image": {
+          "tiny": "https://media.kitsu.io/person/1190/image/tiny-090a20309b7f7b15a8255f71b925406a.jpeg",
+          "large": "https://media.kitsu.io/person/1190/image/large-e99248c28f6b07a5ca4e69b0479a53ca.jpeg",
+          "small": "https://media.kitsu.io/person/1190/image/small-c3f529788baa39d042c218aed8eb551d.jpeg",
+          "medium": "https://media.kitsu.io/person/1190/image/medium-add017fd03797497329812d89a1928d0.jpeg",
+          "original": "https://media.kitsu.io/people/images/1190/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/1190/relationships/castings",
+            "related": "https://kitsu.io/api/edge/people/1190/castings"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/1190/relationships/staff",
+            "related": "https://kitsu.io/api/edge/people/1190/staff"
+          }
+        },
+        "voices": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/1190/relationships/voices",
+            "related": "https://kitsu.io/api/edge/people/1190/voices"
+          }
+        }
+      }
+    },
+    {
+      "id": "985",
+      "type": "people",
+      "links": {
+        "self": "https://kitsu.io/api/edge/people/985"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:32.286Z",
+        "updatedAt": "2021-09-25T08:17:59.219Z",
+        "name": "Mayumi Tanaka",
+        "malId": "Moved to mappings relationship.",
+        "description": " \n  Hometown  \n Tokyo, Japan \nBlood type: A \nHobbies: theater \nSkills &amp; Abilities:  \n- member of an early childhood education research society  \n- playing with children \n ",
+        "image": {
+          "tiny": "https://media.kitsu.io/person/985/image/tiny-58c63a2874cb737cadf393ec35a0fdfc.jpeg",
+          "large": "https://media.kitsu.io/person/985/image/large-b5b49b7cbe97419b78a80a4e4a9b5f35.jpeg",
+          "small": "https://media.kitsu.io/person/985/image/small-d919b67cb48d88219770e11691d4c106.jpeg",
+          "medium": "https://media.kitsu.io/person/985/image/medium-7f35abea285abaeb75f29bb867c927b4.jpeg",
+          "original": "https://media.kitsu.io/people/images/985/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/985/relationships/castings",
+            "related": "https://kitsu.io/api/edge/people/985/castings"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/985/relationships/staff",
+            "related": "https://kitsu.io/api/edge/people/985/staff"
+          }
+        },
+        "voices": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/985/relationships/voices",
+            "related": "https://kitsu.io/api/edge/people/985/voices"
+          }
+        }
+      }
+    },
+    {
+      "id": "405",
+      "type": "people",
+      "links": {
+        "self": "https://kitsu.io/api/edge/people/405"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:24.816Z",
+        "updatedAt": "2021-09-25T07:52:16.071Z",
+        "name": "Michiko Neya",
+        "malId": "Moved to mappings relationship.",
+        "description": " \n  Hometown  \n Fukui, Japan \nBlood type: A \nHobbies: eat a lot, sleep a lot \n ",
+        "image": {
+          "tiny": "https://media.kitsu.io/person/405/image/tiny-0f4112ecb9e9baf381c26f67655d04d3.jpeg",
+          "large": "https://media.kitsu.io/person/405/image/large-35613a6204f09dcd689a01f862a8633f.jpeg",
+          "small": "https://media.kitsu.io/person/405/image/small-608016280bbcccdbef59d4d93cee110f.jpeg",
+          "medium": "https://media.kitsu.io/person/405/image/medium-23449c6d35d7ea986be8185b0382f76a.jpeg",
+          "original": "https://media.kitsu.io/people/images/405/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/405/relationships/castings",
+            "related": "https://kitsu.io/api/edge/people/405/castings"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/405/relationships/staff",
+            "related": "https://kitsu.io/api/edge/people/405/staff"
+          }
+        },
+        "voices": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/405/relationships/voices",
+            "related": "https://kitsu.io/api/edge/people/405/voices"
+          }
+        }
+      }
+    },
+    {
+      "id": "699",
+      "type": "people",
+      "links": {
+        "self": "https://kitsu.io/api/edge/people/699"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:28.150Z",
+        "updatedAt": "2021-09-25T08:05:29.333Z",
+        "name": "Jouji Nakata",
+        "malId": "Moved to mappings relationship.",
+        "description": " \n  Hometown  \n Tokyo, Japan \nHeight: 175 cm (5' 9\") \nBlood type: A \nHobbies: all types of sport \n \nTwitter: @joujinakata123 \nProfile: osawa-inc.co.jp/blocks/...\n \n ",
+        "image": {
+          "tiny": "https://media.kitsu.io/person/699/image/tiny-c4fedcf68bcc74f5fd66b1274b8673d6.jpeg",
+          "large": "https://media.kitsu.io/person/699/image/large-05e4e20bf6fee03559612c9630a4aec0.jpeg",
+          "small": "https://media.kitsu.io/person/699/image/small-de863fb328f0f82206641e751eddff0a.jpeg",
+          "medium": "https://media.kitsu.io/person/699/image/medium-dcfa2c49239e1bbec9de7efc0e417956.jpeg",
+          "original": "https://media.kitsu.io/people/images/699/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/699/relationships/castings",
+            "related": "https://kitsu.io/api/edge/people/699/castings"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/699/relationships/staff",
+            "related": "https://kitsu.io/api/edge/people/699/staff"
+          }
+        },
+        "voices": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/people/699/relationships/voices",
+            "related": "https://kitsu.io/api/edge/people/699/voices"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "count": 709
+  },
+  "links": {
+    "first": "https://kitsu.io/api/edge/castings?filter%5Bis_character%5D=true&filter%5Blanguage%5D=Japanese&filter%5Bmedia_id%5D=12&filter%5Bmedia_type%5D=Anime&include=character%2Cperson&page%5Blimit%5D=10&page%5Boffset%5D=0&sort=-featured",
+    "prev": "https://kitsu.io/api/edge/castings?filter%5Bis_character%5D=true&filter%5Blanguage%5D=Japanese&filter%5Bmedia_id%5D=12&filter%5Bmedia_type%5D=Anime&include=character%2Cperson&page%5Blimit%5D=10&page%5Boffset%5D=0&sort=-featured",
+    "next": "https://kitsu.io/api/edge/castings?filter%5Bis_character%5D=true&filter%5Blanguage%5D=Japanese&filter%5Bmedia_id%5D=12&filter%5Bmedia_type%5D=Anime&include=character%2Cperson&page%5Blimit%5D=10&page%5Boffset%5D=20&sort=-featured",
+    "last": "https://kitsu.io/api/edge/castings?filter%5Bis_character%5D=true&filter%5Blanguage%5D=Japanese&filter%5Bmedia_id%5D=12&filter%5Bmedia_type%5D=Anime&include=character%2Cperson&page%5Blimit%5D=10&page%5Boffset%5D=699&sort=-featured"
+  }
+}

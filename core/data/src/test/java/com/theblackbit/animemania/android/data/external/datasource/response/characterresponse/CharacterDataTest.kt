@@ -17,7 +17,6 @@ class CharacterDataTest {
             id = "1",
             type = "Anime",
             attributes = CharacterAttributes(
-                malId = 1,
                 canonicalName = "Test",
                 description = "Description test",
                 image = Image(
@@ -73,7 +72,6 @@ class CharacterDataTest {
             id = null,
             type = null,
             attributes = CharacterAttributes(
-                null,
                 null,
                 null,
                 null,

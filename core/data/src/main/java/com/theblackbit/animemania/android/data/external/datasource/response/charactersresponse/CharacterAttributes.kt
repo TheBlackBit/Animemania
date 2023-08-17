@@ -4,7 +4,6 @@ data class CharacterAttributes(
     val createdAt: String?,
     val description: String?,
     val image: Image?,
-    val malId: Int?,
     val canonicalName: String?,
     val slug: String?,
     val updatedAt: String?,

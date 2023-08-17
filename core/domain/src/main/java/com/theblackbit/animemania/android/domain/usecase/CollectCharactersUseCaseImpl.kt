@@ -15,7 +15,7 @@ class CollectCharactersUseCaseImpl(
         return Pager(
             config = PagingConfig(
                 pageSize = CharacterPagingSourceFactory.CHARACTER_PAGE_LIMIT,
-                initialLoadSize = CharacterPagingSourceFactory.CHARACTER_PAGE_LIMIT,
+                prefetchDistance = CharacterPagingSourceFactory.CHARACTER_PAGE_LIMIT / 2,
                 enablePlaceholders = false,
             ),
             pagingSourceFactory = {

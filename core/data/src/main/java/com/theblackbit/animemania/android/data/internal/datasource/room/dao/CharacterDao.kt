@@ -12,7 +12,7 @@ interface CharacterDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertCharacters(characters: List<CharacterEntity>)
 
-    @Query("SELECT * from characterentity WHERE collectionID =:collectionId AND page =:page limit 20")
+    @Query("SELECT * from characterentity WHERE collectionID =:collectionId AND page =:page")
     fun getCharactersByCollectionId(collectionId: String, page: Int): Single<List<CharacterEntity>>
 
     @Query("DELETE FROM characterentity WHERE collectionID =:collectionId")

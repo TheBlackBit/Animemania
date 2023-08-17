@@ -37,7 +37,10 @@ class EpisodePagingSource(
             .subscribeOn(Schedulers.io())
             .concatMap { result ->
                 handleApiResult(currentPage = currentPage, result = result)
-                localRepository.getChaptersByCollection(collectionId, currentPage)
+                localRepository.getChaptersByCollection(
+                    collectionId = collectionId,
+                    pageNumber = currentPage,
+                )
             }
             .map { characterEntities -> toLoadResult(characterEntities, currentPage) }
             .onErrorReturn { LoadResult.Error(it) }

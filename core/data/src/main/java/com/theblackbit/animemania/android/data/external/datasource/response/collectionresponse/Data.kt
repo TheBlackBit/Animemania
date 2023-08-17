@@ -1,5 +1,6 @@
 package com.theblackbit.animemania.android.data.external.datasource.response.collectionresponse
 
+import com.theblackbit.animemania.android.data.external.datasource.RequestType
 import com.theblackbit.animemania.android.data.internal.datasource.room.entity.CollectionEntity
 
 data class Data(
@@ -8,7 +9,11 @@ data class Data(
     val type: String?,
 )
 
-fun Data.toCollectionEntity(categoryId: Int, collectionType: String): CollectionEntity {
+fun Data.toCollectionEntity(
+    collectionType: String,
+    typeOfRequest: RequestType,
+    page: Int,
+): CollectionEntity {
     return CollectionEntity(
         collectionId = id ?: "-1",
         name = attributes?.canonicalTitle ?: "",
@@ -16,12 +21,13 @@ fun Data.toCollectionEntity(categoryId: Int, collectionType: String): Collection
         startDate = attributes?.startDate ?: "",
         endDate = attributes?.endDate ?: "",
         genres = "",
-        categoryId = categoryId,
         collectionType = collectionType,
         episodeCount = "",
         miniPosterImageUrl = attributes?.posterImage?.validImage() ?: "",
         bigPosterImageUrl = attributes?.coverImage?.validImage() ?: "",
         status = attributes?.status ?: "",
         synopsis = attributes?.synopsis ?: "",
+        typeOfRequest = typeOfRequest.name,
+        page = page,
     )
 }
