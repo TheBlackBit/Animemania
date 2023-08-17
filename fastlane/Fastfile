@@ -16,9 +16,16 @@
 default_platform(:android)
 
 platform :android do
-   desc 'Runs ktlint'
-   lane :lint_verification do
+   desc 'Lint format'
+   lane :lint_format do
      gradle(task: "clean")
-     gradle(task: "ktlintCheck")
+     gradle(task: "ktlintFormat")
    end
+
+   desc 'Lint verification'
+     lane :lint_verification do
+       gradle(task: "clean")
+       gradle(task: "ktlintCheck")
+     end
+
 end
