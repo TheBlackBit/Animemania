@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 data class ChaptersResponse(
     @SerializedName("data")
-    val chapterData: List<ChapterData>,
+    val chapterData: List<ChapterData>
 )

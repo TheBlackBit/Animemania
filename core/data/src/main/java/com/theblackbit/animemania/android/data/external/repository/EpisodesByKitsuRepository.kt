@@ -8,6 +8,6 @@ interface EpisodesByKitsuRepository {
     fun getCollectionEpisodes(
         collectionId: String,
         pageNumber: String,
-        pageOffset: String,
+        pageOffset: String
     ): Single<SafeApiRequest.ApiResultHandle<EpisodesResponse>>
 }

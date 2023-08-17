@@ -5,7 +5,7 @@ data class CoverImage(
     val original: String?,
     val small: String?,
     val tiny: String?,
-    val medium: String?,
+    val medium: String?
 )
 
 fun CoverImage.validImage(): String {

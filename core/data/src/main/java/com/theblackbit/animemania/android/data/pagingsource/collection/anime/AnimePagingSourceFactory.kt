@@ -9,7 +9,7 @@ import com.theblackbit.animemania.android.model.Collection
 
 class AnimePagingSourceFactory(
     private val localRepository: CollectionLocalRepository,
-    private val animeRemoteRepository: AnimeRemoteRepository,
+    private val animeRemoteRepository: AnimeRemoteRepository
 ) {
 
     fun getAnimePagingSource(requestType: RequestType): RxPagingSource<Int, Collection> {
@@ -19,7 +19,7 @@ class AnimePagingSourceFactory(
                 request = { pageLimit, pageOffset ->
                     animeRemoteRepository.collectTrending(pageLimit, pageOffset)
                 },
-                requestType = requestType,
+                requestType = requestType
             )
 
             RequestType.MOST_ANTICIPATED_ANIME -> MostAnticipatedAnimePagingSource(
@@ -27,7 +27,7 @@ class AnimePagingSourceFactory(
                 request = { pageLimit, pageOffset ->
                     animeRemoteRepository.getMostAnticipated(pageLimit, pageOffset)
                 },
-                requestType = requestType,
+                requestType = requestType
             )
 
             RequestType.TOP_RATED_ANIME -> TopRatedAnimePagingSource(
@@ -35,7 +35,7 @@ class AnimePagingSourceFactory(
                 request = { pageLimit, pageOffset ->
                     animeRemoteRepository.getTopRated(pageLimit, pageOffset)
                 },
-                requestType = requestType,
+                requestType = requestType
             )
 
             RequestType.POPULAR_ANIME -> PopularAnimePagingSource(
@@ -43,7 +43,7 @@ class AnimePagingSourceFactory(
                 request = { pageLimit, pageOffset ->
                     animeRemoteRepository.getPopular(pageLimit, pageOffset)
                 },
-                requestType = requestType,
+                requestType = requestType
             )
 
             else -> EmptyCollectionPagingSource()

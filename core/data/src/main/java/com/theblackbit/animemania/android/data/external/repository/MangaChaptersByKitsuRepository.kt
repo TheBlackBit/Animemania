@@ -8,6 +8,6 @@ interface MangaChaptersByKitsuRepository {
     fun getMangaChapters(
         collectionId: String,
         pageLimit: String,
-        pageOffset: String,
+        pageOffset: String
     ): Single<SafeApiRequest.ApiResultHandle<ChaptersResponse>>
 }

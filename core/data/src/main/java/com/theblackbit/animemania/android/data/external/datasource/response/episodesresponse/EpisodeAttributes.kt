@@ -9,5 +9,5 @@ data class EpisodeAttributes(
     val seasonNumber: Int?,
     val synopsis: String?,
     val updatedAt: String?,
-    val thumbnail: ThumbnailEpisode?,
+    val thumbnail: ThumbnailEpisode?
 )

@@ -7,7 +7,7 @@ import com.theblackbit.animemania.android.model.Character
 
 class CharacterPagingSourceFactory(
     private val localRepository: CharacterLocalRepository,
-    private val remoteRepository: CharacterByKitsuRepository,
+    private val remoteRepository: CharacterByKitsuRepository
 ) {
 
     companion object {
@@ -16,13 +16,13 @@ class CharacterPagingSourceFactory(
 
     fun getCharacterPagingSourceByMediaType(
         collectionId: String,
-        mediaType: String,
+        mediaType: String
     ): RxPagingSource<Int, Character> {
         return CharacterPagingSource(
             localRepository = localRepository,
             remoteRepository = remoteRepository,
             mediaType = mediaType,
-            collectionId = collectionId,
+            collectionId = collectionId
         )
     }
 }

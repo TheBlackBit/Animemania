@@ -10,5 +10,5 @@ data class Attributes(
     val status: String?,
     val synopsis: String?,
     val userCount: Int?,
-    val youtubeVideoId: String?,
+    val youtubeVideoId: String?
 )

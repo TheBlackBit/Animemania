@@ -16,9 +16,9 @@ const val LATEST_VERSION = 1
     entities = [
         CollectionEntity::class,
         CharacterEntity::class,
-        ChapterEntity::class,
+        ChapterEntity::class
     ],
-    exportSchema = true,
+    exportSchema = true
 )
 abstract class AnimeManiaRoom : RoomDatabase() {
     abstract fun collectionDao(): CollectionDao

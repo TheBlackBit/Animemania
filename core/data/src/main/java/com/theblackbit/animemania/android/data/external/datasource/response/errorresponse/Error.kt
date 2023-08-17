@@ -5,5 +5,5 @@ data class Error(
     val detail: String?,
     val source: Source?,
     val status: String?,
-    val title: String?,
+    val title: String?
 )

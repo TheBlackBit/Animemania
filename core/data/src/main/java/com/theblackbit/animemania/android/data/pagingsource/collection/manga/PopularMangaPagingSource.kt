@@ -11,10 +11,10 @@ import io.reactivex.rxjava3.core.Single
 class PopularMangaPagingSource(
     localRepository: CollectionLocalRepository,
     request: (pageLimit: String, pageOffset: String?) -> Single<SafeApiRequest.ApiResultHandle<CollectionResponse>>,
-    requestType: RequestType,
+    requestType: RequestType
 ) : CollectionPagingSource(
     localRepository,
     request,
     requestType,
-    CollectionType.MANGA,
+    CollectionType.MANGA
 )

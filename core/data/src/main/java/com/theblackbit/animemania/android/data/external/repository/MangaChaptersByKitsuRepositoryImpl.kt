@@ -7,18 +7,18 @@ import io.reactivex.rxjava3.core.Single
 
 class MangaChaptersByKitsuRepositoryImpl(
     private val kitsuChaptersDataSource: KitsuChaptersDataSource,
-    private val safeApiRequest: SafeApiRequest,
+    private val safeApiRequest: SafeApiRequest
 ) : MangaChaptersByKitsuRepository {
     override fun getMangaChapters(
         collectionId: String,
         pageLimit: String,
-        pageOffset: String,
+        pageOffset: String
     ): Single<SafeApiRequest.ApiResultHandle<ChaptersResponse>> {
         return safeApiRequest.request {
             kitsuChaptersDataSource.getChapters(
                 mangaId = collectionId,
                 pageLimit = pageLimit,
-                pageOffset = pageOffset,
+                pageOffset = pageOffset
             ).map { it }
         }
     }

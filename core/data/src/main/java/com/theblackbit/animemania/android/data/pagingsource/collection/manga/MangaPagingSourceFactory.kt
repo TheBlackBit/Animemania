@@ -9,7 +9,7 @@ import com.theblackbit.animemania.android.model.Collection
 
 class MangaPagingSourceFactory(
     private val localRepository: CollectionLocalRepository,
-    private val mangaRemoteRepository: MangaRemoteRepository,
+    private val mangaRemoteRepository: MangaRemoteRepository
 ) {
 
     fun getMangaPagingSource(requestType: RequestType): PagingSource<Int, Collection> {
@@ -19,7 +19,7 @@ class MangaPagingSourceFactory(
                 request = { pageLimit, pageOffset ->
                     mangaRemoteRepository.collectTrending(pageLimit, pageOffset)
                 },
-                requestType = requestType,
+                requestType = requestType
             )
 
             RequestType.MOST_ANTICIPATED_MANGA -> MostAnticipatedMangaPagingSource(
@@ -27,7 +27,7 @@ class MangaPagingSourceFactory(
                 request = { pageLimit, pageOffset ->
                     mangaRemoteRepository.getMostAnticipated(pageLimit, pageOffset)
                 },
-                requestType = requestType,
+                requestType = requestType
             )
 
             RequestType.TOP_RATED_MANGA -> TopRatedMangaPagingSource(
@@ -35,7 +35,7 @@ class MangaPagingSourceFactory(
                 request = { pageLimit, pageOffset ->
                     mangaRemoteRepository.getTopRated(pageLimit, pageOffset)
                 },
-                requestType = requestType,
+                requestType = requestType
             )
 
             RequestType.POPULAR_MANGA -> PopularMangaPagingSource(
@@ -43,7 +43,7 @@ class MangaPagingSourceFactory(
                 request = { pageLimit, pageOffset ->
                     mangaRemoteRepository.getPopular(pageLimit, pageOffset)
                 },
-                requestType = requestType,
+                requestType = requestType
             )
 
             else -> EmptyCollectionPagingSource()

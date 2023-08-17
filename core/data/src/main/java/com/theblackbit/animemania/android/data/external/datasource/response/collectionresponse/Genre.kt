@@ -2,5 +2,5 @@ package com.theblackbit.animemania.android.data.external.datasource.response.col
 
 data class Genre(
     val id: String?,
-    val attributes: GenreAttributes?,
+    val attributes: GenreAttributes?
 )

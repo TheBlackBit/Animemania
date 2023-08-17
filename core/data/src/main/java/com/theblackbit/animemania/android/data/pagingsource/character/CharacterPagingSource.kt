@@ -18,7 +18,7 @@ class CharacterPagingSource(
     private val localRepository: CharacterLocalRepository,
     private val remoteRepository: CharacterByKitsuRepository,
     private val mediaType: String,
-    private val collectionId: String,
+    private val collectionId: String
 ) : RxPagingSource<Int, Character>() {
 
     override fun getRefreshKey(state: PagingState<Int, Character>): Int? {
@@ -34,14 +34,14 @@ class CharacterPagingSource(
                 mediaType,
                 collectionId,
                 CHARACTER_PAGE_LIMIT.toString(),
-                pageOffset,
+                pageOffset
             )
             .subscribeOn(Schedulers.io())
             .concatMap { result ->
                 handleApiResult(currentPage = currentPage, result = result)
                 localRepository.getCharactersByCollectionId(
                     collectionId = collectionId,
-                    page = currentPage,
+                    page = currentPage
                 )
             }
             .map { characterEntities -> toLoadResult(characterEntities, currentPage) }
@@ -50,7 +50,7 @@ class CharacterPagingSource(
 
     private fun handleApiResult(
         currentPage: Int,
-        result: SafeApiRequest.ApiResultHandle<CharacterResponse>,
+        result: SafeApiRequest.ApiResultHandle<CharacterResponse>
     ) {
         if (result is SafeApiRequest.ApiResultHandle.Success) {
             if (currentPage == 1) {
@@ -68,13 +68,13 @@ class CharacterPagingSource(
 
     private fun toLoadResult(
         characterEntity: List<CharacterEntity>,
-        currentPage: Int,
+        currentPage: Int
     ): LoadResult<Int, Character> {
         val characters = characterEntity.map { it.toCharacterModel() }
         return LoadResult.Page(
             data = characters,
             prevKey = if (currentPage == 1) null else currentPage - 1,
-            nextKey = if (characters.isEmpty()) null else currentPage + 1,
+            nextKey = if (characters.isEmpty()) null else currentPage + 1
         )
     }
 }

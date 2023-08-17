@@ -24,7 +24,7 @@ class CharacterDataTest {
                     large = "test",
                     small = "test",
                     medium = "test",
-                    original = "test",
+                    original = "test"
                 ),
                 createdAt = "test",
                 updatedAt = "test",

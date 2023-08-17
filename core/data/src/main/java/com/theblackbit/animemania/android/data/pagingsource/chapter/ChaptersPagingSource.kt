@@ -18,7 +18,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 class ChaptersPagingSource(
     private val localRepository: ChapterLocalRepository,
     private val remoteRepository: MangaChaptersByKitsuRepository,
-    private val collectionId: String,
+    private val collectionId: String
 ) : RxPagingSource<Int, Chapter>() {
 
     override fun getRefreshKey(state: PagingState<Int, Chapter>): Int {
@@ -33,14 +33,14 @@ class ChaptersPagingSource(
             .getMangaChapters(
                 collectionId,
                 COLLECTION_PAGE_LIMIT.toString(),
-                pageOffset.toString(),
+                pageOffset.toString()
             )
             .subscribeOn(Schedulers.io())
             .concatMap { result ->
                 handleApiResult(currentPage = currentPage, result = result)
                 localRepository.getChaptersByCollection(
                     collectionId = collectionId,
-                    pageNumber = currentPage,
+                    pageNumber = currentPage
                 )
             }
             .map { characterEntities -> toLoadResult(characterEntities, currentPage) }
@@ -53,7 +53,7 @@ class ChaptersPagingSource(
 
     private fun handleApiResult(
         currentPage: Int,
-        result: SafeApiRequest.ApiResultHandle<ChaptersResponse>,
+        result: SafeApiRequest.ApiResultHandle<ChaptersResponse>
     ) {
         if (result is SafeApiRequest.ApiResultHandle.Success) {
             if (currentPage == 1) {
@@ -68,13 +68,13 @@ class ChaptersPagingSource(
 
     private fun toLoadResult(
         characterEntity: List<ChapterEntity>,
-        currentPage: Int,
+        currentPage: Int
     ): LoadResult<Int, Chapter> {
         val chapters = characterEntity.map { it.toChapterModel() }
         return LoadResult.Page(
             data = chapters,
             prevKey = if (currentPage == 1) null else currentPage - 1,
-            nextKey = if (chapters.isEmpty()) null else currentPage + 1,
+            nextKey = if (chapters.isEmpty()) null else currentPage + 1
         )
     }
 }

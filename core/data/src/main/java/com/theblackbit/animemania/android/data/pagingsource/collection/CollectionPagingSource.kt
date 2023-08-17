@@ -18,7 +18,7 @@ open class CollectionPagingSource(
     private val localRepository: CollectionLocalRepository,
     private val request: (pageLimit: String, pageOffset: String?) -> Single<SafeApiRequest.ApiResultHandle<CollectionResponse>>,
     private val requestType: RequestType,
-    private val collectionType: CollectionType,
+    private val collectionType: CollectionType
 ) : RxPagingSource<Int, Collection>() {
     companion object {
         const val COLLECTION_PAGE_LIMIT = 20
@@ -35,14 +35,14 @@ open class CollectionPagingSource(
         return request
             .invoke(
                 COLLECTION_PAGE_LIMIT.toString(),
-                pageOffset,
+                pageOffset
             )
             .subscribeOn(Schedulers.io())
             .concatMap { result ->
                 handleApiResult(currentPage = currentPage, result = result)
                 localRepository.collectPagedCollections(
                     pageNumber = currentPage,
-                    requestType = requestType,
+                    requestType = requestType
                 )
             }
             .map { collectionsCached ->
@@ -58,7 +58,7 @@ open class CollectionPagingSource(
 
     private fun handleApiResult(
         currentPage: Int,
-        result: SafeApiRequest.ApiResultHandle<CollectionResponse>,
+        result: SafeApiRequest.ApiResultHandle<CollectionResponse>
     ) {
         if (result is SafeApiRequest.ApiResultHandle.Success) {
             handleApiResultSuccess(currentPage, result.value)
@@ -84,25 +84,25 @@ open class CollectionPagingSource(
 
     private fun getEntitiesByDataResponse(
         collectionResponse: CollectionResponse,
-        page: Int,
+        page: Int
     ): List<CollectionEntity> {
         return collectionResponse.collectionData.map {
             it.toCollectionEntity(
                 collectionType = collectionType.collectionName,
                 typeOfRequest = requestType,
-                page = page,
+                page = page
             )
         }
     }
 
     open fun toLoadResult(
         collection: List<Collection>,
-        currentPage: Int,
+        currentPage: Int
     ): LoadResult<Int, Collection> {
         return LoadResult.Page(
             data = collection,
             prevKey = if (currentPage == 1) null else currentPage - 1,
-            nextKey = if (collection.isEmpty()) null else currentPage + 1,
+            nextKey = if (collection.isEmpty()) null else currentPage + 1
         )
     }
 }

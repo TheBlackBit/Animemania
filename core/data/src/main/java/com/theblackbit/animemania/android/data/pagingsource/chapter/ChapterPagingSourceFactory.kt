@@ -10,7 +10,7 @@ import com.theblackbit.animemania.android.model.CollectionType
 class ChapterPagingSourceFactory(
     private val localRepository: ChapterLocalRepository,
     private val mangaChapters: MangaChaptersByKitsuRepository,
-    private val animeEpisodes: EpisodesByKitsuRepository,
+    private val animeEpisodes: EpisodesByKitsuRepository
 ) {
 
     companion object {
@@ -19,19 +19,19 @@ class ChapterPagingSourceFactory(
 
     fun getChapterPagingSourceCollectionId(
         collectionId: String,
-        collectionType: CollectionType,
+        collectionType: CollectionType
     ): RxPagingSource<Int, Chapter> {
         return when (collectionType) {
             CollectionType.ANIME -> EpisodePagingSource(
                 localRepository = localRepository,
                 remoteRepository = animeEpisodes,
-                collectionId = collectionId,
+                collectionId = collectionId
             )
 
             CollectionType.MANGA -> ChaptersPagingSource(
                 localRepository = localRepository,
                 remoteRepository = mangaChapters,
-                collectionId = collectionId,
+                collectionId = collectionId
             )
         }
     }

@@ -6,7 +6,7 @@ import com.theblackbit.animemania.android.data.internal.datasource.room.entity.C
 import io.reactivex.rxjava3.core.Single
 
 class CollectionRoomRepository(
-    private val collectionDao: CollectionDao,
+    private val collectionDao: CollectionDao
 ) : CollectionLocalRepository {
     override fun insertCollectionsEntities(collectionEntities: List<CollectionEntity>) {
         collectionDao.insertCollectionEntities(collectionEntities)
@@ -14,7 +14,7 @@ class CollectionRoomRepository(
 
     override fun collectPagedCollections(
         pageNumber: Int,
-        requestType: RequestType,
+        requestType: RequestType
     ): Single<List<CollectionEntity>> {
         return collectionDao.collectPagedCollectionsByTypeOfRequest(pageNumber, requestType.name)
     }

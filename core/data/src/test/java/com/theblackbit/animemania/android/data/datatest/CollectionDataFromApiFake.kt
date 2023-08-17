@@ -17,13 +17,13 @@ val collectionDataList = listOf(
                 "poster1_medium",
                 "poster1_original",
                 "poster1_small",
-                "poster1_tiny",
+                "poster1_tiny"
             ),
             "2023-07-01",
             "Ongoing",
             "Synopsis 1",
             1000,
-            "videoId1",
+            "videoId1"
         ),
         "id1",
         "type1"
@@ -39,13 +39,13 @@ val collectionDataList = listOf(
                 "poster2_medium",
                 "poster2_original",
                 "poster2_small",
-                "poster2_tiny",
+                "poster2_tiny"
             ),
             "2023-08-15",
             "Upcoming",
             "Synopsis 2",
             750,
-            "videoId2",
+            "videoId2"
         ),
         "id2",
         "type2"
@@ -61,13 +61,13 @@ val collectionDataList = listOf(
                 "poster3_medium",
                 "poster3_original",
                 "poster3_small",
-                "poster3_tiny",
+                "poster3_tiny"
             ),
             "2023-09-20",
             "Ongoing",
             "Synopsis 3",
             900,
-            "videoId3",
+            "videoId3"
         ),
         "id3",
         "type3"
@@ -83,13 +83,13 @@ val collectionDataList = listOf(
                 "poster4_medium",
                 "poster4_original",
                 "poster4_small",
-                "poster4_tiny",
+                "poster4_tiny"
             ),
             "2023-10-04",
             "Upcoming",
             "Synopsis 4",
             210,
-            "videoId4",
+            "videoId4"
         ),
         "id4",
         "type4"
@@ -105,13 +105,13 @@ val collectionDataList = listOf(
                 "poster5_medium",
                 "poster5_original",
                 "poster5_small",
-                "poster5_tiny",
+                "poster5_tiny"
             ),
             "2023-10-05",
             "Ongoing",
             "Synopsis 5",
             430,
-            "videoId5",
+            "videoId5"
         ),
         "id5",
         "type5"
@@ -127,13 +127,13 @@ val collectionDataList = listOf(
                 "poster6_medium",
                 "poster6_original",
                 "poster6_small",
-                "poster6_tiny",
+                "poster6_tiny"
             ),
             "2023-10-06",
             "Finished",
             "Synopsis 6",
             80,
-            "videoId6",
+            "videoId6"
         ),
         "id6",
         "type6"
@@ -149,13 +149,13 @@ val collectionDataList = listOf(
                 "poster7_medium",
                 "poster7_original",
                 "poster7_small",
-                "poster7_tiny",
+                "poster7_tiny"
             ),
             "2023-10-07",
             "Upcoming",
             "Synopsis 7",
             150,
-            "videoId7",
+            "videoId7"
         ),
         "id7",
         "type7"
@@ -171,13 +171,13 @@ val collectionDataList = listOf(
                 "poster8_medium",
                 "poster8_original",
                 "poster8_small",
-                "poster8_tiny",
+                "poster8_tiny"
             ),
             "2023-10-08",
             "Ongoing",
             "Synopsis 8",
             300,
-            "videoId8",
+            "videoId8"
         ),
         "id8",
         "type8"
@@ -193,13 +193,13 @@ val collectionDataList = listOf(
                 "poster9_medium",
                 "poster9_original",
                 "poster9_small",
-                "poster9_tiny",
+                "poster9_tiny"
             ),
             "2023-10-09",
             "Finished",
             "Synopsis 9",
             120,
-            "videoId9",
+            "videoId9"
         ),
         "id9",
         "type9"
@@ -215,13 +215,13 @@ val collectionDataList = listOf(
                 "poster10_medium",
                 "poster10_original",
                 "poster10_small",
-                "poster10_tiny",
+                "poster10_tiny"
             ),
             "2023-10-10",
             "Upcoming",
             "Synopsis 10",
             180,
-            "videoId10",
+            "videoId10"
         ),
         "id10",
         "type10"
@@ -237,13 +237,13 @@ val collectionDataList = listOf(
                 "poster11_medium",
                 "poster11_original",
                 "poster11_small",
-                "poster11_tiny",
+                "poster11_tiny"
             ),
             "2023-10-11",
             "Finished",
             "Synopsis 11",
             110,
-            "videoId11",
+            "videoId11"
         ),
         "id11",
         "type11"
@@ -259,13 +259,13 @@ val collectionDataList = listOf(
                 "poster12_medium",
                 "poster12_original",
                 "poster12_small",
-                "poster12_tiny",
+                "poster12_tiny"
             ),
             "2023-10-12",
             "Upcoming",
             "Synopsis 12",
             80,
-            "videoId12",
+            "videoId12"
         ),
         "id12",
         "type12"
@@ -281,13 +281,13 @@ val collectionDataList = listOf(
                 "poster13_medium",
                 "poster13_original",
                 "poster13_small",
-                "poster13_tiny",
+                "poster13_tiny"
             ),
             "2023-10-13",
             "Ongoing",
             "Synopsis 13",
             250,
-            "videoId13",
+            "videoId13"
         ),
         "id13",
         "type13"
@@ -303,13 +303,13 @@ val collectionDataList = listOf(
                 "poster14_medium",
                 "poster14_original",
                 "poster14_small",
-                "poster14_tiny",
+                "poster14_tiny"
             ),
             "2023-10-14",
             "Finished",
             "Synopsis 14",
             50,
-            "videoId14",
+            "videoId14"
         ),
         "id14",
         "type14"
@@ -325,13 +325,13 @@ val collectionDataList = listOf(
                 "poster15_medium",
                 "poster15_original",
                 "poster15_small",
-                "poster15_tiny",
+                "poster15_tiny"
             ),
             "2023-10-15",
             "Upcoming",
             "Synopsis 15",
             130,
-            "videoId15",
+            "videoId15"
         ),
         "id15",
         "type15"
@@ -347,13 +347,13 @@ val collectionDataList = listOf(
                 "poster16_medium",
                 "poster16_original",
                 "poster16_small",
-                "poster16_tiny",
+                "poster16_tiny"
             ),
             "2023-10-16",
             "Ongoing",
             "Synopsis 16",
             200,
-            "videoId16",
+            "videoId16"
         ),
         "id16",
         "type16"
@@ -369,13 +369,13 @@ val collectionDataList = listOf(
                 "poster17_medium",
                 "poster17_original",
                 "poster17_small",
-                "poster17_tiny",
+                "poster17_tiny"
             ),
             "2023-10-17",
             "Finished",
             "Synopsis 17",
             90,
-            "videoId17",
+            "videoId17"
         ),
         "id17",
         "type17"
@@ -391,13 +391,13 @@ val collectionDataList = listOf(
                 "poster18_medium",
                 "poster18_original",
                 "poster18_small",
-                "poster18_tiny",
+                "poster18_tiny"
             ),
             "2023-10-18",
             "Upcoming",
             "Synopsis 18",
             150,
-            "videoId18",
+            "videoId18"
         ),
         "id18",
         "type18"
@@ -413,13 +413,13 @@ val collectionDataList = listOf(
                 "poster19_medium",
                 "poster19_original",
                 "poster19_small",
-                "poster19_tiny",
+                "poster19_tiny"
             ),
             "2023-10-19",
             "Ongoing",
             "Synopsis 19",
             320,
-            "videoId19",
+            "videoId19"
         ),
         "id19",
         "type19"
@@ -435,13 +435,13 @@ val collectionDataList = listOf(
                 "poster20_medium",
                 "poster20_original",
                 "poster20_small",
-                "poster20_tiny",
+                "poster20_tiny"
             ),
             "2023-10-20",
             "Finished",
             "Synopsis 20",
             420,
-            "videoId20",
+            "videoId20"
         ),
         "id20",
         "type20"

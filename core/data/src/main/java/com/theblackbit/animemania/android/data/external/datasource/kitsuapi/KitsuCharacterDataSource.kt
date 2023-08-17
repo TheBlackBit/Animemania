@@ -13,6 +13,6 @@ interface KitsuCharacterDataSource {
         @Query("include") include: String = KitsuInclude.CHARACTER,
         @Query("filter[is_character]") isCharacter: Boolean = true,
         @Query("page[limit]") pageNumber: String,
-        @Query("page[offset]") pageOffset: String?,
+        @Query("page[offset]") pageOffset: String?
     ): Single<CharacterResponse>
 }

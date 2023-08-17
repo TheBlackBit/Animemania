@@ -10,10 +10,10 @@ interface CollectionLocalRepository {
 
     fun collectPagedCollections(
         pageNumber: Int,
-        requestType: RequestType,
+        requestType: RequestType
     ): Single<List<CollectionEntity>>
 
     fun clearCollectionsByRequestType(
-        requestType: RequestType,
+        requestType: RequestType
     )
 }

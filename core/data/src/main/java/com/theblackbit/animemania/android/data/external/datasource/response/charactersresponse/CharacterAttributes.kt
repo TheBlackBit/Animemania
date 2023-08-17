@@ -6,5 +6,5 @@ data class CharacterAttributes(
     val image: Image?,
     val canonicalName: String?,
     val slug: String?,
-    val updatedAt: String?,
+    val updatedAt: String?
 )

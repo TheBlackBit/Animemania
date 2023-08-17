@@ -8,21 +8,21 @@ interface AnimeRemoteRepository {
 
     fun collectTrending(
         pageLimit: String,
-        pageOffset: String?,
+        pageOffset: String?
     ): Single<SafeApiRequest.ApiResultHandle<CollectionResponse>>
 
     fun getMostAnticipated(
         pageLimit: String,
-        pageOffset: String?,
+        pageOffset: String?
     ): Single<SafeApiRequest.ApiResultHandle<CollectionResponse>>
 
     fun getTopRated(
         pageLimit: String,
-        pageOffset: String?,
+        pageOffset: String?
     ): Single<SafeApiRequest.ApiResultHandle<CollectionResponse>>
 
     fun getPopular(
         pageLimit: String,
-        pageOffset: String?,
+        pageOffset: String?
     ): Single<SafeApiRequest.ApiResultHandle<CollectionResponse>>
 }

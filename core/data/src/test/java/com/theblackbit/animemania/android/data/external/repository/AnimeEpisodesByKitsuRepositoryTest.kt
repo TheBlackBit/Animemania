@@ -42,7 +42,7 @@ class AnimeEpisodesByKitsuRepositoryTest {
                 collectionId = collectionId,
                 pageNumber = pageNumber,
                 pageOffset = pageOffset
-            ),
+            )
         ).thenReturn(Single.just(expectedEpisodeData))
 
         val actualEpisodesData =

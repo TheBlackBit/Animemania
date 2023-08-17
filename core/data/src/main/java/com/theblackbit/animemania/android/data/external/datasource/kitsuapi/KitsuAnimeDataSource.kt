@@ -10,7 +10,7 @@ interface KitsuAnimeDataSource {
     fun getTrendingCollection(
         @Query("include") include: String = KitsuInclude.CATEGORIES,
         @Query("page[limit]") pageLimit: String,
-        @Query("page[offset]") pageOffset: String?,
+        @Query("page[offset]") pageOffset: String?
     ): Single<CollectionResponse>
 
     @GET("anime")
@@ -18,20 +18,20 @@ interface KitsuAnimeDataSource {
         @Query("filter[status]") filter: String = KitsuFilter.UPCOMING,
         @Query("sort") sort: String = KitsuSort.USER_COUNT_DES,
         @Query("page[limit]") pageLimit: String,
-        @Query("page[offset]") pageOffset: String?,
+        @Query("page[offset]") pageOffset: String?
     ): Single<CollectionResponse>
 
     @GET("anime")
     fun getTopRatedCollection(
         @Query("sort") sort: String = KitsuSort.AVERAGE_RATING,
         @Query("page[limit]") pageLimit: String,
-        @Query("page[offset]") pageOffset: String?,
+        @Query("page[offset]") pageOffset: String?
     ): Single<CollectionResponse>
 
     @GET("anime")
     fun getPopularCollection(
         @Query("sort") sort: String = KitsuSort.USER_COUNT_DES,
         @Query("page[limit]") pageLimit: String,
-        @Query("page[offset]") pageOffset: String?,
+        @Query("page[offset]") pageOffset: String?
     ): Single<CollectionResponse>
 }

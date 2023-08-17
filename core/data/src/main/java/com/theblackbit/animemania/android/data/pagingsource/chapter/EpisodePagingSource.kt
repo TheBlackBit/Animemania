@@ -17,7 +17,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 class EpisodePagingSource(
     private val localRepository: ChapterLocalRepository,
     private val remoteRepository: EpisodesByKitsuRepository,
-    private val collectionId: String,
+    private val collectionId: String
 ) : RxPagingSource<Int, Chapter>() {
 
     override fun getRefreshKey(state: PagingState<Int, Chapter>): Int? {
@@ -32,14 +32,14 @@ class EpisodePagingSource(
             .getCollectionEpisodes(
                 collectionId,
                 CHAPTER_PAGE_LIMIT.toString(),
-                pageOffset.toString(),
+                pageOffset.toString()
             )
             .subscribeOn(Schedulers.io())
             .concatMap { result ->
                 handleApiResult(currentPage = currentPage, result = result)
                 localRepository.getChaptersByCollection(
                     collectionId = collectionId,
-                    pageNumber = currentPage,
+                    pageNumber = currentPage
                 )
             }
             .map { characterEntities -> toLoadResult(characterEntities, currentPage) }
@@ -52,7 +52,7 @@ class EpisodePagingSource(
 
     private fun handleApiResult(
         currentPage: Int,
-        result: SafeApiRequest.ApiResultHandle<EpisodesResponse>,
+        result: SafeApiRequest.ApiResultHandle<EpisodesResponse>
     ) {
         if (result is SafeApiRequest.ApiResultHandle.Success) {
             if (currentPage == 1) {
@@ -67,13 +67,13 @@ class EpisodePagingSource(
 
     private fun toLoadResult(
         characterEntity: List<ChapterEntity>,
-        currentPage: Int,
+        currentPage: Int
     ): LoadResult<Int, Chapter> {
         val chapters = characterEntity.map { it.toChapterModel() }
         return LoadResult.Page(
             data = chapters,
             prevKey = if (currentPage == 1) null else currentPage - 1,
-            nextKey = if (chapters.isEmpty()) null else currentPage + 1,
+            nextKey = if (chapters.isEmpty()) null else currentPage + 1
         )
     }
 }

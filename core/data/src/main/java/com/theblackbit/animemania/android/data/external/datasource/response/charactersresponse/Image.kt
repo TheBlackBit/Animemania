@@ -5,7 +5,7 @@ data class Image(
     val large: String?,
     val medium: String?,
     val small: String?,
-    val tiny: String?,
+    val tiny: String?
 )
 
 fun Image.validImage(): String {

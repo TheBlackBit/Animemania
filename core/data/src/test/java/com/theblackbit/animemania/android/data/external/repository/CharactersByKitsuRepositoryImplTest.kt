@@ -53,7 +53,7 @@ class CharactersByKitsuRepositoryImplTest {
                 collectionId = collectionId,
                 pageNumber = pageNumber,
                 pageOffset = pageOffset
-            ),
+            )
         ).thenReturn(Single.just(expectedCharacterData))
 
         val actualCharacterData = charactersByKitsuRepository.getCollectionCharacters(

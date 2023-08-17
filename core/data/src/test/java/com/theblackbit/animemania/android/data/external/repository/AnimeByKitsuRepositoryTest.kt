@@ -40,7 +40,7 @@ class AnimeByKitsuRepositoryTest {
             kitsuCollectionDataSource.getTrendingCollection(
                 pageLimit = pageLimit,
                 pageOffset = pageOffset
-            ),
+            )
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
@@ -61,7 +61,7 @@ class AnimeByKitsuRepositoryTest {
             kitsuCollectionDataSource.getMostWantedCollection(
                 pageLimit = pageLimit,
                 pageOffset = pageOffset
-            ),
+            )
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
@@ -82,7 +82,7 @@ class AnimeByKitsuRepositoryTest {
             kitsuCollectionDataSource.getTopRatedCollection(
                 pageLimit = pageLimit,
                 pageOffset = pageOffset
-            ),
+            )
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
@@ -103,7 +103,7 @@ class AnimeByKitsuRepositoryTest {
             kitsuCollectionDataSource.getPopularCollection(
                 pageLimit = pageLimit,
                 pageOffset = pageOffset
-            ),
+            )
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
