@@ -15,6 +15,6 @@ data class Collection(
     val episodeCount: String,
     val miniPosterImageUrl: String,
     val bigPosterImageUrl: String,
-    val status: StatusOfEmission,
+    val status: String,
     val synopsis: String,
 ) : Parcelable

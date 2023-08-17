@@ -3,12 +3,15 @@ package com.theblackbit.animemania.android.detail.pagertabs.character
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.viewModelScope
+import androidx.paging.LoadState
 import androidx.paging.PagingData
 import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_ID
+import com.theblackbit.animemania.android.common.BundleKeys.COLLECTION_TYPE
 import com.theblackbit.animemania.android.common.FragmentBindingCreator
 import com.theblackbit.animemania.android.feature.detail.R
 import com.theblackbit.animemania.android.feature.detail.databinding.FragmentTabCharactersBinding
 import com.theblackbit.animemania.android.model.Character
+import com.theblackbit.animemania.android.model.CollectionType
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -28,12 +31,14 @@ class CharactersTabFragment : FragmentBindingCreator<FragmentTabCharactersBindin
     companion object {
         fun createFragment(
             collectionId: String,
+            collectionType: CollectionType,
         ): CharactersTabFragment {
             val fragment = CharactersTabFragment()
             val bundle = Bundle()
 
             bundle.apply {
                 putString(COLLECTION_ID, collectionId)
+                putString(COLLECTION_TYPE, collectionType.collectionName)
             }
 
             fragment.arguments = bundle
@@ -51,16 +56,23 @@ class CharactersTabFragment : FragmentBindingCreator<FragmentTabCharactersBindin
                     showNoDataView()
                 }
             }
+            if (loadState.refresh is LoadState.NotLoading) {
+                hideProgressBar()
+            }
         }
     }
 
     private fun startToCollectChapters() {
         arguments?.apply {
             val collectionId = getString(COLLECTION_ID, "")
+            val collectionType = getString(COLLECTION_TYPE, "")
             dataDisposable.add(
-                viewModel.startToCollectCharacters(collectionId, viewModel.viewModelScope)
+                viewModel.startToCollectCharacters(
+                    collectionId = collectionId,
+                    collectionType = collectionType,
+                    scope = viewModel.viewModelScope,
+                )
                     .subscribe({ characters ->
-                        hideProgressBar()
                         addElementToRecyclerView(characters)
                     }, { error ->
                         error.printStackTrace()

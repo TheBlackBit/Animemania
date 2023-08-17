@@ -14,51 +14,53 @@
             type="String" />
     </data>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_container"
+    <LinearLayout
         android:layout_width="150dp"
-        android:layout_height="200dp"
         android:layout_marginHorizontal="8dp"
         android:layout_marginVertical="8dp"
         android:clickable="true"
         android:focusable="true"
-        app:cardBackgroundColor="?attr/colorSurface"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="2dp">
+        android:orientation="vertical"
+        android:layout_height="240dp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_container"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="8dp"
+            android:elevation="0dp"
+            app:cardElevation="0dp">
 
-        <FrameLayout
-            android:id="@+id/fl_collection"
+            <FrameLayout
+                android:id="@+id/fl_collection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/colorSurface"
+                    android:contentDescription="@{name}"
+                    android:scaleType="centerCrop"
+                    app:loadImage="@{url}" />
+
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_collection_name"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/iv_poster"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="?attr/colorSurface"
-                android:contentDescription="@{name}"
-                android:scaleType="centerCrop"
-                app:loadImage="@{url}" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/background_item" />
-
-            <TextView
-                android:id="@+id/tv_collection_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_margin="4dp"
-                android:ellipsize="end"
-                android:gravity="center"
-                android:maxLines="2"
-                android:text="@{name}"
-                android:textAppearance="?attr/textAppearanceLabelMedium"
-                android:textColor="?attr/colorOnSurface"
-                android:textStyle="bold"
-                tools:text="Attack of titan" />
-        </FrameLayout>
-    </androidx.cardview.widget.CardView>
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="4dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:textFontWeight="500"
+            android:maxLines="2"
+            android:text="@{name}"
+            android:textAppearance="?attr/textAppearanceLabelMedium"
+            android:textColor="?attr/colorOnSurface"
+            tools:text="Attack of titan" />
+    </LinearLayout>
 </layout>

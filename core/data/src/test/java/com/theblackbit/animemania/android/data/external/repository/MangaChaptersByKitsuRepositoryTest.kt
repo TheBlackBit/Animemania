@@ -2,6 +2,7 @@ package com.theblackbit.animemania.android.data.external.repository
 
 import com.theblackbit.animemania.android.data.external.datasource.kitsuapi.KitsuChaptersDataSource
 import com.theblackbit.animemania.android.data.external.datasource.response.chaptersresponse.ChaptersResponse
+import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
 import org.junit.Assert.assertEquals
 import org.junit.Before
@@ -18,11 +19,14 @@ class MangaChaptersByKitsuRepositoryTest {
     @Mock
     lateinit var kitsuChaptersDataSource: KitsuChaptersDataSource
 
+    @Mock
+    lateinit var safeApiRequest: SafeApiRequest
+
     private lateinit var mangaChaptersByKitsuRepository: MangaChaptersByKitsuRepositoryImpl
 
     @Before
     fun setup() {
-        mangaChaptersByKitsuRepository = MangaChaptersByKitsuRepositoryImpl(kitsuChaptersDataSource)
+        mangaChaptersByKitsuRepository = MangaChaptersByKitsuRepositoryImpl(kitsuChaptersDataSource, safeApiRequest)
     }
 
     @Test
@@ -35,24 +39,24 @@ class MangaChaptersByKitsuRepositoryTest {
         `when`(
             kitsuChaptersDataSource.getChapters(
                 mangaId = mangaId,
-                pageNumber = pageNumber,
+                pageLimit = pageNumber,
                 pageOffset = pageOffset,
             ),
         ).thenReturn(Single.just(expectedEpisodeData))
 
         val actualEpisodesData =
-            kitsuChaptersDataSource.getChapters(
-                mangaId = mangaId,
-                pageNumber = pageNumber,
+            mangaChaptersByKitsuRepository.getMangaChapters(
+                collectionId = mangaId,
+                pageLimit = pageNumber,
                 pageOffset = pageOffset,
-            ).blockingGet()
+            ).blockingGet() as SafeApiRequest.ApiResultHandle.Success
 
         verify(kitsuChaptersDataSource).getChapters(
             mangaId = mangaId,
-            pageNumber = pageNumber,
+            pageLimit = pageNumber,
             pageOffset = pageOffset,
         )
 
-        assertEquals(expectedEpisodeData, actualEpisodesData)
+        assertEquals(expectedEpisodeData, actualEpisodesData.value)
     }
 }

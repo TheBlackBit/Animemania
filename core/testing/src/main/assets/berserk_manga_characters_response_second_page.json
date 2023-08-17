@@ -1,0 +1,1158 @@
+{
+  "data": [
+    {
+      "id": "c163637",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c163637"
+      },
+      "attributes": {
+        "createdAt": "2018-08-05T21:09:22.983Z",
+        "updatedAt": "2018-08-05T21:09:22.983Z",
+        "role": null,
+        "voiceActor": false,
+        "featured": false,
+        "language": null
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163637/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c163637/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163637/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c163637/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "41181"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163637/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c163637/person"
+          },
+          "data": null
+        }
+      }
+    },
+    {
+      "id": "c163626",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c163626"
+      },
+      "attributes": {
+        "createdAt": "2018-08-05T21:09:22.950Z",
+        "updatedAt": "2018-08-05T21:09:22.950Z",
+        "role": null,
+        "voiceActor": false,
+        "featured": false,
+        "language": null
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163626/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c163626/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163626/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c163626/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "75595"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163626/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c163626/person"
+          },
+          "data": null
+        }
+      }
+    },
+    {
+      "id": "c163627",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c163627"
+      },
+      "attributes": {
+        "createdAt": "2018-08-05T21:09:22.954Z",
+        "updatedAt": "2018-08-05T21:09:22.954Z",
+        "role": null,
+        "voiceActor": false,
+        "featured": false,
+        "language": null
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163627/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c163627/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163627/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c163627/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "41173"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163627/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c163627/person"
+          },
+          "data": null
+        }
+      }
+    },
+    {
+      "id": "c163669",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c163669"
+      },
+      "attributes": {
+        "createdAt": "2018-08-05T21:09:23.055Z",
+        "updatedAt": "2018-08-05T21:09:23.055Z",
+        "role": null,
+        "voiceActor": false,
+        "featured": false,
+        "language": null
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163669/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c163669/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163669/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c163669/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "41183"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163669/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c163669/person"
+          },
+          "data": null
+        }
+      }
+    },
+    {
+      "id": "c163655",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c163655"
+      },
+      "attributes": {
+        "createdAt": "2018-08-05T21:09:23.033Z",
+        "updatedAt": "2018-08-05T21:09:23.033Z",
+        "role": null,
+        "voiceActor": false,
+        "featured": false,
+        "language": null
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163655/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c163655/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163655/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c163655/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "1182"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163655/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c163655/person"
+          },
+          "data": null
+        }
+      }
+    },
+    {
+      "id": "c163649",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c163649"
+      },
+      "attributes": {
+        "createdAt": "2018-08-05T21:09:23.016Z",
+        "updatedAt": "2018-08-05T21:09:23.016Z",
+        "role": null,
+        "voiceActor": false,
+        "featured": false,
+        "language": null
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163649/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c163649/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163649/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c163649/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "41178"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163649/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c163649/person"
+          },
+          "data": null
+        }
+      }
+    },
+    {
+      "id": "c163609",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c163609"
+      },
+      "attributes": {
+        "createdAt": "2018-08-05T21:09:22.896Z",
+        "updatedAt": "2018-08-05T21:09:22.896Z",
+        "role": null,
+        "voiceActor": false,
+        "featured": false,
+        "language": null
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163609/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c163609/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163609/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c163609/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "85171"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163609/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c163609/person"
+          },
+          "data": null
+        }
+      }
+    },
+    {
+      "id": "c163641",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c163641"
+      },
+      "attributes": {
+        "createdAt": "2018-08-05T21:09:22.994Z",
+        "updatedAt": "2018-08-05T21:09:22.994Z",
+        "role": null,
+        "voiceActor": false,
+        "featured": false,
+        "language": null
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163641/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c163641/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163641/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c163641/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "41175"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163641/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c163641/person"
+          },
+          "data": null
+        }
+      }
+    },
+    {
+      "id": "c163612",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c163612"
+      },
+      "attributes": {
+        "createdAt": "2018-08-05T21:09:22.904Z",
+        "updatedAt": "2018-08-05T21:09:22.904Z",
+        "role": null,
+        "voiceActor": false,
+        "featured": false,
+        "language": null
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163612/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c163612/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163612/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c163612/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "1184"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163612/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c163612/person"
+          },
+          "data": null
+        }
+      }
+    },
+    {
+      "id": "c163617",
+      "type": "castings",
+      "links": {
+        "self": "https://kitsu.io/api/edge/castings/c163617"
+      },
+      "attributes": {
+        "createdAt": "2018-08-05T21:09:22.917Z",
+        "updatedAt": "2018-08-05T21:09:22.917Z",
+        "role": null,
+        "voiceActor": false,
+        "featured": false,
+        "language": null
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163617/relationships/media",
+            "related": "https://kitsu.io/api/edge/castings/c163617/media"
+          }
+        },
+        "character": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163617/relationships/character",
+            "related": "https://kitsu.io/api/edge/castings/c163617/character"
+          },
+          "data": {
+            "type": "characters",
+            "id": "1196"
+          }
+        },
+        "person": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/castings/c163617/relationships/person",
+            "related": "https://kitsu.io/api/edge/castings/c163617/person"
+          },
+          "data": null
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "41181",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/41181"
+      },
+      "attributes": {
+        "createdAt": "2014-07-31T11:04:38.807Z",
+        "updatedAt": "2021-09-26T13:17:33.465Z",
+        "slug": "martino",
+        "names": {
+          "en": "Martino",
+          "ja_jp": null
+        },
+        "canonicalName": "Martino",
+        "otherNames": [],
+        "name": "Martino",
+        "malId": 64499,
+        "description": "b' A crafty old mercenarie met by Guts after a defeat on the battlefield. Kind and wise, he created an opening for Guts to escape their guards, but in fact, he used him as a bait for his own escape. '",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/41181/image/tiny-3c191a86a903189063db762446f3f9bc.jpeg",
+          "large": "https://media.kitsu.io/character/41181/image/large-7de06c6a98ce9f2f31e1e73869c11b05.jpeg",
+          "small": "https://media.kitsu.io/character/41181/image/small-a95ddd26fa74deddcd6e52a359e1fde9.jpeg",
+          "medium": "https://media.kitsu.io/character/41181/image/medium-1a313b45ae6bb2e135390f36c6561b87.jpeg",
+          "original": "https://media.kitsu.io/characters/images/41181/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41181/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/41181/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41181/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/41181/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41181/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/41181/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41181/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/41181/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "75595",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/75595"
+      },
+      "attributes": {
+        "createdAt": "2017-01-22T10:24:48.936Z",
+        "updatedAt": "2021-09-27T12:53:43.512Z",
+        "slug": "irvine-8d5b3ded-3d0c-48d5-909e-a2b39f36d2f1",
+        "names": {
+          "en": "Irvine",
+          "ja_jp": "アーヴァン"
+        },
+        "canonicalName": "Irvine",
+        "otherNames": [],
+        "name": "Irvine",
+        "malId": 7871,
+        "description": "Irvine is a prominent archer in the new Band of the Hawks. He has never spoken to anyone on page but Sonia. His eyes have neither pupils nor irises. A self-described hunter and loner, he prefers to camp out in the woods whilst indulging in his only known pleasure: playing the lute by the campfire.   Irvine's precision with the bow is peerless. He is able to fire off several arrows simultaneously with unerring accuracy. The bow itself seems to funnel quite a bit of power into its arrows; foes hit at the neck find themselves headless. In his Apostle form his legs are replaced by a large wolf creature with horns and the same demonic eye as his bow and his body is now covered in fur and his face looks similar to that of a werewolf. In this new form he is able to remove and twist his tail hairs in to arrows and his horns can be used as a crossbow with string made from the horns. Once these arrows from his tail pierce the target they suddenly grow unusually large spikes with the shape of a root that perforate the target's body completely. He has formed a close bond with Sonia, who has taken to riding him as a mount during the final battle with Ganishka.",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/75595/image/tiny-18a7be588f2fc0e26091bf976f7ce9c9.jpeg",
+          "large": "https://media.kitsu.io/character/75595/image/large-eca7ab93bf7eb85fd18b871fdf11fae8.jpeg",
+          "small": "https://media.kitsu.io/character/75595/image/small-4bee75f3345ee1c13f9571c3017830d4.jpeg",
+          "medium": "https://media.kitsu.io/character/75595/image/medium-20a200b750b6ee397d2d3c6fccf9b881.jpeg",
+          "original": "https://media.kitsu.io/characters/images/75595/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/75595/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/75595/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/75595/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/75595/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/75595/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/75595/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/75595/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/75595/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "41173",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/41173"
+      },
+      "attributes": {
+        "createdAt": "2014-07-31T11:04:31.663Z",
+        "updatedAt": "2021-09-26T13:17:15.280Z",
+        "slug": "isma",
+        "names": {
+          "en": "Isma",
+          "ja_jp": "イスマ"
+        },
+        "canonicalName": "Isma",
+        "otherNames": [],
+        "name": "Isma",
+        "malId": 30669,
+        "description": " Isma is a young fishing girl who lives by the outskirts of the village on an island that holds the Sea God.  Isma has short hair with long bangs that will cover half her face at times. Her eyes are much rounder that that of and average person and has a few frekkals on her nose.  She claims that her father was courting a merrow but admits that she is all human, dispite this she can still fish as good as any other merrow and Schierke saw a strange aquatic od/ aura around her. It was because of this and the story of the merrow sealing the Sea God on the island that she now lives on, the people of the village shun her and so she decided to move to the outskirts of town. She later realizes she can turn into a merrow (mermaid) when she dives in the water to save Isidoro who fell over board. She also decides to join Guts' group.",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/41173/image/tiny-fff7f58bcf7714a0380e44cd5f1d46c6.jpeg",
+          "large": "https://media.kitsu.io/character/41173/image/large-e0c4de26349df2ab0c22d4a1abe549e5.jpeg",
+          "small": "https://media.kitsu.io/character/41173/image/small-75439830a09fe9072db089fd4981b6a5.jpeg",
+          "medium": "https://media.kitsu.io/character/41173/image/medium-6733229c5d3b8f7c1454b8a8b47662ab.jpeg",
+          "original": "https://media.kitsu.io/characters/images/41173/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41173/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/41173/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41173/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/41173/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41173/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/41173/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41173/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/41173/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "41183",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/41183"
+      },
+      "attributes": {
+        "createdAt": "2014-07-31T11:04:40.555Z",
+        "updatedAt": "2021-09-26T13:17:38.624Z",
+        "slug": "mule",
+        "names": {
+          "en": "Mule Wolflame",
+          "ja_jp": "ミュール・ウォーフレイム"
+        },
+        "canonicalName": "Mule Wolflame",
+        "otherNames": [],
+        "name": "Mule Wolflame",
+        "malId": 7876,
+        "description": "b' One of the leftovers of Midland's army, Mule was caught by Griffith's aura and joined the new Band of the Hawk along with his fellow soldiers. Seems to be a guardian of sorts for Sonia, who refers to him as \"The Duck Prince\"  '",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/41183/image/tiny-5b3e4c70d9735f253187bee83a989ad6.jpeg",
+          "large": "https://media.kitsu.io/character/41183/image/large-920493931ff4f6b73c62eaef37a6e55b.jpeg",
+          "small": "https://media.kitsu.io/character/41183/image/small-8f72a520a5bfdb94eb2edd0365c7d1df.jpeg",
+          "medium": "https://media.kitsu.io/character/41183/image/medium-f5d036bbb0854b050a161bb544e15cdc.jpeg",
+          "original": "https://media.kitsu.io/characters/images/41183/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41183/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/41183/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41183/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/41183/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41183/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/41183/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41183/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/41183/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "1182",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/1182"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:48.101Z",
+        "updatedAt": "2021-09-25T08:16:02.038Z",
+        "slug": "slan",
+        "names": {
+          "en": "Slan",
+          "ja_jp": "スラン"
+        },
+        "canonicalName": "Slan",
+        "otherNames": [],
+        "name": "Slan",
+        "malId": 605,
+        "description": "Slan is the only member of Godhand that isn't repulsive, but her beauty is the only nice thing about her. As Guts is fighting the monsters off she actually laughs at how hard he's trying and that his fight is the ultimate in futility. She is the first of the Godhand to appear during the eclipse, and takes the form of a giant with black feathered wings.",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/1182/image/tiny-108f5fd9d7af1dcdcf4189efbd3e4b79.jpeg",
+          "large": "https://media.kitsu.io/character/1182/image/large-cad047077a5cee5d6a7858ad8a8a60dd.jpeg",
+          "small": "https://media.kitsu.io/character/1182/image/small-803d380b274dd13c8916e79784520e8a.jpeg",
+          "medium": "https://media.kitsu.io/character/1182/image/medium-a23317c603b37426f8794fec2e227107.jpeg",
+          "original": "https://media.kitsu.io/characters/images/1182/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/1182/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/1182/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/1182/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/1182/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/1182/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/1182/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/1182/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/1182/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "41178",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/41178"
+      },
+      "attributes": {
+        "createdAt": "2014-07-31T11:04:36.060Z",
+        "updatedAt": "2021-09-26T13:17:25.449Z",
+        "slug": "rakshas",
+        "names": {
+          "en": "Rakshas",
+          "ja_jp": null
+        },
+        "canonicalName": "Rakshas",
+        "otherNames": [],
+        "name": "Rakshas",
+        "malId": 7873,
+        "description": "Once a member of the BÄ�kiraka Clan, Rakshas now supposedly serve the new Band of the Hawk. His entire body is covered by a black cloak and a mask, which seems to appear and disappear like a shadow.",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/41178/image/tiny-426e6febad7e6f37007d1e2eecafdd31.jpeg",
+          "large": "https://media.kitsu.io/character/41178/image/large-615a8997db6f69065d80dbea9b610473.jpeg",
+          "small": "https://media.kitsu.io/character/41178/image/small-950bc07e2001b84d65df82d78d820d3a.jpeg",
+          "medium": "https://media.kitsu.io/character/41178/image/medium-cde38bcfd230bcfb69555858c320c004.jpeg",
+          "original": "https://media.kitsu.io/characters/images/41178/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41178/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/41178/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41178/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/41178/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41178/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/41178/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41178/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/41178/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "85171",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/85171"
+      },
+      "attributes": {
+        "createdAt": "2017-01-22T11:26:15.175Z",
+        "updatedAt": "2021-09-27T19:28:30.793Z",
+        "slug": "chicchi-75be5752-8fa1-4f0f-bf75-50219a22ea4e",
+        "names": {
+          "en": "Chicchi",
+          "ja_jp": "チッチ"
+        },
+        "canonicalName": "Chicchi",
+        "otherNames": [
+          "Flower Sprit",
+          "Kawa no Hikari"
+        ],
+        "name": "Chicchi",
+        "malId": 74513,
+        "description": "Chicchi is the first Spirit Guts encounters as a young man and consequently, his first encounter with the supernatural. Chicchi is a Spirit of a flower in a small prison, and was always alone until she met Guts. Its never revealed if she was part of a dream or real.  (Source: Berserk Wikia)",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/85171/image/tiny-a3106056d4a3061b459a1ff80e59d8b3.jpeg",
+          "large": "https://media.kitsu.io/character/85171/image/large-702e173222b7c9bdfeced97c894e6bd5.jpeg",
+          "small": "https://media.kitsu.io/character/85171/image/small-50c9a5ca93e8742e26caad0cc08cafd0.jpeg",
+          "medium": "https://media.kitsu.io/character/85171/image/medium-ed4bbdfd72f4f2056c7fefff2b6718b2.jpeg",
+          "original": "https://media.kitsu.io/characters/images/85171/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/85171/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/85171/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/85171/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/85171/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/85171/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/85171/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/85171/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/85171/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "41175",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/41175"
+      },
+      "attributes": {
+        "createdAt": "2014-07-31T11:04:33.453Z",
+        "updatedAt": "2021-09-26T13:17:20.132Z",
+        "slug": "mozgus",
+        "names": {
+          "en": "Mozgus",
+          "ja_jp": null
+        },
+        "canonicalName": "Mozgus",
+        "otherNames": [],
+        "name": "Mozgus",
+        "malId": 32488,
+        "description": " Mozgus is one of the chief Inquisitors of the Holy See, traveling the world with his group of torturers, sent to root out a violent cult of heretics in the city of St. Albion. He's the main antagonist in the Tower of Conviction, hindering with his excessive religious zeal Guts' efforts in saving Casca. His symbol are four torture wheels, embodying his willingness to use torture as a way to cleanse people from evil.  Life  Mozgus, prior to the events told in the Resurrection Arc was a zealous Inquisitor, acting on behalf of the Holy See. There he recruited a small group of marginalized, disfigured individuals, comforting them by reading parts of the Holy See Doctrine, meant to reassure them that even their disfigurements were meant to be worn with pride as a gift from God, and training them in his particular brand of torture, vicious and rarely leading its survivors to walk away without serious wounds.  He is then sent to St. Albion to root out heretics on the behalf of the Holy See, requesting the Holy Iron Chain Knights as his personal guard. Albeit a true heretical group is brewing in the mountains surrounding St. Albion, based on orgiastic rituals, Mozgus himself apparently does little to stop them, managing to capture many of them only by Farnese's intervention. Instead, he sets every bit of his attention towards smothering in blood and torture the rebellions of the poor and starving population of St. Albion against the tyrannical rule of the Holy See. Mozgus sees such acts of defiance against himself as defiance against God, whose rule he's meant to embody.  Physically tall and strong, harsh and demanding with everyone, even himself, he impresses Farnese by smothering several rebellions with threat of death and torture, sparing only a young mother asking more food for her starving child. Though Mozgus does give the child food and medical attention, he sentences the woman to torture with a tearful prayer that she survive the \"test\" that God has prepared for her, and attempting to use the encounter as a lesson to Farnese about the harshness of God's doctrine. Upon capturing Casca, mistaken as a witch by the local heretics and priests alike, he realizes how the recent accounts of the Black Swordsman may be related to the mute, amnesiac branded girl, so, as usual, tries to torture her as a way to get some more information. Instead, he merely triggers the appearance of a huge band of demons, attracted by the Tower itself, chosen place for the Incarnation Ceremony, and the presence of the Brand. Mozgus doesn't flinch at all, instead closing himself in the chapel of the Tower of Rebirth, where the Apostle-Behelit uses his venom to turn Mozgus and his servants into Apostle-spawns with angelic features, as a way to hasten the Incarnation Ceremony. Without ever knowing what befell him, Mozgus believes that his angelic wings, his increased stamina and the growing of a scaly hide able to withstand blows from the Dragonslayer and Guts' arm cannon were gifts from God, and decides, as a way to stop the Ceremony and quell the population's fears, to burn Casca at the stake, forcing Guts to come out.  After an heated battle against his mutated servants, Guts himself is almost defeated by Mozgus, until he manages to drive his sword into the only weak spot in Mozgus' hide: a small, weaker plate with the Holy See insignia, a representation of the Holy Book he always brings with him. Shortly after his death, the Incarnation Ceremony is completed, with Griffith's rebirth and the total destruction of St. Albion. ",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/41175/image/tiny-dfda8a03105f07b76a542c23c21670a6.jpeg",
+          "large": "https://media.kitsu.io/character/41175/image/large-337dd53f2b45d17972bf1054820acad5.jpeg",
+          "small": "https://media.kitsu.io/character/41175/image/small-47ed8107b54274f5156e233ac8a74445.jpeg",
+          "medium": "https://media.kitsu.io/character/41175/image/medium-e62cf28fa9d5bae81fa32170144b3a6a.jpeg",
+          "original": "https://media.kitsu.io/characters/images/41175/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41175/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/41175/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41175/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/41175/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41175/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/41175/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/41175/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/41175/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "1184",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/1184"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:48.132Z",
+        "updatedAt": "2021-09-25T08:16:13.044Z",
+        "slug": "conrad-a8c06ef3-2999-4c10-a0c6-211ecab5faba",
+        "names": {
+          "en": "Conrad",
+          "ja_jp": "コンラッド"
+        },
+        "canonicalName": "Conrad",
+        "otherNames": [],
+        "name": "Conrad",
+        "malId": 608,
+        "description": "Conrad is the giant worm like member of the Godhand. His first appearance is in the eclipse along with the rest of the Godhand, and he is seen as having eyes that do not open, a mouth that doesn't close and hands that are stuck together.",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/1184/image/tiny-5786a194a32959bc496a2e1eede96407.jpeg",
+          "large": "https://media.kitsu.io/character/1184/image/large-4505a22553bd8529422974bf29e7c3db.jpeg",
+          "small": "https://media.kitsu.io/character/1184/image/small-1fd09a37c26f0117928573db05bf5041.jpeg",
+          "medium": "https://media.kitsu.io/character/1184/image/medium-7c2a5f1ca7dc2ce3f7cc8004e60903f8.jpeg",
+          "original": "https://media.kitsu.io/characters/images/1184/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/1184/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/1184/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/1184/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/1184/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/1184/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/1184/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/1184/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/1184/quotes"
+          }
+        }
+      }
+    },
+    {
+      "id": "1196",
+      "type": "characters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/characters/1196"
+      },
+      "attributes": {
+        "createdAt": "2013-02-20T18:49:48.331Z",
+        "updatedAt": "2021-09-25T08:16:46.756Z",
+        "slug": "erika-23699027-c6d6-45e4-9526-f5db25419cf8",
+        "names": {
+          "en": "Erica",
+          "ja_jp": "エリカ"
+        },
+        "canonicalName": "Erica",
+        "otherNames": [],
+        "name": "Erica",
+        "malId": 73441,
+        "description": "Adopted daughter of Godo.  Was in a wagon been chased by trolls when the Band of the Hawk and Irvine saved her.",
+        "image": {
+          "tiny": "https://media.kitsu.io/character/1196/image/tiny-04c4a50c04743195d4dd02cc38827618.jpeg",
+          "large": "https://media.kitsu.io/character/1196/image/large-9a5744a9fdc312651a0b13ea77c8c296.jpeg",
+          "small": "https://media.kitsu.io/character/1196/image/small-1aafb72b33cf988fff8b1dee839f599c.jpeg",
+          "medium": "https://media.kitsu.io/character/1196/image/medium-1299b9d4d846fcd4dfd00bb4fd1e2253.jpeg",
+          "original": "https://media.kitsu.io/characters/images/1196/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 100,
+                "height": 120
+              },
+              "large": {
+                "width": 500,
+                "height": 600
+              },
+              "small": {
+                "width": 200,
+                "height": 240
+              },
+              "medium": {
+                "width": 300,
+                "height": 360
+              }
+            }
+          }
+        }
+      },
+      "relationships": {
+        "primaryMedia": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/1196/relationships/primary-media",
+            "related": "https://kitsu.io/api/edge/characters/1196/primary-media"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/1196/relationships/castings",
+            "related": "https://kitsu.io/api/edge/characters/1196/castings"
+          }
+        },
+        "mediaCharacters": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/1196/relationships/media-characters",
+            "related": "https://kitsu.io/api/edge/characters/1196/media-characters"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/characters/1196/relationships/quotes",
+            "related": "https://kitsu.io/api/edge/characters/1196/quotes"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "count": 70
+  },
+  "links": {
+    "first": "https://kitsu.io/api/edge/castings?filter%5Bis_character%5D=true&filter%5Bmedia_id%5D=8&filter%5Bmedia_type%5D=Manga&include=character%2Cperson&page%5Blimit%5D=10&page%5Boffset%5D=0&sort=-featured",
+    "prev": "https://kitsu.io/api/edge/castings?filter%5Bis_character%5D=true&filter%5Bmedia_id%5D=8&filter%5Bmedia_type%5D=Manga&include=character%2Cperson&page%5Blimit%5D=10&page%5Boffset%5D=0&sort=-featured",
+    "next": "https://kitsu.io/api/edge/castings?filter%5Bis_character%5D=true&filter%5Bmedia_id%5D=8&filter%5Bmedia_type%5D=Manga&include=character%2Cperson&page%5Blimit%5D=10&page%5Boffset%5D=20&sort=-featured",
+    "last": "https://kitsu.io/api/edge/castings?filter%5Bis_character%5D=true&filter%5Bmedia_id%5D=8&filter%5Bmedia_type%5D=Manga&include=character%2Cperson&page%5Blimit%5D=10&page%5Boffset%5D=60&sort=-featured"
+  }
+}

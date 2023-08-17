@@ -21,6 +21,7 @@ class AndroidFeaturePlugin : Plugin<Project> {
             androidTestDependencies()
             rxDependencies()
             dependencies {
+                "implementation"(project(":core:data"))
                 "implementation"(project(":core:domain"))
                 "implementation"(project(":core:util"))
                 "implementation"(project(":core:model"))

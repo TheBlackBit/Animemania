@@ -1,8 +1,8 @@
 package com.theblackbit.animemania.android.data.external.repository
 
-import com.theblackbit.animemania.android.data.external.datasource.kitsuapi.KitsuCollectionDataSource
-import com.theblackbit.animemania.android.data.external.datasource.kitsuapi.KitsuMediaType
+import com.theblackbit.animemania.android.data.external.datasource.kitsuapi.KitsuMangaDataSource
 import com.theblackbit.animemania.android.data.external.datasource.response.collectionresponse.CollectionResponse
+import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
 import org.junit.Assert
 import org.junit.Before
@@ -15,10 +15,13 @@ import org.mockito.junit.MockitoJUnitRunner
 @RunWith(MockitoJUnitRunner::class)
 class MangaByKitsuRepositoryTest {
 
-    private lateinit var mangaByKitsuRepository: MangaByKitsuRepository
+    private lateinit var mangaByKitsuRepository: MangaByKitsuRemoteRepository
 
     @Mock
-    lateinit var kitsuCollectionDataSource: KitsuCollectionDataSource
+    lateinit var kitsuCollectionDataSource: KitsuMangaDataSource
+
+    @Mock
+    lateinit var safeApiRequest: SafeApiRequest
 
     private val pageLimit = "10"
     private val pageOffset = "0"
@@ -26,94 +29,91 @@ class MangaByKitsuRepositoryTest {
 
     @Before
     fun setup() {
-        mangaByKitsuRepository = MangaByKitsuRepository(kitsuCollectionDataSource)
+        mangaByKitsuRepository =
+            MangaByKitsuRemoteRepository(kitsuCollectionDataSource, safeApiRequest)
     }
 
     @Test
     fun testCollectTrendingManga() {
         Mockito.`when`(
             kitsuCollectionDataSource.getTrendingCollection(
-                path = KitsuMediaType.MANGA_TRENDING,
                 pageLimit = pageLimit,
                 pageOffset = pageOffset,
             ),
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
-            mangaByKitsuRepository.collectTrendingCollection(pageLimit, pageOffset).blockingGet()
+            mangaByKitsuRepository.collectTrending(pageLimit, pageOffset)
+                .blockingGet() as SafeApiRequest.ApiResultHandle.Success
 
         Mockito.verify(kitsuCollectionDataSource).getTrendingCollection(
-            path = KitsuMediaType.MANGA_TRENDING,
             pageLimit = pageLimit,
             pageOffset = pageOffset,
         )
 
-        Assert.assertEquals(expectedResponse, actualResponse)
+        Assert.assertEquals(expectedResponse, actualResponse.value)
     }
 
     @Test
     fun testGetMostWantedMANGA() {
         Mockito.`when`(
             kitsuCollectionDataSource.getMostWantedCollection(
-                path = KitsuMediaType.MANGA_MEDIA_TYPE,
                 pageLimit = pageLimit,
                 pageOffset = pageOffset,
             ),
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
-            mangaByKitsuRepository.getMostWantedCollection(pageLimit, pageOffset).blockingGet()
+            mangaByKitsuRepository.getMostAnticipated(pageLimit, pageOffset)
+                .blockingGet() as SafeApiRequest.ApiResultHandle.Success
 
         Mockito.verify(kitsuCollectionDataSource).getMostWantedCollection(
-            path = KitsuMediaType.MANGA_MEDIA_TYPE,
             pageLimit = pageLimit,
             pageOffset = pageOffset,
         )
 
-        Assert.assertEquals(expectedResponse, actualResponse)
+        Assert.assertEquals(expectedResponse, actualResponse.value)
     }
 
     @Test
     fun testGetTopRatedManga() {
         Mockito.`when`(
             kitsuCollectionDataSource.getTopRatedCollection(
-                path = KitsuMediaType.MANGA_MEDIA_TYPE,
                 pageLimit = pageLimit,
                 pageOffset = pageOffset,
             ),
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
-            mangaByKitsuRepository.getTopRatedCollection(pageLimit, pageOffset).blockingGet()
+            mangaByKitsuRepository.getTopRated(pageLimit, pageOffset)
+                .blockingGet() as SafeApiRequest.ApiResultHandle.Success
 
         Mockito.verify(kitsuCollectionDataSource).getTopRatedCollection(
-            path = KitsuMediaType.MANGA_MEDIA_TYPE,
             pageLimit = pageLimit,
             pageOffset = pageOffset,
         )
 
-        Assert.assertEquals(expectedResponse, actualResponse)
+        Assert.assertEquals(expectedResponse, actualResponse.value)
     }
 
     @Test
     fun testGetPopularManga() {
         Mockito.`when`(
             kitsuCollectionDataSource.getPopularCollection(
-                path = KitsuMediaType.MANGA_MEDIA_TYPE,
                 pageLimit = pageLimit,
                 pageOffset = pageOffset,
             ),
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
-            mangaByKitsuRepository.getPopularCollection(pageLimit, pageOffset).blockingGet()
+            mangaByKitsuRepository.getPopular(pageLimit, pageOffset)
+                .blockingGet() as SafeApiRequest.ApiResultHandle.Success
 
         Mockito.verify(kitsuCollectionDataSource).getPopularCollection(
-            path = KitsuMediaType.MANGA_MEDIA_TYPE,
             pageLimit = pageLimit,
             pageOffset = pageOffset,
         )
 
-        Assert.assertEquals(expectedResponse, actualResponse)
+        Assert.assertEquals(expectedResponse, actualResponse.value)
     }
 }

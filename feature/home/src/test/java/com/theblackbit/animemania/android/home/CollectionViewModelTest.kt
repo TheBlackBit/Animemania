@@ -1,12 +1,10 @@
 package com.theblackbit.animemania.android.home
 
 import androidx.paging.PagingData
-import com.theblackbit.animemania.android.domain.usecase.CollectCategoriesUseCase
+import com.theblackbit.animemania.android.data.external.datasource.RequestType
 import com.theblackbit.animemania.android.domain.usecase.CollectCollectionDataUseCase
-import com.theblackbit.animemania.android.model.Category
 import com.theblackbit.animemania.android.model.Collection
 import io.reactivex.rxjava3.core.Flowable
-import io.reactivex.rxjava3.core.Single
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.TestScope
@@ -27,69 +25,36 @@ class CollectionViewModelTest {
     @Mock
     private lateinit var collectMangaDataUseCase: CollectCollectionDataUseCase
 
-    @Mock
-    private lateinit var collectAnimeCategoriesUseCase: CollectCategoriesUseCase
-
-    @Mock
-    private lateinit var collectMangaCategoriesUseCase: CollectCategoriesUseCase
-
     private lateinit var sut: CollectionViewModel
 
     private val testScope = TestScope()
-
-    private val listOfCategories = listOf(
-        Category(1, "test1"),
-        Category(2, "test2"),
-    )
 
     @Before
     fun setUp() {
         sut = CollectionViewModel(
             collectAnimeDataUseCase,
             collectMangaDataUseCase,
-            collectAnimeCategoriesUseCase,
-            collectMangaCategoriesUseCase,
         )
     }
 
     @Test
-    fun testStartToCollectAnimeCategories() {
-        Mockito.`when`(collectAnimeCategoriesUseCase.collect())
-            .thenReturn(Single.just(listOfCategories))
-
-        val result = sut.startToCollectAnimeCategories()
-
-        result.test().assertResult(listOfCategories)
-    }
-
-    @Test
-    fun testStartToCollectMangaCategories() {
-        Mockito.`when`(collectMangaCategoriesUseCase.collect())
-            .thenReturn(Single.just(listOfCategories))
-
-        val result = sut.startToCollectMangaCategories()
-
-        result.test().assertResult(listOfCategories)
-    }
-
-    @Test
     fun testStartToCollectAnimeData(): Unit = runBlocking {
-        Mockito.`when`(collectAnimeDataUseCase.collectByCategory(1))
+        Mockito.`when`(collectAnimeDataUseCase.collectByCategory(RequestType.TRENDING_ANIME))
             .thenReturn(getTestFlowable())
 
-        sut.startToCollectAnimeData(1, testScope)
+        sut.startToCollectAnimeData(RequestType.TRENDING_ANIME, testScope)
 
-        Mockito.verify(collectAnimeDataUseCase).collectByCategory(1)
+        Mockito.verify(collectAnimeDataUseCase).collectByCategory(RequestType.TRENDING_ANIME)
     }
 
     @Test
     fun testStartToCollectMangaData(): Unit = runBlocking {
-        Mockito.`when`(collectMangaDataUseCase.collectByCategory(1))
+        Mockito.`when`(collectMangaDataUseCase.collectByCategory(RequestType.TRENDING_MANGA))
             .thenReturn(getTestFlowable())
 
-        sut.startToCollectMangaData(1, testScope)
+        sut.startToCollectMangaData(RequestType.TRENDING_MANGA, testScope)
 
-        Mockito.verify(collectMangaDataUseCase).collectByCategory(1)
+        Mockito.verify(collectMangaDataUseCase).collectByCategory(RequestType.TRENDING_MANGA)
     }
 
     private fun getTestFlowable(): Flowable<PagingData<Collection>> {

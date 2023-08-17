@@ -30,14 +30,14 @@ class CharacterTabViewModelTest {
     }
 
     @Test
-    fun testCollectChapters() {
+    fun testCollectCharacters() {
         val pagingData: Flowable<PagingData<Character>> =
             Flowable.just(PagingData.from(emptyList()))
-        Mockito.`when`(charactersUseCase.collect("1"))
+        Mockito.`when`(charactersUseCase.collect("1", "Anime"))
             .thenReturn(pagingData)
 
-        charactersTabViewModel.startToCollectCharacters("1", testScope)
+        charactersTabViewModel.startToCollectCharacters("1", "Anime", testScope)
 
-        Mockito.verify(charactersUseCase).collect("1")
+        Mockito.verify(charactersUseCase).collect("1", "Anime")
     }
 }

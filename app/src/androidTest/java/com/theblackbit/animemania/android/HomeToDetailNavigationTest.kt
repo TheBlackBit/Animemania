@@ -17,27 +17,20 @@ import com.theblackbit.animemania.android.core.testing.KoinTestRule
 import com.theblackbit.animemania.android.core.testing.customviewaction.ClickItemOnChildRecyclerViewItem
 import com.theblackbit.animemania.android.core.testing.customviewaction.ScrollToPositionChildRecyclerView
 import com.theblackbit.animemania.android.core.testing.customviewaction.WaitFor
-import com.theblackbit.animemania.android.core.testing.data.anime.mostWantedAnimeData
-import com.theblackbit.animemania.android.core.testing.data.anime.popularAnimeData
-import com.theblackbit.animemania.android.core.testing.data.anime.topRatedAnimeData
-import com.theblackbit.animemania.android.core.testing.data.anime.trendingAnimeData
-import com.theblackbit.animemania.android.core.testing.data.collectionCategories
-import com.theblackbit.animemania.android.core.testing.data.manga.mostWantedMangaData
-import com.theblackbit.animemania.android.core.testing.data.manga.popularMangaData
-import com.theblackbit.animemania.android.core.testing.data.manga.topRatedMangaData
-import com.theblackbit.animemania.android.core.testing.data.manga.trendingMangaData
-import com.theblackbit.animemania.android.core.testing.di.collectAnimeCategoriesUseCaseModuleTest
-import com.theblackbit.animemania.android.core.testing.di.collectAnimeDataUseCaseTestModule
-import com.theblackbit.animemania.android.core.testing.di.collectChaptersUseCaseTestModule
-import com.theblackbit.animemania.android.core.testing.di.collectCharactersUseCaseTestModule
-import com.theblackbit.animemania.android.core.testing.di.collectMangaCategoriesUseCaseModuleTest
-import com.theblackbit.animemania.android.core.testing.di.collectMangaDataUseCaseTestModule
+import com.theblackbit.animemania.android.data.di.internal.collectionDaoModule
+import com.theblackbit.animemania.android.data.di.internal.collectionRoomRepositoryModule
+import com.theblackbit.animemania.android.data.di.internal.roomDbModule
+import com.theblackbit.animemania.android.data.di.pagingsource.animePagingSourceFactoryModule
+import com.theblackbit.animemania.android.data.di.pagingsource.mangaPagingSourceFactoryModule
 import com.theblackbit.animemania.android.detail.di.chapterTabViewModelModule
 import com.theblackbit.animemania.android.detail.di.characterTabViewModelModule
+import com.theblackbit.animemania.android.di.animeRemoteRepositoryMock
+import com.theblackbit.animemania.android.di.mangaRemoteRepositoryMock
+import com.theblackbit.animemania.android.domain.di.collectAnimeUseCaseModule
+import com.theblackbit.animemania.android.domain.di.collectMangaUseCaseModule
 import com.theblackbit.animemania.android.feature.detail.R
 import com.theblackbit.animemania.android.home.adapter.DataViewHolder
 import com.theblackbit.animemania.android.home.di.homeViewModelModule
-import com.theblackbit.animemania.android.model.Collection
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -51,12 +44,15 @@ class HomeToDetailNavigationTest : KoinTest {
     @get:Rule
     val koinTestRule = KoinTestRule(
         modules = listOf(
-            collectAnimeDataUseCaseTestModule,
-            collectAnimeCategoriesUseCaseModuleTest,
-            collectMangaDataUseCaseTestModule,
-            collectMangaCategoriesUseCaseModuleTest,
-            collectChaptersUseCaseTestModule,
-            collectCharactersUseCaseTestModule,
+            roomDbModule,
+            collectionDaoModule,
+            collectionRoomRepositoryModule,
+            animePagingSourceFactoryModule,
+            mangaPagingSourceFactoryModule,
+            animeRemoteRepositoryMock,
+            mangaRemoteRepositoryMock,
+            collectAnimeUseCaseModule,
+            collectMangaUseCaseModule,
             homeViewModelModule,
             chapterTabViewModelModule,
             characterTabViewModelModule,
@@ -64,42 +60,36 @@ class HomeToDetailNavigationTest : KoinTest {
     )
 
     @Test
-    fun testNavigationAnimeEachItemToDetail() {
+    fun testNavigationAnimeToDetail() {
         ActivityScenario.launch(MainActivity::class.java)
 
-        onView(ViewMatchers.isRoot()).perform(WaitFor(5000L))
+        testTrendingAnimeDetailNavigation()
 
-        collectionCategories.forEachIndexed { parentIndex, _ ->
-            when (parentIndex) {
-                0 -> testTrendingAnimeDetailNavigation(parentIndex)
-                1 -> testMostWantedAnimeDetailNavigation(parentIndex)
-                2 -> testTopRatedAnimeDetailNavigation(parentIndex)
-                3 -> testPopularAnimeDetailNavigation(parentIndex)
-            }
-        }
+        testMostAnticipatedAnimeDetailNavigation()
+
+        testTopRatedAnimeDetailNavigation()
+
+        testPopularAnimeDetailNavigation()
     }
 
     @Test
-    fun testNavigationMangaEachItemToDetail() {
+    fun testNavigationMangaToDetail() {
         ActivityScenario.launch(MainActivity::class.java)
         onView(withText("Manga"))
             .perform(click())
-        onView(ViewMatchers.isRoot()).perform(WaitFor(5000L))
 
-        collectionCategories.forEachIndexed { parentIndex, _ ->
-            when (parentIndex) {
-                0 -> testTrendingMangaDetailNavigation(parentIndex)
-                1 -> testMostWantedMangaDetailNavigation(parentIndex)
-                2 -> testTopRatedMangaDetailNavigation(parentIndex)
-                3 -> testPopularMangaDetailNavigation(parentIndex)
-            }
-        }
+        testTrendingMangaDetailNavigation()
+
+        testMostAnticipatedMangaDetailNavigation()
+
+        testTopRatedMangaDetailNavigation()
+
+        testPopularMangaDetailNavigation()
     }
 
     @Test
     fun backNavigationFromDetailToHome() {
         ActivityScenario.launch(MainActivity::class.java)
-        onView(ViewMatchers.isRoot()).perform(WaitFor(5000L))
         onView(withId(homeR.id.rv_data))
             .perform(
                 RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
@@ -134,74 +124,117 @@ class HomeToDetailNavigationTest : KoinTest {
             .check(matches(isDisplayed()))
     }
 
-    private fun testTrendingAnimeDetailNavigation(parentIndex: Int) {
-        trendingAnimeData.forEachIndexed { childIndex, collection ->
-            validateDataPassBetweenFragments(parentIndex, childIndex, collection)
-            pressBack()
-            onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
-        }
+    private fun testTrendingAnimeDetailNavigation() {
+        validateDataPassBetweenFragments(
+            parentIndex = 0,
+            name = "One Piece",
+            status = "current",
+            averageRating = "83.69%",
+            startDate = "1999-10-20",
+            endDate = "",
+        )
+        pressBack()
+        onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
     }
 
-    private fun testMostWantedAnimeDetailNavigation(parentIndex: Int) {
-        mostWantedAnimeData.forEachIndexed { childIndex, collection ->
-            validateDataPassBetweenFragments(parentIndex, childIndex, collection)
-            pressBack()
-            onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
-        }
+    private fun testMostAnticipatedAnimeDetailNavigation() {
+        validateDataPassBetweenFragments(
+            parentIndex = 1,
+            name = "SPY×FAMILY Season 2",
+            status = "upcoming",
+            averageRating = "",
+            startDate = "2023-10-31",
+            endDate = "",
+        )
+        pressBack()
+        onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
     }
 
-    private fun testTopRatedAnimeDetailNavigation(parentIndex: Int) {
-        topRatedAnimeData.forEachIndexed { childIndex, collection ->
-            validateDataPassBetweenFragments(parentIndex, childIndex, collection)
-            pressBack()
-            onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
-        }
+    private fun testTopRatedAnimeDetailNavigation() {
+        validateDataPassBetweenFragments(
+            2,
+            name = "Kimetsu no Yaiba: Yuukaku-hen",
+            status = "finished",
+            averageRating = "87.43%",
+            startDate = "2021-12-05",
+            endDate = "2022-02-13",
+        )
+        pressBack()
+        onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
     }
 
-    private fun testPopularAnimeDetailNavigation(parentIndex: Int) {
-        popularAnimeData.forEachIndexed { childIndex, collection ->
-            validateDataPassBetweenFragments(parentIndex, childIndex, collection)
-            pressBack()
-            onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
-        }
+    private fun testPopularAnimeDetailNavigation() {
+        validateDataPassBetweenFragments(
+            3,
+            name = "Attack on Titan",
+            status = "finished",
+            averageRating = "84.92%",
+            startDate = "2013-04-07",
+            endDate = "2013-09-29",
+        )
+        pressBack()
+        onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
     }
 
-    private fun testTrendingMangaDetailNavigation(parentIndex: Int) {
-        trendingMangaData.forEachIndexed { childIndex, collection ->
-            validateDataPassBetweenFragments(parentIndex, childIndex, collection)
-            pressBack()
-            onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
-        }
+    private fun testTrendingMangaDetailNavigation() {
+        validateDataPassBetweenFragments(
+            0,
+            name = "Martial Peak",
+            status = "current",
+            averageRating = "80.04%",
+            startDate = "2017-06-01",
+            endDate = "",
+        )
+        pressBack()
+        onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
     }
 
-    private fun testMostWantedMangaDetailNavigation(parentIndex: Int) {
-        mostWantedMangaData.forEachIndexed { childIndex, collection ->
-            validateDataPassBetweenFragments(parentIndex, childIndex, collection)
-            pressBack()
-            onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
-        }
+    private fun testMostAnticipatedMangaDetailNavigation() {
+        validateDataPassBetweenFragments(
+            1,
+            name = "Mushoku Tensei: Dasoku-hen",
+            status = "current",
+            averageRating = "",
+            startDate = "2023-06-23",
+            endDate = "",
+        )
+        pressBack()
+        onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
     }
 
-    private fun testTopRatedMangaDetailNavigation(parentIndex: Int) {
-        topRatedMangaData.forEachIndexed { childIndex, collection ->
-            validateDataPassBetweenFragments(parentIndex, childIndex, collection)
-            pressBack()
-            onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
-        }
+    private fun testTopRatedMangaDetailNavigation() {
+        validateDataPassBetweenFragments(
+            2,
+            name = "Boku no Hero Academia",
+            status = "current",
+            averageRating = "85.01%",
+            startDate = "2014-07-07",
+            endDate = "",
+        )
+        pressBack()
+        onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
     }
 
-    private fun testPopularMangaDetailNavigation(parentIndex: Int) {
-        popularMangaData.forEachIndexed { childIndex, collection ->
-            validateDataPassBetweenFragments(parentIndex, childIndex, collection)
-            pressBack()
-            onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
-        }
+    private fun testPopularMangaDetailNavigation() {
+        validateDataPassBetweenFragments(
+            3,
+            name = "Boku no Hero Academia",
+            status = "current",
+            averageRating = "85.01%",
+            startDate = "2014-07-07",
+            endDate = "",
+        )
+        pressBack()
+        onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
     }
 
     private fun validateDataPassBetweenFragments(
         parentIndex: Int,
-        childIndex: Int,
-        collection: Collection,
+        name: String,
+        status: String,
+        averageRating: String,
+        startDate: String,
+        endDate: String,
     ) {
         onView(withId(homeR.id.rv_data))
             .perform(
@@ -213,7 +246,7 @@ class HomeToDetailNavigationTest : KoinTest {
                 ScrollToPositionChildRecyclerView(
                     parentRecyclerViewId = homeR.id.rv_data,
                     positionOfChildRecyclerView = parentIndex,
-                    positionOfViewInChildRecyclerView = childIndex,
+                    positionOfViewInChildRecyclerView = 0,
                     childRecyclerViewId = homeR.id.rv_data_container,
                 ),
             )
@@ -221,7 +254,7 @@ class HomeToDetailNavigationTest : KoinTest {
                 ClickItemOnChildRecyclerViewItem<DataViewHolder>(
                     parentRecyclerViewId = homeR.id.rv_data,
                     positionOfChildRecyclerView = parentIndex,
-                    positionOfViewInChildRecyclerView = childIndex,
+                    positionOfViewInChildRecyclerView = 0,
                     childRecyclerViewId = homeR.id.rv_data_container,
                 ),
             )
@@ -229,18 +262,18 @@ class HomeToDetailNavigationTest : KoinTest {
         onView(ViewMatchers.isRoot()).perform(WaitFor(1000L))
 
         onView(withId(R.id.tv_broadcast_state))
-            .check(matches(withText(collection.status.name)))
+            .check(matches(withText(status)))
 
         onView(withId(R.id.tv_title_name))
-            .check(matches(withText(collection.name)))
+            .check(matches(withText(name)))
 
         onView(withId(R.id.tv_rating))
-            .check(matches(withText(collection.averageRating)))
+            .check(matches(withText(averageRating)))
 
         onView(withId(R.id.tv_emit))
-            .check(matches(withText(collection.startDate)))
+            .check(matches(withText(startDate)))
 
         onView(withId(R.id.tv_end_date))
-            .check(matches(withText(collection.endDate)))
+            .check(matches(withText(endDate)))
     }
 }

@@ -1,0 +1,292 @@
+{
+  "data": [
+    {
+      "id": "405936",
+      "type": "chapters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/chapters/405936"
+      },
+      "attributes": {
+        "createdAt": "2017-08-09T05:06:30.091Z",
+        "updatedAt": "2018-11-28T23:13:26.149Z",
+        "synopsis": "",
+        "description": "",
+        "titles": {},
+        "canonicalTitle": null,
+        "volumeNumber": 1,
+        "number": 1,
+        "published": null,
+        "length": null,
+        "thumbnail": null
+      },
+      "relationships": {
+        "manga": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/chapters/405936/relationships/manga",
+            "related": "https://kitsu.io/api/edge/chapters/405936/manga"
+          }
+        }
+      }
+    },
+    {
+      "id": "405937",
+      "type": "chapters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/chapters/405937"
+      },
+      "attributes": {
+        "createdAt": "2017-08-09T05:06:30.103Z",
+        "updatedAt": "2018-11-28T23:13:26.149Z",
+        "synopsis": "",
+        "description": "",
+        "titles": {},
+        "canonicalTitle": null,
+        "volumeNumber": 1,
+        "number": 2,
+        "published": null,
+        "length": null,
+        "thumbnail": null
+      },
+      "relationships": {
+        "manga": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/chapters/405937/relationships/manga",
+            "related": "https://kitsu.io/api/edge/chapters/405937/manga"
+          }
+        }
+      }
+    },
+    {
+      "id": "405938",
+      "type": "chapters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/chapters/405938"
+      },
+      "attributes": {
+        "createdAt": "2017-08-09T05:06:30.112Z",
+        "updatedAt": "2018-11-28T23:13:26.149Z",
+        "synopsis": "",
+        "description": "",
+        "titles": {},
+        "canonicalTitle": null,
+        "volumeNumber": 1,
+        "number": 3,
+        "published": null,
+        "length": null,
+        "thumbnail": null
+      },
+      "relationships": {
+        "manga": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/chapters/405938/relationships/manga",
+            "related": "https://kitsu.io/api/edge/chapters/405938/manga"
+          }
+        }
+      }
+    },
+    {
+      "id": "405939",
+      "type": "chapters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/chapters/405939"
+      },
+      "attributes": {
+        "createdAt": "2017-08-09T05:06:30.119Z",
+        "updatedAt": "2018-11-28T23:13:26.149Z",
+        "synopsis": "",
+        "description": "",
+        "titles": {},
+        "canonicalTitle": null,
+        "volumeNumber": 1,
+        "number": 4,
+        "published": null,
+        "length": null,
+        "thumbnail": null
+      },
+      "relationships": {
+        "manga": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/chapters/405939/relationships/manga",
+            "related": "https://kitsu.io/api/edge/chapters/405939/manga"
+          }
+        }
+      }
+    },
+    {
+      "id": "405940",
+      "type": "chapters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/chapters/405940"
+      },
+      "attributes": {
+        "createdAt": "2017-08-09T05:06:30.126Z",
+        "updatedAt": "2018-11-28T23:13:26.149Z",
+        "synopsis": "",
+        "description": "",
+        "titles": {},
+        "canonicalTitle": null,
+        "volumeNumber": 1,
+        "number": 5,
+        "published": null,
+        "length": null,
+        "thumbnail": null
+      },
+      "relationships": {
+        "manga": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/chapters/405940/relationships/manga",
+            "related": "https://kitsu.io/api/edge/chapters/405940/manga"
+          }
+        }
+      }
+    },
+    {
+      "id": "405941",
+      "type": "chapters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/chapters/405941"
+      },
+      "attributes": {
+        "createdAt": "2017-08-09T05:06:30.132Z",
+        "updatedAt": "2018-11-28T23:13:26.149Z",
+        "synopsis": "",
+        "description": "",
+        "titles": {},
+        "canonicalTitle": null,
+        "volumeNumber": 1,
+        "number": 6,
+        "published": null,
+        "length": null,
+        "thumbnail": null
+      },
+      "relationships": {
+        "manga": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/chapters/405941/relationships/manga",
+            "related": "https://kitsu.io/api/edge/chapters/405941/manga"
+          }
+        }
+      }
+    },
+    {
+      "id": "405942",
+      "type": "chapters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/chapters/405942"
+      },
+      "attributes": {
+        "createdAt": "2017-08-09T05:06:30.138Z",
+        "updatedAt": "2018-11-28T23:13:26.149Z",
+        "synopsis": "",
+        "description": "",
+        "titles": {},
+        "canonicalTitle": null,
+        "volumeNumber": 1,
+        "number": 7,
+        "published": null,
+        "length": null,
+        "thumbnail": null
+      },
+      "relationships": {
+        "manga": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/chapters/405942/relationships/manga",
+            "related": "https://kitsu.io/api/edge/chapters/405942/manga"
+          }
+        }
+      }
+    },
+    {
+      "id": "405943",
+      "type": "chapters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/chapters/405943"
+      },
+      "attributes": {
+        "createdAt": "2017-08-09T05:06:30.144Z",
+        "updatedAt": "2018-11-28T23:13:26.149Z",
+        "synopsis": "",
+        "description": "",
+        "titles": {},
+        "canonicalTitle": null,
+        "volumeNumber": 1,
+        "number": 8,
+        "published": null,
+        "length": null,
+        "thumbnail": null
+      },
+      "relationships": {
+        "manga": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/chapters/405943/relationships/manga",
+            "related": "https://kitsu.io/api/edge/chapters/405943/manga"
+          }
+        }
+      }
+    },
+    {
+      "id": "405944",
+      "type": "chapters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/chapters/405944"
+      },
+      "attributes": {
+        "createdAt": "2017-08-09T05:06:30.149Z",
+        "updatedAt": "2018-11-28T23:13:26.149Z",
+        "synopsis": "",
+        "description": "",
+        "titles": {},
+        "canonicalTitle": null,
+        "volumeNumber": 1,
+        "number": 9,
+        "published": null,
+        "length": null,
+        "thumbnail": null
+      },
+      "relationships": {
+        "manga": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/chapters/405944/relationships/manga",
+            "related": "https://kitsu.io/api/edge/chapters/405944/manga"
+          }
+        }
+      }
+    },
+    {
+      "id": "405945",
+      "type": "chapters",
+      "links": {
+        "self": "https://kitsu.io/api/edge/chapters/405945"
+      },
+      "attributes": {
+        "createdAt": "2017-08-09T05:06:30.154Z",
+        "updatedAt": "2018-11-28T23:13:26.149Z",
+        "synopsis": "",
+        "description": "",
+        "titles": {},
+        "canonicalTitle": null,
+        "volumeNumber": 1,
+        "number": 10,
+        "published": null,
+        "length": null,
+        "thumbnail": null
+      },
+      "relationships": {
+        "manga": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/chapters/405945/relationships/manga",
+            "related": "https://kitsu.io/api/edge/chapters/405945/manga"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "count": 5000
+  },
+  "links": {
+    "first": "https://kitsu.io/api/edge/chapters?filter%5Bmanga_id%5D=8&page%5Blimit%5D=10&page%5Boffset%5D=0&sort=number",
+    "next": "https://kitsu.io/api/edge/chapters?filter%5Bmanga_id%5D=8&page%5Blimit%5D=10&page%5Boffset%5D=10&sort=number",
+    "last": "https://kitsu.io/api/edge/chapters?filter%5Bmanga_id%5D=8&page%5Blimit%5D=10&page%5Boffset%5D=4990&sort=number"
+  }
+}

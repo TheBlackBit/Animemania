@@ -7,3 +7,7 @@ data class PosterImage(
     val small: String?,
     val tiny: String?,
 )
+
+fun PosterImage.validImage(): String {
+    return large ?: medium ?: original ?: small ?: tiny ?: ""
+}

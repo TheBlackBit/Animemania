@@ -2,6 +2,7 @@ package com.theblackbit.animemania.android.data.external.repository
 
 import com.theblackbit.animemania.android.data.external.datasource.kitsuapi.KitsuEpisodesDataSource
 import com.theblackbit.animemania.android.data.external.datasource.response.episodesresponse.EpisodesResponse
+import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
 import org.junit.Assert.assertEquals
 import org.junit.Before
@@ -18,11 +19,15 @@ class AnimeEpisodesByKitsuRepositoryTest {
     @Mock
     lateinit var kitsuEpisodesDataSource: KitsuEpisodesDataSource
 
+    @Mock
+    lateinit var safeApiRequest: SafeApiRequest
+
     private lateinit var animeEpisodesByKitsuRepository: AnimeEpisodesByKitsuRepository
 
     @Before
     fun setup() {
-        animeEpisodesByKitsuRepository = AnimeEpisodesByKitsuRepository(kitsuEpisodesDataSource)
+        animeEpisodesByKitsuRepository =
+            AnimeEpisodesByKitsuRepository(kitsuEpisodesDataSource, safeApiRequest)
     }
 
     @Test
@@ -46,7 +51,7 @@ class AnimeEpisodesByKitsuRepositoryTest {
                 pageNumber,
                 pageOffset,
             )
-                .blockingGet()
+                .blockingGet() as SafeApiRequest.ApiResultHandle.Success
 
         verify(kitsuEpisodesDataSource).getEpisodes(
             collectionId = collectionId,
@@ -54,6 +59,6 @@ class AnimeEpisodesByKitsuRepositoryTest {
             pageOffset = pageOffset,
         )
 
-        assertEquals(expectedEpisodeData, actualEpisodesData)
+        assertEquals(expectedEpisodeData, actualEpisodesData.value)
     }
 }

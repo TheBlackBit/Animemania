@@ -5,5 +5,5 @@ import com.theblackbit.animemania.android.model.Character
 import io.reactivex.rxjava3.core.Flowable
 
 interface CollectCharactersUseCase {
-    fun collect(collectionId: String): Flowable<PagingData<Character>>
+    fun collect(collectionId: String, mediaType: String): Flowable<PagingData<Character>>
 }

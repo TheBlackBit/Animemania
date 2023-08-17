@@ -38,9 +38,9 @@ class TestChaptersDao {
 
     @Test
     fun testInsertAndCollectChapters() {
-        val collectionId = 1
+        val collectionId = "1"
         chapterDao.insertChapters(chapterList)
-        chapterDao.getChaptersByCollection(collectionId)
+        chapterDao.getChaptersByCollection(collectionId, 1)
             .test()
             .assertValue { chapterEntities ->
                 chapterEntities.isNotEmpty() &&
@@ -52,10 +52,10 @@ class TestChaptersDao {
 
     @Test
     fun testDeleteChaptersByCollectionId() {
-        val collectionId = 1
+        val collectionId = "1"
         chapterDao.insertChapters(chapterList)
         chapterDao.deleteChaptersByCollection(collectionId)
-        chapterDao.getChaptersByCollection(collectionId)
+        chapterDao.getChaptersByCollection(collectionId, 1)
             .test()
             .assertValue { chapterEntities ->
                 chapterEntities.isEmpty()

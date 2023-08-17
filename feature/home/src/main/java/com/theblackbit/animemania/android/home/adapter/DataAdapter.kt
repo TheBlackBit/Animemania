@@ -1,7 +1,7 @@
 package com.theblackbit.animemania.android.home.adapter
 
 import android.view.ViewGroup
-import androidx.cardview.widget.CardView
+import android.widget.ImageView
 import androidx.paging.PagingDataAdapter
 import com.theblackbit.animemania.android.common.extensions.viewForViewDataBinding
 import com.theblackbit.animemania.android.feature.home.R
@@ -11,6 +11,7 @@ import com.theblackbit.animemania.android.model.Collection
 class DataAdapter(
     diffCallback: DataDiffCallback,
     private val onClickCollection: OnClickCollection,
+    private val requestTypeName: String,
 ) :
     PagingDataAdapter<Collection, DataViewHolder>(
         diffCallback,
@@ -27,10 +28,11 @@ class DataAdapter(
         return DataViewHolder(
             binding = binding,
             onClickCollection = onClickCollection,
+            requestTypeName = requestTypeName,
         )
     }
 
     interface OnClickCollection {
-        fun onClick(collection: Collection, cardView: CardView)
+        fun onClick(collection: Collection, imageView: ImageView)
     }
 }

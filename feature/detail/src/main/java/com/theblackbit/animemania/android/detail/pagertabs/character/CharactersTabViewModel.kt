@@ -15,9 +15,10 @@ class CharactersTabViewModel(
 ) : ViewModel() {
     fun startToCollectCharacters(
         collectionId: String,
+        collectionType: String,
         scope: CoroutineScope,
     ): Flowable<PagingData<Character>> {
-        return charactersUseCase.collect(collectionId)
+        return charactersUseCase.collect(collectionId, collectionType)
             .cachedIn(scope)
     }
 }

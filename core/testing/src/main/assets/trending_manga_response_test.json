@@ -1,0 +1,4029 @@
+{
+  "data": [
+    {
+      "id": "40987",
+      "type": "manga",
+      "links": {
+        "self": "/manga/40987"
+      },
+      "attributes": {
+        "createdAt": "2018-06-06T16:05:29.358Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "martial-peak",
+        "synopsis": "The journey to the martial peak is a lonely, solitary and long one.In the face of adversity,you must survive and remain unyielding.Only then can you break through and and continue on your journey to become the strongest. Sky Tower tests its disciples in the harshest ways to prepare them for this journey.One day the lowly sweeper Yang Kai managed to obtain a black book, setting him on the road to the peak of the martials world.(Source: MU)",
+        "description": "The journey to the martial peak is a lonely, solitary and long one.In the face of adversity,you must survive and remain unyielding.Only then can you break through and and continue on your journey to become the strongest. Sky Tower tests its disciples in the harshest ways to prepare them for this journey.One day the lowly sweeper Yang Kai managed to obtain a black book, setting him on the road to the peak of the martials world.(Source: MU)",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en_us": "Martial Peak",
+          "zh_cn": "武炼巅峰"
+        },
+        "canonicalTitle": "Martial Peak",
+        "abbreviatedTitles": [
+          "MP\r\n",
+          "Wu Lian Dian Feng \r\n",
+          "Wǔ Liàn Diān Fēng\r\n",
+          "Wǔ Liàn Diānfēng\r\n",
+          "Вершина боевых искусств\r\n",
+          "Пик боевых искусств"
+        ],
+        "averageRating": "80.04",
+        "ratingFrequencies": {
+          "2": "6",
+          "3": "1",
+          "4": "7",
+          "5": "2",
+          "6": "4",
+          "7": "3",
+          "8": "23",
+          "9": "2",
+          "10": "21",
+          "11": "13",
+          "12": "31",
+          "13": "20",
+          "14": "127",
+          "15": "34",
+          "16": "65",
+          "17": "47",
+          "18": "73",
+          "19": "35",
+          "20": "218"
+        },
+        "userCount": 2687,
+        "favoritesCount": 82,
+        "startDate": "2017-06-01",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 544,
+        "ratingRank": 947,
+        "ageRating": "G",
+        "ageRatingGuide": null,
+        "subtype": "manhua",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/poster_images/40987/tiny.jpg",
+          "large": "https://media.kitsu.io/manga/poster_images/40987/large.jpg",
+          "small": "https://media.kitsu.io/manga/poster_images/40987/small.jpg",
+          "medium": "https://media.kitsu.io/manga/poster_images/40987/medium.jpg",
+          "original": "https://media.kitsu.io/manga/poster_images/40987/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/cover_images/40987/tiny.jpg",
+          "large": "https://media.kitsu.io/manga/cover_images/40987/large.jpg",
+          "small": "https://media.kitsu.io/manga/cover_images/40987/small.jpg",
+          "original": "https://media.kitsu.io/manga/cover_images/40987/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": null,
+        "volumeCount": null,
+        "serialization": null,
+        "mangaType": "manhua"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/40987/relationships/genres",
+            "related": "/manga/40987/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/40987/relationships/categories",
+            "related": "/manga/40987/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/40987/relationships/castings",
+            "related": "/manga/40987/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/40987/relationships/installments",
+            "related": "/manga/40987/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/40987/relationships/mappings",
+            "related": "/manga/40987/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/40987/relationships/reviews",
+            "related": "/manga/40987/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/40987/relationships/media-relationships",
+            "related": "/manga/40987/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/40987/relationships/characters",
+            "related": "/manga/40987/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/40987/relationships/staff",
+            "related": "/manga/40987/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/40987/relationships/productions",
+            "related": "/manga/40987/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/40987/relationships/quotes",
+            "related": "/manga/40987/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/40987/relationships/chapters",
+            "related": "/manga/40987/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/40987/relationships/manga-characters",
+            "related": "/manga/40987/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/40987/relationships/manga-staff",
+            "related": "/manga/40987/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "38",
+      "type": "manga",
+      "links": {
+        "self": "/manga/38"
+      },
+      "attributes": {
+        "createdAt": "2013-12-18T13:48:27.926Z",
+        "updatedAt": "2023-08-14T20:21:20.646Z",
+        "slug": "one-piece",
+        "synopsis": "Gol D. Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.\n\nEnter Monkey D. Luffy, a 17-year-old boy that defies your standard definition of a pirate. Rather than the popular persona of a wicked, hardened, toothless pirate who ransacks villages for fun, Luffy’s reason for being a pirate is one of pure wonder; the thought of an exciting adventure and meeting new and intriguing people, along with finding One Piece, are his reasons of becoming a pirate. Following in the footsteps of his childhood hero, Luffy and his crew travel across the Grand Line, experiencing crazy adventures, unveiling dark mysteries and battling strong enemies, all in order to reach One Piece.\n\n(Source: MAL Rewrite)",
+        "description": "Gol D. Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.\n\nEnter Monkey D. Luffy, a 17-year-old boy that defies your standard definition of a pirate. Rather than the popular persona of a wicked, hardened, toothless pirate who ransacks villages for fun, Luffy’s reason for being a pirate is one of pure wonder; the thought of an exciting adventure and meeting new and intriguing people, along with finding One Piece, are his reasons of becoming a pirate. Following in the footsteps of his childhood hero, Luffy and his crew travel across the Grand Line, experiencing crazy adventures, unveiling dark mysteries and battling strong enemies, all in order to reach One Piece.\n\n(Source: MAL Rewrite)",
+        "coverImageTopOffset": 50,
+        "titles": {
+          "en": "One Piece",
+          "en_jp": "One Piece",
+          "en_us": "One Piece",
+          "ja_jp": "ONE PIECE"
+        },
+        "canonicalTitle": "One Piece",
+        "abbreviatedTitles": [
+          "Budak Getah",
+          "Đảo Hải Tặc",
+          "Большой куш",
+          "Ван Пис",
+          "Уан Пийс",
+          "Эйтиро Ода",
+          "Վան Փիս",
+          "וואן פיס",
+          "قطعة واحدة",
+          "وان پیس",
+          "ون بيس",
+          "وەن پیس",
+          "वान पिस",
+          "वान् पीस",
+          "ওয়ান পিস",
+          "ஒன் பீஸ்",
+          "วันพีซ",
+          "ဝမ်းပိစ်",
+          "ዋንፒስ",
+          "ワンピース",
+          "海盗路飞",
+          "海賊王",
+          "海贼王",
+          "航海王",
+          "원피스"
+        ],
+        "averageRating": "84.88",
+        "ratingFrequencies": {
+          "2": "5159",
+          "3": "99",
+          "4": "276",
+          "5": "50",
+          "6": "253",
+          "7": "57",
+          "8": "4601",
+          "9": "89",
+          "10": "503",
+          "11": "121",
+          "12": "726",
+          "13": "158",
+          "14": "10224",
+          "15": "243",
+          "16": "2377",
+          "17": "511",
+          "18": "3356",
+          "19": "730",
+          "20": "56042"
+        },
+        "userCount": 143613,
+        "favoritesCount": 3376,
+        "startDate": "1997-07-22",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 3,
+        "ratingRank": 2,
+        "ageRating": "G",
+        "ageRatingGuide": null,
+        "subtype": "manga",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/38/poster_image/tiny-9212308f74228cddfeffb43e8b27b7f8.jpeg",
+          "large": "https://media.kitsu.io/manga/38/poster_image/large-676b91b69b775c6c240c41dbf8106d03.jpeg",
+          "small": "https://media.kitsu.io/manga/38/poster_image/small-856c6f25c6a57d4f1d4570bb578af520.jpeg",
+          "medium": "https://media.kitsu.io/manga/38/poster_image/medium-101738b3660e107cc751f00d46126f0b.jpeg",
+          "original": "https://media.kitsu.io/manga/38/poster_image/85c98b3ebfea8a1cfe8c8f837b6b5fc8.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/38/cover_image/tiny-551b3a10a77d7462184ec88c870e909a.jpeg",
+          "large": "https://media.kitsu.io/manga/38/cover_image/large-bd52b8f2fb81d3cf99b4fbe4c072d2b1.jpeg",
+          "small": "https://media.kitsu.io/manga/38/cover_image/small-e0bb784a3578bfd6bcdde1ccc83529b1.jpeg",
+          "original": "https://media.kitsu.io/manga/38/cover_image/020c994fbf81443b79723d8fca369df0.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": null,
+        "volumeCount": null,
+        "serialization": "Shounen Jump (Weekly)",
+        "mangaType": "manga"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/38/relationships/genres",
+            "related": "/manga/38/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/38/relationships/categories",
+            "related": "/manga/38/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/38/relationships/castings",
+            "related": "/manga/38/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/38/relationships/installments",
+            "related": "/manga/38/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/38/relationships/mappings",
+            "related": "/manga/38/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/38/relationships/reviews",
+            "related": "/manga/38/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/38/relationships/media-relationships",
+            "related": "/manga/38/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/38/relationships/characters",
+            "related": "/manga/38/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/38/relationships/staff",
+            "related": "/manga/38/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/38/relationships/productions",
+            "related": "/manga/38/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/38/relationships/quotes",
+            "related": "/manga/38/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/38/relationships/chapters",
+            "related": "/manga/38/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/38/relationships/manga-characters",
+            "related": "/manga/38/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/38/relationships/manga-staff",
+            "related": "/manga/38/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "54139",
+      "type": "manga",
+      "links": {
+        "self": "/manga/54139"
+      },
+      "attributes": {
+        "createdAt": "2018-12-03T09:06:32.604Z",
+        "updatedAt": "2023-08-14T18:43:47.090Z",
+        "slug": "chainsawman",
+        "synopsis": "The name says it all! Denji's life of poverty is changed forever when he merges with his pet chainsaw dog, Pochita! Now he's living in the big city and an official Devil Hunter. But he's got a lot to learn about his new job and chainsaw powers!\n\n(Source: Mangaplus)\n\nNotes:\n- Nominated for the 2020 Manga Taisho Award.\n- Winner of the 2021 Kono Manga ga Sugoi Award.\n- Winner of the 66th Shogakukan Manga Award in the shounen category.\n- Winner of the 2021 and 2022 Harvey Award for Best Manga.",
+        "description": "The name says it all! Denji's life of poverty is changed forever when he merges with his pet chainsaw dog, Pochita! Now he's living in the big city and an official Devil Hunter. But he's got a lot to learn about his new job and chainsaw powers!\n\n(Source: Mangaplus)\n\nNotes:\n- Nominated for the 2020 Manga Taisho Award.\n- Winner of the 2021 Kono Manga ga Sugoi Award.\n- Winner of the 66th Shogakukan Manga Award in the shounen category.\n- Winner of the 2021 and 2022 Harvey Award for Best Manga.",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en": "Chainsaw Man",
+          "ja_jp": "チェンソーマン"
+        },
+        "canonicalTitle": "Chainsaw Man",
+        "abbreviatedTitles": [
+          "Chainsawman",
+          "Chensoo Man",
+          "CSM",
+          "Людина-бензопила",
+          "Человек-бензопила",
+          "رجل المنشار",
+          "مرد اره ای",
+          "មនុស្សរណា",
+          "チェンソーマン",
+          "チェンソーマン 第二部",
+          "电锯人",
+          "鏈鋸人",
+          "電鋸人",
+          "체인쏘맨",
+          "Chainsaw Man: Public Safety Saga"
+        ],
+        "averageRating": "84.84",
+        "ratingFrequencies": {
+          "2": "620",
+          "3": "10",
+          "4": "19",
+          "5": "8",
+          "6": "31",
+          "7": "15",
+          "8": "433",
+          "9": "14",
+          "10": "130",
+          "11": "20",
+          "12": "239",
+          "13": "48",
+          "14": "1958",
+          "15": "228",
+          "16": "1865",
+          "17": "592",
+          "18": "2686",
+          "19": "527",
+          "20": "7190"
+        },
+        "userCount": 33244,
+        "favoritesCount": 1351,
+        "startDate": "2018-12-03",
+        "endDate": "2020-12-14",
+        "nextRelease": null,
+        "popularityRank": 28,
+        "ratingRank": 4,
+        "ageRating": "R",
+        "ageRatingGuide": "Violence \u0026 blood, partial nudity",
+        "subtype": "manga",
+        "status": "finished",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/54139/poster_image/tiny-74397fc2bef16a7435c07dbf7be601ec.jpeg",
+          "large": "https://media.kitsu.io/manga/54139/poster_image/large-abe06849b6452458885bb1d22c29ed23.jpeg",
+          "small": "https://media.kitsu.io/manga/54139/poster_image/small-820164ca2c8731ee78c141ed2977e728.jpeg",
+          "medium": "https://media.kitsu.io/manga/54139/poster_image/medium-9491633b3d19666dba2e36e07413389e.jpeg",
+          "original": "https://media.kitsu.io/manga/54139/poster_image/0e1fd07d0df5d9187b84b16128438382.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/54139/cover_image/tiny-b07af0eb9be16ec35666efdeabd34ba1.jpeg",
+          "large": "https://media.kitsu.io/manga/54139/cover_image/large-259b90cae4de586d5b68e32253b183ca.jpeg",
+          "small": "https://media.kitsu.io/manga/54139/cover_image/small-38a84934fe95ecab6d88679f39ba4b9b.jpeg",
+          "original": "https://media.kitsu.io/manga/54139/cover_image/69c39e98b1799c8e115745df9aa36e6e.png",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": 97,
+        "volumeCount": 11,
+        "serialization": "Shounen Jump (Weekly)",
+        "mangaType": "manga"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/54139/relationships/genres",
+            "related": "/manga/54139/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/54139/relationships/categories",
+            "related": "/manga/54139/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/54139/relationships/castings",
+            "related": "/manga/54139/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/54139/relationships/installments",
+            "related": "/manga/54139/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/54139/relationships/mappings",
+            "related": "/manga/54139/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/54139/relationships/reviews",
+            "related": "/manga/54139/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/54139/relationships/media-relationships",
+            "related": "/manga/54139/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/54139/relationships/characters",
+            "related": "/manga/54139/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/54139/relationships/staff",
+            "related": "/manga/54139/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/54139/relationships/productions",
+            "related": "/manga/54139/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/54139/relationships/quotes",
+            "related": "/manga/54139/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/54139/relationships/chapters",
+            "related": "/manga/54139/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/54139/relationships/manga-characters",
+            "related": "/manga/54139/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/54139/relationships/manga-staff",
+            "related": "/manga/54139/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "40815",
+      "type": "manga",
+      "links": {
+        "self": "/manga/40815"
+      },
+      "attributes": {
+        "createdAt": "2018-04-02T14:43:35.394Z",
+        "updatedAt": "2023-08-14T18:41:28.685Z",
+        "slug": "jujutsu-kaisen",
+        "synopsis": "Although Yuji Itadori looks like your average teenager, his immense physical strength is something to behold! Every sports club wants him to join, but Itadori would rather hang out with the school outcasts in the Occult Research Club. One day, the club manages to get their hands on a sealed cursed object. Little do they know the terror they’ll unleash when they break the seal…\n\n(Source: Viz Media)\n\nNotes:\n- Ranked 1st in Japan's Bookstore Employees Top Manga of 2018.\n- Nominated for the 25th Annual Tezuka Osamu Cultural Prize in 2021.\n- Nominated for the 65th Shogakukan Manga Award in the Shounen Category in 2019.",
+        "description": "Although Yuji Itadori looks like your average teenager, his immense physical strength is something to behold! Every sports club wants him to join, but Itadori would rather hang out with the school outcasts in the Occult Research Club. One day, the club manages to get their hands on a sealed cursed object. Little do they know the terror they’ll unleash when they break the seal…\n\n(Source: Viz Media)\n\nNotes:\n- Ranked 1st in Japan's Bookstore Employees Top Manga of 2018.\n- Nominated for the 25th Annual Tezuka Osamu Cultural Prize in 2021.\n- Nominated for the 65th Shogakukan Manga Award in the Shounen Category in 2019.",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en": "Jujutsu Kaisen",
+          "en_jp": "Jujutsu Kaisen",
+          "ja_jp": "呪術廻戦"
+        },
+        "canonicalTitle": "Jujutsu Kaisen",
+        "abbreviatedTitles": [
+          "Chú Thuật Hồi Chiến",
+          "Jujutsu Kaisen - Batalha de feiticeiros",
+          "Jujutsu Kaisen - Contiendas de brujería",
+          "Lanet Savaşları",
+          "Sorcery Fight",
+          "Магическая битва",
+          "Магічна битва",
+          "جوجوتسو كايسين",
+          "जादुई लडाई",
+          "咒术回战",
+          "咒術迴戰",
+          "주술회전"
+        ],
+        "averageRating": "84.78",
+        "ratingFrequencies": {
+          "2": "1647",
+          "3": "15",
+          "4": "51",
+          "5": "12",
+          "6": "67",
+          "7": "23",
+          "8": "1064",
+          "9": "28",
+          "10": "164",
+          "11": "58",
+          "12": "280",
+          "13": "60",
+          "14": "3398",
+          "15": "194",
+          "16": "1313",
+          "17": "409",
+          "18": "1443",
+          "19": "312",
+          "20": "16562"
+        },
+        "userCount": 54182,
+        "favoritesCount": 572,
+        "startDate": "2018-03-05",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 16,
+        "ratingRank": 7,
+        "ageRating": "PG",
+        "ageRatingGuide": null,
+        "subtype": "manga",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/40815/poster_image/tiny-1cbc103528e9b4259e27976dff648256.jpeg",
+          "large": "https://media.kitsu.io/manga/40815/poster_image/large-f3a78f082ce3ddfeca300789e0eec170.jpeg",
+          "small": "https://media.kitsu.io/manga/40815/poster_image/small-c333317ee0a509ac980527641fd2eba6.jpeg",
+          "medium": "https://media.kitsu.io/manga/40815/poster_image/medium-767e86e8803c5b52e16892601b448ece.jpeg",
+          "original": "https://media.kitsu.io/manga/40815/poster_image/ae8c69e2b7c147bfc38de1ec07a879a2.png",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/40815/cover_image/tiny-f41f09b464205bb074ce39b4113d3c51.jpeg",
+          "large": "https://media.kitsu.io/manga/40815/cover_image/large-0bcff93de29dbbdcea0e4dc58b0580ba.jpeg",
+          "small": "https://media.kitsu.io/manga/40815/cover_image/small-f1e223479855c34d9aaa3a1c9930f783.jpeg",
+          "original": "https://media.kitsu.io/manga/40815/cover_image/f0c20d8d9d579eb0ede0d0477394a22b.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": null,
+        "volumeCount": null,
+        "serialization": "Shounen Jump (Weekly)",
+        "mangaType": "manga"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/40815/relationships/genres",
+            "related": "/manga/40815/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/40815/relationships/categories",
+            "related": "/manga/40815/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/40815/relationships/castings",
+            "related": "/manga/40815/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/40815/relationships/installments",
+            "related": "/manga/40815/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/40815/relationships/mappings",
+            "related": "/manga/40815/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/40815/relationships/reviews",
+            "related": "/manga/40815/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/40815/relationships/media-relationships",
+            "related": "/manga/40815/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/40815/relationships/characters",
+            "related": "/manga/40815/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/40815/relationships/staff",
+            "related": "/manga/40815/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/40815/relationships/productions",
+            "related": "/manga/40815/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/40815/relationships/quotes",
+            "related": "/manga/40815/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/40815/relationships/chapters",
+            "related": "/manga/40815/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/40815/relationships/manga-characters",
+            "related": "/manga/40815/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/40815/relationships/manga-staff",
+            "related": "/manga/40815/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "60628",
+      "type": "manga",
+      "links": {
+        "self": "/manga/60628"
+      },
+      "attributes": {
+        "createdAt": "2021-07-29T20:47:38.563Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "solo-max-level-newbie",
+        "synopsis": "Jinhyuk, a gaming Nutuber, was the only person who saw the ending of the game \"Tower of Trials\".\n\nHowever, when the game’s popularity declined, it became difficult for him to continue making a living as a gaming Nutuber.\n\nSince he already saw the ending of the game, he was about to quit playing. But that day, \"Tower of Trials\" became reality, and Jinhyuk, who knew about every single thing in the game, took over everything faster than anyone possibly could!\n\n“I’ll show you what a true pro is like.”\n\n(Source: MU)",
+        "description": "Jinhyuk, a gaming Nutuber, was the only person who saw the ending of the game \"Tower of Trials\".\n\nHowever, when the game’s popularity declined, it became difficult for him to continue making a living as a gaming Nutuber.\n\nSince he already saw the ending of the game, he was about to quit playing. But that day, \"Tower of Trials\" became reality, and Jinhyuk, who knew about every single thing in the game, took over everything faster than anyone possibly could!\n\n“I’ll show you what a true pro is like.”\n\n(Source: MU)",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en": "Solo Max-Level Newbie",
+          "ko_kr": "나 혼자 만렙 뉴비"
+        },
+        "canonicalTitle": "Solo Max-Level Newbie",
+        "abbreviatedTitles": [
+          "Na Honja Mallep Newbie"
+        ],
+        "averageRating": "79.67",
+        "ratingFrequencies": {
+          "2": "7",
+          "3": "1",
+          "4": "2",
+          "6": "1",
+          "7": "1",
+          "8": "12",
+          "9": "2",
+          "10": "12",
+          "11": "2",
+          "12": "28",
+          "13": "15",
+          "14": "101",
+          "15": "20",
+          "16": "64",
+          "17": "36",
+          "18": "75",
+          "19": "11",
+          "20": "125"
+        },
+        "userCount": 2353,
+        "favoritesCount": 10,
+        "startDate": "2021-07-29",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 642,
+        "ratingRank": 1046,
+        "ageRating": "PG",
+        "ageRatingGuide": "Teens 13 or older",
+        "subtype": "manhwa",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/60628/poster_image/tiny-7fb3e49cc3e0654849b2310360967ae6.jpeg",
+          "large": "https://media.kitsu.io/manga/60628/poster_image/large-ecc8d639c5613410a5e42dfc95062c54.jpeg",
+          "small": "https://media.kitsu.io/manga/60628/poster_image/small-13e7eef27975c6cd24cac6996cbea69a.jpeg",
+          "medium": "https://media.kitsu.io/manga/60628/poster_image/medium-f148e61cc67e94b9c19dcb5d3b3cf82c.jpeg",
+          "original": "https://media.kitsu.io/manga/60628/poster_image/d6f918e6b16b3e88330c1829e786be85.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/60628/cover_image/tiny-0a08e913380a5a3d769d96c17b170a68.jpeg",
+          "large": "https://media.kitsu.io/manga/60628/cover_image/large-18f8e002689bbda39018d373132032ac.jpeg",
+          "small": "https://media.kitsu.io/manga/60628/cover_image/small-1b11cb441230073ba73cbcb6bbf940e6.jpeg",
+          "original": "https://media.kitsu.io/manga/60628/cover_image/e66f423ae70b24bb348cbd4efad32473.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": null,
+        "volumeCount": null,
+        "serialization": "Naver Webtoon",
+        "mangaType": "manhwa"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/60628/relationships/genres",
+            "related": "/manga/60628/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/60628/relationships/categories",
+            "related": "/manga/60628/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/60628/relationships/castings",
+            "related": "/manga/60628/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/60628/relationships/installments",
+            "related": "/manga/60628/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/60628/relationships/mappings",
+            "related": "/manga/60628/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/60628/relationships/reviews",
+            "related": "/manga/60628/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/60628/relationships/media-relationships",
+            "related": "/manga/60628/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/60628/relationships/characters",
+            "related": "/manga/60628/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/60628/relationships/staff",
+            "related": "/manga/60628/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/60628/relationships/productions",
+            "related": "/manga/60628/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/60628/relationships/quotes",
+            "related": "/manga/60628/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/60628/relationships/chapters",
+            "related": "/manga/60628/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/60628/relationships/manga-characters",
+            "related": "/manga/60628/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/60628/relationships/manga-staff",
+            "related": "/manga/60628/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "24147",
+      "type": "manga",
+      "links": {
+        "self": "/manga/24147"
+      },
+      "attributes": {
+        "createdAt": "2013-12-18T14:08:57.751Z",
+        "updatedAt": "2023-08-14T19:14:31.921Z",
+        "slug": "one-punch-man",
+        "synopsis": "Everything about a young man named Saitama screams \"AVERAGE,” from his lifeless expression, to his bald head, to his unimpressive physique. However, this average-looking fellow doesn't have your average problem... He's actually a superhero that's looking for tough opponents! The problem is, every time he finds a promising candidate he beats the snot out of them in one punch. Can Saitama finally find an evil villain strong enough to challenge him? Follow Saitama through his hilarious romps as he searches for new bad guys to challenge!\n\n(Source: Viz)",
+        "description": "Everything about a young man named Saitama screams \"AVERAGE,” from his lifeless expression, to his bald head, to his unimpressive physique. However, this average-looking fellow doesn't have your average problem... He's actually a superhero that's looking for tough opponents! The problem is, every time he finds a promising candidate he beats the snot out of them in one punch. Can Saitama finally find an evil villain strong enough to challenge him? Follow Saitama through his hilarious romps as he searches for new bad guys to challenge!\n\n(Source: Viz)",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en": "One-Punch Man",
+          "en_jp": "One Punch-Man",
+          "en_us": "One-Punch Man",
+          "ja_jp": "ワンパンマン"
+        },
+        "canonicalTitle": "One Punch-Man",
+        "abbreviatedTitles": [
+          "Onepunchman",
+          "Onepanman"
+        ],
+        "averageRating": "84.5",
+        "ratingFrequencies": {
+          "2": "3588",
+          "3": "66",
+          "4": "203",
+          "5": "57",
+          "6": "196",
+          "7": "41",
+          "8": "3206",
+          "9": "78",
+          "10": "449",
+          "11": "126",
+          "12": "661",
+          "13": "167",
+          "14": "9067",
+          "15": "344",
+          "16": "3276",
+          "17": "767",
+          "18": "4049",
+          "19": "592",
+          "20": "40141"
+        },
+        "userCount": 119342,
+        "favoritesCount": 1707,
+        "startDate": "2012-06-14",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 5,
+        "ratingRank": 9,
+        "ageRating": "G",
+        "ageRatingGuide": null,
+        "subtype": "manga",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/24147/poster_image/tiny-cb71649ef8f22e7881f7f0b008351904.jpeg",
+          "large": "https://media.kitsu.io/manga/24147/poster_image/large-4f2d300b6f3485997a68c752de00a8f9.jpeg",
+          "small": "https://media.kitsu.io/manga/24147/poster_image/small-04249d9208e57a4f610ebbbaadcecc19.jpeg",
+          "medium": "https://media.kitsu.io/manga/24147/poster_image/medium-2eb408f8d314f6e3dc2e3714892d6691.jpeg",
+          "original": "https://media.kitsu.io/manga/24147/poster_image/ec4d6e5919f287f7f11ea2625efec4bd.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/24147/cover_image/tiny-248d21f54eee3a60698061181bdcd3eb.jpeg",
+          "large": "https://media.kitsu.io/manga/24147/cover_image/large-3bf6d144f65a2c6f9c246578617df691.jpeg",
+          "small": "https://media.kitsu.io/manga/24147/cover_image/small-fcb3e87dfac6d4701f1663832051b1ee.jpeg",
+          "original": "https://media.kitsu.io/manga/24147/cover_image/c06c4310e3d396bea68b3ace78a412c9.png",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": null,
+        "volumeCount": 0,
+        "serialization": "Tonari no Young Jump",
+        "mangaType": "manga"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/24147/relationships/genres",
+            "related": "/manga/24147/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/24147/relationships/categories",
+            "related": "/manga/24147/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/24147/relationships/castings",
+            "related": "/manga/24147/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/24147/relationships/installments",
+            "related": "/manga/24147/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/24147/relationships/mappings",
+            "related": "/manga/24147/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/24147/relationships/reviews",
+            "related": "/manga/24147/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/24147/relationships/media-relationships",
+            "related": "/manga/24147/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/24147/relationships/characters",
+            "related": "/manga/24147/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/24147/relationships/staff",
+            "related": "/manga/24147/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/24147/relationships/productions",
+            "related": "/manga/24147/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/24147/relationships/quotes",
+            "related": "/manga/24147/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/24147/relationships/chapters",
+            "related": "/manga/24147/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/24147/relationships/manga-characters",
+            "related": "/manga/24147/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/24147/relationships/manga-staff",
+            "related": "/manga/24147/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "26004",
+      "type": "manga",
+      "links": {
+        "self": "/manga/26004"
+      },
+      "attributes": {
+        "createdAt": "2014-09-03T10:57:38.139Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "boku-no-hero-academia",
+        "synopsis": "What would the world be like if 80 percent of the population manifested superpowers called “Quirks” at age four? Heroes and villains would be battling it out everywhere! Being a hero would mean learning to use your power, but where would you go to study? The Hero Academy of course! But what would you do if you were one of the 20 percent who were born Quirkless?\n\nMiddle school student Izuku Midoriya wants to be a hero more than anything, but he hasn’t got an ounce of power in him. With no chance of ever getting into the prestigious U.A. High School for budding heroes, his life is looking more and more like a dead end. Then an encounter with All Might, the greatest hero of them all, gives him a chance to change his destiny…\n\n(Source: Viz Media)",
+        "description": "What would the world be like if 80 percent of the population manifested superpowers called “Quirks” at age four? Heroes and villains would be battling it out everywhere! Being a hero would mean learning to use your power, but where would you go to study? The Hero Academy of course! But what would you do if you were one of the 20 percent who were born Quirkless?\n\nMiddle school student Izuku Midoriya wants to be a hero more than anything, but he hasn’t got an ounce of power in him. With no chance of ever getting into the prestigious U.A. High School for budding heroes, his life is looking more and more like a dead end. Then an encounter with All Might, the greatest hero of them all, gives him a chance to change his destiny…\n\n(Source: Viz Media)",
+        "coverImageTopOffset": 99,
+        "titles": {
+          "ar": "أكاديمية بطلي",
+          "en": "My Hero Academia",
+          "en_jp": "Boku no Hero Academia",
+          "he_il": "אקדמיית הגיבורים שלי",
+          "ja_jp": "僕のヒーローアカデミア",
+          "ko_kr": "나의 영웅 아카데미아",
+          "lt_lt": "Mano herojų akademija",
+          "pl_pl": "My Hero Academia: Akademia Bohaterów",
+          "ru_ru": "Моя геройская академия",
+          "th_th": "มายฮีโร่ อคาเดเมีย",
+          "tr_tr": "Kahramanlık Akademim",
+          "vi_vn": "Học viện anh hùng",
+          "zh_cn": "我的英雄学院",
+          "zh_tw": "我的英雄學院"
+        },
+        "canonicalTitle": "Boku no Hero Academia",
+        "abbreviatedTitles": [
+          "Boku no Hiiroo Akademia",
+          "Mitt Helteakademia",
+          "فێرگەى پاڵەوانەكەم",
+          "मेरो हिरो एकेडेमिया",
+          "ഹീറോ അക്കാദമി",
+          "มายฮีโร่อคาเดเมีย"
+        ],
+        "averageRating": "85.01",
+        "ratingFrequencies": {
+          "2": "5350",
+          "3": "118",
+          "4": "272",
+          "5": "77",
+          "6": "279",
+          "7": "86",
+          "8": "3701",
+          "9": "112",
+          "10": "745",
+          "11": "190",
+          "12": "1088",
+          "13": "265",
+          "14": "13590",
+          "15": "545",
+          "16": "4092",
+          "17": "1015",
+          "18": "3947",
+          "19": "638",
+          "20": "61140"
+        },
+        "userCount": 172372,
+        "favoritesCount": 2059,
+        "startDate": "2014-07-07",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 1,
+        "ratingRank": 1,
+        "ageRating": "PG",
+        "ageRatingGuide": "Teens 13 or older",
+        "subtype": "manga",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/26004/poster_image/tiny-3cd73215f295a574f68d0a52431c5e45.jpeg",
+          "large": "https://media.kitsu.io/manga/26004/poster_image/large-226bfa9e2bb2d77058802994345e1d7f.jpeg",
+          "small": "https://media.kitsu.io/manga/26004/poster_image/small-a4a5de9ab5b2674bdf5b5eb9f6b59981.jpeg",
+          "medium": "https://media.kitsu.io/manga/26004/poster_image/medium-69bb6d4cdf1af57f4956328321aed79c.jpeg",
+          "original": "https://media.kitsu.io/manga/26004/poster_image/5b83b5bebf9feca94a57e789be757e1f.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/26004/cover_image/tiny-1f73b4c17f12e86bc20014fc7bb614f0.jpeg",
+          "large": "https://media.kitsu.io/manga/26004/cover_image/large-377d7007411093643f31606c56547ad9.jpeg",
+          "small": "https://media.kitsu.io/manga/26004/cover_image/small-7649b65744d904e9001cf6c691c62e1d.jpeg",
+          "original": "https://media.kitsu.io/manga/26004/cover_image/9d540ab1aec27af1cae7619f30b2f427.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": null,
+        "volumeCount": null,
+        "serialization": "Shounen Jump (Weekly)",
+        "mangaType": "manga"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/26004/relationships/genres",
+            "related": "/manga/26004/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/26004/relationships/categories",
+            "related": "/manga/26004/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/26004/relationships/castings",
+            "related": "/manga/26004/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/26004/relationships/installments",
+            "related": "/manga/26004/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/26004/relationships/mappings",
+            "related": "/manga/26004/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/26004/relationships/reviews",
+            "related": "/manga/26004/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/26004/relationships/media-relationships",
+            "related": "/manga/26004/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/26004/relationships/characters",
+            "related": "/manga/26004/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/26004/relationships/staff",
+            "related": "/manga/26004/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/26004/relationships/productions",
+            "related": "/manga/26004/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/26004/relationships/quotes",
+            "related": "/manga/26004/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/26004/relationships/chapters",
+            "related": "/manga/26004/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/26004/relationships/manga-characters",
+            "related": "/manga/26004/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/26004/relationships/manga-staff",
+            "related": "/manga/26004/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "54114",
+      "type": "manga",
+      "links": {
+        "self": "/manga/54114"
+      },
+      "attributes": {
+        "createdAt": "2018-11-11T17:13:07.946Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "solo-levelling",
+        "synopsis": "In a world where awakened beings called “Hunters” must battle deadly monsters to protect humanity, Sung Jinwoo, nicknamed “the weakest hunter of all mankind,” finds himself in a constant struggle for survival. One day, after a brutal encounter in an overpowered dungeon wipes out his party and threatens to end his life, a mysterious System chooses him as its sole player: Jinwoo has been granted the rare opportunity to level up his abilities, possibly beyond any known limits. Follow Jinwoo’s journey as he takes on ever-stronger enemies, both human and monster, to discover the secrets deep within the dungeons and the ultimate extent of his powers.\n\n(Source: Tappytoon)\n\nNote: Chapter count includes a prologue and 21 side stories.",
+        "description": "In a world where awakened beings called “Hunters” must battle deadly monsters to protect humanity, Sung Jinwoo, nicknamed “the weakest hunter of all mankind,” finds himself in a constant struggle for survival. One day, after a brutal encounter in an overpowered dungeon wipes out his party and threatens to end his life, a mysterious System chooses him as its sole player: Jinwoo has been granted the rare opportunity to level up his abilities, possibly beyond any known limits. Follow Jinwoo’s journey as he takes on ever-stronger enemies, both human and monster, to discover the secrets deep within the dungeons and the ultimate extent of his powers.\n\n(Source: Tappytoon)\n\nNote: Chapter count includes a prologue and 21 side stories.",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en_jp": "Boku dake Level Up na Ken",
+          "en_kr": "Na Honjaman Level Up",
+          "en_us": "Solo Leveling",
+          "ja_jp": "俺だけレベルアップな件",
+          "ko_kr": "나 혼자만 레벨업"
+        },
+        "canonicalTitle": "Solo Leveling",
+        "abbreviatedTitles": [
+          "Only I level up",
+          "I Level Up Alone",
+          "Поднятие уровня в одиночку",
+          "Na Honjaman Level-Up",
+          "Only I Level Up",
+          "Ore Dake Level Up na Ken",
+          "Поднятие уровня в одиночку",
+          "Тільки я візьму новий рівень",
+          "تکرو",
+          "我独自升级"
+        ],
+        "averageRating": "84.38",
+        "ratingFrequencies": {
+          "2": "1215",
+          "3": "17",
+          "4": "67",
+          "5": "15",
+          "6": "58",
+          "7": "16",
+          "8": "946",
+          "9": "13",
+          "10": "167",
+          "11": "48",
+          "12": "314",
+          "13": "74",
+          "14": "2329",
+          "15": "212",
+          "16": "1598",
+          "17": "495",
+          "18": "2218",
+          "19": "506",
+          "20": "12117"
+        },
+        "userCount": 44577,
+        "favoritesCount": 1611,
+        "startDate": "2018-03-04",
+        "endDate": "2023-05-31",
+        "nextRelease": null,
+        "popularityRank": 20,
+        "ratingRank": 13,
+        "ageRating": "PG",
+        "ageRatingGuide": null,
+        "subtype": "manhwa",
+        "status": "finished",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/poster_images/54114/tiny.jpg",
+          "large": "https://media.kitsu.io/manga/poster_images/54114/large.jpg",
+          "small": "https://media.kitsu.io/manga/poster_images/54114/small.jpg",
+          "medium": "https://media.kitsu.io/manga/poster_images/54114/medium.jpg",
+          "original": "https://media.kitsu.io/manga/poster_images/54114/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/54114/cover_image/tiny-8d9f4b722a3050275ee0651f91d04f40.jpeg",
+          "large": "https://media.kitsu.io/manga/54114/cover_image/large-5ced5f4969b4e15202e7f08188ba093f.jpeg",
+          "small": "https://media.kitsu.io/manga/54114/cover_image/small-bd7baf08e81ec18b717616fbe55ef180.jpeg",
+          "original": "https://media.kitsu.io/manga/54114/cover_image/50f5b4b656a64e8fe560fad557830dcd.png",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": 201,
+        "volumeCount": null,
+        "serialization": "KakaoPage",
+        "mangaType": "manhwa"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/54114/relationships/genres",
+            "related": "/manga/54114/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/54114/relationships/categories",
+            "related": "/manga/54114/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/54114/relationships/castings",
+            "related": "/manga/54114/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/54114/relationships/installments",
+            "related": "/manga/54114/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/54114/relationships/mappings",
+            "related": "/manga/54114/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/54114/relationships/reviews",
+            "related": "/manga/54114/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/54114/relationships/media-relationships",
+            "related": "/manga/54114/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/54114/relationships/characters",
+            "related": "/manga/54114/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/54114/relationships/staff",
+            "related": "/manga/54114/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/54114/relationships/productions",
+            "related": "/manga/54114/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/54114/relationships/quotes",
+            "related": "/manga/54114/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/54114/relationships/chapters",
+            "related": "/manga/54114/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/54114/relationships/manga-characters",
+            "related": "/manga/54114/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/54114/relationships/manga-staff",
+            "related": "/manga/54114/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "8",
+      "type": "manga",
+      "links": {
+        "self": "/manga/8"
+      },
+      "attributes": {
+        "createdAt": "2013-12-18T13:48:25.461Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "berserk",
+        "synopsis": "His name is Guts, the Black Swordsman, a feared warrior spoken of only in whispers. Bearer of a gigantic sword, an iron hand, and the scars of countless battles and tortures, his flesh is also indelibly marked with The Brand, an unholy symbol that draws the forces of darkness to him and dooms him as their sacrifice. But Guts won't take his fate lying down; he'll cut a crimson swath of carnage through the ranks of the damned—and anyone else foolish enough to oppose him! Accompanied by Puck the Elf, more an annoyance than a companion, Guts relentlessly follows a dark, bloodstained path that leads only to death...or vengeance.\n\n(Source: Dark Horse)\n\nNotes:\n- Volumes 1-5 contain the 16 prequel chapters 0A - 0P.\n- Chapter 83 was omitted from Volume 13 due to the author’s request.\n- Volume 14 includes “Berserk: The Prototype”.\n- Due to the author's passing, starting from Chapter 365, the manga is illustrated by Studio Gaga (Miura's assistants) and supervised by Kouji Mori (a close friend of Miura's).",
+        "description": "His name is Guts, the Black Swordsman, a feared warrior spoken of only in whispers. Bearer of a gigantic sword, an iron hand, and the scars of countless battles and tortures, his flesh is also indelibly marked with The Brand, an unholy symbol that draws the forces of darkness to him and dooms him as their sacrifice. But Guts won't take his fate lying down; he'll cut a crimson swath of carnage through the ranks of the damned—and anyone else foolish enough to oppose him! Accompanied by Puck the Elf, more an annoyance than a companion, Guts relentlessly follows a dark, bloodstained path that leads only to death...or vengeance.\n\n(Source: Dark Horse)\n\nNotes:\n- Volumes 1-5 contain the 16 prequel chapters 0A - 0P.\n- Chapter 83 was omitted from Volume 13 due to the author’s request.\n- Volume 14 includes “Berserk: The Prototype”.\n- Due to the author's passing, starting from Chapter 365, the manga is illustrated by Studio Gaga (Miura's assistants) and supervised by Kouji Mori (a close friend of Miura's).",
+        "coverImageTopOffset": 200,
+        "titles": {
+          "en": "Berserk",
+          "en_jp": "Berserk",
+          "en_us": "Berserk",
+          "ja_jp": "ベルセルク"
+        },
+        "canonicalTitle": "Berserk",
+        "abbreviatedTitles": [
+          "Berserk: The Prototype"
+        ],
+        "averageRating": "84.33",
+        "ratingFrequencies": {
+          "2": "1598",
+          "3": "22",
+          "4": "49",
+          "5": "25",
+          "6": "42",
+          "7": "12",
+          "8": "1065",
+          "9": "11",
+          "10": "92",
+          "11": "28",
+          "12": "189",
+          "13": "37",
+          "14": "1767",
+          "15": "74",
+          "16": "1166",
+          "17": "243",
+          "18": "2237",
+          "19": "409",
+          "20": "13025"
+        },
+        "userCount": 50128,
+        "favoritesCount": 3651,
+        "startDate": "1989-08-25",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 19,
+        "ratingRank": 16,
+        "ageRating": "R",
+        "ageRatingGuide": "Horror",
+        "subtype": "manga",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/8/poster_image/tiny-ad1df8a063d11baf9fda08160deffc00.jpeg",
+          "large": "https://media.kitsu.io/manga/8/poster_image/large-f598ed525107bcb69ebda5bf36c6910d.jpeg",
+          "small": "https://media.kitsu.io/manga/8/poster_image/small-bdf7be96b4337627856b36e0be0241fb.jpeg",
+          "medium": "https://media.kitsu.io/manga/8/poster_image/medium-8edd6ddb0c6ec34a54521487ee81fb02.jpeg",
+          "original": "https://media.kitsu.io/manga/8/poster_image/67d602c20d1bf0eeb43e1a363c59ed5b.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/8/cover_image/tiny-a61e4ae3c11698a65c0ecdd6cd3e86bd.gif",
+          "large": "https://media.kitsu.io/manga/8/cover_image/large-d976a1baf3051d321608d4ebb7da4220.gif",
+          "small": "https://media.kitsu.io/manga/8/cover_image/small-dd96d5ac1412ccabb1bcca3fe89747f5.gif",
+          "tiny_webp": "https://media.kitsu.io/manga/8/cover_image/tiny_webp-90fec06d293be542b08f362b457bce04.webp",
+          "large_webp": "https://media.kitsu.io/manga/8/cover_image/large_webp-e735c50a70351a02998742aa8f1424a6.webp",
+          "small_webp": "https://media.kitsu.io/manga/8/cover_image/small_webp-645e5266280fa6c4032f54823eb6413a.webp",
+          "original": "https://media.kitsu.io/manga/cover_images/8/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              },
+              "tiny_webp": {
+                "width": 840,
+                "height": 200
+              },
+              "large_webp": {
+                "width": 3360,
+                "height": 800
+              },
+              "small_webp": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": null,
+        "volumeCount": 0,
+        "serialization": "Young Animal",
+        "mangaType": "manga"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/8/relationships/genres",
+            "related": "/manga/8/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/8/relationships/categories",
+            "related": "/manga/8/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/8/relationships/castings",
+            "related": "/manga/8/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/8/relationships/installments",
+            "related": "/manga/8/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/8/relationships/mappings",
+            "related": "/manga/8/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/8/relationships/reviews",
+            "related": "/manga/8/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/8/relationships/media-relationships",
+            "related": "/manga/8/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/8/relationships/characters",
+            "related": "/manga/8/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/8/relationships/staff",
+            "related": "/manga/8/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/8/relationships/productions",
+            "related": "/manga/8/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/8/relationships/quotes",
+            "related": "/manga/8/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/8/relationships/chapters",
+            "related": "/manga/8/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/8/relationships/manga-characters",
+            "related": "/manga/8/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/8/relationships/manga-staff",
+            "related": "/manga/8/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "56270",
+      "type": "manga",
+      "links": {
+        "self": "/manga/56270"
+      },
+      "attributes": {
+        "createdAt": "2020-05-03T16:53:47.368Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "the-great-mage-returns-after-4000-years",
+        "synopsis": "The worst student of Westrod Academy, the disgrace of the Blake House.A new soul enters the lifeless body of Frey Blake, the boy who couldn’t handle his painful life and chose death instead. “What’s with this body? I’ll have to check every little detail of it.” The Great Mage Lucas Traumen. He earned his chance at revenge by gaining the flesh and bones of Frey Blake the disgrace! And now begins the interesting adventure of the Great Mage who returned after 4000 years! (Source: MangaDex)",
+        "description": "The worst student of Westrod Academy, the disgrace of the Blake House.A new soul enters the lifeless body of Frey Blake, the boy who couldn’t handle his painful life and chose death instead. “What’s with this body? I’ll have to check every little detail of it.” The Great Mage Lucas Traumen. He earned his chance at revenge by gaining the flesh and bones of Frey Blake the disgrace! And now begins the interesting adventure of the Great Mage who returned after 4000 years! (Source: MangaDex)",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en": "The Great Mage Returns After 4000 Years",
+          "en_kr": "4000 Nyeon Mane Gwihwanhan Daemadosa",
+          "fa_ir": "بازگشت ساحر اعظم پس از ۴ هزار سال",
+          "id_id": "Sang Penyihir Agung Kembali Setelah 4000 Tahun",
+          "ko_kr": "4000년 만에 귀환한 대마도사",
+          "ru_ru": "Архимаг, который вернулся спустя 4 тысячи лет"
+        },
+        "canonicalTitle": "The Great Mage Returns After 4000 Years",
+        "abbreviatedTitles": [
+          "جادوگر بزرگ پس از ۴۰۰۰ سال برمی‌گردد"
+        ],
+        "averageRating": "80.14",
+        "ratingFrequencies": {
+          "2": "6",
+          "4": "1",
+          "6": "5",
+          "7": "3",
+          "8": "25",
+          "9": "2",
+          "10": "13",
+          "11": "4",
+          "12": "47",
+          "13": "18",
+          "14": "183",
+          "15": "53",
+          "16": "168",
+          "17": "89",
+          "18": "117",
+          "19": "37",
+          "20": "194"
+        },
+        "userCount": 3507,
+        "favoritesCount": 28,
+        "startDate": "2020-05-01",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 400,
+        "ratingRank": 930,
+        "ageRating": "PG",
+        "ageRatingGuide": null,
+        "subtype": "manhwa",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/poster_images/56270/tiny.jpg",
+          "large": "https://media.kitsu.io/manga/poster_images/56270/large.jpg",
+          "small": "https://media.kitsu.io/manga/poster_images/56270/small.jpg",
+          "medium": "https://media.kitsu.io/manga/poster_images/56270/medium.jpg",
+          "original": "https://media.kitsu.io/manga/poster_images/56270/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": null,
+        "chapterCount": null,
+        "volumeCount": null,
+        "serialization": "Kakaopage ",
+        "mangaType": "manhwa"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/56270/relationships/genres",
+            "related": "/manga/56270/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/56270/relationships/categories",
+            "related": "/manga/56270/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/56270/relationships/castings",
+            "related": "/manga/56270/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/56270/relationships/installments",
+            "related": "/manga/56270/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/56270/relationships/mappings",
+            "related": "/manga/56270/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/56270/relationships/reviews",
+            "related": "/manga/56270/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/56270/relationships/media-relationships",
+            "related": "/manga/56270/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/56270/relationships/characters",
+            "related": "/manga/56270/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/56270/relationships/staff",
+            "related": "/manga/56270/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/56270/relationships/productions",
+            "related": "/manga/56270/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/56270/relationships/quotes",
+            "related": "/manga/56270/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/56270/relationships/chapters",
+            "related": "/manga/56270/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/56270/relationships/manga-characters",
+            "related": "/manga/56270/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/56270/relationships/manga-staff",
+            "related": "/manga/56270/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "58010",
+      "type": "manga",
+      "links": {
+        "self": "/manga/58010"
+      },
+      "attributes": {
+        "createdAt": "2020-11-09T20:39:49.529Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "mercenary-enrollment",
+        "synopsis": "At the age of eight, I-Jin Yu lost his parents in a plane crash and became stranded in a foreign land, forced to become a child mercenary in order to stay alive. He returns home ten years later to be reunited with his family in Korea, where food and shelter are plenty and everything seems peaceful. But I-Jin will soon learn that life as a teenager is a whole other feat of survival. With only one year of high school left, I-Jin must master new tactics to maneuver his way around the schoolhouse battleground. Can he survive a year of high school? Or rather, will the school be able to survive him?\n\n(Source: WEBTOONS)",
+        "description": "At the age of eight, I-Jin Yu lost his parents in a plane crash and became stranded in a foreign land, forced to become a child mercenary in order to stay alive. He returns home ten years later to be reunited with his family in Korea, where food and shelter are plenty and everything seems peaceful. But I-Jin will soon learn that life as a teenager is a whole other feat of survival. With only one year of high school left, I-Jin must master new tactics to maneuver his way around the schoolhouse battleground. Can he survive a year of high school? Or rather, will the school be able to survive him?\n\n(Source: WEBTOONS)",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en": "Mercenary Enrollment",
+          "en_kr": "Iphagyongbyeong",
+          "ko_kr": "입학용병"
+        },
+        "canonicalTitle": "Iphagyongbyeong",
+        "abbreviatedTitles": [
+          "High School Mercenary (French)",
+          "High School Soldier (Indonesian)",
+          "Mercenario adolescente",
+          "Mercenary Enrollment",
+          "Söldnereinschreibung",
+          "Tentara Menyamar Jadi Anak SMA",
+          "พี่ชายสายบอดี้การ์ด",
+          "入学傭兵",
+          "入學傭兵",
+          "少年佣兵"
+        ],
+        "averageRating": "82.04",
+        "ratingFrequencies": {
+          "2": "48",
+          "3": "0",
+          "4": "2",
+          "5": "2",
+          "6": "3",
+          "7": "1",
+          "8": "45",
+          "10": "11",
+          "11": "4",
+          "12": "22",
+          "13": "16",
+          "14": "172",
+          "15": "42",
+          "16": "137",
+          "17": "66",
+          "18": "126",
+          "19": "43",
+          "20": "462"
+        },
+        "userCount": 3717,
+        "favoritesCount": 56,
+        "startDate": "2020-11-07",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 369,
+        "ratingRank": 464,
+        "ageRating": "PG",
+        "ageRatingGuide": null,
+        "subtype": "manhwa",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/poster_images/58010/tiny.jpg",
+          "large": "https://media.kitsu.io/manga/poster_images/58010/large.jpg",
+          "small": "https://media.kitsu.io/manga/poster_images/58010/small.jpg",
+          "medium": "https://media.kitsu.io/manga/poster_images/58010/medium.jpg",
+          "original": "https://media.kitsu.io/manga/poster_images/58010/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/58010/cover_image/tiny-c8a30b2e84f12babdc3314ba902a3213.jpeg",
+          "large": "https://media.kitsu.io/manga/58010/cover_image/large-a4c29fa6072de7728f369f9782718289.jpeg",
+          "small": "https://media.kitsu.io/manga/58010/cover_image/small-e138fa07d649f77cf50d336d2137e360.jpeg",
+          "original": "https://media.kitsu.io/manga/58010/cover_image/1d1df5246da9fb50efdb24db5e6deb5c.png",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": null,
+        "volumeCount": null,
+        "serialization": "Naver Webtoon",
+        "mangaType": "manhwa"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/58010/relationships/genres",
+            "related": "/manga/58010/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/58010/relationships/categories",
+            "related": "/manga/58010/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/58010/relationships/castings",
+            "related": "/manga/58010/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/58010/relationships/installments",
+            "related": "/manga/58010/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/58010/relationships/mappings",
+            "related": "/manga/58010/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/58010/relationships/reviews",
+            "related": "/manga/58010/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/58010/relationships/media-relationships",
+            "related": "/manga/58010/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/58010/relationships/characters",
+            "related": "/manga/58010/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/58010/relationships/staff",
+            "related": "/manga/58010/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/58010/relationships/productions",
+            "related": "/manga/58010/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/58010/relationships/quotes",
+            "related": "/manga/58010/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/58010/relationships/chapters",
+            "related": "/manga/58010/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/58010/relationships/manga-characters",
+            "related": "/manga/58010/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/58010/relationships/manga-staff",
+            "related": "/manga/58010/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "25436",
+      "type": "manga",
+      "links": {
+        "self": "/manga/25436"
+      },
+      "attributes": {
+        "createdAt": "2014-07-06T04:59:55.618Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "tower-of-god",
+        "synopsis": "What do you desire? Fortune? Glory? Power? Revenge? Or something that surpasses all others? What ever you desire, that is here. Tower of God.\n\nJoin Baam as he climbs each level of the Tower to find his beloved friend, Rachel. Facing impossible missions to mind bending puzzles as he uses any means necessary to reach the top.",
+        "description": "What do you desire? Fortune? Glory? Power? Revenge? Or something that surpasses all others? What ever you desire, that is here. Tower of God.\n\nJoin Baam as he climbs each level of the Tower to find his beloved friend, Rachel. Facing impossible missions to mind bending puzzles as he uses any means necessary to reach the top.",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en": "Tower of God",
+          "en_kr": "Sinui Tap",
+          "ko_kr": "신의 탑"
+        },
+        "canonicalTitle": "Tower of God",
+        "abbreviatedTitles": [
+          "Dievo Bokštas",
+          "Shi-nui t'ap",
+          "Top of God",
+          "Torre de Deus",
+          "Torre de Dios",
+          "Башня Бога",
+          "神之塔",
+          "ทาวเวอร์ออฟก๊อด หอคอยเทพเจ้า"
+        ],
+        "averageRating": "82.3",
+        "ratingFrequencies": {
+          "2": "162",
+          "3": "1",
+          "4": "14",
+          "5": "2",
+          "6": "22",
+          "7": "3",
+          "8": "190",
+          "9": "6",
+          "10": "91",
+          "11": "10",
+          "12": "126",
+          "13": "31",
+          "14": "597",
+          "15": "79",
+          "16": "563",
+          "17": "161",
+          "18": "751",
+          "19": "133",
+          "20": "1755"
+        },
+        "userCount": 13987,
+        "favoritesCount": 550,
+        "startDate": "2010-09-04",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 73,
+        "ratingRank": 348,
+        "ageRating": "G",
+        "ageRatingGuide": "",
+        "subtype": "manhwa",
+        "status": "current",
+        "tba": "",
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/poster_images/25436/tiny.jpg",
+          "large": "https://media.kitsu.io/manga/poster_images/25436/large.jpg",
+          "small": "https://media.kitsu.io/manga/poster_images/25436/small.jpg",
+          "medium": "https://media.kitsu.io/manga/poster_images/25436/medium.jpg",
+          "original": "https://media.kitsu.io/manga/poster_images/25436/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": null,
+                "height": null
+              },
+              "large": {
+                "width": null,
+                "height": null
+              },
+              "small": {
+                "width": null,
+                "height": null
+              },
+              "medium": {
+                "width": null,
+                "height": null
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/cover_images/25436/tiny.jpg",
+          "large": "https://media.kitsu.io/manga/cover_images/25436/large.jpg",
+          "small": "https://media.kitsu.io/manga/cover_images/25436/small.jpg",
+          "original": "https://media.kitsu.io/manga/cover_images/25436/original.jpeg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": null,
+                "height": null
+              },
+              "large": {
+                "width": null,
+                "height": null
+              },
+              "small": {
+                "width": null,
+                "height": null
+              }
+            }
+          }
+        },
+        "chapterCount": null,
+        "volumeCount": null,
+        "serialization": "Naver",
+        "mangaType": "manhwa"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/25436/relationships/genres",
+            "related": "/manga/25436/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/25436/relationships/categories",
+            "related": "/manga/25436/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/25436/relationships/castings",
+            "related": "/manga/25436/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/25436/relationships/installments",
+            "related": "/manga/25436/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/25436/relationships/mappings",
+            "related": "/manga/25436/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/25436/relationships/reviews",
+            "related": "/manga/25436/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/25436/relationships/media-relationships",
+            "related": "/manga/25436/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/25436/relationships/characters",
+            "related": "/manga/25436/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/25436/relationships/staff",
+            "related": "/manga/25436/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/25436/relationships/productions",
+            "related": "/manga/25436/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/25436/relationships/quotes",
+            "related": "/manga/25436/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/25436/relationships/chapters",
+            "related": "/manga/25436/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/25436/relationships/manga-characters",
+            "related": "/manga/25436/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/25436/relationships/manga-staff",
+            "related": "/manga/25436/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "37605",
+      "type": "manga",
+      "links": {
+        "self": "/manga/37605"
+      },
+      "attributes": {
+        "createdAt": "2016-04-20T13:00:17.426Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "yaoshenji",
+        "synopsis": "In his past life, although too weak to protect his home when it counted, out of grave determination Nie Li became the strongest Demon Spiritist and stood at the pinnacle of the martial world. However, he lost his life during the battle with the Sage Emperor and six deity-ranked beasts.\n\nHis soul was then brought back to when he was still 13 years old. Although he's the weakest in his class with the lowest talent, having only a red soul realm and a weak one at that, with the aid of the vast knowledge which he accumulated from his previous life, he decided to train faster than anyone could expect. He also decided to help those who died nobly in his previous life to train faster as well.\n\nHe aims to protect the city from the coming future of being devastated by demon beasts and the previous fate of ending up destroyed. He aims to protect his lover, friends, family and fellow citizens who died in the beast assault or its aftermath. And he aims to destroy the so-called Sacred family who arrogantly abandoned their duty and betrayed the city in his past life.\n\n(Source: MU)",
+        "description": "In his past life, although too weak to protect his home when it counted, out of grave determination Nie Li became the strongest Demon Spiritist and stood at the pinnacle of the martial world. However, he lost his life during the battle with the Sage Emperor and six deity-ranked beasts.\n\nHis soul was then brought back to when he was still 13 years old. Although he's the weakest in his class with the lowest talent, having only a red soul realm and a weak one at that, with the aid of the vast knowledge which he accumulated from his previous life, he decided to train faster than anyone could expect. He also decided to help those who died nobly in his previous life to train faster as well.\n\nHe aims to protect the city from the coming future of being devastated by demon beasts and the previous fate of ending up destroyed. He aims to protect his lover, friends, family and fellow citizens who died in the beast assault or its aftermath. And he aims to destroy the so-called Sacred family who arrogantly abandoned their duty and betrayed the city in his past life.\n\n(Source: MU)",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en": "Tales of Demons and Gods",
+          "en_cn": "Yaoshenji",
+          "zh_cn": "妖神记"
+        },
+        "canonicalTitle": "Yaoshenji",
+        "abbreviatedTitles": [],
+        "averageRating": "82.34",
+        "ratingFrequencies": {
+          "2": "96",
+          "3": "5",
+          "4": "9",
+          "5": "0",
+          "6": "10",
+          "7": "2",
+          "8": "102",
+          "9": "6",
+          "10": "30",
+          "11": "16",
+          "12": "43",
+          "13": "23",
+          "14": "381",
+          "15": "81",
+          "16": "188",
+          "17": "100",
+          "18": "193",
+          "19": "66",
+          "20": "1105"
+        },
+        "userCount": 6673,
+        "favoritesCount": 146,
+        "startDate": "2015-06-22",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 188,
+        "ratingRank": 313,
+        "ageRating": "PG",
+        "ageRatingGuide": "",
+        "subtype": "manhua",
+        "status": "current",
+        "tba": "",
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/poster_images/37605/tiny.jpg",
+          "large": "https://media.kitsu.io/manga/poster_images/37605/large.jpg",
+          "small": "https://media.kitsu.io/manga/poster_images/37605/small.jpg",
+          "medium": "https://media.kitsu.io/manga/poster_images/37605/medium.jpg",
+          "original": "https://media.kitsu.io/manga/poster_images/37605/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": null,
+                "height": null
+              },
+              "large": {
+                "width": null,
+                "height": null
+              },
+              "small": {
+                "width": null,
+                "height": null
+              },
+              "medium": {
+                "width": null,
+                "height": null
+              }
+            }
+          }
+        },
+        "coverImage": null,
+        "chapterCount": null,
+        "volumeCount": null,
+        "serialization": "u17",
+        "mangaType": "manhua"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/37605/relationships/genres",
+            "related": "/manga/37605/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/37605/relationships/categories",
+            "related": "/manga/37605/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/37605/relationships/castings",
+            "related": "/manga/37605/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/37605/relationships/installments",
+            "related": "/manga/37605/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/37605/relationships/mappings",
+            "related": "/manga/37605/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/37605/relationships/reviews",
+            "related": "/manga/37605/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/37605/relationships/media-relationships",
+            "related": "/manga/37605/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/37605/relationships/characters",
+            "related": "/manga/37605/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/37605/relationships/staff",
+            "related": "/manga/37605/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/37605/relationships/productions",
+            "related": "/manga/37605/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/37605/relationships/quotes",
+            "related": "/manga/37605/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/37605/relationships/chapters",
+            "related": "/manga/37605/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/37605/relationships/manga-characters",
+            "related": "/manga/37605/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/37605/relationships/manga-staff",
+            "related": "/manga/37605/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "54448",
+      "type": "manga",
+      "links": {
+        "self": "/manga/54448"
+      },
+      "attributes": {
+        "createdAt": "2019-04-23T14:04:33.623Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "spy-x-family",
+        "synopsis": "The master spy codenamed  has spent his days on undercover missions, all for the dream of a better world. But one day, he receives a particularly difficult new order from command. For his mission, he must form a temporary family and start a new life?! A Spy/Action/Comedy about a one-of-a-kind family!\n\nNote: Nominated for the 12th Manga Taishou Award in 2019, also nominated for the 24th Tezuka Osamu Cultural Prize and the Best Shounen Manga of the 44th Kodansha Manga Awards in 2020.\n\n\n(Source: Manga PLUS)",
+        "description": "The master spy codenamed  has spent his days on undercover missions, all for the dream of a better world. But one day, he receives a particularly difficult new order from command. For his mission, he must form a temporary family and start a new life?! A Spy/Action/Comedy about a one-of-a-kind family!\n\nNote: Nominated for the 12th Manga Taishou Award in 2019, also nominated for the 24th Tezuka Osamu Cultural Prize and the Best Shounen Manga of the 44th Kodansha Manga Awards in 2020.\n\n\n(Source: Manga PLUS)",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en": "SPY x FAMILY",
+          "en_jp": "SPY×FAMILY",
+          "ja_jp": "SPY×FAMILY"
+        },
+        "canonicalTitle": "SPY×FAMILY",
+        "abbreviatedTitles": [
+          "SxF",
+          "스파이 패밀리",
+          "SPY×FAMILY: WJ Special Extra Mission!!",
+          "间谍过家家",
+          "CASUS×AİLE",
+          "Spy Family",
+          "SZPIEG X RODZINA",
+          "ŠNIPO ŠEIMA",
+          "ŠNIPO×ŠEIMA",
+          "Špión x Rodina",
+          "Семья шпиона",
+          "Сім'я × шпигуна",
+          "Сім'я шпигуна",
+          "ТАГНУУЛУ × ГЭР БҮЛ",
+          "جاسوس × خانواده",
+          "जासूस X परिवार",
+          "जासूस×परिवार",
+          "スパイファミリー",
+          "間諜家家酒",
+          "間諜過家家",
+          "间谍过家家"
+        ],
+        "averageRating": "84.86",
+        "ratingFrequencies": {
+          "2": "408",
+          "3": "7",
+          "4": "17",
+          "5": "6",
+          "6": "19",
+          "7": "9",
+          "8": "326",
+          "9": "10",
+          "10": "93",
+          "11": "23",
+          "12": "138",
+          "13": "35",
+          "14": "1468",
+          "15": "123",
+          "16": "1152",
+          "17": "285",
+          "18": "1183",
+          "19": "179",
+          "20": "5347"
+        },
+        "userCount": 26094,
+        "favoritesCount": 461,
+        "startDate": "2019-03-24",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 36,
+        "ratingRank": 3,
+        "ageRating": "G",
+        "ageRatingGuide": null,
+        "subtype": "manga",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/54448/poster_image/tiny-3b8c506b2cc9673064eaf63cfc90244d.jpeg",
+          "large": "https://media.kitsu.io/manga/54448/poster_image/large-eff4f6abad72ab35adec7cd0de4de52b.jpeg",
+          "small": "https://media.kitsu.io/manga/54448/poster_image/small-eefb666a779f3686e49a87ffdca00a16.jpeg",
+          "medium": "https://media.kitsu.io/manga/54448/poster_image/medium-445c67132d00586a5f4e5fd3584f2005.jpeg",
+          "original": "https://media.kitsu.io/manga/54448/poster_image/d4237a69c5bdd6f5c7cab1138d500d21.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/54448/cover_image/tiny-3bb50931f525f7cbae06dbbaef6684f7.jpeg",
+          "large": "https://media.kitsu.io/manga/54448/cover_image/large-78411aae3d2af0922e8e458f5845f3f4.jpeg",
+          "small": "https://media.kitsu.io/manga/54448/cover_image/small-07496f1de9963b71171c588800e4afe4.jpeg",
+          "original": "https://media.kitsu.io/manga/54448/cover_image/1c96f626f68456220ba41096a1942eee.png",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": null,
+        "volumeCount": null,
+        "serialization": "Shounen Jump+",
+        "mangaType": "manga"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/54448/relationships/genres",
+            "related": "/manga/54448/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/54448/relationships/categories",
+            "related": "/manga/54448/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/54448/relationships/castings",
+            "related": "/manga/54448/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/54448/relationships/installments",
+            "related": "/manga/54448/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/54448/relationships/mappings",
+            "related": "/manga/54448/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/54448/relationships/reviews",
+            "related": "/manga/54448/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/54448/relationships/media-relationships",
+            "related": "/manga/54448/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/54448/relationships/characters",
+            "related": "/manga/54448/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/54448/relationships/staff",
+            "related": "/manga/54448/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/54448/relationships/productions",
+            "related": "/manga/54448/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/54448/relationships/quotes",
+            "related": "/manga/54448/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/54448/relationships/chapters",
+            "related": "/manga/54448/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/54448/relationships/manga-characters",
+            "related": "/manga/54448/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/54448/relationships/manga-staff",
+            "related": "/manga/54448/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "65717",
+      "type": "manga",
+      "links": {
+        "self": "/manga/65717"
+      },
+      "attributes": {
+        "createdAt": "2023-01-02T15:15:55.824Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "infinite-wizard",
+        "synopsis": "A human’s dream of infinity is like a supernova explosion that spreads at the speed of light! This is the story of child named Shirone who was abandoned in a stable, wrapped in swaddling clothes. While growing up, he showed unbridled interest in everything related to books and strove to learn even on his own. Although Shirone was the foster son of a hunter, one of the lowest-class people, he was a genius in everything! One day, as a reward for mastering a legendary skill to knock down trees with a couple swings of an axe, his foster father takes him along on his trip to the city. And in that city, Shirone chances upon magic!",
+        "description": "A human’s dream of infinity is like a supernova explosion that spreads at the speed of light! This is the story of child named Shirone who was abandoned in a stable, wrapped in swaddling clothes. While growing up, he showed unbridled interest in everything related to books and strove to learn even on his own. Although Shirone was the foster son of a hunter, one of the lowest-class people, he was a genius in everything! One day, as a reward for mastering a legendary skill to knock down trees with a couple swings of an axe, his foster father takes him along on his trip to the city. And in that city, Shirone chances upon magic!",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en": "Infinite Wizard",
+          "en_kr": "Muhanui Mabeopsa",
+          "ko_kr": "무한의 마법사"
+        },
+        "canonicalTitle": "Muhanui Mabeopsa",
+        "abbreviatedTitles": [
+          "Infinite Mage"
+        ],
+        "averageRating": "81.54",
+        "ratingFrequencies": {
+          "2": "1",
+          "8": "2",
+          "9": "0",
+          "10": "2",
+          "11": "1",
+          "12": "5",
+          "13": "4",
+          "14": "24",
+          "15": "11",
+          "16": "20",
+          "17": "14",
+          "18": "19",
+          "19": "4",
+          "20": "43"
+        },
+        "userCount": 917,
+        "favoritesCount": 6,
+        "startDate": "2022-12-30",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 1964,
+        "ratingRank": 586,
+        "ageRating": null,
+        "ageRatingGuide": null,
+        "subtype": "manhwa",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/65717/poster_image/tiny-030ff1719be3c7dfcda91cd33e7d3bde.jpeg",
+          "large": "https://media.kitsu.io/manga/65717/poster_image/large-7dc868259b85ba659cc264e0af4c5400.jpeg",
+          "small": "https://media.kitsu.io/manga/65717/poster_image/small-15350b1866cfa83216b4f4a14005cbfe.jpeg",
+          "medium": "https://media.kitsu.io/manga/65717/poster_image/medium-013d4bbebc3b9c9ea6ce8cf7669ffbc1.jpeg",
+          "original": "https://media.kitsu.io/manga/65717/poster_image/0160849b1d6592e1af3b716c5ff81944.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": null,
+        "chapterCount": null,
+        "volumeCount": null,
+        "serialization": "Kakao",
+        "mangaType": "manhwa"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/65717/relationships/genres",
+            "related": "/manga/65717/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/65717/relationships/categories",
+            "related": "/manga/65717/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/65717/relationships/castings",
+            "related": "/manga/65717/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/65717/relationships/installments",
+            "related": "/manga/65717/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/65717/relationships/mappings",
+            "related": "/manga/65717/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/65717/relationships/reviews",
+            "related": "/manga/65717/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/65717/relationships/media-relationships",
+            "related": "/manga/65717/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/65717/relationships/characters",
+            "related": "/manga/65717/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/65717/relationships/staff",
+            "related": "/manga/65717/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/65717/relationships/productions",
+            "related": "/manga/65717/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/65717/relationships/quotes",
+            "related": "/manga/65717/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/65717/relationships/chapters",
+            "related": "/manga/65717/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/65717/relationships/manga-characters",
+            "related": "/manga/65717/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/65717/relationships/manga-staff",
+            "related": "/manga/65717/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "37",
+      "type": "manga",
+      "links": {
+        "self": "/manga/37"
+      },
+      "attributes": {
+        "createdAt": "2013-12-18T13:48:27.590Z",
+        "updatedAt": "2023-08-14T18:43:38.062Z",
+        "slug": "bleach",
+        "synopsis": "Ichigo Kurosaki has always been able to see ghosts, but this ability doesn't change his life nearly as much as his close encounter with Rukia Kuchiki, a Soul Reaper and member of the mysterious Soul Society. While fighting a Hollow, an evil spirit that preys on humans who display psychic energy, Rukia attempts to lend Ichigo some of her powers so that he can save his family; but much to her surprise, Ichigo absorbs every last drop of her energy. Now a full-fledged Soul Reaper himself, Ichigo quickly learns that the world he inhabits is one full of dangerous spirits and, along with Rukia—who is slowly regaining her powers—it's Ichigo's job to protect the innocent from Hollows and help the spirits themselves find peace.\n\n(Source: ANN)\n\nNote: Chapter count includes the following 19 extra chapters.\n\nVolume 10 contains chapter 88.5 \"Karakura Super Heroes.\" --not included in the count.\nVolume 12 contains chapter 0.8 \"A Wonderful Error.\"\nVolume 15 contains chapter -17 \"Soreyuku Hoshiboshi no Tame no Zensoukyoku\" (逸れゆく星々の為の前奏曲, Prelude for the Straying Stars).\nVolume 20 contains chapter -12.5 \"Blooming Under a Cold Moon.\"\nVolume 23 contains the two-part chapter 0 \"Side-A The Sand\" and \"Side-B The Rotator.\"\nVolume 32 contains chapter -16 \"Hyougen ni Shisu\" (氷原に死す, Dying in the Ice Fields).\nVolume 36 consists of chapters -108 to -100 \"Turn Back the Pendulum.\"\nVolume 37 contains chapters -99 to -97 \"Turn Back the Pendulum\" and \"Let Stop the Pendulum.\"\nVolume 70 contains chapter 520.5 \"Walk Under Two Letters\" (520.5 WALK UNDER TWO LETTERS).\n\nTotal chapter count is 705.",
+        "description": "Ichigo Kurosaki has always been able to see ghosts, but this ability doesn't change his life nearly as much as his close encounter with Rukia Kuchiki, a Soul Reaper and member of the mysterious Soul Society. While fighting a Hollow, an evil spirit that preys on humans who display psychic energy, Rukia attempts to lend Ichigo some of her powers so that he can save his family; but much to her surprise, Ichigo absorbs every last drop of her energy. Now a full-fledged Soul Reaper himself, Ichigo quickly learns that the world he inhabits is one full of dangerous spirits and, along with Rukia—who is slowly regaining her powers—it's Ichigo's job to protect the innocent from Hollows and help the spirits themselves find peace.\n\n(Source: ANN)\n\nNote: Chapter count includes the following 19 extra chapters.\n\nVolume 10 contains chapter 88.5 \"Karakura Super Heroes.\" --not included in the count.\nVolume 12 contains chapter 0.8 \"A Wonderful Error.\"\nVolume 15 contains chapter -17 \"Soreyuku Hoshiboshi no Tame no Zensoukyoku\" (逸れゆく星々の為の前奏曲, Prelude for the Straying Stars).\nVolume 20 contains chapter -12.5 \"Blooming Under a Cold Moon.\"\nVolume 23 contains the two-part chapter 0 \"Side-A The Sand\" and \"Side-B The Rotator.\"\nVolume 32 contains chapter -16 \"Hyougen ni Shisu\" (氷原に死す, Dying in the Ice Fields).\nVolume 36 consists of chapters -108 to -100 \"Turn Back the Pendulum.\"\nVolume 37 contains chapters -99 to -97 \"Turn Back the Pendulum\" and \"Let Stop the Pendulum.\"\nVolume 70 contains chapter 520.5 \"Walk Under Two Letters\" (520.5 WALK UNDER TWO LETTERS).\n\nTotal chapter count is 705.",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en": "Bleach",
+          "en_jp": "BLEACH",
+          "ja_jp": "BLEACH"
+        },
+        "canonicalTitle": "Bleach",
+        "abbreviatedTitles": [
+          "ブリーチ"
+        ],
+        "averageRating": "77.22",
+        "ratingFrequencies": {
+          "2": "129",
+          "3": "1",
+          "4": "91",
+          "5": "6",
+          "6": "136",
+          "7": "6",
+          "8": "483",
+          "9": "3",
+          "10": "597",
+          "11": "22",
+          "12": "965",
+          "13": "42",
+          "14": "2541",
+          "15": "121",
+          "16": "1907",
+          "17": "158",
+          "18": "1309",
+          "19": "73",
+          "20": "2863"
+        },
+        "userCount": 22910,
+        "favoritesCount": 870,
+        "startDate": "2001-08-07",
+        "endDate": "2016-08-22",
+        "nextRelease": null,
+        "popularityRank": 41,
+        "ratingRank": 2134,
+        "ageRating": "PG",
+        "ageRatingGuide": null,
+        "subtype": "manga",
+        "status": "finished",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/37/poster_image/tiny-4b685adcb9527b9e04092f0720304c83.jpeg",
+          "large": "https://media.kitsu.io/manga/37/poster_image/large-4f4237a25573f67e17c7b69e33767ed2.jpeg",
+          "small": "https://media.kitsu.io/manga/37/poster_image/small-26c1e5a8c80d830f9761da0c9e70d582.jpeg",
+          "medium": "https://media.kitsu.io/manga/37/poster_image/medium-5a037fd4d9480837e84097ad3d4e068b.jpeg",
+          "original": "https://media.kitsu.io/manga/37/poster_image/922b193bbaea37e453514b9b6e8aa621.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/37/cover_image/tiny-6fd81a1d2c8dd59966950b8fc18cd2e6.jpeg",
+          "large": "https://media.kitsu.io/manga/37/cover_image/large-ad16c41e8445f1c9a4c0ca6e9fa2cb53.jpeg",
+          "small": "https://media.kitsu.io/manga/37/cover_image/small-cf53a6de6ea9808fed1ee6426ceb52b4.jpeg",
+          "original": "https://media.kitsu.io/manga/37/cover_image/a25e8753633411750f9bcbbc9f3bfd5a.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": 705,
+        "volumeCount": 74,
+        "serialization": "Shounen Jump (Weekly)",
+        "mangaType": "manga"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/37/relationships/genres",
+            "related": "/manga/37/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/37/relationships/categories",
+            "related": "/manga/37/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/37/relationships/castings",
+            "related": "/manga/37/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/37/relationships/installments",
+            "related": "/manga/37/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/37/relationships/mappings",
+            "related": "/manga/37/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/37/relationships/reviews",
+            "related": "/manga/37/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/37/relationships/media-relationships",
+            "related": "/manga/37/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/37/relationships/characters",
+            "related": "/manga/37/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/37/relationships/staff",
+            "related": "/manga/37/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/37/relationships/productions",
+            "related": "/manga/37/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/37/relationships/quotes",
+            "related": "/manga/37/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/37/relationships/chapters",
+            "related": "/manga/37/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/37/relationships/manga-characters",
+            "related": "/manga/37/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/37/relationships/manga-staff",
+            "related": "/manga/37/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "54093",
+      "type": "manga",
+      "links": {
+        "self": "/manga/54093"
+      },
+      "attributes": {
+        "createdAt": "2018-11-02T04:19:42.026Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "versatile-mage",
+        "synopsis": "He woke up in a familiar world that had vastly changed.\n\nHis familiar school had become a mystical school that teaches magic, encouraging everyone to become a mighty magician.\n\n(Source: MU)",
+        "description": "He woke up in a familiar world that had vastly changed.\n\nHis familiar school had become a mystical school that teaches magic, encouraging everyone to become a mighty magician.\n\n(Source: MU)",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en": "Versatile Mage",
+          "en_cn": "Quanzhi Fashi",
+          "zh_cn": "全职法师"
+        },
+        "canonicalTitle": "Quanzhi Fashi",
+        "abbreviatedTitles": [],
+        "averageRating": "72.38",
+        "ratingFrequencies": {
+          "2": "5",
+          "3": "3",
+          "4": "7",
+          "5": "0",
+          "6": "11",
+          "7": "3",
+          "8": "28",
+          "9": "2",
+          "10": "15",
+          "11": "5",
+          "12": "36",
+          "13": "26",
+          "14": "109",
+          "15": "40",
+          "16": "45",
+          "17": "12",
+          "18": "33",
+          "19": "9",
+          "20": "69"
+        },
+        "userCount": 2109,
+        "favoritesCount": 5,
+        "startDate": "2016-01-01",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 718,
+        "ratingRank": 6047,
+        "ageRating": "G",
+        "ageRatingGuide": null,
+        "subtype": "manhua",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/poster_images/54093/tiny.jpg",
+          "large": "https://media.kitsu.io/manga/poster_images/54093/large.jpg",
+          "small": "https://media.kitsu.io/manga/poster_images/54093/small.jpg",
+          "medium": "https://media.kitsu.io/manga/poster_images/54093/medium.jpg",
+          "original": "https://media.kitsu.io/manga/poster_images/54093/original.jpeg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/cover_images/54093/tiny.jpg",
+          "large": "https://media.kitsu.io/manga/cover_images/54093/large.jpg",
+          "small": "https://media.kitsu.io/manga/cover_images/54093/small.jpg",
+          "original": "https://media.kitsu.io/manga/cover_images/54093/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": null,
+        "volumeCount": null,
+        "serialization": null,
+        "mangaType": "manhua"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/54093/relationships/genres",
+            "related": "/manga/54093/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/54093/relationships/categories",
+            "related": "/manga/54093/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/54093/relationships/castings",
+            "related": "/manga/54093/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/54093/relationships/installments",
+            "related": "/manga/54093/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/54093/relationships/mappings",
+            "related": "/manga/54093/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/54093/relationships/reviews",
+            "related": "/manga/54093/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/54093/relationships/media-relationships",
+            "related": "/manga/54093/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/54093/relationships/characters",
+            "related": "/manga/54093/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/54093/relationships/staff",
+            "related": "/manga/54093/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/54093/relationships/productions",
+            "related": "/manga/54093/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/54093/relationships/quotes",
+            "related": "/manga/54093/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/54093/relationships/chapters",
+            "related": "/manga/54093/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/54093/relationships/manga-characters",
+            "related": "/manga/54093/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/54093/relationships/manga-staff",
+            "related": "/manga/54093/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "25541",
+      "type": "manga",
+      "links": {
+        "self": "/manga/25541"
+      },
+      "attributes": {
+        "createdAt": "2014-08-31T14:16:01.395Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "mushoku-tensei-isekai-ittara-honki-dasu",
+        "synopsis": "Just when an unemployed thirty-four-year-old otaku reaches a dead end in life and decides that it's time to turn over a new leaf—he gets run over by a truck and dies! Shockingly, he finds himself reborn into an infant's body in a strange new world of swords and magic.His new identity is Rudeus Grayrat, but he still retains the memories of his previous life. Follow Rudeus from infancy to adulthood, as he struggles to redeem himself in a wondrous yet dangerous world.\n\n(Source: Seven Seas)",
+        "description": "Just when an unemployed thirty-four-year-old otaku reaches a dead end in life and decides that it's time to turn over a new leaf—he gets run over by a truck and dies! Shockingly, he finds himself reborn into an infant's body in a strange new world of swords and magic.His new identity is Rudeus Grayrat, but he still retains the memories of his previous life. Follow Rudeus from infancy to adulthood, as he struggles to redeem himself in a wondrous yet dangerous world.\n\n(Source: Seven Seas)",
+        "coverImageTopOffset": 23,
+        "titles": {
+          "en": "Mushoku Tensei: Jobless Reincarnation",
+          "en_jp": "Mushoku Tensei: Isekai Ittara Honki Dasu",
+          "fr_fr": "Mushoku Tensei - Nouvelle vie, nouvelle chance",
+          "ja_jp": "無職転生 ～異世界行ったら本気だす～",
+          "ko_kr": "무직전생 〜다른 세계 가면 진심 낸다〜",
+          "pt_pt": "A Reencarnação do Vagabundo: Vou dar meu melhor se for para outro mundo",
+          "ru_ru": "Реинкарнация безработного: Попав в другой мир, я стану сёръёзнее",
+          "th_th": "เกิดชาตินี้พี่ต้องเทพ",
+          "zh_cn": "无职转生 无职转生~在异世界认真地活下去~"
+        },
+        "canonicalTitle": "Mushoku Tensei: Isekai Ittara Honki Dasu",
+        "abbreviatedTitles": [
+          "Jobless Reincarnation – It will be All Out if I Go to Another World",
+          "Jobless Reincarnation - I Will Go All Out When I'm Transported to Another World",
+          "Mr. No-Job's New Life - If I Go to a Parallel World, Then I'll Get Serious"
+        ],
+        "averageRating": "80.56",
+        "ratingFrequencies": {
+          "2": "17",
+          "3": "0",
+          "4": "8",
+          "5": "1",
+          "6": "15",
+          "7": "3",
+          "8": "76",
+          "9": "2",
+          "10": "50",
+          "11": "3",
+          "12": "108",
+          "13": "20",
+          "14": "362",
+          "15": "59",
+          "16": "562",
+          "17": "93",
+          "18": "410",
+          "19": "38",
+          "20": "505"
+        },
+        "userCount": 7697,
+        "favoritesCount": 125,
+        "startDate": "2014-05-02",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 155,
+        "ratingRank": 801,
+        "ageRating": "R",
+        "ageRatingGuide": null,
+        "subtype": "manga",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/poster_images/25541/tiny.jpg",
+          "large": "https://media.kitsu.io/manga/poster_images/25541/large.jpg",
+          "small": "https://media.kitsu.io/manga/poster_images/25541/small.jpg",
+          "medium": "https://media.kitsu.io/manga/poster_images/25541/medium.jpg",
+          "original": "https://media.kitsu.io/manga/poster_images/25541/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/cover_images/25541/tiny.jpg",
+          "large": "https://media.kitsu.io/manga/cover_images/25541/large.jpg",
+          "small": "https://media.kitsu.io/manga/cover_images/25541/small.jpg",
+          "original": "https://media.kitsu.io/manga/cover_images/25541/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": null,
+        "volumeCount": null,
+        "serialization": "Comic Flapper",
+        "mangaType": "manga"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/25541/relationships/genres",
+            "related": "/manga/25541/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/25541/relationships/categories",
+            "related": "/manga/25541/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/25541/relationships/castings",
+            "related": "/manga/25541/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/25541/relationships/installments",
+            "related": "/manga/25541/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/25541/relationships/mappings",
+            "related": "/manga/25541/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/25541/relationships/reviews",
+            "related": "/manga/25541/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/25541/relationships/media-relationships",
+            "related": "/manga/25541/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/25541/relationships/characters",
+            "related": "/manga/25541/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/25541/relationships/staff",
+            "related": "/manga/25541/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/25541/relationships/productions",
+            "related": "/manga/25541/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/25541/relationships/quotes",
+            "related": "/manga/25541/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/25541/relationships/chapters",
+            "related": "/manga/25541/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/25541/relationships/manga-characters",
+            "related": "/manga/25541/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/25541/relationships/manga-staff",
+            "related": "/manga/25541/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "39293",
+      "type": "manga",
+      "links": {
+        "self": "/manga/39293"
+      },
+      "attributes": {
+        "createdAt": "2017-05-05T21:37:21.258Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "lookism",
+        "synopsis": "Park Hyung Suk, overweight and unattractive, is bullied and abused on a daily basis. But a miracle is about to happen.\n(Source: MU)",
+        "description": "Park Hyung Suk, overweight and unattractive, is bullied and abused on a daily basis. But a miracle is about to happen.\n(Source: MU)",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en": "Lookism",
+          "en_kr": "Oemojisangjuui",
+          "ko_kr": "외모지상주의"
+        },
+        "canonicalTitle": "Oemojisangjuui",
+        "abbreviatedTitles": [
+          "Apariências",
+          "Görünüşçülük",
+          "Дискриминация по внешности",
+          "Лукизм",
+          "外見至上主義",
+          "外貌至上主義",
+          "看脸时代",
+          "看臉時代",
+          "외모지상주의"
+        ],
+        "averageRating": "80.98",
+        "ratingFrequencies": {
+          "2": "46",
+          "4": "4",
+          "6": "12",
+          "7": "3",
+          "8": "55",
+          "9": "3",
+          "10": "28",
+          "11": "11",
+          "12": "73",
+          "13": "15",
+          "14": "249",
+          "15": "30",
+          "16": "207",
+          "17": "44",
+          "18": "178",
+          "19": "37",
+          "20": "560"
+        },
+        "userCount": 4242,
+        "favoritesCount": 77,
+        "startDate": "2014-11-20",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 314,
+        "ratingRank": 705,
+        "ageRating": null,
+        "ageRatingGuide": null,
+        "subtype": "manhwa",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/39293/poster_image/tiny-1754d568731cb010e24cbf26722ad2bc.jpeg",
+          "large": "https://media.kitsu.io/manga/39293/poster_image/large-68c4db12d087ebb9e69cd21deba575a8.jpeg",
+          "small": "https://media.kitsu.io/manga/39293/poster_image/small-d840868f74db860496883acdaf702770.jpeg",
+          "medium": "https://media.kitsu.io/manga/39293/poster_image/medium-a56a88eeea0b3c77726afc1ff50db06c.jpeg",
+          "original": "https://media.kitsu.io/manga/39293/poster_image/652ae72bac6c028bc4140bb6b599183d.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 110,
+                "height": 156
+              },
+              "large": {
+                "width": 550,
+                "height": 780
+              },
+              "small": {
+                "width": 284,
+                "height": 402
+              },
+              "medium": {
+                "width": 390,
+                "height": 554
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/39293/cover_image/tiny-ee88fa36e6c3fff0437cfa69649cedaf.jpeg",
+          "large": "https://media.kitsu.io/manga/39293/cover_image/large-ba78d9f2102251b6beb49e1e12fff961.jpeg",
+          "small": "https://media.kitsu.io/manga/39293/cover_image/small-2b3a06d7a3b8e60b8ec082eb66bf92b9.jpeg",
+          "original": "https://media.kitsu.io/manga/39293/cover_image/2c5280933b5d19094abbb3f42960f015.png",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": null,
+        "volumeCount": null,
+        "serialization": "Naver Webtoon",
+        "mangaType": "manhwa"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/39293/relationships/genres",
+            "related": "/manga/39293/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/39293/relationships/categories",
+            "related": "/manga/39293/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/39293/relationships/castings",
+            "related": "/manga/39293/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/39293/relationships/installments",
+            "related": "/manga/39293/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/39293/relationships/mappings",
+            "related": "/manga/39293/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/39293/relationships/reviews",
+            "related": "/manga/39293/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/39293/relationships/media-relationships",
+            "related": "/manga/39293/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/39293/relationships/characters",
+            "related": "/manga/39293/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/39293/relationships/staff",
+            "related": "/manga/39293/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/39293/relationships/productions",
+            "related": "/manga/39293/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/39293/relationships/quotes",
+            "related": "/manga/39293/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/39293/relationships/chapters",
+            "related": "/manga/39293/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/39293/relationships/manga-characters",
+            "related": "/manga/39293/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/39293/relationships/manga-staff",
+            "related": "/manga/39293/manga-staff"
+          }
+        }
+      }
+    },
+    {
+      "id": "37855",
+      "type": "manga",
+      "links": {
+        "self": "/manga/37855"
+      },
+      "attributes": {
+        "createdAt": "2016-06-21T17:34:45.422Z",
+        "updatedAt": "2023-08-14T18:00:22.433Z",
+        "slug": "komi-san-wa-community-shou-desu-manga",
+        "synopsis": "It's Shouko Komi's first day at the prestigious Itan Private High School, and she has already risen to the status of the school's Madonna. With long black hair and a tall, graceful appearance, she captures the attention of anyone who comes across her. There's just one problem though—despite her popularity, Shouko is terrible at communicating with others.\n\nHitohito Tadano is your average high school boy. With his life motto of \"read the situation and make sure to stay away from trouble,\" he quickly finds that sitting next to Shouko has made him the enemy of everyone in his class! One day, knocked out by accident, Hitohito later wakes up to the sound of Shouko's \"meow.\" He lies that he heard nothing, causing Shouko to run away. But before she can escape, Hitohito surmises that Shouko is not able to talk to others easily—in fact, she has never been able to make a single friend. Hitohito resolves to help Shouko with her goal of making one hundred friends so that she can overcome her communication disorder.\n\n(Source: MyAnimeList)",
+        "description": "It's Shouko Komi's first day at the prestigious Itan Private High School, and she has already risen to the status of the school's Madonna. With long black hair and a tall, graceful appearance, she captures the attention of anyone who comes across her. There's just one problem though—despite her popularity, Shouko is terrible at communicating with others.\n\nHitohito Tadano is your average high school boy. With his life motto of \"read the situation and make sure to stay away from trouble,\" he quickly finds that sitting next to Shouko has made him the enemy of everyone in his class! One day, knocked out by accident, Hitohito later wakes up to the sound of Shouko's \"meow.\" He lies that he heard nothing, causing Shouko to run away. But before she can escape, Hitohito surmises that Shouko is not able to talk to others easily—in fact, she has never been able to make a single friend. Hitohito resolves to help Shouko with her goal of making one hundred friends so that she can overcome her communication disorder.\n\n(Source: MyAnimeList)",
+        "coverImageTopOffset": 0,
+        "titles": {
+          "en": "Komi Can't Communicate",
+          "en_jp": "Komi-san wa, Comyushou desu.",
+          "id_id": "Komi Sulit Berkomunikasi",
+          "ja_jp": "古見さんは、コミュ症です。",
+          "ko_kr": "코미 양은, 커뮤증이에요",
+          "zh_cn": "古見同學有交流障礙症"
+        },
+        "canonicalTitle": "Komi-san wa, Comyushou desu.",
+        "abbreviatedTitles": [
+          "Comi san ha Comyusho desu",
+          "Komi-san Has a Communication Disorder",
+          "Komi-san wa",
+          "Komi-san wa Komyushou Desu",
+          "Komi-san wa, Communication Shougai desu.",
+          "Komi-san wa, Comyushou desu.",
+          "Komi-san wa, Komyushou desu.",
+          "Miss Komi Is Bad at Communication",
+          "Communication Shougai desu."
+        ],
+        "averageRating": "81.95",
+        "ratingFrequencies": {
+          "2": "70",
+          "3": "1",
+          "4": "12",
+          "5": "4",
+          "6": "31",
+          "7": "1",
+          "8": "121",
+          "9": "8",
+          "10": "93",
+          "11": "12",
+          "12": "187",
+          "13": "43",
+          "14": "870",
+          "15": "132",
+          "16": "933",
+          "17": "186",
+          "18": "848",
+          "19": "113",
+          "20": "1456"
+        },
+        "userCount": 16308,
+        "favoritesCount": 487,
+        "startDate": "2016-05-18",
+        "endDate": null,
+        "nextRelease": null,
+        "popularityRank": 60,
+        "ratingRank": 485,
+        "ageRating": "G",
+        "ageRatingGuide": null,
+        "subtype": "manga",
+        "status": "current",
+        "tba": null,
+        "posterImage": {
+          "tiny": "https://media.kitsu.io/manga/poster_images/37855/tiny.jpg",
+          "large": "https://media.kitsu.io/manga/poster_images/37855/large.jpg",
+          "small": "https://media.kitsu.io/manga/poster_images/37855/small.jpg",
+          "medium": "https://media.kitsu.io/manga/poster_images/37855/medium.jpg",
+          "original": "https://media.kitsu.io/manga/poster_images/37855/original.jpg",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": null,
+                "height": null
+              },
+              "large": {
+                "width": null,
+                "height": null
+              },
+              "small": {
+                "width": null,
+                "height": null
+              },
+              "medium": {
+                "width": null,
+                "height": null
+              }
+            }
+          }
+        },
+        "coverImage": {
+          "tiny": "https://media.kitsu.io/manga/cover_images/37855/tiny.jpg",
+          "large": "https://media.kitsu.io/manga/cover_images/37855/large.jpg",
+          "small": "https://media.kitsu.io/manga/cover_images/37855/small.jpg",
+          "original": "https://media.kitsu.io/manga/cover_images/37855/original.png",
+          "meta": {
+            "dimensions": {
+              "tiny": {
+                "width": 840,
+                "height": 200
+              },
+              "large": {
+                "width": 3360,
+                "height": 800
+              },
+              "small": {
+                "width": 1680,
+                "height": 400
+              }
+            }
+          }
+        },
+        "chapterCount": null,
+        "volumeCount": 0,
+        "serialization": "Shounen Sunday",
+        "mangaType": "manga"
+      },
+      "relationships": {
+        "genres": {
+          "links": {
+            "self": "/manga/37855/relationships/genres",
+            "related": "/manga/37855/genres"
+          }
+        },
+        "categories": {
+          "links": {
+            "self": "/manga/37855/relationships/categories",
+            "related": "/manga/37855/categories"
+          }
+        },
+        "castings": {
+          "links": {
+            "self": "/manga/37855/relationships/castings",
+            "related": "/manga/37855/castings"
+          }
+        },
+        "installments": {
+          "links": {
+            "self": "/manga/37855/relationships/installments",
+            "related": "/manga/37855/installments"
+          }
+        },
+        "mappings": {
+          "links": {
+            "self": "/manga/37855/relationships/mappings",
+            "related": "/manga/37855/mappings"
+          }
+        },
+        "reviews": {
+          "links": {
+            "self": "/manga/37855/relationships/reviews",
+            "related": "/manga/37855/reviews"
+          }
+        },
+        "mediaRelationships": {
+          "links": {
+            "self": "/manga/37855/relationships/media-relationships",
+            "related": "/manga/37855/media-relationships"
+          }
+        },
+        "characters": {
+          "links": {
+            "self": "/manga/37855/relationships/characters",
+            "related": "/manga/37855/characters"
+          }
+        },
+        "staff": {
+          "links": {
+            "self": "/manga/37855/relationships/staff",
+            "related": "/manga/37855/staff"
+          }
+        },
+        "productions": {
+          "links": {
+            "self": "/manga/37855/relationships/productions",
+            "related": "/manga/37855/productions"
+          }
+        },
+        "quotes": {
+          "links": {
+            "self": "/manga/37855/relationships/quotes",
+            "related": "/manga/37855/quotes"
+          }
+        },
+        "chapters": {
+          "links": {
+            "self": "/manga/37855/relationships/chapters",
+            "related": "/manga/37855/chapters"
+          }
+        },
+        "mangaCharacters": {
+          "links": {
+            "self": "/manga/37855/relationships/manga-characters",
+            "related": "/manga/37855/manga-characters"
+          }
+        },
+        "mangaStaff": {
+          "links": {
+            "self": "/manga/37855/relationships/manga-staff",
+            "related": "/manga/37855/manga-staff"
+          }
+        }
+      }
+    }
+  ]
+}

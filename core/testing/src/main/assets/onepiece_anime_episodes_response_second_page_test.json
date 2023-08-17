@@ -1,0 +1,453 @@
+{
+  "data": [
+    {
+      "id": "172488",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/172488"
+      },
+      "attributes": {
+        "createdAt": "2014-11-21T15:29:08.140Z",
+        "updatedAt": "2021-09-17T04:56:55.723Z",
+        "synopsis": "Usopp spreads word of Kuro's evil plot and the impending pirate attack, but no one believes his warnings. The Straw Hat Pirates decide to help Usopp put a stop to the dastardly scheme.",
+        "description": "Usopp spreads word of Kuro's evil plot and the impending pirate attack, but no one believes his warnings. The Straw Hat Pirates decide to help Usopp put a stop to the dastardly scheme.",
+        "titles": {
+          "en_jp": "Inbou wo Abake! Kaizoku Shitsuji Captain Kuro",
+          "en_us": "Expose the Plot! Pirate Butler, Captain Kuro!",
+          "ja_jp": "陰謀を暴け!海賊執事キャプテンクロ"
+        },
+        "canonicalTitle": "Expose the Plot! Pirate Butler, Captain Kuro!",
+        "seasonNumber": 1,
+        "number": 11,
+        "relativeNumber": 11,
+        "airdate": "2000-01-26",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/172488/original.jpeg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172488/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/172488/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172488/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/172488/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "172489",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/172489"
+      },
+      "attributes": {
+        "createdAt": "2014-11-21T15:29:09.277Z",
+        "updatedAt": "2021-09-17T04:56:56.273Z",
+        "synopsis": "Luffy and crew seek to best Captain Kuro, but they've prepared their defense on the wrong side of the island! All looks grim now that Usopp must face off against the Black Cat Pirates alone.",
+        "description": "Luffy and crew seek to best Captain Kuro, but they've prepared their defense on the wrong side of the island! All looks grim now that Usopp must face off against the Black Cat Pirates alone.",
+        "titles": {
+          "en_jp": "Gekitotsu! Kuroneko Kaizoku-dan Sakamichi no Daikoubou!",
+          "en_us": "Clash with the Black Cat Pirates! The Great Battle on the Slope!",
+          "ja_jp": "激突!クロネコ海賊団坂道の大攻防!"
+        },
+        "canonicalTitle": "Clash with the Black Cat Pirates! The Great Battle on the Slope!",
+        "seasonNumber": 1,
+        "number": 12,
+        "relativeNumber": 12,
+        "airdate": "2000-02-02",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/172489/original.jpeg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172489/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/172489/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172489/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/172489/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "172490",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/172490"
+      },
+      "attributes": {
+        "createdAt": "2014-11-21T15:29:10.638Z",
+        "updatedAt": "2021-09-17T04:56:56.729Z",
+        "synopsis": "In an effort to save Usopp's village, the Straw Hat Pirates seek to block the marauders' path from the sea. With Luffy out of the battle, Zoro must face the fearsome Meowban Brothers!",
+        "description": "In an effort to save Usopp's village, the Straw Hat Pirates seek to block the marauders' path from the sea. With Luffy out of the battle, Zoro must face the fearsome Meowban Brothers!",
+        "titles": {
+          "en_jp": "Kyoufu no Futarigumi! Nyaban Brothers VS Zoro",
+          "en_us": "The Terrifying Duo! Meowban Brothers vs. Zoro!",
+          "ja_jp": "恐怖の二人組!ニャーバン兄弟VSゾロ"
+        },
+        "canonicalTitle": "The Terrifying Duo! Meowban Brothers vs. Zoro!",
+        "seasonNumber": 1,
+        "number": 13,
+        "relativeNumber": 13,
+        "airdate": "2000-02-09",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/172490/original.jpeg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172490/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/172490/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172490/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/172490/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "172491",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/172491"
+      },
+      "attributes": {
+        "createdAt": "2014-11-21T15:29:11.687Z",
+        "updatedAt": "2021-09-17T04:56:57.156Z",
+        "synopsis": "Nami manages to rescue Zoro's missing swords and attempts to revive Luffy. With one of the Meowban brothers down, the other rages on even more fiercely than before!",
+        "description": "Nami manages to rescue Zoro's missing swords and attempts to revive Luffy. With one of the Meowban brothers down, the other rages on even more fiercely than before!",
+        "titles": {
+          "en_jp": "Luffy Fukkatsu! Kaya-ojousama no Kesshi no Teikou",
+          "en_us": "Luffy Back in Action! Miss Kaya's Desperate Resistance!",
+          "ja_jp": "ルフィ復活!カヤお嬢様の決死の抵抗"
+        },
+        "canonicalTitle": "Luffy Back in Action! Miss Kaya's Desperate Resistance!",
+        "seasonNumber": 1,
+        "number": 14,
+        "relativeNumber": 14,
+        "airdate": "2000-02-16",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/172491/original.jpeg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172491/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/172491/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172491/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/172491/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "172492",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/172492"
+      },
+      "attributes": {
+        "createdAt": "2014-11-21T15:29:12.977Z",
+        "updatedAt": "2021-09-17T04:56:57.797Z",
+        "synopsis": "Usopp's friends run away with the heiress Kaya. Jango races off after them, but not before sending Butchie into a berserk rage. As Zoro continues his battle, Luffy takes on Captain Kuro.",
+        "description": "Usopp's friends run away with the heiress Kaya. Jango races off after them, but not before sending Butchie into a berserk rage. As Zoro continues his battle, Luffy takes on Captain Kuro.",
+        "titles": {
+          "en_jp": "Kuro wo Taose! Otoko Usopp Namida no Ketsui!",
+          "en_us": "Beat Kuro! Usopp the Man's Tearful Resolve!",
+          "ja_jp": "クロを倒せ!男ウソップ涙の決意!"
+        },
+        "canonicalTitle": "Beat Kuro! Usopp the Man's Tearful Resolve!",
+        "seasonNumber": 1,
+        "number": 15,
+        "relativeNumber": 15,
+        "airdate": "2000-02-23",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/172492/original.jpeg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172492/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/172492/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172492/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/172492/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "172493",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/172493"
+      },
+      "attributes": {
+        "createdAt": "2014-11-21T15:29:14.860Z",
+        "updatedAt": "2021-09-17T04:56:58.338Z",
+        "synopsis": "Luffy battles with Kuro on the beach, while the Veggies (with Kaya in tow) flee Jango the Hypnotist.",
+        "description": "Luffy battles with Kuro on the beach, while the Veggies (with Kaya in tow) flee Jango the Hypnotist.",
+        "titles": {
+          "en_jp": "Kayaw wo Mamore! Usopp Kaizoku-dan dai Katsuyaku!",
+          "en_us": "Protect Kaya! The Usopp Pirates' Great Efforts!",
+          "ja_jp": "カヤを守れ!ウソップ海賊団大活躍!"
+        },
+        "canonicalTitle": "Protect Kaya! The Usopp Pirates' Great Efforts!",
+        "seasonNumber": 1,
+        "number": 16,
+        "relativeNumber": 16,
+        "airdate": "2000-03-01",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/172493/original.jpeg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172493/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/172493/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172493/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/172493/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "172494",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/172494"
+      },
+      "attributes": {
+        "createdAt": "2014-11-21T15:29:15.868Z",
+        "updatedAt": "2021-09-17T04:56:58.983Z",
+        "synopsis": "Kaya rewards the Straw Hat Pirates' efforts to save her with a ship to call their own - the Going Merry!",
+        "description": "Kaya rewards the Straw Hat Pirates' efforts to save her with a ship to call their own - the Going Merry!",
+        "titles": {
+          "en_jp": "Ikari Bakuhatsu! Kuro vs Luffy Ketchaku no Yukue!",
+          "en_us": "Angry Explosion! Kuro vs. Luffy! How it Ends!",
+          "ja_jp": "怒り爆発!クロVSルフィ決着の行方!"
+        },
+        "canonicalTitle": "Angry Explosion! Kuro vs. Luffy! How it Ends!",
+        "seasonNumber": 1,
+        "number": 17,
+        "relativeNumber": 17,
+        "airdate": "2000-03-08",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/172494/original.jpeg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172494/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/172494/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172494/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/172494/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "172495",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/172495"
+      },
+      "attributes": {
+        "createdAt": "2014-11-21T15:29:17.119Z",
+        "updatedAt": "2021-09-17T04:56:59.489Z",
+        "synopsis": "On the legendary Treasure Island, Luffy and crew encounter strange animals and an even stranger man named Gaimon.",
+        "description": "On the legendary Treasure Island, Luffy and crew encounter strange animals and an even stranger man named Gaimon.",
+        "titles": {
+          "en_jp": "Anta ga Chinju! Gaimon to Kimyou na Nakama",
+          "en_us": "You're the Weird Creature! Gaimon and His Strange Friends!",
+          "ja_jp": "あんたが珍獣!ガイモンと奇妙な仲間"
+        },
+        "canonicalTitle": "You're the Weird Creature! Gaimon and His Strange Friends!",
+        "seasonNumber": 1,
+        "number": 18,
+        "relativeNumber": 18,
+        "airdate": "2000-03-15",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/172495/original.jpeg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172495/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/172495/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172495/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/172495/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "172496",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/172496"
+      },
+      "attributes": {
+        "createdAt": "2014-11-21T15:29:18.160Z",
+        "updatedAt": "2021-09-17T04:56:59.984Z",
+        "synopsis": "In the past, young Zoro sparred constantly with a girl named Kuina, but he could never claim victory. They vowed that one of them would someday be the world's greatest swordsman - but tragedy intervened.",
+        "description": "In the past, young Zoro sparred constantly with a girl named Kuina, but he could never claim victory. They vowed that one of them would someday be the world's greatest swordsman - but tragedy intervened.",
+        "titles": {
+          "en_jp": "Santouryuu no Kako! Zoro to Kuina no Chikai!",
+          "en_us": "The Three-Sword Style's Past! Zoro and Kuina's Vow!",
+          "ja_jp": "三刀流の過去!ゾロとくいなの誓い!"
+        },
+        "canonicalTitle": "The Three-Sword Style's Past! Zoro and Kuina's Vow!",
+        "seasonNumber": 1,
+        "number": 19,
+        "relativeNumber": 19,
+        "airdate": "2000-03-22",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/172496/original.jpeg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172496/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/172496/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172496/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/172496/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "172497",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/172497"
+      },
+      "attributes": {
+        "createdAt": "2014-11-21T15:29:19.177Z",
+        "updatedAt": "2021-09-17T04:57:00.565Z",
+        "synopsis": "The Straw Hats need a cook among their crew, so they head to a nearby restaurant and meet a passionate Sous Chef named Sanji.",
+        "description": "The Straw Hats need a cook among their crew, so they head to a nearby restaurant and meet a passionate Sous Chef named Sanji.",
+        "titles": {
+          "en_jp": "Meibutsu Kokku! Kaijou Restaurant no Sanji",
+          "en_us": "Famous Cook! Sanji of the Sea Restaurant!",
+          "ja_jp": "名物コック!海上レストランのサンジ"
+        },
+        "canonicalTitle": "Famous Cook! Sanji of the Sea Restaurant!",
+        "seasonNumber": 1,
+        "number": 20,
+        "relativeNumber": 20,
+        "airdate": "2000-04-12",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/172497/original.jpeg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172497/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/172497/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172497/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/172497/videos"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "count": 1239
+  },
+  "links": {
+    "first": "https://kitsu.io/api/edge/episodes?filter%5BmediaType%5D=Anime&filter%5Bmedia_id%5D=12&page%5Blimit%5D=10&page%5Boffset%5D=0&sort=number",
+    "prev": "https://kitsu.io/api/edge/episodes?filter%5BmediaType%5D=Anime&filter%5Bmedia_id%5D=12&page%5Blimit%5D=10&page%5Boffset%5D=0&sort=number",
+    "next": "https://kitsu.io/api/edge/episodes?filter%5BmediaType%5D=Anime&filter%5Bmedia_id%5D=12&page%5Blimit%5D=10&page%5Boffset%5D=20&sort=number",
+    "last": "https://kitsu.io/api/edge/episodes?filter%5BmediaType%5D=Anime&filter%5Bmedia_id%5D=12&page%5Blimit%5D=10&page%5Boffset%5D=1229&sort=number"
+  }
+}

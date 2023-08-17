@@ -10,32 +10,25 @@ import androidx.test.espresso.matcher.ViewMatchers.isRoot
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.filters.LargeTest
 import com.theblackbit.animemania.android.core.testing.KoinTestRule
 import com.theblackbit.animemania.android.core.testing.customviewaction.ScrollToPositionChildRecyclerView
 import com.theblackbit.animemania.android.core.testing.customviewaction.WaitFor
+import com.theblackbit.animemania.android.core.testing.customviewmatcher.ChildRecyclerViewItemCountAssertion
 import com.theblackbit.animemania.android.core.testing.customviewmatcher.HasEllipsizeEndAtPositionOnChildRecyclerView
-import com.theblackbit.animemania.android.core.testing.customviewmatcher.ImageIsCropAtPositionOnChildRecyclerView
-import com.theblackbit.animemania.android.core.testing.customviewmatcher.ImageIsLoadedAtPositionOnChildRecyclerView
 import com.theblackbit.animemania.android.core.testing.customviewmatcher.MaxLinesTextViewAtPositionOnChildRecyclerView
 import com.theblackbit.animemania.android.core.testing.customviewmatcher.WithTextAtPositionOnChildRecyclerView
-import com.theblackbit.animemania.android.core.testing.data.CATEGORY_MOST_WANTED_ID
-import com.theblackbit.animemania.android.core.testing.data.CATEGORY_TOP_RATED_ID
-import com.theblackbit.animemania.android.core.testing.data.CATEGORY_TRENDING_ID
-import com.theblackbit.animemania.android.core.testing.data.anime.mostWantedAnimeData
-import com.theblackbit.animemania.android.core.testing.data.anime.popularAnimeData
-import com.theblackbit.animemania.android.core.testing.data.anime.topRatedAnimeData
-import com.theblackbit.animemania.android.core.testing.data.anime.trendingAnimeData
-import com.theblackbit.animemania.android.core.testing.data.collectionCategories
-import com.theblackbit.animemania.android.core.testing.data.manga.mostWantedMangaData
-import com.theblackbit.animemania.android.core.testing.data.manga.popularMangaData
-import com.theblackbit.animemania.android.core.testing.data.manga.topRatedMangaData
-import com.theblackbit.animemania.android.core.testing.data.manga.trendingMangaData
-import com.theblackbit.animemania.android.core.testing.di.collectAnimeCategoriesUseCaseModuleTest
-import com.theblackbit.animemania.android.core.testing.di.collectAnimeDataUseCaseTestModule
-import com.theblackbit.animemania.android.core.testing.di.collectMangaCategoriesUseCaseModuleTest
-import com.theblackbit.animemania.android.core.testing.di.collectMangaDataUseCaseTestModule
+import com.theblackbit.animemania.android.data.di.internal.collectionDaoModule
+import com.theblackbit.animemania.android.data.di.internal.collectionRoomRepositoryModule
+import com.theblackbit.animemania.android.data.di.internal.roomDbModule
+import com.theblackbit.animemania.android.data.di.pagingsource.animePagingSourceFactoryModule
+import com.theblackbit.animemania.android.data.di.pagingsource.mangaPagingSourceFactoryModule
+import com.theblackbit.animemania.android.domain.di.collectAnimeUseCaseModule
+import com.theblackbit.animemania.android.domain.di.collectMangaUseCaseModule
 import com.theblackbit.animemania.android.feature.home.R
+import com.theblackbit.animemania.android.home.di.animeRemoteRepositoryMock
 import com.theblackbit.animemania.android.home.di.homeViewModelModule
+import com.theblackbit.animemania.android.home.di.mangaRemoteRepositoryMock
 import org.hamcrest.Matchers.not
 import org.junit.Rule
 import org.junit.Test
@@ -43,20 +36,31 @@ import org.junit.runner.RunWith
 import org.koin.test.KoinTest
 import com.theblackbit.animemania.android.core.resources.R as resources
 
+@LargeTest
 @RunWith(AndroidJUnit4::class)
 class CollectionTabFragmentTest : KoinTest {
 
     @get:Rule
     val koinTestRule = KoinTestRule(
         modules = listOf(
-            collectAnimeDataUseCaseTestModule,
-            collectAnimeCategoriesUseCaseModuleTest,
-            collectMangaDataUseCaseTestModule,
-            collectMangaCategoriesUseCaseModuleTest,
+            roomDbModule,
+            collectionDaoModule,
+            collectionRoomRepositoryModule,
+            animePagingSourceFactoryModule,
+            mangaPagingSourceFactoryModule,
+            animeRemoteRepositoryMock,
+            mangaRemoteRepositoryMock,
+            collectAnimeUseCaseModule,
+            collectMangaUseCaseModule,
             homeViewModelModule,
         ),
     )
 
+    /**
+     * Tests the Anime tab
+     * @see animeRemoteRepositoryMock this koin module contains the class that
+     * returns the mocked data provided by a json from assets from the module Testing
+     */
     @Test
     fun testAnimeFetchedWithCategories() {
         launchFragmentInContainer<AnimeTabFragment>(
@@ -71,21 +75,20 @@ class CollectionTabFragmentTest : KoinTest {
 
         testProgressBarIsGone()
 
-        collectionCategories.forEachIndexed { categoryIndex, category ->
-            testCategoryNameDisplayedCorrectly(
-                positionOfParentRV = categoryIndex,
-                categoryName = category.categoryName,
-            )
+        testTrendingAnime()
 
-            when (category.categoryId) {
-                CATEGORY_TRENDING_ID -> testAnimeTrendingCollection(categoryIndex)
-                CATEGORY_MOST_WANTED_ID -> testAnimeMostWantedCollection(categoryIndex)
-                CATEGORY_TOP_RATED_ID -> testAnimeTopRatedCollection(categoryIndex)
-                else -> testAnimePopularCollection(categoryIndex)
-            }
-        }
+        testMostAnticipatedAnime()
+
+        testTopRatedAnime()
+
+        testPopularAnime()
     }
 
+    /**
+     * Tests the Manga tab
+     * @see mangaRemoteRepositoryMock this koin module contains the class that
+     * returns the mocked data provided by a json from assets from the module Testing
+     */
     @Test
     fun testMangaFetchedWithCategories() {
         launchFragmentInContainer<MangaTabFragment>(
@@ -100,19 +103,153 @@ class CollectionTabFragmentTest : KoinTest {
 
         testProgressBarIsGone()
 
-        collectionCategories.forEachIndexed { categoryIndex, category ->
-            testCategoryNameDisplayedCorrectly(
-                positionOfParentRV = categoryIndex,
-                categoryName = category.categoryName,
-            )
+        testTrendingManga()
 
-            when (category.categoryId) {
-                CATEGORY_TRENDING_ID -> testMangaTrendingCollection(categoryIndex)
-                CATEGORY_MOST_WANTED_ID -> testMangaMostWantedCollection(categoryIndex)
-                CATEGORY_TOP_RATED_ID -> testMangaTopRatedCollection(categoryIndex)
-                else -> testMangaPopularCollection(categoryIndex)
-            }
-        }
+        testMostAnticipatedManga()
+
+        testTopRatedManga()
+
+        testPopularManga()
+    }
+
+    private fun testTrendingAnime() {
+        scrollToChildRecyclerView(0)
+
+        testSizeOfChildRecyclerViewRecyclerView(positionOfChildRecyclerView = 0, expectedCount = 20)
+
+        testCategoryNameDisplayedCorrectly("Trending for this week")
+
+        testFirstAndLastItemCollection(
+            positionOfChildRecyclerView = 0,
+            firstItemTitle = "One Piece",
+            lastItemTitle = "Black Clover",
+        )
+    }
+
+    private fun testMostAnticipatedAnime() {
+        scrollToChildRecyclerView(1)
+
+        testSizeOfChildRecyclerViewRecyclerView(expectedCount = 20, positionOfChildRecyclerView = 1)
+
+        testCategoryNameDisplayedCorrectly("Most anticipated")
+
+        testFirstAndLastItemCollection(
+            positionOfChildRecyclerView = 1,
+            firstItemTitle = "SPY×FAMILY Season 2",
+            lastItemTitle = "Saint Seiya: Knights of the Zodiac Season 3",
+        )
+
+        testSizeOfChildRecyclerViewRecyclerView(expectedCount = 22, positionOfChildRecyclerView = 1)
+    }
+
+    private fun testTopRatedAnime() {
+        scrollToChildRecyclerView(2)
+
+        testSizeOfChildRecyclerViewRecyclerView(expectedCount = 20, positionOfChildRecyclerView = 2)
+
+        testCategoryNameDisplayedCorrectly("Top rated")
+
+        testFirstAndLastItemCollection(
+            positionOfChildRecyclerView = 2,
+            firstItemTitle = "Kimetsu no Yaiba: Yuukaku-hen",
+            lastItemTitle = "Boku no Hero Academia 3",
+        )
+
+        testSizeOfChildRecyclerViewRecyclerView(expectedCount = 40, positionOfChildRecyclerView = 2)
+    }
+
+    private fun testPopularAnime() {
+        scrollToChildRecyclerView(3)
+
+        testSizeOfChildRecyclerViewRecyclerView(expectedCount = 20, positionOfChildRecyclerView = 3)
+
+        testCategoryNameDisplayedCorrectly("Most popular")
+
+        testFirstAndLastItemCollection(
+            positionOfChildRecyclerView = 3,
+            firstItemTitle = "Attack on Titan",
+            lastItemTitle = "Nanatsu no Taizai: Imashime no Fukkatsu",
+        )
+
+        testSizeOfChildRecyclerViewRecyclerView(expectedCount = 40, positionOfChildRecyclerView = 3)
+    }
+
+    private fun testTrendingManga() {
+        scrollToChildRecyclerView(0)
+
+        testSizeOfChildRecyclerViewRecyclerView(positionOfChildRecyclerView = 0, expectedCount = 20)
+
+        testCategoryNameDisplayedCorrectly("Trending for this week")
+
+        testFirstAndLastItemCollection(
+            positionOfChildRecyclerView = 0,
+            firstItemTitle = "Martial Peak",
+            lastItemTitle = "Komi-san wa, Comyushou desu.",
+        )
+    }
+
+    private fun testMostAnticipatedManga() {
+        scrollToChildRecyclerView(1)
+
+        testSizeOfChildRecyclerViewRecyclerView(expectedCount = 20, positionOfChildRecyclerView = 1)
+
+        testCategoryNameDisplayedCorrectly("Most anticipated")
+
+        testFirstAndLastItemCollection(
+            positionOfChildRecyclerView = 1,
+            firstItemTitle = "Mushoku Tensei: Dasoku-hen",
+            lastItemTitle = "Naneun Yeowangida",
+        )
+
+        testSizeOfChildRecyclerViewRecyclerView(expectedCount = 33, positionOfChildRecyclerView = 1)
+    }
+
+    private fun testTopRatedManga() {
+        scrollToChildRecyclerView(2)
+
+        testSizeOfChildRecyclerViewRecyclerView(expectedCount = 20, positionOfChildRecyclerView = 2)
+
+        testCategoryNameDisplayedCorrectly("Top rated")
+
+        testFirstAndLastItemCollection(
+            positionOfChildRecyclerView = 2,
+            firstItemTitle = "Boku no Hero Academia",
+            lastItemTitle = "Jibaku Shounen Hanako-kun",
+        )
+
+        testSizeOfChildRecyclerViewRecyclerView(expectedCount = 40, positionOfChildRecyclerView = 2)
+    }
+
+    private fun testPopularManga() {
+        scrollToChildRecyclerView(3)
+        testSizeOfChildRecyclerViewRecyclerView(expectedCount = 20, positionOfChildRecyclerView = 3)
+
+        testCategoryNameDisplayedCorrectly("Most popular")
+
+        testFirstAndLastItemCollection(
+            positionOfChildRecyclerView = 3,
+            firstItemTitle = "Boku no Hero Academia",
+            lastItemTitle = "Solo Leveling",
+        )
+
+        testSizeOfChildRecyclerViewRecyclerView(expectedCount = 40, positionOfChildRecyclerView = 3)
+    }
+
+    private fun testSizeOfChildRecyclerViewRecyclerView(
+        positionOfChildRecyclerView: Int,
+        expectedCount: Int,
+
+    ) {
+        onView(withId(R.id.rv_data))
+            .check(
+                matches(
+                    ChildRecyclerViewItemCountAssertion(
+                        positionOfChildRecyclerView = positionOfChildRecyclerView,
+                        childRecyclerViewId = R.id.rv_data_container,
+                        expectedCount,
+                    ),
+                ),
+            )
     }
 
     private fun testProgressBarIsVisible() {
@@ -126,7 +263,7 @@ class CollectionTabFragmentTest : KoinTest {
     }
 
     private fun waitUntilDataIsFetched() {
-        onView(isRoot()).perform(WaitFor(6000L))
+        onView(isRoot()).perform(WaitFor(4000L))
     }
 
     private fun testProgressBarIsGone() {
@@ -134,96 +271,38 @@ class CollectionTabFragmentTest : KoinTest {
             .check(matches(not(isDisplayed())))
     }
 
-    private fun testCategoryNameDisplayedCorrectly(positionOfParentRV: Int, categoryName: String) {
+    private fun scrollToChildRecyclerView(position: Int) {
         onView(withId(R.id.rv_data))
             .perform(
                 RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
-                    positionOfParentRV,
+                    position,
                 ),
             )
+    }
 
+    private fun testCategoryNameDisplayedCorrectly(categoryName: String) {
         onView(withText(categoryName))
             .check(matches(isDisplayed()))
     }
 
-    private fun testAnimeTrendingCollection(categoryIndex: Int) {
-        trendingAnimeData.forEachIndexed { collectionIndex, collection ->
-            testViewsInsideChildRecyclerView(
-                positionOfParentRV = categoryIndex,
-                positionOfChildRV = collectionIndex,
-                title = collection.name,
-            )
-        }
-    }
+    private fun testFirstAndLastItemCollection(
+        positionOfChildRecyclerView: Int,
+        firstPosition: Int = 0,
+        lastPosition: Int = 19,
+        firstItemTitle: String,
+        lastItemTitle: String,
+    ) {
+        testViewsInsideChildRecyclerView(
+            positionOfParentRV = positionOfChildRecyclerView,
+            positionOfChildRV = firstPosition,
+            title = firstItemTitle,
+        )
 
-    private fun testAnimeMostWantedCollection(categoryIndex: Int) {
-        mostWantedAnimeData.forEachIndexed { collectionIndex, collection ->
-            testViewsInsideChildRecyclerView(
-                positionOfParentRV = categoryIndex,
-                positionOfChildRV = collectionIndex,
-                title = collection.name,
-            )
-        }
-    }
-
-    private fun testAnimeTopRatedCollection(categoryIndex: Int) {
-        topRatedAnimeData.forEachIndexed { collectionIndex, collection ->
-            testViewsInsideChildRecyclerView(
-                positionOfParentRV = categoryIndex,
-                positionOfChildRV = collectionIndex,
-                title = collection.name,
-            )
-        }
-    }
-
-    private fun testAnimePopularCollection(categoryIndex: Int) {
-        popularAnimeData.forEachIndexed { collectionIndex, collection ->
-            testViewsInsideChildRecyclerView(
-                positionOfParentRV = categoryIndex,
-                positionOfChildRV = collectionIndex,
-                title = collection.name,
-            )
-        }
-    }
-
-    private fun testMangaTrendingCollection(categoryIndex: Int) {
-        trendingMangaData.forEachIndexed { collectionIndex, collection ->
-            testViewsInsideChildRecyclerView(
-                positionOfParentRV = categoryIndex,
-                positionOfChildRV = collectionIndex,
-                title = collection.name,
-            )
-        }
-    }
-
-    private fun testMangaMostWantedCollection(categoryIndex: Int) {
-        mostWantedMangaData.forEachIndexed { collectionIndex, collection ->
-            testViewsInsideChildRecyclerView(
-                positionOfParentRV = categoryIndex,
-                positionOfChildRV = collectionIndex,
-                title = collection.name,
-            )
-        }
-    }
-
-    private fun testMangaTopRatedCollection(categoryIndex: Int) {
-        topRatedMangaData.forEachIndexed { collectionIndex, collection ->
-            testViewsInsideChildRecyclerView(
-                positionOfParentRV = categoryIndex,
-                positionOfChildRV = collectionIndex,
-                title = collection.name,
-            )
-        }
-    }
-
-    private fun testMangaPopularCollection(categoryIndex: Int) {
-        popularMangaData.forEachIndexed { collectionIndex, collection ->
-            testViewsInsideChildRecyclerView(
-                positionOfParentRV = categoryIndex,
-                positionOfChildRV = collectionIndex,
-                title = collection.name,
-            )
-        }
+        testViewsInsideChildRecyclerView(
+            positionOfParentRV = positionOfChildRecyclerView,
+            positionOfChildRV = lastPosition,
+            title = lastItemTitle,
+        )
     }
 
     private fun testViewsInsideChildRecyclerView(
@@ -269,26 +348,6 @@ class CollectionTabFragmentTest : KoinTest {
                         positionOfViewInChildRecyclerView = positionOfChildRV,
                         textViewId = R.id.tv_collection_name,
                         maxLines = 2,
-                    ),
-                ),
-            )
-            .check(
-                matches(
-                    ImageIsCropAtPositionOnChildRecyclerView(
-                        positionOfChildRecyclerView = positionOfParentRV,
-                        childRecyclerViewId = R.id.rv_data_container,
-                        positionOfViewInChildRecyclerView = positionOfChildRV,
-                        imageViewId = R.id.iv_poster,
-                    ),
-                ),
-            )
-            .check(
-                matches(
-                    ImageIsLoadedAtPositionOnChildRecyclerView(
-                        positionOfChildRecyclerView = positionOfParentRV,
-                        childRecyclerViewId = R.id.rv_data_container,
-                        positionOfViewInChildRecyclerView = positionOfChildRV,
-                        imageViewId = R.id.iv_poster,
                     ),
                 ),
             )

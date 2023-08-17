@@ -22,7 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="@{hideProgress ? View.VISIBLE : View.GONE}"
-            android:nestedScrollingEnabled="false"
             android:orientation="vertical"
             tools:listitem="@layout/item_chapter"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
