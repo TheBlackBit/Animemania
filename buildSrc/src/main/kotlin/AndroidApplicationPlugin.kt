@@ -18,6 +18,7 @@ class AndroidApplicationPlugin : Plugin<Project> {
                 apply("com.android.application")
                 apply("org.jetbrains.kotlin.android")
                 apply("kotlin-kapt")
+                apply("org.jlleitschuh.gradle.ktlint")
             }
             extensions.configure<ApplicationExtension> {
                 configureKotlinAndroid(this)
