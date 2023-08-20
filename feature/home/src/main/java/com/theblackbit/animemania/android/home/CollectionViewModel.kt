@@ -13,24 +13,24 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 @OptIn(ExperimentalCoroutinesApi::class)
 class CollectionViewModel(
     private val collectAnimeDataUseCase: CollectCollectionDataUseCase,
-    private val collectMangaDataUseCase: CollectCollectionDataUseCase,
+    private val collectMangaDataUseCase: CollectCollectionDataUseCase
 ) : ViewModel() {
 
     var initDataCollected = false
 
     fun startToCollectAnimeData(
         requestType: RequestType,
-        scope: CoroutineScope,
+        scope: CoroutineScope
     ): Flowable<PagingData<Collection>> =
         collectAnimeDataUseCase.collectByCategory(
-            requestType = requestType,
+            requestType = requestType
         ).cachedIn(scope)
 
     fun startToCollectMangaData(
         requestType: RequestType,
-        scope: CoroutineScope,
+        scope: CoroutineScope
     ): Flowable<PagingData<Collection>> =
         collectMangaDataUseCase.collectByCategory(
-            requestType = requestType,
+            requestType = requestType
         ).cachedIn(scope)
 }

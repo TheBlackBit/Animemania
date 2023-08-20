@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 data class CharacterResponse(
     @SerializedName("included")
-    val characterData: List<CharacterData>,
+    val characterData: List<CharacterData>
 )

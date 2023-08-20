@@ -9,7 +9,7 @@ import org.hamcrest.Description
 class WithTextAtPosition(
     private val text: String,
     private val position: Int,
-    private val textViewId: Int,
+    private val textViewId: Int
 ) : BaseMatcher<View>() {
     override fun describeTo(description: Description?) {
         description?.appendText("Check $text matches with textView with id $textViewId at position $position")

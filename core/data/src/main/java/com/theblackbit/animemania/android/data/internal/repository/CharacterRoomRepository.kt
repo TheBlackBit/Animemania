@@ -5,7 +5,7 @@ import com.theblackbit.animemania.android.data.internal.datasource.room.entity.C
 import io.reactivex.rxjava3.core.Single
 
 class CharacterRoomRepository(
-    private val characterDao: CharacterDao,
+    private val characterDao: CharacterDao
 ) : CharacterLocalRepository {
     override fun insertCharacters(characters: List<CharacterEntity>) {
         characterDao.insertCharacters(characters)
@@ -13,7 +13,7 @@ class CharacterRoomRepository(
 
     override fun getCharactersByCollectionId(
         collectionId: String,
-        page: Int,
+        page: Int
     ): Single<List<CharacterEntity>> {
         return characterDao.getCharactersByCollectionId(collectionId, page)
     }

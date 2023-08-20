@@ -5,7 +5,7 @@ import com.theblackbit.animemania.android.feature.detail.databinding.ItemCharact
 import com.theblackbit.animemania.android.model.Character
 
 class CharactersViewHolder(
-    private val binding: ItemCharacterBinding,
+    private val binding: ItemCharacterBinding
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(character: Character) {
         with(binding) {

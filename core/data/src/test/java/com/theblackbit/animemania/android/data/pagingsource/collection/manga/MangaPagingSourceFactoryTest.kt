@@ -26,7 +26,7 @@ class MangaPagingSourceFactoryTest {
     fun setUp() {
         factory = MangaPagingSourceFactory(
             collectionLocalRepository,
-            collectionRemoteRepository,
+            collectionRemoteRepository
         )
     }
 

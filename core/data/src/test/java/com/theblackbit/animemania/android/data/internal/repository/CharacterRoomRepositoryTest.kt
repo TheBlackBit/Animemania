@@ -41,7 +41,7 @@ class CharacterRoomRepositoryTest {
 
         Mockito.verify(characterDao).getCharactersByCollectionId(
             collectionId = collectionId,
-            page = page,
+            page = page
         )
     }
 

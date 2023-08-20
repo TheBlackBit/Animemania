@@ -15,18 +15,18 @@ class AnimeEpisodesByKitsuRepositoryMock(private val context: Context) : Episode
     override fun getCollectionEpisodes(
         collectionId: String,
         pageNumber: String,
-        pageOffset: String,
+        pageOffset: String
     ): Single<SafeApiRequest.ApiResultHandle<EpisodesResponse>> {
         val delay = if (pageOffset == "null") 1L else 0
         val response = when {
             (pageOffset == "null" && collectionId == VALID_COLLECTION_ANIME_ID) -> jsonFileToKotlinClass(
                 context,
-                "onepiece_anime_episodes_response_first_page_test.json",
+                "onepiece_anime_episodes_response_first_page_test.json"
             )
 
             (pageOffset == ChapterPagingSourceFactory.CHAPTER_PAGE_LIMIT.toString() && collectionId == VALID_COLLECTION_ANIME_ID) -> jsonFileToKotlinClass(
                 context,
-                "onepiece_anime_episodes_response_second_page_test.json",
+                "onepiece_anime_episodes_response_second_page_test.json"
             )
 
             else -> EpisodesResponse(emptyList())
@@ -34,8 +34,8 @@ class AnimeEpisodesByKitsuRepositoryMock(private val context: Context) : Episode
 
         return Single.just<SafeApiRequest.ApiResultHandle<EpisodesResponse>>(
             SafeApiRequest.ApiResultHandle.Success(
-                response,
-            ),
+                response
+            )
         ).delay(delay, TimeUnit.SECONDS)
     }
 }

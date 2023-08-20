@@ -44,14 +44,14 @@ class HomeFragmentTest : KoinTest {
             mangaRemoteRepositoryMock,
             collectAnimeUseCaseModule,
             collectMangaUseCaseModule,
-            homeViewModelModule,
-        ),
+            homeViewModelModule
+        )
     )
 
     @Test
     fun headerIsDisplayed() {
         launchFragmentInContainer<HomeFragment>(
-            themeResId = resources.style.Theme_Animemania,
+            themeResId = resources.style.Theme_Animemania
         )
         onView(withText(resources.string.icon))
             .check(matches(isDisplayed()))
@@ -62,7 +62,7 @@ class HomeFragmentTest : KoinTest {
     @Test
     fun testAnimeTabInHomeFragment() {
         launchFragmentInContainer<HomeFragment>(
-            themeResId = resources.style.Theme_Animemania,
+            themeResId = resources.style.Theme_Animemania
         )
         testTabWithViewPager("Anime", "One Piece")
     }
@@ -70,7 +70,7 @@ class HomeFragmentTest : KoinTest {
     @Test
     fun testMangaTabInHomeFragment() {
         launchFragmentInContainer<HomeFragment>(
-            themeResId = resources.style.Theme_Animemania,
+            themeResId = resources.style.Theme_Animemania
         )
         testTabWithViewPager("Manga", "Martial Peak")
     }
@@ -98,9 +98,9 @@ class HomeFragmentTest : KoinTest {
                     childRecyclerViewId = R.id.rv_data_container,
                     positionOfViewInChildRecyclerView = 0,
                     textViewId = R.id.tv_collection_name,
-                    text = contentText,
-                ),
-            ),
+                    text = contentText
+                )
+            )
         )
     }
 }

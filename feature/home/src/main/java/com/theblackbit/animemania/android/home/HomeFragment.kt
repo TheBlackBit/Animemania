@@ -21,7 +21,7 @@ class HomeFragment : FragmentBindingCreator<FragmentHomeBinding>() {
 
     private val fragments = listOf(
         AnimeTabFragment(),
-        MangaTabFragment(),
+        MangaTabFragment()
     )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -9,6 +9,6 @@ interface CharacterByKitsuRepository {
         mediaType: String,
         collectionId: String,
         pageNumber: String,
-        pageOffset: String?,
+        pageOffset: String?
     ): Single<SafeApiRequest.ApiResultHandle<CharacterResponse>>
 }

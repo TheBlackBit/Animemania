@@ -2,5 +2,5 @@ package com.theblackbit.animemania.android.data.external.datasource.response.err
 
 data class Source(
     val parameter: String?,
-    val pointer: String?,
+    val pointer: String?
 )

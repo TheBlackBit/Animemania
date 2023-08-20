@@ -72,8 +72,8 @@ class Animemania : Application() {
                     collectCharactersUseCaseModule,
                     homeViewModelModule,
                     chapterTabViewModelModule,
-                    characterTabViewModelModule,
-                ),
+                    characterTabViewModelModule
+                )
             )
         }
     }

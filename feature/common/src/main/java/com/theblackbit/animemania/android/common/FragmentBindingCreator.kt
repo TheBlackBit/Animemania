@@ -15,7 +15,7 @@ abstract class FragmentBindingCreator<T : ViewDataBinding> : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?,
+        savedInstanceState: Bundle?
     ): View? {
         if (!::binding.isInitialized) {
             binding = DataBindingUtil.inflate(inflater, layoutId, container, false)

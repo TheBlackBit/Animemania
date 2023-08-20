@@ -13,7 +13,7 @@ class MaxLinesTextViewAtPositionOnChildRecyclerView(
     private val childRecyclerViewId: Int,
     private val positionOfViewInChildRecyclerView: Int,
     private val textViewId: Int,
-    private val maxLines: Int,
+    private val maxLines: Int
 ) : BaseMatcher<View>() {
     override fun describeTo(description: Description?) {
         description?.appendText("")
@@ -24,7 +24,7 @@ class MaxLinesTextViewAtPositionOnChildRecyclerView(
         val viewHolder = view.getChildRecyclerViewHolder(
             positionOfChildRecyclerView = positionOfChildRecyclerView,
             childRecyclerViewId = childRecyclerViewId,
-            positionOfViewInChildRecyclerView = positionOfViewInChildRecyclerView,
+            positionOfViewInChildRecyclerView = positionOfViewInChildRecyclerView
         )
 
         val textView = viewHolder.itemView.findViewById<View>(textViewId)

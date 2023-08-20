@@ -23,7 +23,7 @@ class WithTextAtPositionOnChildRecyclerView(
     private val childRecyclerViewId: Int,
     private val positionOfViewInChildRecyclerView: Int,
     private val textViewId: Int,
-    private val text: String,
+    private val text: String
 ) : BaseMatcher<View>() {
     override fun describeTo(description: Description?) {
         description?.appendText("Assert of recycler view at position $positionOfViewInChildRecyclerView in the $positionOfChildRecyclerView position of the parent")
@@ -34,7 +34,7 @@ class WithTextAtPositionOnChildRecyclerView(
         val viewHolder = view.getChildRecyclerViewHolder(
             positionOfChildRecyclerView = positionOfChildRecyclerView,
             childRecyclerViewId = childRecyclerViewId,
-            positionOfViewInChildRecyclerView = positionOfViewInChildRecyclerView,
+            positionOfViewInChildRecyclerView = positionOfViewInChildRecyclerView
         )
 
         val textView = viewHolder.itemView.findViewById<View>(textViewId)

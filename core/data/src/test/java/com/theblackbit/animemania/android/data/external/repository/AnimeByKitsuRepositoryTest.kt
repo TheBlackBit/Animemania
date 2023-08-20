@@ -39,8 +39,8 @@ class AnimeByKitsuRepositoryTest {
         `when`(
             kitsuCollectionDataSource.getTrendingCollection(
                 pageLimit = pageLimit,
-                pageOffset = pageOffset,
-            ),
+                pageOffset = pageOffset
+            )
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
@@ -49,7 +49,7 @@ class AnimeByKitsuRepositoryTest {
 
         verify(kitsuCollectionDataSource).getTrendingCollection(
             pageLimit = pageLimit,
-            pageOffset = pageOffset,
+            pageOffset = pageOffset
         )
 
         assertEquals(expectedResponse, actualResponse.value)
@@ -60,8 +60,8 @@ class AnimeByKitsuRepositoryTest {
         `when`(
             kitsuCollectionDataSource.getMostWantedCollection(
                 pageLimit = pageLimit,
-                pageOffset = pageOffset,
-            ),
+                pageOffset = pageOffset
+            )
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
@@ -70,7 +70,7 @@ class AnimeByKitsuRepositoryTest {
 
         verify(kitsuCollectionDataSource).getMostWantedCollection(
             pageLimit = pageLimit,
-            pageOffset = pageOffset,
+            pageOffset = pageOffset
         )
 
         assertEquals(expectedResponse, actualResponse.value)
@@ -81,8 +81,8 @@ class AnimeByKitsuRepositoryTest {
         `when`(
             kitsuCollectionDataSource.getTopRatedCollection(
                 pageLimit = pageLimit,
-                pageOffset = pageOffset,
-            ),
+                pageOffset = pageOffset
+            )
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
@@ -91,7 +91,7 @@ class AnimeByKitsuRepositoryTest {
 
         verify(kitsuCollectionDataSource).getTopRatedCollection(
             pageLimit = pageLimit,
-            pageOffset = pageOffset,
+            pageOffset = pageOffset
         )
 
         assertEquals(expectedResponse, actualResponse.value)
@@ -102,8 +102,8 @@ class AnimeByKitsuRepositoryTest {
         `when`(
             kitsuCollectionDataSource.getPopularCollection(
                 pageLimit = pageLimit,
-                pageOffset = pageOffset,
-            ),
+                pageOffset = pageOffset
+            )
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
@@ -112,7 +112,7 @@ class AnimeByKitsuRepositoryTest {
 
         verify(kitsuCollectionDataSource).getPopularCollection(
             pageLimit = pageLimit,
-            pageOffset = pageOffset,
+            pageOffset = pageOffset
         )
 
         assertEquals(expectedResponse, actualResponse.value)

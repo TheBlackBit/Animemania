@@ -14,7 +14,7 @@ class ThumbnailChapterTest {
             large = "large.jpg",
             small = "small.jpg",
             medium = "medium.jpg",
-            original = "original.jpg",
+            original = "original.jpg"
         )
         val result = thumbnail.validImage()
         assertEquals("original.jpg", result)
@@ -27,7 +27,7 @@ class ThumbnailChapterTest {
             medium = "medium.jpg",
             original = null,
             large = "large.jpg",
-            small = "small.jpg",
+            small = "small.jpg"
         )
         val result = thumbnail.validImage()
         assertEquals("medium.jpg", result)
@@ -40,7 +40,7 @@ class ThumbnailChapterTest {
             medium = null,
             original = null,
             large = "large.jpg",
-            small = "small.jpg",
+            small = "small.jpg"
         )
         val result = thumbnail.validImage()
         assertEquals("large.jpg", result)
@@ -53,7 +53,7 @@ class ThumbnailChapterTest {
             medium = null,
             original = null,
             large = null,
-            small = "small.jpg",
+            small = "small.jpg"
         )
         val result = thumbnail.validImage()
         assertEquals("small.jpg", result)
@@ -66,7 +66,7 @@ class ThumbnailChapterTest {
             medium = null,
             original = null,
             large = null,
-            small = null,
+            small = null
         )
         val result = thumbnail.validImage()
         assertEquals("tiny.jpg", result)
@@ -79,7 +79,7 @@ class ThumbnailChapterTest {
             large = null,
             small = null,
             medium = null,
-            original = null,
+            original = null
         )
         val result = thumbnail.validImage()
         assertEquals("", result)

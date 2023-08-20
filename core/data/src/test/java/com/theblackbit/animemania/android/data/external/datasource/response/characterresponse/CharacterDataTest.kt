@@ -24,12 +24,12 @@ class CharacterDataTest {
                     large = "test",
                     small = "test",
                     medium = "test",
-                    original = "test",
+                    original = "test"
                 ),
                 createdAt = "test",
                 updatedAt = "test",
-                slug = "slug",
-            ),
+                slug = "slug"
+            )
         )
 
         val characterEntity =
@@ -50,7 +50,7 @@ class CharacterDataTest {
         val characterData = CharacterData(
             id = null,
             type = null,
-            attributes = null,
+            attributes = null
         )
 
         val characterEntity =
@@ -77,8 +77,8 @@ class CharacterDataTest {
                 null,
                 null,
                 null,
-                null,
-            ),
+                null
+            )
         )
 
         val characterEntity =

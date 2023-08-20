@@ -8,5 +8,5 @@ data class ChapterAttributes(
     val volumeNumber: Int?,
     val synopsis: String?,
     val updatedAt: String?,
-    val thumbnail: ThumbnailChapter?,
+    val thumbnail: ThumbnailChapter?
 )

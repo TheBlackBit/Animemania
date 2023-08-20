@@ -8,5 +8,5 @@ enum class RequestType {
     TRENDING_MANGA,
     MOST_ANTICIPATED_MANGA,
     TOP_RATED_MANGA,
-    POPULAR_MANGA,
+    POPULAR_MANGA
 }

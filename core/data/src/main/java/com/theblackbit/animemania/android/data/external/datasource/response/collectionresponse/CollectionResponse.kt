@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 data class CollectionResponse(
     @SerializedName("data")
-    val collectionData: List<Data>,
+    val collectionData: List<Data>
 )

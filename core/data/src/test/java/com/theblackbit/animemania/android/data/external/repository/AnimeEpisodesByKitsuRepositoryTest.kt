@@ -41,22 +41,22 @@ class AnimeEpisodesByKitsuRepositoryTest {
             kitsuEpisodesDataSource.getEpisodes(
                 collectionId = collectionId,
                 pageNumber = pageNumber,
-                pageOffset = pageOffset,
-            ),
+                pageOffset = pageOffset
+            )
         ).thenReturn(Single.just(expectedEpisodeData))
 
         val actualEpisodesData =
             animeEpisodesByKitsuRepository.getCollectionEpisodes(
                 collectionId,
                 pageNumber,
-                pageOffset,
+                pageOffset
             )
                 .blockingGet() as SafeApiRequest.ApiResultHandle.Success
 
         verify(kitsuEpisodesDataSource).getEpisodes(
             collectionId = collectionId,
             pageNumber = pageNumber,
-            pageOffset = pageOffset,
+            pageOffset = pageOffset
         )
 
         assertEquals(expectedEpisodeData, actualEpisodesData.value)

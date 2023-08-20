@@ -1,0 +1,47 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+   desc 'Lint format'
+   lane :lint_format do
+   setup_ci if ENV['CI']
+     gradle(task: "clean")
+     gradle(task: "ktlintFormat")
+   end
+
+   desc 'Lint verification'
+   lane :lint_verification do
+   setup_ci if ENV['CI']
+     gradle(task: "clean")
+     gradle(task: "ktlintCheck")
+   end
+
+   desc 'Unit test verification'
+   lane :unit_test_verification do
+   setup_ci if ENV['CI']
+     gradle(task: "clean")
+     gradle(task: "testDebugUnitTest")
+   end
+
+   desc 'Generate coverage report'
+   lane :coverage_report do
+   setup_ci if ENV['CI']
+     gradle(task: "clean")
+     gradle(task: "jacocoMergedReport")
+   end
+
+end

@@ -26,12 +26,12 @@ class ChapterDataTest {
                     large = "test",
                     small = "test",
                     medium = "test",
-                    original = "test",
+                    original = "test"
                 ),
                 createdAt = "test",
                 length = 1,
-                updatedAt = "test",
-            ),
+                updatedAt = "test"
+            )
         )
 
         val chapterEntity = chapterData.toChapterEntity(page = page, collectionId = collectionId)
@@ -53,7 +53,7 @@ class ChapterDataTest {
         val chapterData = ChapterData(
             id = null,
             type = null,
-            attributes = null,
+            attributes = null
         )
 
         val chapterEntity = chapterData.toChapterEntity(page = page, collectionId = collectionId)
@@ -83,8 +83,8 @@ class ChapterDataTest {
                 thumbnail = null,
                 createdAt = null,
                 length = null,
-                updatedAt = null,
-            ),
+                updatedAt = null
+            )
         )
 
         val chapterEntity = chapterData.toChapterEntity(page = page, collectionId = collectionId)

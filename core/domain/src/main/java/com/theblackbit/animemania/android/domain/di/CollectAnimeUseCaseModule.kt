@@ -10,7 +10,7 @@ const val ANIME_COLLECTION_QUALIFIER = "ANIME_COLLECTION"
 val collectAnimeUseCaseModule = module {
     factory<CollectCollectionDataUseCase>(qualifier = named(ANIME_COLLECTION_QUALIFIER)) {
         CollectAnimeDataUseCase(
-            get(),
+            get()
         )
     }
 }

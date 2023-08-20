@@ -6,7 +6,7 @@ import java.io.IOException
 
 class SafeApiRequest {
     inline fun <reified T> request(
-        apiRequest: () -> Single<Any>,
+        apiRequest: () -> Single<Any>
     ): Single<ApiResultHandle<T>> {
         return apiRequest.invoke()
             .flatMap { response ->

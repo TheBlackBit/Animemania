@@ -5,7 +5,7 @@ data class ThumbnailEpisode(
     val large: String?,
     val small: String?,
     val medium: String?,
-    val original: String?,
+    val original: String?
 )
 
 fun ThumbnailEpisode.validImage(): String {

@@ -10,7 +10,7 @@ import org.hamcrest.Description
 class WithImageScaleTypeAtPosition(
     private val position: Int,
     private val scaleType: ScaleType,
-    private val imageViewId: Int,
+    private val imageViewId: Int
 ) : BaseMatcher<View>() {
     override fun describeTo(description: Description?) {
         description?.appendText("ScaleType of ImageView with id $imageViewId at position $position is ${scaleType.name}.")

@@ -31,7 +31,7 @@ class CharactersTabFragment : FragmentBindingCreator<FragmentTabCharactersBindin
     companion object {
         fun createFragment(
             collectionId: String,
-            collectionType: CollectionType,
+            collectionType: CollectionType
         ): CharactersTabFragment {
             val fragment = CharactersTabFragment()
             val bundle = Bundle()
@@ -70,13 +70,13 @@ class CharactersTabFragment : FragmentBindingCreator<FragmentTabCharactersBindin
                 viewModel.startToCollectCharacters(
                     collectionId = collectionId,
                     collectionType = collectionType,
-                    scope = viewModel.viewModelScope,
+                    scope = viewModel.viewModelScope
                 )
                     .subscribe({ characters ->
                         addElementToRecyclerView(characters)
                     }, { error ->
                         error.printStackTrace()
-                    }),
+                    })
             )
         }
     }

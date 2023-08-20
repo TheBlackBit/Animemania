@@ -5,7 +5,7 @@ import com.theblackbit.animemania.android.model.Collection
 import com.theblackbit.animemania.android.model.CollectionType
 
 @Entity(
-    primaryKeys = ["collectionId", "typeOfRequest"],
+    primaryKeys = ["collectionId", "typeOfRequest"]
 )
 data class CollectionEntity(
     val collectionId: String,
@@ -21,7 +21,7 @@ data class CollectionEntity(
     val bigPosterImageUrl: String,
     val status: String,
     val synopsis: String,
-    val page: Int,
+    val page: Int
 )
 
 fun CollectionEntity.toCollection(collectionType: CollectionType): Collection {
@@ -37,6 +37,6 @@ fun CollectionEntity.toCollection(collectionType: CollectionType): Collection {
         miniPosterImageUrl = miniPosterImageUrl,
         bigPosterImageUrl = bigPosterImageUrl,
         status = status,
-        synopsis = synopsis,
+        synopsis = synopsis
     )
 }

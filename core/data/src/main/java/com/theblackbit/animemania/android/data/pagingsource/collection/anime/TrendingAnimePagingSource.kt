@@ -12,22 +12,22 @@ import io.reactivex.rxjava3.core.Single
 class TrendingAnimePagingSource(
     localRepository: CollectionLocalRepository,
     request: (pageLimit: String, pageOffset: String?) -> Single<SafeApiRequest.ApiResultHandle<CollectionResponse>>,
-    requestType: RequestType,
+    requestType: RequestType
 ) : CollectionPagingSource(
     localRepository,
     request,
     requestType,
-    CollectionType.ANIME,
+    CollectionType.ANIME
 ) {
 
     override fun toLoadResult(
         collection: List<Collection>,
-        currentPage: Int,
+        currentPage: Int
     ): LoadResult<Int, Collection> {
         return LoadResult.Page(
             data = collection,
             prevKey = null,
-            nextKey = null,
+            nextKey = null
         )
     }
 }

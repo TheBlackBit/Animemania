@@ -10,3 +10,9 @@ plugins {
     @Suppress("DSL_SCOPE_VIOLATION")
     id(libs.plugins.secrets.get().pluginId) version("2.0.1") apply false
 }
+
+buildscript {
+    dependencies {
+        classpath("org.jlleitschuh.gradle:ktlint-gradle:11.5.1")
+    }
+}

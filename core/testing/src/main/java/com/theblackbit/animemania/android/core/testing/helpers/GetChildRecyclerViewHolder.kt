@@ -16,7 +16,7 @@ import com.theblackbit.animemania.android.core.testing.exception.ChildRecyclerVi
 fun RecyclerView.getChildRecyclerViewHolder(
     positionOfChildRecyclerView: Int,
     childRecyclerViewId: Int,
-    positionOfViewInChildRecyclerView: Int,
+    positionOfViewInChildRecyclerView: Int
 ): RecyclerView.ViewHolder {
     val viewHolder = findViewHolderForAdapterPosition(positionOfChildRecyclerView)
         ?: throw ChildRecyclerViewNotFoundException("No ViewHolder found at position $childRecyclerViewId")
@@ -27,7 +27,7 @@ fun RecyclerView.getChildRecyclerViewHolder(
 
     if (innerRecyclerView !is RecyclerView) {
         throw ChildRecyclerViewNotFoundException(
-            message = "The Id of childRecyclerView not correspond to a RecyclerView at position $childRecyclerViewId. Please verify the Id of your child RecyclerView",
+            message = "The Id of childRecyclerView not correspond to a RecyclerView at position $childRecyclerViewId. Please verify the Id of your child RecyclerView"
         )
     }
 

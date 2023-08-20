@@ -7,18 +7,18 @@ import io.reactivex.rxjava3.core.Single
 
 class AnimeEpisodesByKitsuRepository(
     private val kitsuEpisodesDataSource: KitsuEpisodesDataSource,
-    private val safeApiRequest: SafeApiRequest,
+    private val safeApiRequest: SafeApiRequest
 ) : EpisodesByKitsuRepository {
     override fun getCollectionEpisodes(
         collectionId: String,
         pageNumber: String,
-        pageOffset: String,
+        pageOffset: String
     ): Single<SafeApiRequest.ApiResultHandle<EpisodesResponse>> {
         return safeApiRequest.request {
             kitsuEpisodesDataSource.getEpisodes(
                 collectionId = collectionId,
                 pageNumber = pageNumber,
-                pageOffset = pageOffset,
+                pageOffset = pageOffset
             ).map { it }
         }
     }

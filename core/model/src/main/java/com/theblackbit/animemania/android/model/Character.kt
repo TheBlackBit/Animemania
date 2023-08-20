@@ -4,5 +4,5 @@ data class Character(
     val id: String,
     val name: String,
     val imageUrl: String,
-    val overView: String,
+    val overView: String
 )

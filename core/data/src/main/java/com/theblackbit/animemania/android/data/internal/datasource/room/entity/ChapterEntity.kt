@@ -14,7 +14,7 @@ data class ChapterEntity(
     val number: Int,
     val seasonNumber: Int,
     val imageUrl: String,
-    val pageNumber: Int,
+    val pageNumber: Int
 )
 
 fun ChapterEntity.toChapterModel(): Chapter {
@@ -24,6 +24,6 @@ fun ChapterEntity.toChapterModel(): Chapter {
         synopsis = synopsis,
         number = number.toString(),
         seasonNumber = seasonNumber.toString(),
-        imageUrl = imageUrl,
+        imageUrl = imageUrl
     )
 }

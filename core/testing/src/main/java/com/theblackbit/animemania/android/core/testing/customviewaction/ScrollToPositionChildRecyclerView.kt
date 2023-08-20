@@ -20,7 +20,7 @@ class ScrollToPositionChildRecyclerView(
     private val parentRecyclerViewId: Int,
     private val positionOfChildRecyclerView: Int,
     private val positionOfViewInChildRecyclerView: Int,
-    private val childRecyclerViewId: Int,
+    private val childRecyclerViewId: Int
 
 ) : ViewAction {
     override fun getDescription(): String {
@@ -39,7 +39,7 @@ class ScrollToPositionChildRecyclerView(
             viewHolder?.itemView?.findViewById<RecyclerView>(childRecyclerViewId)
 
         val action = RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
-            positionOfViewInChildRecyclerView,
+            positionOfViewInChildRecyclerView
         )
         action.perform(uiController, innerRecyclerView)
         uiController?.loopMainThreadForAtLeast(1000) // Optional delay after scrolling in order to wait the movement of the item

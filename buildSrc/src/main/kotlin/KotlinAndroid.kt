@@ -25,6 +25,8 @@ internal fun Project.configureKotlinAndroid(
             targetCompatibility = JavaVersion.VERSION_17
         }
 
+        configureKotlin()
+
         testOptions {
             animationsDisabled = true
             unitTests {
@@ -36,6 +38,13 @@ internal fun Project.configureKotlinAndroid(
         buildFeatures {
             buildConfig = true
         }
+
+        packaging {
+            resources {
+                excludes.add("/META-INF/{AL2.0,LGPL2.1}")
+            }
+        }
+
     }
 }
 

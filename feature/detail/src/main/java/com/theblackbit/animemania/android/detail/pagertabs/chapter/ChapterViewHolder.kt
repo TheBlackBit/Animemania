@@ -5,7 +5,7 @@ import com.theblackbit.animemania.android.feature.detail.databinding.ItemChapter
 import com.theblackbit.animemania.android.model.Chapter
 
 class ChapterViewHolder(
-    private val binding: ItemChapterBinding,
+    private val binding: ItemChapterBinding
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(chapter: Chapter) {
         with(binding) {

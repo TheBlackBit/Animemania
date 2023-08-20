@@ -38,8 +38,8 @@ class MangaByKitsuRepositoryTest {
         Mockito.`when`(
             kitsuCollectionDataSource.getTrendingCollection(
                 pageLimit = pageLimit,
-                pageOffset = pageOffset,
-            ),
+                pageOffset = pageOffset
+            )
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
@@ -48,7 +48,7 @@ class MangaByKitsuRepositoryTest {
 
         Mockito.verify(kitsuCollectionDataSource).getTrendingCollection(
             pageLimit = pageLimit,
-            pageOffset = pageOffset,
+            pageOffset = pageOffset
         )
 
         Assert.assertEquals(expectedResponse, actualResponse.value)
@@ -59,8 +59,8 @@ class MangaByKitsuRepositoryTest {
         Mockito.`when`(
             kitsuCollectionDataSource.getMostWantedCollection(
                 pageLimit = pageLimit,
-                pageOffset = pageOffset,
-            ),
+                pageOffset = pageOffset
+            )
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
@@ -69,7 +69,7 @@ class MangaByKitsuRepositoryTest {
 
         Mockito.verify(kitsuCollectionDataSource).getMostWantedCollection(
             pageLimit = pageLimit,
-            pageOffset = pageOffset,
+            pageOffset = pageOffset
         )
 
         Assert.assertEquals(expectedResponse, actualResponse.value)
@@ -80,8 +80,8 @@ class MangaByKitsuRepositoryTest {
         Mockito.`when`(
             kitsuCollectionDataSource.getTopRatedCollection(
                 pageLimit = pageLimit,
-                pageOffset = pageOffset,
-            ),
+                pageOffset = pageOffset
+            )
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
@@ -90,7 +90,7 @@ class MangaByKitsuRepositoryTest {
 
         Mockito.verify(kitsuCollectionDataSource).getTopRatedCollection(
             pageLimit = pageLimit,
-            pageOffset = pageOffset,
+            pageOffset = pageOffset
         )
 
         Assert.assertEquals(expectedResponse, actualResponse.value)
@@ -101,8 +101,8 @@ class MangaByKitsuRepositoryTest {
         Mockito.`when`(
             kitsuCollectionDataSource.getPopularCollection(
                 pageLimit = pageLimit,
-                pageOffset = pageOffset,
-            ),
+                pageOffset = pageOffset
+            )
         ).thenReturn(Single.just(expectedResponse))
 
         val actualResponse =
@@ -111,7 +111,7 @@ class MangaByKitsuRepositoryTest {
 
         Mockito.verify(kitsuCollectionDataSource).getPopularCollection(
             pageLimit = pageLimit,
-            pageOffset = pageOffset,
+            pageOffset = pageOffset
         )
 
         Assert.assertEquals(expectedResponse, actualResponse.value)

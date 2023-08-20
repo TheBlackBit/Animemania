@@ -42,9 +42,9 @@ class CharactersByKitsuRepositoryImplTest {
                 CharacterData(
                     attributes = null,
                     id = null,
-                    type = null,
-                ),
-            ),
+                    type = null
+                )
+            )
         )
 
         `when`(
@@ -52,22 +52,22 @@ class CharactersByKitsuRepositoryImplTest {
                 mediaType = mediaType,
                 collectionId = collectionId,
                 pageNumber = pageNumber,
-                pageOffset = pageOffset,
-            ),
+                pageOffset = pageOffset
+            )
         ).thenReturn(Single.just(expectedCharacterData))
 
         val actualCharacterData = charactersByKitsuRepository.getCollectionCharacters(
             mediaType = mediaType,
             collectionId = collectionId,
             pageNumber = pageNumber,
-            pageOffset = pageOffset,
+            pageOffset = pageOffset
         ).blockingGet() as SafeApiRequest.ApiResultHandle.Success
 
         verify(kitsuCharacterDataSource).getCollectionCharacters(
             mediaType = mediaType,
             collectionId = collectionId,
             pageNumber = pageNumber,
-            pageOffset = pageOffset,
+            pageOffset = pageOffset
         )
 
         assertEquals(expectedCharacterData, actualCharacterData.value)

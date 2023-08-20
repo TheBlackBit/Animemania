@@ -13,6 +13,6 @@ interface KitsuEpisodesDataSource {
         @Query("filter[media_id]") collectionId: String,
         @Query("sort") sort: String = NUMBER,
         @Query("page[limit]") pageNumber: String,
-        @Query("page[offset]") pageOffset: String,
+        @Query("page[offset]") pageOffset: String
     ): Single<EpisodesResponse>
 }

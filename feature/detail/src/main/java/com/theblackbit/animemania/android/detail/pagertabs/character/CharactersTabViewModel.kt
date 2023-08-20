@@ -11,12 +11,12 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class CharactersTabViewModel(
-    private val charactersUseCase: CollectCharactersUseCase,
+    private val charactersUseCase: CollectCharactersUseCase
 ) : ViewModel() {
     fun startToCollectCharacters(
         collectionId: String,
         collectionType: String,
-        scope: CoroutineScope,
+        scope: CoroutineScope
     ): Flowable<PagingData<Character>> {
         return charactersUseCase.collect(collectionId, collectionType)
             .cachedIn(scope)

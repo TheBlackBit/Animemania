@@ -10,7 +10,7 @@ val roomDbModule = module {
         Room.databaseBuilder(
             context = androidContext(),
             klass = AnimeManiaRoom::class.java,
-            name = "animemania_db",
+            name = "animemania_db"
         ).build()
     }
 }

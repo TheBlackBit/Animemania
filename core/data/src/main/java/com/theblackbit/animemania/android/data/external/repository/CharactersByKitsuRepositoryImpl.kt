@@ -7,20 +7,20 @@ import io.reactivex.rxjava3.core.Single
 
 class CharactersByKitsuRepositoryImpl(
     private val kitsuCharacterDataSource: KitsuCharacterDataSource,
-    private val safeApiRequest: SafeApiRequest,
+    private val safeApiRequest: SafeApiRequest
 ) : CharacterByKitsuRepository {
     override fun getCollectionCharacters(
         mediaType: String,
         collectionId: String,
         pageNumber: String,
-        pageOffset: String?,
+        pageOffset: String?
     ): Single<SafeApiRequest.ApiResultHandle<CharacterResponse>> {
         return safeApiRequest.request {
             kitsuCharacterDataSource.getCollectionCharacters(
                 mediaType = mediaType,
                 collectionId = collectionId,
                 pageNumber = pageNumber,
-                pageOffset = pageOffset,
+                pageOffset = pageOffset
             ).map {
                 it
             }

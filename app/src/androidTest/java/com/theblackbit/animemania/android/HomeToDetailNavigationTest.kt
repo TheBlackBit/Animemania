@@ -55,8 +55,8 @@ class HomeToDetailNavigationTest : KoinTest {
             collectMangaUseCaseModule,
             homeViewModelModule,
             chapterTabViewModelModule,
-            characterTabViewModelModule,
-        ),
+            characterTabViewModelModule
+        )
     )
 
     @Test
@@ -93,24 +93,24 @@ class HomeToDetailNavigationTest : KoinTest {
         onView(withId(homeR.id.rv_data))
             .perform(
                 RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
-                    0,
-                ),
+                    0
+                )
             )
             .perform(
                 ScrollToPositionChildRecyclerView(
                     parentRecyclerViewId = homeR.id.rv_data,
                     positionOfChildRecyclerView = 0,
                     positionOfViewInChildRecyclerView = 0,
-                    childRecyclerViewId = homeR.id.rv_data_container,
-                ),
+                    childRecyclerViewId = homeR.id.rv_data_container
+                )
             )
             .perform(
                 ClickItemOnChildRecyclerViewItem<DataViewHolder>(
                     parentRecyclerViewId = homeR.id.rv_data,
                     positionOfChildRecyclerView = 0,
                     positionOfViewInChildRecyclerView = 0,
-                    childRecyclerViewId = homeR.id.rv_data_container,
-                ),
+                    childRecyclerViewId = homeR.id.rv_data_container
+                )
             )
 
         onView(ViewMatchers.isRoot()).perform(WaitFor(200L))
@@ -131,7 +131,7 @@ class HomeToDetailNavigationTest : KoinTest {
             status = "current",
             averageRating = "83.69%",
             startDate = "1999-10-20",
-            endDate = "",
+            endDate = ""
         )
         pressBack()
         onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
@@ -144,7 +144,7 @@ class HomeToDetailNavigationTest : KoinTest {
             status = "upcoming",
             averageRating = "",
             startDate = "2023-10-31",
-            endDate = "",
+            endDate = ""
         )
         pressBack()
         onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
@@ -157,7 +157,7 @@ class HomeToDetailNavigationTest : KoinTest {
             status = "finished",
             averageRating = "87.43%",
             startDate = "2021-12-05",
-            endDate = "2022-02-13",
+            endDate = "2022-02-13"
         )
         pressBack()
         onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
@@ -170,7 +170,7 @@ class HomeToDetailNavigationTest : KoinTest {
             status = "finished",
             averageRating = "84.92%",
             startDate = "2013-04-07",
-            endDate = "2013-09-29",
+            endDate = "2013-09-29"
         )
         pressBack()
         onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
@@ -183,7 +183,7 @@ class HomeToDetailNavigationTest : KoinTest {
             status = "current",
             averageRating = "80.04%",
             startDate = "2017-06-01",
-            endDate = "",
+            endDate = ""
         )
         pressBack()
         onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
@@ -196,7 +196,7 @@ class HomeToDetailNavigationTest : KoinTest {
             status = "current",
             averageRating = "",
             startDate = "2023-06-23",
-            endDate = "",
+            endDate = ""
         )
         pressBack()
         onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
@@ -209,7 +209,7 @@ class HomeToDetailNavigationTest : KoinTest {
             status = "current",
             averageRating = "85.01%",
             startDate = "2014-07-07",
-            endDate = "",
+            endDate = ""
         )
         pressBack()
         onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
@@ -222,7 +222,7 @@ class HomeToDetailNavigationTest : KoinTest {
             status = "current",
             averageRating = "85.01%",
             startDate = "2014-07-07",
-            endDate = "",
+            endDate = ""
         )
         pressBack()
         onView(ViewMatchers.isRoot()).perform(WaitFor(500L))
@@ -234,29 +234,29 @@ class HomeToDetailNavigationTest : KoinTest {
         status: String,
         averageRating: String,
         startDate: String,
-        endDate: String,
+        endDate: String
     ) {
         onView(withId(homeR.id.rv_data))
             .perform(
                 RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
-                    parentIndex,
-                ),
+                    parentIndex
+                )
             )
             .perform(
                 ScrollToPositionChildRecyclerView(
                     parentRecyclerViewId = homeR.id.rv_data,
                     positionOfChildRecyclerView = parentIndex,
                     positionOfViewInChildRecyclerView = 0,
-                    childRecyclerViewId = homeR.id.rv_data_container,
-                ),
+                    childRecyclerViewId = homeR.id.rv_data_container
+                )
             )
             .perform(
                 ClickItemOnChildRecyclerViewItem<DataViewHolder>(
                     parentRecyclerViewId = homeR.id.rv_data,
                     positionOfChildRecyclerView = parentIndex,
                     positionOfViewInChildRecyclerView = 0,
-                    childRecyclerViewId = homeR.id.rv_data_container,
-                ),
+                    childRecyclerViewId = homeR.id.rv_data_container
+                )
             )
 
         onView(ViewMatchers.isRoot()).perform(WaitFor(1000L))

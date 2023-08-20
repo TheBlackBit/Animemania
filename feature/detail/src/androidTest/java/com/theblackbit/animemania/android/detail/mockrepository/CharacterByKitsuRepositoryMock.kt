@@ -16,7 +16,7 @@ class CharacterByKitsuRepositoryMock(private val context: Context) :
         mediaType: String,
         collectionId: String,
         pageNumber: String,
-        pageOffset: String?,
+        pageOffset: String?
     ): Single<SafeApiRequest.ApiResultHandle<CharacterResponse>> {
         return when (mediaType) {
             KitsuMediaType.ANIME_MEDIA_TYPE -> animeCharacters(pageOffset, collectionId)
@@ -26,18 +26,18 @@ class CharacterByKitsuRepositoryMock(private val context: Context) :
 
     private fun animeCharacters(
         pageOffset: String?,
-        collectionId: String,
+        collectionId: String
     ): Single<SafeApiRequest.ApiResultHandle<CharacterResponse>> {
         val delay = if (pageOffset == null) 1L else 0
         val response = when {
             (pageOffset == null && collectionId == VALID_COLLECTION_ANIME_ID) -> jsonFileToKotlinClass(
                 context,
-                "onepiece_anime_characters_first_page_test.json",
+                "onepiece_anime_characters_first_page_test.json"
             )
 
             (pageOffset == CharacterPagingSourceFactory.CHARACTER_PAGE_LIMIT.toString() && collectionId == VALID_COLLECTION_ANIME_ID) -> jsonFileToKotlinClass(
                 context,
-                "onepiece_anime_characters_second_page_test.json",
+                "onepiece_anime_characters_second_page_test.json"
             )
 
             else -> CharacterResponse(emptyList())
@@ -45,25 +45,25 @@ class CharacterByKitsuRepositoryMock(private val context: Context) :
 
         return Single.just<SafeApiRequest.ApiResultHandle<CharacterResponse>>(
             SafeApiRequest.ApiResultHandle.Success(
-                response,
-            ),
+                response
+            )
         ).delay(delay, TimeUnit.SECONDS)
     }
 
     private fun mangaCharacters(
         pageOffset: String?,
-        collectionId: String,
+        collectionId: String
     ): Single<SafeApiRequest.ApiResultHandle<CharacterResponse>> {
         val delay = if (pageOffset == null) 1L else 0
         val response = when {
             (pageOffset == null && collectionId == VALID_COLLECTION_ID_MANGA) -> jsonFileToKotlinClass(
                 context,
-                "berserk_manga_characters_response_first_page_test.json",
+                "berserk_manga_characters_response_first_page_test.json"
             )
 
             (pageOffset == CharacterPagingSourceFactory.CHARACTER_PAGE_LIMIT.toString() && collectionId == VALID_COLLECTION_ANIME_ID) -> jsonFileToKotlinClass(
                 context,
-                "berserk_manga_characters_response_second_page.json",
+                "berserk_manga_characters_response_second_page.json"
             )
 
             else -> CharacterResponse(emptyList())
@@ -71,8 +71,8 @@ class CharacterByKitsuRepositoryMock(private val context: Context) :
 
         return Single.just<SafeApiRequest.ApiResultHandle<CharacterResponse>>(
             SafeApiRequest.ApiResultHandle.Success(
-                response,
-            ),
+                response
+            )
         ).delay(delay, TimeUnit.SECONDS)
     }
 }

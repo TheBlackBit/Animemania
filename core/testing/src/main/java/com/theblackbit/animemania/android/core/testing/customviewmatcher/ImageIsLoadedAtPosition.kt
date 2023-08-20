@@ -8,7 +8,7 @@ import org.hamcrest.Description
 
 class ImageIsLoadedAtPosition(
     private val position: Int,
-    private val imageViewId: Int,
+    private val imageViewId: Int
 ) : BaseMatcher<View>() {
     override fun describeTo(description: Description?) {
         description?.appendText("Image is loaded with id $imageViewId at position $position")

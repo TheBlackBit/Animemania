@@ -11,10 +11,10 @@ import io.reactivex.rxjava3.core.Single
 class MostAnticipatedAnimePagingSource(
     localRepository: CollectionLocalRepository,
     request: (pageLimit: String, pageOffset: String?) -> Single<SafeApiRequest.ApiResultHandle<CollectionResponse>>,
-    requestType: RequestType,
+    requestType: RequestType
 ) : CollectionPagingSource(
     localRepository,
     request,
     requestType,
-    CollectionType.ANIME,
+    CollectionType.ANIME
 )

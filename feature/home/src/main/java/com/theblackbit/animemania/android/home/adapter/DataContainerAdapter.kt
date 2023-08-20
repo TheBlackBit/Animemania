@@ -7,14 +7,14 @@ import com.theblackbit.animemania.android.feature.home.R
 import com.theblackbit.animemania.android.feature.home.databinding.ItemDataContainerBinding
 
 class DataContainerAdapter(
-    private val data: List<Pair<DataAdapter, String>>,
+    private val data: List<Pair<DataAdapter, String>>
 ) : RecyclerView.Adapter<DataContainerViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataContainerViewHolder {
         val binding =
             ItemDataContainerBinding.bind(parent.viewForViewDataBinding(R.layout.item_data_container))
         return DataContainerViewHolder(
-            binding,
+            binding
         )
     }
 

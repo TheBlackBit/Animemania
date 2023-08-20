@@ -33,7 +33,7 @@ class CollectionViewModelTest {
     fun setUp() {
         sut = CollectionViewModel(
             collectAnimeDataUseCase,
-            collectMangaDataUseCase,
+            collectMangaDataUseCase
         )
     }
 

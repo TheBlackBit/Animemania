@@ -44,7 +44,7 @@ class TestCollectionsDao {
 
         collectionDao.collectPagedCollectionsByTypeOfRequest(
             pageNumber = pageNumber,
-            typeOfRequest = "TRENDING_ANIME",
+            typeOfRequest = "TRENDING_ANIME"
         )
             .test()
             .assertValue { collectionCategory ->
@@ -66,7 +66,7 @@ class TestCollectionsDao {
 
         collectionDao.collectPagedCollectionsByTypeOfRequest(
             pageNumber = pageNumber,
-            typeOfRequest = "TRENDING_ANIME",
+            typeOfRequest = "TRENDING_ANIME"
         )
             .test()
             .assertValue {

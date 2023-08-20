@@ -7,6 +7,6 @@ import io.reactivex.rxjava3.core.Flowable
 
 interface CollectCollectionDataUseCase {
     fun collectByCategory(
-        requestType: RequestType,
+        requestType: RequestType
     ): Flowable<PagingData<Collection>>
 }

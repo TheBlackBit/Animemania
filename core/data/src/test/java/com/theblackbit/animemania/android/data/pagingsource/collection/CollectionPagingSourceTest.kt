@@ -33,7 +33,7 @@ class CollectionPagingSourceTest {
     private val pageLimit = 20
 
     private val collectionResponse = CollectionResponse(
-        collectionData = collectionDataList,
+        collectionData = collectionDataList
     )
 
     @Test
@@ -42,7 +42,7 @@ class CollectionPagingSourceTest {
             it.toCollectionEntity(
                 collectionType = CollectionType.ANIME.collectionName,
                 typeOfRequest = RequestType.TRENDING_ANIME,
-                page = 1,
+                page = 1
             )
         }
 
@@ -56,26 +56,26 @@ class CollectionPagingSourceTest {
                 Single.just(SafeApiRequest.ApiResultHandle.Success(collectionResponse))
             },
             requestType = RequestType.TRENDING_ANIME,
-            collectionType = CollectionType.ANIME,
+            collectionType = CollectionType.ANIME
         )
         val pageNumber = 1
 
         Mockito.`when`(
             localRepository.collectPagedCollections(
                 pageNumber,
-                requestType = RequestType.TRENDING_ANIME,
-            ),
+                requestType = RequestType.TRENDING_ANIME
+            )
         ).thenReturn(
             Single.just(
-                collectionEntities,
-            ),
+                collectionEntities
+            )
         )
 
         val pager = TestPager(
             config = PagingConfig(
-                pageSize = pageLimit,
+                pageSize = pageLimit
             ),
-            pagingSource = collectionPagingSource,
+            pagingSource = collectionPagingSource
         )
 
         val page = with(pager) {
@@ -97,7 +97,7 @@ class CollectionPagingSourceTest {
             it.toCollectionEntity(
                 collectionType = CollectionType.ANIME.collectionName,
                 typeOfRequest = RequestType.TRENDING_ANIME,
-                page = pageNumber,
+                page = pageNumber
             )
         }
 
@@ -111,25 +111,25 @@ class CollectionPagingSourceTest {
                 Single.just(SafeApiRequest.ApiResultHandle.Success(collectionResponse))
             },
             requestType = RequestType.TRENDING_ANIME,
-            collectionType = CollectionType.ANIME,
+            collectionType = CollectionType.ANIME
         )
 
         Mockito.`when`(
             localRepository.collectPagedCollections(
                 pageNumber,
-                requestType = RequestType.TRENDING_ANIME,
-            ),
+                requestType = RequestType.TRENDING_ANIME
+            )
         ).thenReturn(
             Single.just(
-                collectionEntities,
-            ),
+                collectionEntities
+            )
         )
 
         val pager = TestPager(
             config = PagingConfig(
-                pageSize = pageLimit,
+                pageSize = pageLimit
             ),
-            pagingSource = collectionPagingSource,
+            pagingSource = collectionPagingSource
         )
 
         val page = with(pager) {
@@ -152,7 +152,7 @@ class CollectionPagingSourceTest {
             it.toCollectionEntity(
                 collectionType = CollectionType.ANIME.collectionName,
                 typeOfRequest = RequestType.TRENDING_ANIME,
-                page = pageNumber,
+                page = pageNumber
             )
         }
 
@@ -166,22 +166,22 @@ class CollectionPagingSourceTest {
                 Single.just(SafeApiRequest.ApiResultHandle.ApiError)
             },
             requestType = RequestType.TRENDING_ANIME,
-            collectionType = CollectionType.ANIME,
+            collectionType = CollectionType.ANIME
         )
 
         Mockito.`when`(
-            localRepository.collectPagedCollections(pageNumber, RequestType.TRENDING_ANIME),
+            localRepository.collectPagedCollections(pageNumber, RequestType.TRENDING_ANIME)
         ).thenReturn(
             Single.just(
-                collectionEntities,
-            ),
+                collectionEntities
+            )
         )
 
         val pager = TestPager(
             config = PagingConfig(
-                pageSize = pageLimit,
+                pageSize = pageLimit
             ),
-            pagingSource = collectionPagingSource,
+            pagingSource = collectionPagingSource
         )
 
         val page = with(pager) {

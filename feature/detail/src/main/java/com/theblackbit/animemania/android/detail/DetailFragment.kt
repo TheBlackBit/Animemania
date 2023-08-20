@@ -38,7 +38,7 @@ class DetailFragment : Fragment(), OnBackNavigation {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?,
+        savedInstanceState: Bundle?
     ): View {
         if (!::binding.isInitialized) {
             binding = FragmentDetailBinding.inflate(inflater, container, false)
@@ -88,7 +88,7 @@ class DetailFragment : Fragment(), OnBackNavigation {
                 endDate = endDate,
                 genres = genres,
                 overview = overview,
-                collectionType = getValidCollectionType(collectionType),
+                collectionType = getValidCollectionType(collectionType)
             )
             configTabLayout()
         }
@@ -108,7 +108,7 @@ class DetailFragment : Fragment(), OnBackNavigation {
         startDate: String,
         endDate: String,
         genres: String,
-        overview: String,
+        overview: String
 
     ) {
         detailTabAdapter = DetailTabAdapter(
@@ -119,11 +119,11 @@ class DetailFragment : Fragment(), OnBackNavigation {
                     startDate = startDate,
                     endDate = endDate,
                     genres = genres,
-                    synopsis = overview,
+                    synopsis = overview
                 ),
                 ChaptersTabFragment.createFragment(collectionId, collectionType),
-                CharactersTabFragment.createFragment(collectionId, collectionType),
-            ),
+                CharactersTabFragment.createFragment(collectionId, collectionType)
+            )
         )
         binding.vpInfo.adapter = detailTabAdapter
     }

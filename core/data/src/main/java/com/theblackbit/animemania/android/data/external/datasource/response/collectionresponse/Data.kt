@@ -6,13 +6,13 @@ import com.theblackbit.animemania.android.data.internal.datasource.room.entity.C
 data class Data(
     val attributes: Attributes?,
     val id: String?,
-    val type: String?,
+    val type: String?
 )
 
 fun Data.toCollectionEntity(
     collectionType: String,
     typeOfRequest: RequestType,
-    page: Int,
+    page: Int
 ): CollectionEntity {
     return CollectionEntity(
         collectionId = id ?: "-1",
@@ -28,6 +28,6 @@ fun Data.toCollectionEntity(
         status = attributes?.status ?: "",
         synopsis = attributes?.synopsis ?: "",
         typeOfRequest = typeOfRequest.name,
-        page = page,
+        page = page
     )
 }

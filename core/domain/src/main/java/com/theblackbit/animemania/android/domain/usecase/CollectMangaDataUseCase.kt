@@ -11,17 +11,17 @@ import com.theblackbit.animemania.android.model.Collection
 import io.reactivex.rxjava3.core.Flowable
 
 class CollectMangaDataUseCase(
-    private val pagingSourceFactory: MangaPagingSourceFactory,
+    private val pagingSourceFactory: MangaPagingSourceFactory
 ) : CollectCollectionDataUseCase {
     override fun collectByCategory(requestType: RequestType): Flowable<PagingData<Collection>> {
         return Pager(
             config = PagingConfig(
                 pageSize = CollectionPagingSource.COLLECTION_PAGE_LIMIT,
-                prefetchDistance = CollectionPagingSource.COLLECTION_PAGE_LIMIT / 2,
+                prefetchDistance = CollectionPagingSource.COLLECTION_PAGE_LIMIT / 2
             ),
             pagingSourceFactory = {
                 pagingSourceFactory.getMangaPagingSource(requestType)
-            },
+            }
         ).flowable
     }
 }

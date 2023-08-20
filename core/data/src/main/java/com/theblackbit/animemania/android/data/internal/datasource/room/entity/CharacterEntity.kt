@@ -12,7 +12,7 @@ data class CharacterEntity(
     val imageUrl: String,
     val collectionId: String,
     val overView: String,
-    val page: Int,
+    val page: Int
 )
 
 fun CharacterEntity.toCharacterModel(): Character {
@@ -20,6 +20,6 @@ fun CharacterEntity.toCharacterModel(): Character {
         id = characterId,
         name = name,
         imageUrl = imageUrl,
-        overView = overView,
+        overView = overView
     )
 }

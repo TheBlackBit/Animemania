@@ -11,7 +11,7 @@ val homeViewModelModule = module {
     viewModel {
         CollectionViewModel(
             collectAnimeDataUseCase = get(qualifier = named(ANIME_COLLECTION_QUALIFIER)),
-            collectMangaDataUseCase = get(qualifier = named(MANGA_COLLECTION_QUALIFIER)),
+            collectMangaDataUseCase = get(qualifier = named(MANGA_COLLECTION_QUALIFIER))
         )
     }
 }

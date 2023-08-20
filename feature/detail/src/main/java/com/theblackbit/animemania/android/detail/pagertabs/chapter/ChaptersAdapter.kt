@@ -9,7 +9,7 @@ import com.theblackbit.animemania.android.model.Chapter
 
 class ChaptersAdapter(diffCallback: ChapterDiffCallback) :
     PagingDataAdapter<Chapter, ChapterViewHolder>(
-        diffCallback,
+        diffCallback
     ) {
 
     override fun onBindViewHolder(holder: ChapterViewHolder, position: Int) {
@@ -21,7 +21,7 @@ class ChaptersAdapter(diffCallback: ChapterDiffCallback) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChapterViewHolder {
         val binding = ItemChapterBinding.bind(parent.viewForViewDataBinding(R.layout.item_chapter))
         return ChapterViewHolder(
-            binding,
+            binding
         )
     }
 }

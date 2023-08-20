@@ -8,7 +8,7 @@ val animeRepositoryModule = module {
     single<AnimeRemoteRepository> {
         AnimeByKitsuRemoteRepository(
             get(),
-            get(),
+            get()
         )
     }
 }

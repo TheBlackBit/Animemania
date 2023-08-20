@@ -5,7 +5,7 @@ import com.theblackbit.animemania.android.data.internal.datasource.room.entity.C
 import io.reactivex.rxjava3.core.Single
 
 class ChapterRoomRepository(
-    private val chapterDao: ChapterDao,
+    private val chapterDao: ChapterDao
 ) : ChapterLocalRepository {
     override fun insertChapters(chapters: List<ChapterEntity>) {
         chapterDao.insertChapters(chapters)
@@ -13,11 +13,11 @@ class ChapterRoomRepository(
 
     override fun getChaptersByCollection(
         collectionId: String,
-        pageNumber: Int,
+        pageNumber: Int
     ): Single<List<ChapterEntity>> {
         return chapterDao.getChaptersByCollection(
             collectionId = collectionId,
-            pageNumber = pageNumber,
+            pageNumber = pageNumber
         )
     }
 

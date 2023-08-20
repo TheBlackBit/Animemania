@@ -31,7 +31,7 @@ class ChaptersTabFragment : FragmentBindingCreator<FragmentTabChaptersBinding>()
     companion object {
         fun createFragment(
             collectionId: String,
-            collectionType: CollectionType,
+            collectionType: CollectionType
         ): ChaptersTabFragment {
             val fragment = ChaptersTabFragment()
             val bundle = Bundle()
@@ -70,13 +70,13 @@ class ChaptersTabFragment : FragmentBindingCreator<FragmentTabChaptersBinding>()
                 viewModel.startToCollectChapters(
                     collectionId,
                     getCollectionTypeByName(collectionType),
-                    viewModel.viewModelScope,
+                    viewModel.viewModelScope
                 )
                     .subscribe({ chapters ->
                         addElementToRecyclerView(chapters)
                     }, { error ->
                         error.printStackTrace()
-                    }),
+                    })
             )
         }
     }

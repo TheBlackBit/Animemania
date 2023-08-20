@@ -52,8 +52,8 @@ class CollectionTabFragmentTest : KoinTest {
             mangaRemoteRepositoryMock,
             collectAnimeUseCaseModule,
             collectMangaUseCaseModule,
-            homeViewModelModule,
-        ),
+            homeViewModelModule
+        )
     )
 
     /**
@@ -64,7 +64,7 @@ class CollectionTabFragmentTest : KoinTest {
     @Test
     fun testAnimeFetchedWithCategories() {
         launchFragmentInContainer<AnimeTabFragment>(
-            themeResId = resources.style.Theme_Animemania,
+            themeResId = resources.style.Theme_Animemania
         )
 
         testProgressBarIsVisible()
@@ -92,7 +92,7 @@ class CollectionTabFragmentTest : KoinTest {
     @Test
     fun testMangaFetchedWithCategories() {
         launchFragmentInContainer<MangaTabFragment>(
-            themeResId = resources.style.Theme_Animemania,
+            themeResId = resources.style.Theme_Animemania
         )
 
         testProgressBarIsVisible()
@@ -122,7 +122,7 @@ class CollectionTabFragmentTest : KoinTest {
         testFirstAndLastItemCollection(
             positionOfChildRecyclerView = 0,
             firstItemTitle = "One Piece",
-            lastItemTitle = "Black Clover",
+            lastItemTitle = "Black Clover"
         )
     }
 
@@ -136,7 +136,7 @@ class CollectionTabFragmentTest : KoinTest {
         testFirstAndLastItemCollection(
             positionOfChildRecyclerView = 1,
             firstItemTitle = "SPY×FAMILY Season 2",
-            lastItemTitle = "Saint Seiya: Knights of the Zodiac Season 3",
+            lastItemTitle = "Saint Seiya: Knights of the Zodiac Season 3"
         )
 
         testSizeOfChildRecyclerViewRecyclerView(expectedCount = 22, positionOfChildRecyclerView = 1)
@@ -152,7 +152,7 @@ class CollectionTabFragmentTest : KoinTest {
         testFirstAndLastItemCollection(
             positionOfChildRecyclerView = 2,
             firstItemTitle = "Kimetsu no Yaiba: Yuukaku-hen",
-            lastItemTitle = "Boku no Hero Academia 3",
+            lastItemTitle = "Boku no Hero Academia 3"
         )
 
         testSizeOfChildRecyclerViewRecyclerView(expectedCount = 40, positionOfChildRecyclerView = 2)
@@ -168,7 +168,7 @@ class CollectionTabFragmentTest : KoinTest {
         testFirstAndLastItemCollection(
             positionOfChildRecyclerView = 3,
             firstItemTitle = "Attack on Titan",
-            lastItemTitle = "Nanatsu no Taizai: Imashime no Fukkatsu",
+            lastItemTitle = "Nanatsu no Taizai: Imashime no Fukkatsu"
         )
 
         testSizeOfChildRecyclerViewRecyclerView(expectedCount = 40, positionOfChildRecyclerView = 3)
@@ -184,7 +184,7 @@ class CollectionTabFragmentTest : KoinTest {
         testFirstAndLastItemCollection(
             positionOfChildRecyclerView = 0,
             firstItemTitle = "Martial Peak",
-            lastItemTitle = "Komi-san wa, Comyushou desu.",
+            lastItemTitle = "Komi-san wa, Comyushou desu."
         )
     }
 
@@ -198,7 +198,7 @@ class CollectionTabFragmentTest : KoinTest {
         testFirstAndLastItemCollection(
             positionOfChildRecyclerView = 1,
             firstItemTitle = "Mushoku Tensei: Dasoku-hen",
-            lastItemTitle = "Naneun Yeowangida",
+            lastItemTitle = "Naneun Yeowangida"
         )
 
         testSizeOfChildRecyclerViewRecyclerView(expectedCount = 33, positionOfChildRecyclerView = 1)
@@ -214,7 +214,7 @@ class CollectionTabFragmentTest : KoinTest {
         testFirstAndLastItemCollection(
             positionOfChildRecyclerView = 2,
             firstItemTitle = "Boku no Hero Academia",
-            lastItemTitle = "Jibaku Shounen Hanako-kun",
+            lastItemTitle = "Jibaku Shounen Hanako-kun"
         )
 
         testSizeOfChildRecyclerViewRecyclerView(expectedCount = 40, positionOfChildRecyclerView = 2)
@@ -229,7 +229,7 @@ class CollectionTabFragmentTest : KoinTest {
         testFirstAndLastItemCollection(
             positionOfChildRecyclerView = 3,
             firstItemTitle = "Boku no Hero Academia",
-            lastItemTitle = "Solo Leveling",
+            lastItemTitle = "Solo Leveling"
         )
 
         testSizeOfChildRecyclerViewRecyclerView(expectedCount = 40, positionOfChildRecyclerView = 3)
@@ -237,7 +237,7 @@ class CollectionTabFragmentTest : KoinTest {
 
     private fun testSizeOfChildRecyclerViewRecyclerView(
         positionOfChildRecyclerView: Int,
-        expectedCount: Int,
+        expectedCount: Int
 
     ) {
         onView(withId(R.id.rv_data))
@@ -246,9 +246,9 @@ class CollectionTabFragmentTest : KoinTest {
                     ChildRecyclerViewItemCountAssertion(
                         positionOfChildRecyclerView = positionOfChildRecyclerView,
                         childRecyclerViewId = R.id.rv_data_container,
-                        expectedCount,
-                    ),
-                ),
+                        expectedCount
+                    )
+                )
             )
     }
 
@@ -275,8 +275,8 @@ class CollectionTabFragmentTest : KoinTest {
         onView(withId(R.id.rv_data))
             .perform(
                 RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
-                    position,
-                ),
+                    position
+                )
             )
     }
 
@@ -290,25 +290,25 @@ class CollectionTabFragmentTest : KoinTest {
         firstPosition: Int = 0,
         lastPosition: Int = 19,
         firstItemTitle: String,
-        lastItemTitle: String,
+        lastItemTitle: String
     ) {
         testViewsInsideChildRecyclerView(
             positionOfParentRV = positionOfChildRecyclerView,
             positionOfChildRV = firstPosition,
-            title = firstItemTitle,
+            title = firstItemTitle
         )
 
         testViewsInsideChildRecyclerView(
             positionOfParentRV = positionOfChildRecyclerView,
             positionOfChildRV = lastPosition,
-            title = lastItemTitle,
+            title = lastItemTitle
         )
     }
 
     private fun testViewsInsideChildRecyclerView(
         positionOfParentRV: Int,
         positionOfChildRV: Int,
-        title: String,
+        title: String
     ) {
         onView(withId(R.id.rv_data))
             .perform(
@@ -316,8 +316,8 @@ class CollectionTabFragmentTest : KoinTest {
                     parentRecyclerViewId = R.id.rv_data,
                     positionOfChildRecyclerView = positionOfParentRV,
                     positionOfViewInChildRecyclerView = positionOfChildRV,
-                    childRecyclerViewId = R.id.rv_data_container,
-                ),
+                    childRecyclerViewId = R.id.rv_data_container
+                )
             )
             .check(
                 matches(
@@ -326,9 +326,9 @@ class CollectionTabFragmentTest : KoinTest {
                         childRecyclerViewId = R.id.rv_data_container,
                         positionOfViewInChildRecyclerView = positionOfChildRV,
                         textViewId = R.id.tv_collection_name,
-                        text = title,
-                    ),
-                ),
+                        text = title
+                    )
+                )
             )
             .check(
                 matches(
@@ -336,9 +336,9 @@ class CollectionTabFragmentTest : KoinTest {
                         positionOfChildRecyclerView = positionOfParentRV,
                         childRecyclerViewId = R.id.rv_data_container,
                         positionOfViewInChildRecyclerView = positionOfChildRV,
-                        textViewId = R.id.tv_collection_name,
-                    ),
-                ),
+                        textViewId = R.id.tv_collection_name
+                    )
+                )
             )
             .check(
                 matches(
@@ -347,9 +347,9 @@ class CollectionTabFragmentTest : KoinTest {
                         childRecyclerViewId = R.id.rv_data_container,
                         positionOfViewInChildRecyclerView = positionOfChildRV,
                         textViewId = R.id.tv_collection_name,
-                        maxLines = 2,
-                    ),
-                ),
+                        maxLines = 2
+                    )
+                )
             )
     }
 }

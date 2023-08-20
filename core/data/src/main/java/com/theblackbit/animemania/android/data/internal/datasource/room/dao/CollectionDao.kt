@@ -18,11 +18,11 @@ interface CollectionDao {
     @Query("SELECT * from collectionentity where page =:pageNumber AND typeOfRequest =:typeOfRequest")
     fun collectPagedCollectionsByTypeOfRequest(
         pageNumber: Int,
-        typeOfRequest: String,
+        typeOfRequest: String
     ): Single<List<CollectionEntity>>
 
     @Query("DELETE from collectionentity  where typeOfRequest=:typeOfRequest")
     fun clearCollectioncategoryjoinentity(
-        typeOfRequest: String,
+        typeOfRequest: String
     )
 }

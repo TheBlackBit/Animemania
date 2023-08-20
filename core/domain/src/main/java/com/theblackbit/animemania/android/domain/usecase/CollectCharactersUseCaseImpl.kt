@@ -9,21 +9,21 @@ import com.theblackbit.animemania.android.model.Character
 import io.reactivex.rxjava3.core.Flowable
 
 class CollectCharactersUseCaseImpl(
-    private val characterPagingSourceFactory: CharacterPagingSourceFactory,
+    private val characterPagingSourceFactory: CharacterPagingSourceFactory
 ) : CollectCharactersUseCase {
     override fun collect(collectionId: String, mediaType: String): Flowable<PagingData<Character>> {
         return Pager(
             config = PagingConfig(
                 pageSize = CharacterPagingSourceFactory.CHARACTER_PAGE_LIMIT,
                 prefetchDistance = CharacterPagingSourceFactory.CHARACTER_PAGE_LIMIT / 2,
-                enablePlaceholders = false,
+                enablePlaceholders = false
             ),
             pagingSourceFactory = {
                 characterPagingSourceFactory.getCharacterPagingSourceByMediaType(
                     collectionId,
-                    mediaType,
+                    mediaType
                 )
-            },
+            }
         ).flowable
     }
 }
