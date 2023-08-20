@@ -23,9 +23,22 @@ platform :android do
    end
 
    desc 'Lint verification'
-     lane :lint_verification do
-       gradle(task: "clean")
-       gradle(task: "ktlintCheck")
-     end
+   lane :lint_verification do
+     gradle(task: "clean")
+     gradle(task: "ktlintCheck")
+   end
+
+   desc 'Unit test verification'
+   lane :unit_test_verification do
+     gradle(task: "clean")
+     gradle(task: "testDebugUnitTest")
+   end
+
+
+   desc 'Generate coverage report'
+   lane :coverage_report do
+     gradle(task: "clean")
+     gradle(task: "jacocoMergedReport")
+   end
 
 end
