@@ -23,16 +23,9 @@ android {
         }
 
         getByName("debug") {
-            applicationIdSuffix = ".dev"
             isDebuggable = true
             enableUnitTestCoverage = true
             enableAndroidTestCoverage = true
-        }
-    }
-
-    packaging {
-        resources {
-            excludes.add("/META-INF/{AL2.0,LGPL2.1}")
         }
     }
 }

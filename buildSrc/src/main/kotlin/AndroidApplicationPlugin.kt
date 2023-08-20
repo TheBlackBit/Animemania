@@ -1,15 +1,11 @@
 import com.android.build.api.dsl.ApplicationExtension
-import com.android.build.api.dsl.CommonExtension
-import org.gradle.api.JavaVersion
+import com.android.build.api.variant.ApplicationAndroidComponentsExtension
+import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.artifacts.VersionCatalog
-import org.gradle.api.artifacts.VersionCatalogsExtension
-import org.gradle.api.plugins.JavaPluginExtension
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.getByType
-
 
 class AndroidApplicationPlugin : Plugin<Project> {
     override fun apply(target: Project) {
@@ -17,8 +13,9 @@ class AndroidApplicationPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("com.android.application")
                 apply("org.jetbrains.kotlin.android")
-                apply("kotlin-kapt")
                 apply("org.jlleitschuh.gradle.ktlint")
+                apply("org.gradle.jacoco")
+                apply("kotlin-kapt")
             }
             extensions.configure<ApplicationExtension> {
                 configureKotlinAndroid(this)
@@ -28,6 +25,9 @@ class AndroidApplicationPlugin : Plugin<Project> {
                 buildFeatures.dataBinding = true
                 buildFeatures.viewBinding = true
             }
+
+            configureJacoco()
+
 
             rxDependencies()
             coreDependencies()
