@@ -1,0 +1,33 @@
+name: Test verification
+run-name: ${{ github.actor }} Start Test verification
+on:
+  pull_request:
+    types: [opened, reopened]
+    branches:
+      - 'develop'
+
+jobs:
+  code_coverage:
+    name: Verify Code Coverage
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - run: fastlane coverage_report
+      - uses: madrapps/jacoco-report@v1.6.1
+        with:
+          paths: |
+            ${{github.workspace}}/app/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/core/data/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/core/domain/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/core/model/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/core/util/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/feature/common/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/feature/detail/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/feature/home/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+          token: ${{ secrets.GITHUB_TOKEN }}
+          min-coverage-overall: 50
+          min-coverage-changed-files: 80
