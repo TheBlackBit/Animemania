@@ -28,9 +28,6 @@ class ChapterDataTest {
                     medium = "test",
                     original = "test"
                 ),
-                createdAt = "test",
-                length = 1,
-                updatedAt = "test"
             )
         )
 
@@ -81,9 +78,6 @@ class ChapterDataTest {
                 number = null,
                 volumeNumber = null,
                 thumbnail = null,
-                createdAt = null,
-                length = null,
-                updatedAt = null
             )
         )
 
@@ -118,9 +112,6 @@ class ChapterDataTest {
                     medium = "medium",
                     original = null
                 ),
-                createdAt = "test",
-                length = 1,
-                updatedAt = "test"
             )
         )
 
@@ -148,9 +139,6 @@ class ChapterDataTest {
                     medium = null,
                     original = null
                 ),
-                createdAt = "test",
-                length = 1,
-                updatedAt = "test"
             )
         )
 
@@ -178,9 +166,6 @@ class ChapterDataTest {
                     medium = null,
                     original = null
                 ),
-                createdAt = "test",
-                length = 1,
-                updatedAt = "test"
             )
         )
 
@@ -208,9 +193,6 @@ class ChapterDataTest {
                     medium = null,
                     original = null
                 ),
-                createdAt = "test",
-                length = 1,
-                updatedAt = "test"
             )
         )
 
