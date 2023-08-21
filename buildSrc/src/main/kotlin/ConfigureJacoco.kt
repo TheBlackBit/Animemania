@@ -1,4 +1,5 @@
-
+import com.android.build.api.variant.AndroidComponentsExtension
+import com.android.build.gradle.internal.tasks.JacocoTask
 import org.gradle.api.Project
 import org.gradle.api.tasks.testing.Test
 import org.gradle.kotlin.dsl.configure
@@ -6,6 +7,7 @@ import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.withType
 import org.gradle.testing.jacoco.plugins.JacocoPluginExtension
 import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
+import org.gradle.testing.jacoco.tasks.JacocoCoverageVerification
 import org.gradle.testing.jacoco.tasks.JacocoReport
 import java.util.Locale
 
@@ -32,7 +34,11 @@ internal fun Project.configureJacoco() {
     }
 
     tasks.create("jacocoMergedReport", JacocoReport::class.java) {
-        dependsOn("testDebugUnitTest", "createDebugCoverageReport")
+        dependsOn("testDebugUnitTest")
+
+        if(hasAndroidTest()) {
+            dependsOn("createDebugCoverageReport")
+        }
 
         reports {
             xml.required.set(true)
