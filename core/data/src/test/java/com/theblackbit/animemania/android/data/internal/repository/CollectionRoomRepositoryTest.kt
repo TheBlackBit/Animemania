@@ -33,6 +33,12 @@ class CollectionRoomRepositoryTest {
     }
 
     @Test
+    fun testCollectPagedCollectionsByTypeOfRequest() {
+        sut.collectPagedCollections(1, requestType = RequestType.TRENDING_ANIME)
+        Mockito.verify(collectionDao).collectPagedCollectionsByTypeOfRequest(1, RequestType.TRENDING_ANIME.name)
+    }
+
+    @Test
     fun testClearCollectionEntitiesByCategoryByDao() {
         sut.clearCollectionsByRequestType(RequestType.TRENDING_MANGA)
 
