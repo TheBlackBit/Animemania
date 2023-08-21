@@ -35,8 +35,11 @@
 -dontwarn org.openjsse.javax.net.ssl.SSLSocket
 -dontwarn org.openjsse.net.ssl.OpenJSSE
 
-
-
+-keepclassmembers class com.theblackbit.animemania.android.data.external.datasource.response.** {*;}
+-keepclassmembers class com.theblackbit.animemania.android.model.** {*;}
+-keepclassmembers class * extends androidx.constraintlayout.motion.widget.Key {
+  public <init>();
+}
 -keep public class * implements com.bumptech.glide.module.GlideModule
 -keep class * extends com.bumptech.glide.module.AppGlideModule {
  <init>(...);
