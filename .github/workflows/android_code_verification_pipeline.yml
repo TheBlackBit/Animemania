@@ -20,6 +20,15 @@ jobs:
       - uses: paambaati/codeclimate-action@v5.0.0
         env:
           CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
+          JACOCO_SOURCE_PATH: |
+            "${{github.workspace}}/app/src/main/java"
+            "${{github.workspace}}/core/data/src/main/java"
+            "${{github.workspace}}/core/domain/src/main/java"
+            "${{github.workspace}}/core/model/src/main/java"
+            "${{github.workspace}}/core/util/src/main/java"
+            "${{github.workspace}}/feature/common/src/main/java"
+            "${{github.workspace}}/feature/detail/src/main/java"
+            "${{github.workspace}}/feature/home/src/main/java"
         with:
         # The report file must be there, otherwise Code Climate won't find it
           coverageCommand: fastlane coverage_report
