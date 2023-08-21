@@ -22,7 +22,6 @@ class AndroidModulePlugin : Plugin<Project> {
                     getByName("release") {
                         isMinifyEnabled = true
                     }
-
                     getByName("debug") {
                         enableUnitTestCoverage = true
                         enableAndroidTestCoverage = true
