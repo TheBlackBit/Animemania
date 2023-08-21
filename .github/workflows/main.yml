@@ -1,0 +1,73 @@
+name: PR verification
+run-name: ${{ github.actor }} Your PR is being verified 🔬
+on:
+  pull_request_target:
+    types: [opened, reopened]
+    branches:
+      - 'master'
+      - 'develop'
+
+jobs:
+  Run-Linter:
+    name: Run ktlint
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - run: fastlane lint_format
+      - run: fastlane lint_verification
+  Run-Unit-Test:
+    needs: Run-Linter
+    name: Run unit test
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - run: fastlane unit_test_verification  
+  Code-analysis:
+    needs: Run-Unit-Test
+    name: Code analysis by code climate
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: fastlane coverage_report
+      - uses: paambaati/codeclimate-action@v5.0.0
+        env:
+          CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
+          JACOCO_SOURCE_PATH: |
+            "${{github.workspace}}/app/src/main/java"
+            "${{github.workspace}}/core/data/src/main/java"
+            "${{github.workspace}}/core/domain/src/main/java"
+            "${{github.workspace}}/core/model/src/main/java"
+            "${{github.workspace}}/core/util/src/main/java"
+            "${{github.workspace}}/feature/common/src/main/java"
+            "${{github.workspace}}/feature/detail/src/main/java"
+            "${{github.workspace}}/feature/home/src/main/java"
+        with:
+        # The report file must be there, otherwise Code Climate won't find it
+          coverageLocations: |
+            ${{github.workspace}}/app/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/core/data/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/core/domain/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/core/model/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/core/util/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/feature/common/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/feature/detail/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/feature/home/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+    
