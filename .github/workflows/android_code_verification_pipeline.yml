@@ -1,8 +1,7 @@
-name: PR verification
+name: Android verification
 run-name: ${{ github.actor }} Your PR is being verified 🔬
 on:
-  pull_request_target:
-    types: [opened, reopened]
+  push:
     branches:
       - 'master'
       - 'develop'
@@ -40,13 +39,6 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-      - uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 29
-          force-avd-creation: false
-          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          disable-animations: true
-          script: fastlane coverage_report
       - uses: paambaati/codeclimate-action@v5.0.0
         env:
           CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
@@ -61,6 +53,7 @@ jobs:
             "${{github.workspace}}/feature/home/src/main/java"
         with:
         # The report file must be there, otherwise Code Climate won't find it
+          coverageCommand: fastlane coverage_report
           coverageLocations: |
             ${{github.workspace}}/app/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
             ${{github.workspace}}/core/data/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
