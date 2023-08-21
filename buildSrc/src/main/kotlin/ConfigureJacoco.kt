@@ -36,9 +36,9 @@ internal fun Project.configureJacoco() {
     tasks.create("jacocoMergedReport", JacocoReport::class.java) {
         dependsOn("testDebugUnitTest")
 
-        if(hasAndroidTest()) {
+       /* if(hasAndroidTest()) {
             dependsOn("createDebugCoverageReport")
-        }
+        }*/
 
         reports {
             xml.required.set(true)
@@ -56,7 +56,7 @@ internal fun Project.configureJacoco() {
         executionData.setFrom(
             fileTree(project.buildDir) {
                 include(
-                    "outputs/code_coverage/**/*.ec",
+                //    "outputs/code_coverage/**/*.ec",
                     "outputs/unit_test_code_coverage/debugUnitTest/testDebugUnitTest.exec"
                 )
             }
