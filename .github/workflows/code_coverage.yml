@@ -2,7 +2,7 @@ name: Test verification
 run-name: ${{ github.actor }} Start Test verification
 on:
   pull_request:
-    types: [opened, reopened]
+    types: [opened, reopened, edited]
     branches:
       - 'develop'
 
