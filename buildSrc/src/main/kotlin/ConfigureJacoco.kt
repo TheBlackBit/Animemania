@@ -36,9 +36,10 @@ internal fun Project.configureJacoco() {
     tasks.create("jacocoMergedReport", JacocoReport::class.java) {
         dependsOn("testDebugUnitTest")
 
+       /* Android Test code coverage disable
         if(hasAndroidTest()) {
             dependsOn("createDebugCoverageReport")
-        }
+        }*/
 
         reports {
             xml.required.set(true)
@@ -56,7 +57,7 @@ internal fun Project.configureJacoco() {
         executionData.setFrom(
             fileTree(project.buildDir) {
                 include(
-                    "outputs/code_coverage/**/*.ec",
+                //  Disable report for android test coverage   "outputs/code_coverage/**/*.ec",
                     "outputs/unit_test_code_coverage/debugUnitTest/testDebugUnitTest.exec"
                 )
             }
