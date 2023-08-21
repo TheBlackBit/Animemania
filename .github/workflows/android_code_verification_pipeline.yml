@@ -1,8 +1,8 @@
-name: PR verification
+name: Android pipe line verification
 run-name: ${{ github.actor }} Your PR is being verified 🔬
 on:
-  pull_request_target:
-    types: [opened, reopened]
+  pull_request: {}
+  push:
     branches:
       - 'master'
       - 'develop'
@@ -19,19 +19,8 @@ jobs:
           java-version: '17'
       - run: fastlane lint_format
       - run: fastlane lint_verification
-  Run-Unit-Test:
-    needs: Run-Linter
-    name: Run unit test
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-      - run: fastlane unit_test_verification  
   Code-analysis:
-    needs: Run-Unit-Test
+    needs: Run-Linter
     name: Code analysis by code climate
     runs-on: macos-latest
     steps:
@@ -44,24 +33,24 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
           JACOCO_SOURCE_PATH: |
-            "${{github.workspace}}/app/src/main/java"
-            "${{github.workspace}}/core/data/src/main/java"
-            "${{github.workspace}}/core/domain/src/main/java"
-            "${{github.workspace}}/core/model/src/main/java"
-            "${{github.workspace}}/core/util/src/main/java"
-            "${{github.workspace}}/feature/common/src/main/java"
-            "${{github.workspace}}/feature/detail/src/main/java"
-            "${{github.workspace}}/feature/home/src/main/java"
+            ${{github.workspace}}/app/src/main/java
+            ${{github.workspace}}/core/data/src/main/java
+            ${{github.workspace}}/core/domain/src/main/java
+            ${{github.workspace}}/core/model/src/main/java
+            ${{github.workspace}}/core/util/src/main/java
+            ${{github.workspace}}/feature/common/src/main/java
+            ${{github.workspace}}/feature/detail/src/main/java
+            ${{github.workspace}}/feature/home/src/main/java
         with:
         # The report file must be there, otherwise Code Climate won't find it
           coverageCommand: fastlane coverage_report
           coverageLocations: |
-            ${{github.workspace}}/app/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
-            ${{github.workspace}}/core/data/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
-            ${{github.workspace}}/core/domain/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
-            ${{github.workspace}}/core/model/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
-            ${{github.workspace}}/core/util/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
-            ${{github.workspace}}/feature/common/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
-            ${{github.workspace}}/feature/detail/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
-            ${{github.workspace}}/feature/home/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/app/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml:jacoco
+            ${{github.workspace}}/core/data/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml:jacoco
+            ${{github.workspace}}/core/domain/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml:jacoco
+            ${{github.workspace}}/core/model/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml:jacoco
+            ${{github.workspace}}/core/util/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml:jacoco
+            ${{github.workspace}}/feature/common/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml:jacoco
+            ${{github.workspace}}/feature/detail/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml:jacoco
+            ${{github.workspace}}/feature/home/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml:jacoco
     
