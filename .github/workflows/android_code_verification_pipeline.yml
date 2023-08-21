@@ -24,7 +24,7 @@ jobs:
         # The report file must be there, otherwise Code Climate won't find it
           coverageCommand: fastlane coverage_report
           coverageLocations: |
-            ${{github.workspace}}/app/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
+            ${{github.workspace}}/app/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml:jacoco
             ${{github.workspace}}/core/data/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml:jacoco
             ${{github.workspace}}/core/domain/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml:jacoco
             ${{github.workspace}}/core/model/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml:jacoco
