@@ -1,4 +1,3 @@
-
 import com.android.build.api.dsl.LibraryExtension
 import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import org.gradle.api.Plugin
@@ -21,6 +20,10 @@ class AndroidModulePlugin : Plugin<Project> {
                 buildTypes {
                     getByName("release") {
                         isMinifyEnabled = true
+                        proguardFiles(
+                            getDefaultProguardFile("proguard-android-optimize.txt"),
+                            "proguard-rules.pro"
+                        )
                     }
 
                     getByName("debug") {
