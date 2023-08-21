@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="cover_collapse_height">300dp</dimen>
+    <dimen name="back_icon_height">48dp</dimen>
+    <dimen name="back_icon_width">48dp</dimen>
+    <dimen name="back_icon_margin_start">16dp</dimen>
+    <dimen name="back_icon_margin_top">50dp</dimen>
+    <dimen name="back_icon_padding">12dp</dimen>
+    <dimen name="back_icon_elevation">4dp</dimen>
+    <dimen name="image_cover_height">160dp</dimen>
+    <dimen name="image_cover_width">110dp</dimen>
+    <dimen name="image_cover_margin_start">16dp</dimen>
+    <dimen name="image_cover_elevation">4dp</dimen>
+    <dimen name="rounded_container_height">120dp</dimen>
+    <dimen name="rounded_container_top_left_radius_start">30dp</dimen>
+    <dimen name="rounded_container_top_right_radius_start">30dp</dimen>
+    <dimen name="tv_title_name_margin_start">10dp</dimen>
+    <dimen name="tv_title_name_margin_end">16dp</dimen>
+    <dimen name="tv_title_name_margin_top">20dp</dimen>
+</resources>

@@ -1,5 +1,6 @@
-import com.android.build.api.dsl.ApplicationExtension
+
 import com.android.build.api.dsl.LibraryExtension
+import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -10,29 +11,31 @@ class AndroidModulePlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
+                apply("kotlin-parcelize")
+                apply("org.gradle.jacoco")
+                apply("org.jlleitschuh.gradle.ktlint")
             }
 
             extensions.configure<LibraryExtension> {
                 configureKotlinAndroid(this)
+                buildTypes {
+                    getByName("release") {
+                        isMinifyEnabled = true
+                    }
+
+                    getByName("debug") {
+                        enableUnitTestCoverage = true
+                        enableAndroidTestCoverage = true
+                    }
+                }
             }
-            configureBuildTypeForModule()
+            extensions.configure<LibraryAndroidComponentsExtension> {
+                disableUnnecessaryAndroidTests(target)
+            }
+
+            if (hasUnitTest()) configureJacoco()
             coreDependencies()
             testDependencies()
-        }
-    }
-}
-
-internal fun Project.configureBuildTypeForModule() {
-    extensions.configure<LibraryExtension> {
-        buildTypes {
-            getByName("release") {
-                isMinifyEnabled = true
-            }
-
-            getByName("debug") {
-                enableUnitTestCoverage = true
-                enableAndroidTestCoverage = true
-            }
         }
     }
 }

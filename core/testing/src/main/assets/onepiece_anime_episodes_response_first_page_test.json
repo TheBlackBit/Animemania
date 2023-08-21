@@ -1,0 +1,452 @@
+{
+  "data": [
+    {
+      "id": "103482",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/103482"
+      },
+      "attributes": {
+        "createdAt": "2013-03-26T08:42:37.108Z",
+        "updatedAt": "2021-09-17T04:19:12.419Z",
+        "synopsis": "A group of pirates lead by Alvida plunder a ship, only to find a barrel which contains a strange boy named Luffy. Luffy is on a mission to find the legendary treasure \"One Piece\" and he befriends the ship's cabin-boy, Coby, who actually wants to become a marine officer. Luffy defeats Alvida and the two journey on in search of crewmates. ",
+        "description": "A group of pirates lead by Alvida plunder a ship, only to find a barrel which contains a strange boy named Luffy. Luffy is on a mission to find the legendary treasure \"One Piece\" and he befriends the ship's cabin-boy, Coby, who actually wants to become a marine officer. Luffy defeats Alvida and the two journey on in search of crewmates. ",
+        "titles": {
+          "en_jp": "Ore wa Luffy! Kaizoku Ou ni Naru Otoko Da!",
+          "en_us": "I'm Luffy! The Man Who's Gonna Be King of the Pirates!",
+          "ja_jp": "俺はルフィ!海賊王になる男だ!"
+        },
+        "canonicalTitle": "I'm Luffy! The Man Who's Gonna Be King of the Pirates!",
+        "seasonNumber": 1,
+        "number": 1,
+        "relativeNumber": 1,
+        "airdate": "1999-10-20",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/103482/original.jpg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103482/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/103482/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103482/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/103482/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "103483",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/103483"
+      },
+      "attributes": {
+        "createdAt": "2013-03-26T08:42:37.120Z",
+        "updatedAt": "2021-09-17T04:19:12.936Z",
+        "synopsis": "Luffy and Coby arrive at Shell Island, a Marine base. They meet the bounty hunter Roronoa Zoro, held under arrest by the infamous marine, Captain Morgan, and his son Helmeppo.",
+        "description": "Luffy and Coby arrive at Shell Island, a Marine base. They meet the bounty hunter Roronoa Zoro, held under arrest by the infamous marine, Captain Morgan, and his son Helmeppo.",
+        "titles": {
+          "en_jp": "Daikengou Arawaru! Kaizokugari Roronoa Zoro",
+          "en_us": "Enter the Great Swordsman! Pirate Hunter Roronoa Zoro!",
+          "ja_jp": "大剣豪現る!海賊狩りロロノア·ゾロ"
+        },
+        "canonicalTitle": "Enter the Great Swordsman! Pirate Hunter Roronoa Zoro!",
+        "seasonNumber": 1,
+        "number": 2,
+        "relativeNumber": 2,
+        "airdate": "1999-11-17",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/103483/original.jpg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103483/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/103483/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103483/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/103483/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "103484",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/103484"
+      },
+      "attributes": {
+        "createdAt": "2013-03-26T08:42:37.234Z",
+        "updatedAt": "2021-09-17T04:19:13.606Z",
+        "synopsis": "Luffy convinces Zoro to join his crew, but they must first defeat Captain Morgan. After freeing the island from Morgan's oppressive rule, Coby is accepted as a marine while the other two continue on their journey. ",
+        "description": "Luffy convinces Zoro to join his crew, but they must first defeat Captain Morgan. After freeing the island from Morgan's oppressive rule, Coby is accepted as a marine while the other two continue on their journey. ",
+        "titles": {
+          "en_jp": "Morgan vs. Luffy! Nazo no Bishoujo wa Dare?",
+          "en_us": "Morgan versus Luffy! Who's the Mysterious Pretty Girl?",
+          "ja_jp": "モーガンVSルフィ!謎の美少女は誰?"
+        },
+        "canonicalTitle": "Morgan versus Luffy! Who's the Mysterious Pretty Girl?",
+        "seasonNumber": 1,
+        "number": 3,
+        "relativeNumber": 3,
+        "airdate": "1999-11-24",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/103484/original.jpg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103484/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/103484/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103484/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/103484/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "103485",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/103485"
+      },
+      "attributes": {
+        "createdAt": "2013-03-26T08:42:37.247Z",
+        "updatedAt": "2021-09-17T04:19:14.196Z",
+        "synopsis": "Out on the sea, Luffy almost loses his hat and reflects on his past, and how a pirate named Shanks influenced him. Afterwards, Luffy meets Nami, and Buggy the Clown's men. ",
+        "description": "Out on the sea, Luffy almost loses his hat and reflects on his past, and how a pirate named Shanks influenced him. Afterwards, Luffy meets Nami, and Buggy the Clown's men. ",
+        "titles": {
+          "en_jp": "Luffy no Kako! Akagami no Shanks Toujou",
+          "en_us": "Luffy's Past! Enter Red-Haired Shanks!",
+          "ja_jp": "ルフィの過去!赤髪のシャンクス登場"
+        },
+        "canonicalTitle": "Luffy's Past! Enter Red-Haired Shanks!",
+        "seasonNumber": 1,
+        "number": 4,
+        "relativeNumber": 4,
+        "airdate": "1999-12-08",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/103485/original.jpg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103485/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/103485/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103485/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/103485/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "103486",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/103486"
+      },
+      "attributes": {
+        "createdAt": "2013-03-26T08:42:37.260Z",
+        "updatedAt": "2021-09-17T04:19:14.958Z",
+        "synopsis": "In order to save herself and steal a map to the Grand Line, Nami tricks Luffy into allowing her to turn him over to Buggy. ",
+        "description": "In order to save herself and steal a map to the Grand Line, Nami tricks Luffy into allowing her to turn him over to Buggy. ",
+        "titles": {
+          "en_jp": "Kyoufu Nazo no Chikara! Kaizoku Douke Buggy-senchou!",
+          "en_us": "A Terrifying Mysterious Power! Captain Buggy, the Clown Pirate!",
+          "ja_jp": "恐怖!謎の力·海賊道化バギー船長!"
+        },
+        "canonicalTitle": "A Terrifying Mysterious Power! Captain Buggy, the Clown Pirate!",
+        "seasonNumber": 1,
+        "number": 5,
+        "relativeNumber": 5,
+        "airdate": "1999-12-15",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/103486/original.jpg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103486/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/103486/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103486/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/103486/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "103487",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/103487"
+      },
+      "attributes": {
+        "createdAt": "2013-03-26T08:42:37.271Z",
+        "updatedAt": "2021-09-17T04:19:15.689Z",
+        "synopsis": "Mohji and Richie show up for revenge after Buggy's humiliating defeat in the previous episode, and Luffy meets a small dog guarding his master's store, even though he knows that he is long dead. ",
+        "description": "Mohji and Richie show up for revenge after Buggy's humiliating defeat in the previous episode, and Luffy meets a small dog guarding his master's store, even though he knows that he is long dead. ",
+        "titles": {
+          "en_jp": "Zettai Zetsumei! Moujuutsukai Mohji VS Luffy!",
+          "en_us": "Desperate Situation! Beast Tamer Mohji vs. Luffy!",
+          "ja_jp": "絶体絶命!猛獣使いモージvsルフィ!"
+        },
+        "canonicalTitle": "Desperate Situation! Beast Tamer Mohji vs. Luffy!",
+        "seasonNumber": 1,
+        "number": 6,
+        "relativeNumber": 6,
+        "airdate": "1999-12-29",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/103487/original.jpg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103487/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/103487/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103487/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/103487/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "103488",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/103488"
+      },
+      "attributes": {
+        "createdAt": "2013-03-26T08:42:37.282Z",
+        "updatedAt": "2021-09-17T04:19:16.185Z",
+        "synopsis": "Enraged by the actions of Buggy's crew, the city's mayor rushes to fight Buggy himself, but the Straw Hat Pirates come to his rescue. Zoro fights Cabaji, despite still being wounded from his previous encounter with Buggy, while Luffy faces the clown pirate himself and Nami searches for the map to the Grand Line. ",
+        "description": "Enraged by the actions of Buggy's crew, the city's mayor rushes to fight Buggy himself, but the Straw Hat Pirates come to his rescue. Zoro fights Cabaji, despite still being wounded from his previous encounter with Buggy, while Luffy faces the clown pirate himself and Nami searches for the map to the Grand Line. ",
+        "titles": {
+          "en_jp": "Souzetsu Kettou! Kengou Zoro vs Kyokugei no Cabaji!",
+          "en_us": "Epic Showdown! Swordsman Zoro vs. Acrobat Cabaji!",
+          "ja_jp": "壮絶決闘!剣豪ゾロvs曲芸のカバジ!"
+        },
+        "canonicalTitle": "Epic Showdown! Swordsman Zoro vs. Acrobat Cabaji!",
+        "seasonNumber": 1,
+        "number": 7,
+        "relativeNumber": 7,
+        "airdate": "1999-12-29",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/103488/original.jpg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103488/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/103488/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103488/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/103488/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "103489",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/103489"
+      },
+      "attributes": {
+        "createdAt": "2013-03-26T08:42:37.295Z",
+        "updatedAt": "2021-09-17T04:19:16.811Z",
+        "synopsis": "Buggy's link to Shanks is revealed, and when he rips the straw hat Shanks gave Luffy, his rage knows no bounds. Who will win in this clash between Devil Fruit users? ",
+        "description": "Buggy's link to Shanks is revealed, and when he rips the straw hat Shanks gave Luffy, his rage knows no bounds. Who will win in this clash between Devil Fruit users? ",
+        "titles": {
+          "en_jp": "Shousha wa Dotchi? Akuma no Mi no Nouryoku Taiketsu!",
+          "en_us": "Who is the Victor? Devil Fruit Power Showdown!",
+          "ja_jp": "勝者はどっち?悪魔の実の能力対決!"
+        },
+        "canonicalTitle": "Who is the Victor? Devil Fruit Power Showdown!",
+        "seasonNumber": 1,
+        "number": 8,
+        "relativeNumber": 8,
+        "airdate": "1999-12-29",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/103489/original.jpg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103489/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/103489/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/103489/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/103489/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "172486",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/172486"
+      },
+      "attributes": {
+        "createdAt": "2014-11-21T15:29:06.310Z",
+        "updatedAt": "2021-09-17T04:56:54.608Z",
+        "synopsis": "Luffy, Zoro, and Nami arrive at an island hoping to obtain a ship and crew, but the three are quickly confronted with the blustering Captain Usopp - who has a connection to Luffy's past.",
+        "description": "Luffy, Zoro, and Nami arrive at an island hoping to obtain a ship and crew, but the three are quickly confronted with the blustering Captain Usopp - who has a connection to Luffy's past.",
+        "titles": {
+          "en_jp": "Seigi no Usotsuki? Captain Usopp",
+          "en_us": "The Honorable Liar? Captain Usopp!",
+          "ja_jp": "正義のうそつき?キャプテンウソップ"
+        },
+        "canonicalTitle": "The Honorable Liar? Captain Usopp!",
+        "seasonNumber": 1,
+        "number": 9,
+        "relativeNumber": 9,
+        "airdate": "2000-01-12",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/172486/original.jpeg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172486/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/172486/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172486/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/172486/videos"
+          }
+        }
+      }
+    },
+    {
+      "id": "172487",
+      "type": "episodes",
+      "links": {
+        "self": "https://kitsu.io/api/edge/episodes/172487"
+      },
+      "attributes": {
+        "createdAt": "2014-11-21T15:29:07.202Z",
+        "updatedAt": "2021-09-17T04:56:55.238Z",
+        "synopsis": "Luffy follows Usopp to the mansion and encounters the brutal pirate Captain Kuro. The scoundrel plans to claim Kaya's fortune and live the stolen life of luxury.",
+        "description": "Luffy follows Usopp to the mansion and encounters the brutal pirate Captain Kuro. The scoundrel plans to claim Kaya's fortune and live the stolen life of luxury.",
+        "titles": {
+          "en_jp": "Shijou Saikyou no Hen na Yatsu! Saiminjutsushi Jango",
+          "en_us": "The Weirdest Guy Ever! Jango the Hypnotist!",
+          "ja_jp": "史上最強の変な奴!催眠術師ジャンゴ"
+        },
+        "canonicalTitle": "The Weirdest Guy Ever! Jango the Hypnotist!",
+        "seasonNumber": 1,
+        "number": 10,
+        "relativeNumber": 10,
+        "airdate": "2000-01-19",
+        "length": 24,
+        "thumbnail": {
+          "original": "https://media.kitsu.io/episodes/thumbnails/172487/original.jpeg",
+          "meta": {
+            "dimensions": {}
+          }
+        }
+      },
+      "relationships": {
+        "media": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172487/relationships/media",
+            "related": "https://kitsu.io/api/edge/episodes/172487/media"
+          }
+        },
+        "videos": {
+          "links": {
+            "self": "https://kitsu.io/api/edge/episodes/172487/relationships/videos",
+            "related": "https://kitsu.io/api/edge/episodes/172487/videos"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "count": 1239
+  },
+  "links": {
+    "first": "https://kitsu.io/api/edge/episodes?filter%5BmediaType%5D=Anime&filter%5Bmedia_id%5D=12&page%5Blimit%5D=10&page%5Boffset%5D=0&sort=number",
+    "next": "https://kitsu.io/api/edge/episodes?filter%5BmediaType%5D=Anime&filter%5Bmedia_id%5D=12&page%5Blimit%5D=10&page%5Boffset%5D=10&sort=number",
+    "last": "https://kitsu.io/api/edge/episodes?filter%5BmediaType%5D=Anime&filter%5Bmedia_id%5D=12&page%5Blimit%5D=10&page%5Boffset%5D=1229&sort=number"
+  }
+}

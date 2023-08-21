@@ -16,24 +16,26 @@ android {
             isDebuggable = false
             isMinifyEnabled = true
             isShrinkResources = true
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
 
         getByName("debug") {
-            applicationIdSuffix = ".dev"
             isDebuggable = true
             enableUnitTestCoverage = true
             enableAndroidTestCoverage = true
         }
     }
-
-    packaging {
-        resources {
-            resources.excludes.add("/META-INF/{AL2.0,LGPL2.1}")
-        }
-    }
 }
 
 dependencies {
-    implementation(libs.androidx.lifecycle.runtime)
+    implementation(project(":core:util"))
+    implementation(project(":core:domain"))
+    implementation(project(":core:data"))
+    implementation(project(":core:model"))
+    implementation(project(":core:testing"))
+    implementation(project(":feature:home"))
+    implementation(project(":feature:detail"))
 }

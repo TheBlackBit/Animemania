@@ -1,0 +1,19 @@
+<resources>
+    <string name="icon">黒</string>
+    <string name="app_name">Animemania</string>
+    <string name="anime">Anime</string>
+    <string name="manga">Manga</string>
+    <string name="trending_week">Trending for this week</string>
+    <string name="most_anticipated">Most anticipated</string>
+    <string name="top_rated">Top rated</string>
+    <string name="most_popular">Most popular</string>
+    <string name="emitted_state">State: </string>
+    <string name="emitted">Emitted: </string>
+    <string name="finished">Finished: </string>
+    <string name="synopsis">Synopsis</string>
+    <string name="no_synopsis">There aren\'t synopsis yet!</string>
+    <string name="no_info_yet">No information yet!</string>
+    <string name="overview">Overview</string>
+    <string name="chapters">Chapters</string>
+    <string name="characters">Characters</string>
+</resources>
