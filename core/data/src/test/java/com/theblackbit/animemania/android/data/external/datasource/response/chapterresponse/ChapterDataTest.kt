@@ -28,9 +28,6 @@ class ChapterDataTest {
                     medium = "test",
                     original = "test"
                 ),
-                createdAt = "test",
-                length = 1,
-                updatedAt = "test"
             )
         )
 
@@ -81,9 +78,6 @@ class ChapterDataTest {
                 number = null,
                 volumeNumber = null,
                 thumbnail = null,
-                createdAt = null,
-                length = null,
-                updatedAt = null
             )
         )
 
@@ -97,5 +91,113 @@ class ChapterDataTest {
         Assert.assertEquals(chapterEntity.seasonNumber, -1)
         Assert.assertEquals(chapterEntity.imageUrl, "")
         Assert.assertEquals(chapterEntity.pageNumber, page)
+    }
+
+    @Test
+    fun testChapterDataToChapterEntityImageUrlOriginalIsNull() {
+        val page = 1
+        val collectionId = "1"
+        val chapterData = ChapterData(
+            id = "1",
+            type = "Anime",
+            attributes = ChapterAttributes(
+                canonicalTitle = "Chapter 1",
+                synopsis = "Synopsis for Chapter 1",
+                number = 1,
+                volumeNumber = 1,
+                thumbnail = ThumbnailChapter(
+                    tiny = "tiny",
+                    large = "large",
+                    small = "small",
+                    medium = "medium",
+                    original = null
+                ),
+            )
+        )
+
+        val chapterEntity = chapterData.toChapterEntity(page = page, collectionId = collectionId)
+
+        Assert.assertEquals(chapterEntity.imageUrl, chapterData.attributes?.thumbnail?.medium)
+    }
+
+    @Test
+    fun testChapterDataToChapterEntityImageUrlOriginalAndMediumAreNull() {
+        val page = 1
+        val collectionId = "1"
+        val chapterData = ChapterData(
+            id = "1",
+            type = "Anime",
+            attributes = ChapterAttributes(
+                canonicalTitle = "Chapter 1",
+                synopsis = "Synopsis for Chapter 1",
+                number = 1,
+                volumeNumber = 1,
+                thumbnail = ThumbnailChapter(
+                    tiny = "tiny",
+                    large = "large",
+                    small = "small",
+                    medium = null,
+                    original = null
+                ),
+            )
+        )
+
+        val chapterEntity = chapterData.toChapterEntity(page = page, collectionId = collectionId)
+
+        Assert.assertEquals(chapterEntity.imageUrl, chapterData.attributes?.thumbnail?.large)
+    }
+
+    @Test
+    fun testChapterDataToChapterEntityImageUrlOriginalMediumAndLargeAreNull() {
+        val page = 1
+        val collectionId = "1"
+        val chapterData = ChapterData(
+            id = "1",
+            type = "Anime",
+            attributes = ChapterAttributes(
+                canonicalTitle = "Chapter 1",
+                synopsis = "Synopsis for Chapter 1",
+                number = 1,
+                volumeNumber = 1,
+                thumbnail = ThumbnailChapter(
+                    tiny = "tiny",
+                    large = null,
+                    small = "small",
+                    medium = null,
+                    original = null
+                ),
+            )
+        )
+
+        val chapterEntity = chapterData.toChapterEntity(page = page, collectionId = collectionId)
+
+        Assert.assertEquals(chapterEntity.imageUrl, chapterData.attributes?.thumbnail?.small)
+    }
+
+    @Test
+    fun testChapterDataToChapterEntityImageUrlOriginalMediumLargeAndSmallAreNull() {
+        val page = 1
+        val collectionId = "1"
+        val chapterData = ChapterData(
+            id = "1",
+            type = "Anime",
+            attributes = ChapterAttributes(
+                canonicalTitle = "Chapter 1",
+                synopsis = "Synopsis for Chapter 1",
+                number = 1,
+                volumeNumber = 1,
+                thumbnail = ThumbnailChapter(
+                    tiny = "tiny",
+                    large = null,
+                    small = null,
+                    medium = null,
+                    original = null
+                ),
+            )
+        )
+
+        val chapterEntity = chapterData.toChapterEntity(page = page, collectionId = collectionId)
+
+        Assert.assertEquals(chapterEntity.imageUrl, chapterData.attributes?.thumbnail?.tiny)
     }
 }

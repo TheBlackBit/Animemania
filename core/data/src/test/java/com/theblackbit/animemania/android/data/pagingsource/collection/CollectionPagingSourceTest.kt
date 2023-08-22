@@ -2,6 +2,7 @@ package com.theblackbit.animemania.android.data.pagingsource.collection
 
 import androidx.paging.PagingConfig
 import androidx.paging.PagingSource
+import androidx.paging.PagingState
 import androidx.paging.testing.TestPager
 import com.theblackbit.animemania.android.data.datatest.collectionDataList
 import com.theblackbit.animemania.android.data.external.datasource.RequestType
@@ -14,6 +15,7 @@ import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
+import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
@@ -37,6 +39,31 @@ class CollectionPagingSourceTest {
     )
 
     @Test
+    fun testRefreshKey() = runTest {
+        collectionPagingSource = CollectionPagingSource(
+            localRepository = localRepository,
+            request = { _, _ ->
+                Single.just(SafeApiRequest.ApiResultHandle.Success(collectionResponse))
+            },
+            requestType = RequestType.TRENDING_ANIME,
+            collectionType = CollectionType.ANIME
+        )
+
+        val result = collectionPagingSource.getRefreshKey(
+            PagingState(
+                pages = emptyList(),
+                anchorPosition = 1,
+                config = PagingConfig(
+                    pageSize = 10
+                ),
+                leadingPlaceholderCount = 0
+            )
+        )
+
+        Assert.assertEquals(result, 1)
+    }
+
+    @Test
     fun loadReturnsPageWhenOnSuccessfulLoadOfItemKeyedData() = runTest {
         val collectionEntities = collectionResponse.collectionData.map {
             it.toCollectionEntity(
@@ -58,11 +85,10 @@ class CollectionPagingSourceTest {
             requestType = RequestType.TRENDING_ANIME,
             collectionType = CollectionType.ANIME
         )
-        val pageNumber = 1
 
         Mockito.`when`(
             localRepository.collectPagedCollections(
-                pageNumber,
+                1,
                 requestType = RequestType.TRENDING_ANIME
             )
         ).thenReturn(
@@ -79,7 +105,7 @@ class CollectionPagingSourceTest {
         )
 
         val page = with(pager) {
-            refresh(initialKey = pageNumber)
+            refresh()
         } as PagingSource.LoadResult.Page
 
         Mockito.verify(localRepository).clearCollectionsByRequestType(RequestType.TRENDING_ANIME)
@@ -195,5 +221,40 @@ class CollectionPagingSourceTest {
             .insertCollectionsEntities(collectionEntities)
 
         assert(page.data.containsAll(animeList))
+    }
+
+    @Test
+    fun testApiAndCacheReturnsEmptyData() = runTest {
+        val pageNumber = 1
+
+        collectionPagingSource = CollectionPagingSource(
+            localRepository = localRepository,
+            request = { _, _ ->
+                Single.just(SafeApiRequest.ApiResultHandle.ApiError)
+            },
+            requestType = RequestType.TRENDING_ANIME,
+            collectionType = CollectionType.ANIME
+        )
+
+        Mockito.`when`(
+            localRepository.collectPagedCollections(pageNumber, RequestType.TRENDING_ANIME)
+        ).thenReturn(
+            Single.just(
+                emptyList()
+            )
+        )
+
+        val pager = TestPager(
+            config = PagingConfig(
+                pageSize = pageLimit
+            ),
+            pagingSource = collectionPagingSource
+        )
+
+        val page = with(pager) {
+            refresh(initialKey = pageNumber)
+        } as PagingSource.LoadResult.Page
+
+        assert(page.data.isEmpty())
     }
 }

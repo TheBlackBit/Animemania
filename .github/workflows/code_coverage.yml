@@ -2,7 +2,7 @@ name: Test verification
 run-name: ${{ github.actor }} Start Test verification
 on:
   pull_request:
-    types: [opened, reopened]
+    types: [opened, reopened, edited]
     branches:
       - 'develop'
 
@@ -31,3 +31,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           min-coverage-overall: 50
           min-coverage-changed-files: 80
+          continue-on-error: false
