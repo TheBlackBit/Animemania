@@ -24,7 +24,18 @@ jobs:
           echo "KEY_ALIAS=${{secrets.KEY_ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
       - run: |
           # Create JSON data using secrets and save to a file
-          echo ${{ secrets.PLAYSTORE_CREDENTIALS }} > ${{github.workspace}}/fastlane/secrets/pc-api-5201818442615982167-352-90e18ec40c6a.json
+          echo '{
+            "type": "${{secrets.TYPE_JSON}}",
+            "project_id": "${{secrets.PROJECT_ID_JSON}}",
+            "private_key_id": "${{secrets.PRIVATE_KEY_ID_JSON}}",
+            "private_key": "${{secrets.PRIVATE_KEY_JSON}}",
+            "client_email": "${{secrets.CLIENT_EMAIL_JSON}}",
+            "client_id": "${{secrets.CLIENT_ID_JSON}}",
+            "auth_uri": "${{secrets.AUTH_URI_JSON}}",
+            "token_uri": "${{secrets.TOKEN_URI_JSON}}",
+            "auth_provider_x509_cert_url": "${{secrets.AUTH_PROVIDER_JSON}}",
+            "client_x509_cert_url": "${{secrets.CLIENT_CERT_JSON}}"
+          }' > ${{github.workspace}}/fastlane/secrets/pc-api-5201818442615982167-352-90e18ec40c6a.json
       - uses: timheuer/base64-to-file@v1
         with:
           filename: '${{github.workspace}}/app/keystore.jks'
