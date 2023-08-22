@@ -32,15 +32,6 @@
         android:background="?attr/background"
         app:layoutDescription="@xml/motion_collapse_anim">
 
-        <FrameLayout
-            android:id="@+id/fl_top_app_bar"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:alpha="0.7"
-            android:background="?attr/colorSurface"
-            android:elevation="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/coverCollapse"
