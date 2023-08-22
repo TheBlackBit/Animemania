@@ -14,7 +14,10 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          java-version: '17'    
+          java-version: '17'
+      - run: |
+          # Get release version
+          echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
       - run: |
           # Create a properties file using echo command
           echo 'KITSU_API_URL="${{secrets.KITSU_API_URL}}"' > ${{github.workspace}}/secrets.defaults.properties
@@ -26,6 +29,7 @@ jobs:
           filename: '${{github.workspace}}/fastlane/secrets_play_console.json'
           encodedString: ${{ secrets.JSON_SECRET }}
       - run: |
+          # Decode base64 Json and create the file
           echo "${{secrets.JSON_SECRET}}" > ${{github.workspace}}/fastlane/secret_play_console.json.b64
           base64 -d -i ${{github.workspace}}/fastlane/secret_play_console.json.b64 > ${{github.workspace}}/fastlane/secret_play_console.json
       - run: fastlane supply init --track beta
