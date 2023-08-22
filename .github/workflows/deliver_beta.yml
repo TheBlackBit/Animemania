@@ -22,6 +22,9 @@ jobs:
           echo "ALIAS=${{secrets.ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
           echo "KEY_PASS=${{secrets.KEY_PASS}}" >> ${{github.workspace}}/secrets.defaults.properties
           echo "KEY_ALIAS=${{secrets.KEY_ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
+     
+      - run: |
+          mkdir ${{github.workspace}}/fastlane/secrets 
       - run: cat ${{github.workspace}}/secrets.defaults.properties    
       - uses: jsdaniell/create-json@v1.2.2
         with:
