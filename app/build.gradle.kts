@@ -8,7 +8,7 @@ android {
     defaultConfig {
         applicationId = "com.theblackbit.animemania.android"
         versionCode = 1
-        versionName = "1.0.0-Beta"
+        versionName = "0.0.0"
     }
 }
 

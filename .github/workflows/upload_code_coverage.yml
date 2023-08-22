@@ -16,6 +16,12 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+      - run: |
+          # Create a properties file using echo command
+          echo 'KITSU_API_URL="${{secrets.KITSU_API_URL}}"' > ${{github.workspace}}/secrets.defaults.properties
+          echo "ALIAS=${{secrets.ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
+          echo "KEY_PASS=${{secrets.KEY_PASS}}" >> ${{github.workspace}}/secrets.defaults.properties
+          echo "KEY_ALIAS=${{secrets.KEY_ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
       - uses: paambaati/codeclimate-action@v5.0.0
         env:
           CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}

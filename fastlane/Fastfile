@@ -14,11 +14,10 @@
 # update_fastlane
 
 PACKAGE_NAME = "com.theblackbit.animemania.android"
-BUNDLE_FILE_PATH = "app/release/app-release.aab"
+BUNDLE_FILE_PATH = "app/build/outputs/bundle/release/app-release.aab"
 KEYSTORE_PATH = "app/keystore.jks"
-PLAY_STORE_KEY_PATH = "fastlane/secrets/pc-api-5201818442615982167-352-90e18ec40c6a.json"
+PLAY_STORE_KEY_PATH = "fastlane/secret_play_console.json"
 GRADLE_FILE_PATH = "app/build.gradle.kts"
-UPDATED_VERSION_CODE = 1
 VERSION_NAME = "1.0.0-alpha"
 
 default_platform(:android)
@@ -53,40 +52,46 @@ platform :android do
    end
 
 
-   desc "get_play_store_version_code"
-   private_lane :get_play_store_version_code do |options|
-    version_code_from_play_store_strings = google_play_track_version_codes(
-      track: options[:track],
-      package_name: PACKAGE_NAME,
-      json_key: PLAY_STORE_KEY_PATH)
-      version_code_from_play_store = version_code_from_play_store_strings[0].to_i
-      UPDATED_VERSION_CODE = version_code_from_play_store
-   end
-
-  desc "Responsible for fetching version code from play console and incrementing version code."
-  private_lane :get_play_store_version_code_and_increment do
-    get_play_store_version_code
+  desc "Increment app version code."
+  lane :increment_app_version_code do |options|
+  setup_ci if ENV['CI']
+     version_code_from_play_store_strings = google_play_track_version_codes(
+       track: options[:track],
+       package_name: PACKAGE_NAME,
+       json_key: PLAY_STORE_KEY_PATH)
+       version_code_from_play_store = version_code_from_play_store_strings[0].to_i
     increment_version_code(
       gradle_file_path: GRADLE_FILE_PATH,
-      version_code: UPDATED_VERSION_CODE.to_i + 1
+      version_code: version_code_from_play_store + 1
       )
   end
 
-
-  desc "Upload APK to playstore"
-  lane :deliver_apk do |options|
+  desc "Set app version name."
+  lane :set_version_name do |options|
   setup_ci if ENV['CI']
-    get_play_store_version_code_and_increment
     android_set_version_name(
-      version_name: options[:version],
-      gradle_file: GRADLE_FILE_PATH
-     )
-    gradle(task: "bundleRelease")
+        version_name: options[:version],
+        gradle_file: GRADLE_FILE_PATH)
+  end
+
+  desc "Generate bundle"
+  lane :generate_aab do
+   setup_ci if ENV['CI']
+     gradle(task: "bundleRelease")
+  end
+
+  desc "Upload AAB to playStore"
+  lane :deliver_aab do |options|
+  setup_ci if ENV['CI']
     upload_to_play_store(
        track: options[:track],
        aab: BUNDLE_FILE_PATH,
        json_key: PLAY_STORE_KEY_PATH,
-       package_name: PACKAGE_NAME
+       package_name: PACKAGE_NAME,
+       version_name: options[:version],
+       skip_upload_metadata: true,
+       skip_upload_images: true,
+       skip_upload_screenshots: true
       )
   end
 end

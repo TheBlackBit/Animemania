@@ -1,0 +1,41 @@
+name: Deliver to beta
+
+on:
+  push:
+    tags:
+      - 'v*.*.*-beta*'
+
+jobs:
+  beta:
+    name: Deliver beta
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - run: |
+          # Get release version
+          echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - run: |
+          # Create a properties file using echo command
+          echo "${{secrets.KEYSTORE}}" > keystore.jks.b64
+          base64 -d -i keystore.jks.b64 > ${{github.workspace}}/app/keystore.jks
+          echo 'KITSU_API_URL="${{secrets.KITSU_API_URL}}"' > ${{github.workspace}}/secrets.defaults.properties
+          echo "ALIAS=${{secrets.ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
+          echo "KEY_PASS=${{secrets.KEY_PASS}}" >> ${{github.workspace}}/secrets.defaults.properties
+          echo "KEY_ALIAS=${{secrets.KEY_ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
+      - run: |
+          # Decode base64 Json and create the file
+          echo "${{secrets.JSON_SECRET}}" > ${{github.workspace}}/fastlane/secret_play_console.json.b64
+          base64 -d -i ${{github.workspace}}/fastlane/secret_play_console.json.b64 > ${{github.workspace}}/fastlane/secret_play_console.json
+      - run: fastlane supply init --track beta
+      - run: fastlane increment_app_version_code track:"beta"
+      - run: fastlane set_version_name version:${{ env.RELEASE_VERSION }}
+      - run: fastlane generate_aab
+      - run: |
+          # Create what's new section
+          echo "${{env.CHANGE_LOG}}" > ${{github.workspace}}/fastlane/metadata/android/en-US/changelogs/${{ env.RELEASE_VERSION }}.txt
+      - run: fastlane deliver_aab version:"${{ env.RELEASE_VERSION }}" track:"beta"
+        
