@@ -32,6 +32,7 @@ jobs:
           base64 -d -i ${{github.workspace}}/fastlane/secret_play_console.json.b64 > ${{github.workspace}}/fastlane/secret_play_console.json
       - run: fastlane supply init --track beta
       - run: fastlane increment_app_version_code track:"beta"
+      - run: fastlane set_version_name version:${{ env.RELEASE_VERSION }}
       - run: fastlane generate_aab
       - run: |
           # Create what's new section
