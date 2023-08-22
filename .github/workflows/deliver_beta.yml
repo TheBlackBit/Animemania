@@ -22,7 +22,7 @@ jobs:
           echo "ALIAS=${{secrets.ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
           echo "KEY_PASS=${{secrets.KEY_PASS}}" >> ${{github.workspace}}/secrets.defaults.properties
           echo "KEY_ALIAS=${{secrets.KEY_ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
-      - run: cat ${{github.workspace}}secrets.defaults.properties    
+      - run: cat ${{github.workspace}}/secrets.defaults.properties    
       - uses: jsdaniell/create-json@v1.2.2
         with:
           name: "pc-api-5201818442615982167-352-90e18ec40c6a.json"
