@@ -18,12 +18,12 @@ jobs:
           java-version: '17'    
       - run: |
           # Create a properties file using echo command
-          echo "KITSU_API_URL=${{secrets.KITSU_API_URL}}" > ${{github.workspace}}secrets.defaults.properties
-          echo "ALIAS=${{secrets.ALIAS}}" >> ${{github.workspace}}secrets.defaults.properties
-          echo "KEY_PASS=${{secrets.KEY_PASS}}" >> ${{github.workspace}}secrets.defaults.properties
-          echo "KEY_ALIAS=${{secrets.KEY_ALIAS}}" >> ${{github.workspace}}secrets.defaults.properties
+          echo "KITSU_API_URL=${{secrets.KITSU_API_URL}}" > ${{github.workspace}}/secrets.defaults.properties
+          echo "ALIAS=${{secrets.ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
+          echo "KEY_PASS=${{secrets.KEY_PASS}}" >> ${{github.workspace}}/secrets.defaults.properties
+          echo "KEY_ALIAS=${{secrets.KEY_ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
       - run: cat ${{github.workspace}}secrets.defaults.properties    
-      - uses: christian-draeger/write-properties@1.1.0 
+      - uses: jsdaniell/create-json@v1.2.2
         with:
           name: "pc-api-5201818442615982167-352-90e18ec40c6a.json"
           json: ${{secrets.PLAYSTORE_CREDENTIALS}}
