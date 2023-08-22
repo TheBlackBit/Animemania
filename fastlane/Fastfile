@@ -16,7 +16,7 @@
 PACKAGE_NAME = "com.theblackbit.animemania.android"
 BUNDLE_FILE_PATH = "app/release/app-release.aab"
 KEYSTORE_PATH = "app/keystore.jks"
-PLAY_STORE_KEY_PATH = "fastlane/secrets/pc-api-5201818442615982167-352-90e18ec40c6a.json"
+PLAY_STORE_KEY_PATH = "fastlane/secret_play_console.json"
 GRADLE_FILE_PATH = "app/build.gradle.kts"
 UPDATED_VERSION_CODE = 1
 VERSION_NAME = "1.0.0-alpha"

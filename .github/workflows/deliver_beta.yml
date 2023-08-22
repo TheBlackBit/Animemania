@@ -35,7 +35,7 @@ jobs:
             "token_uri": "${{secrets.TOKEN_URI_JSON}}",
             "auth_provider_x509_cert_url": "${{secrets.AUTH_PROVIDER_JSON}}",
             "client_x509_cert_url": "${{secrets.CLIENT_CERT_JSON}}"
-          }' > ${{github.workspace}}/fastlane/secrets/pc-api-5201818442615982167-352-90e18ec40c6a.json
+          }' > ${{github.workspace}}/fastlane/secret_play_console.json
       - uses: timheuer/base64-to-file@v1
         with:
           filename: '${{github.workspace}}/app/keystore.jks'
