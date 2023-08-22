@@ -51,9 +51,6 @@ open class CollectionPagingSource(
                 }
                 toLoadResult(collections, currentPage)
             }
-            .onErrorReturn {
-                LoadResult.Error(it)
-            }
     }
 
     private fun handleApiResult(

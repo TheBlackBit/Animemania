@@ -2,7 +2,7 @@ name: Ktlint format and verify
 run-name: ${{ github.actor }} Running linter
 on:
   pull_request:
-    types: [opened, reopened]
+    types: [opened, reopened, edited]
     branches:
       - 'master'
       - 'develop'
