@@ -14,7 +14,7 @@
 # update_fastlane
 
 PACKAGE_NAME = "com.theblackbit.animemania.android"
-BUNDLE_FILE_PATH = "app/release/app-release.aab"
+BUNDLE_FILE_PATH = "app/build/outputs/bundle/release/app-release.aab"
 KEYSTORE_PATH = "app/keystore.jks"
 PLAY_STORE_KEY_PATH = "fastlane/secret_play_console.json"
 GRADLE_FILE_PATH = "app/build.gradle.kts"
