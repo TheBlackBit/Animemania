@@ -1,8 +1,7 @@
 name: Deliver to beta
 
 on:
-  release:
-    types: [published]
+  push:
     tags:
       - 'v*.*.*-beta*'
 
