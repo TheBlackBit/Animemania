@@ -76,9 +76,9 @@ platform :android do
        aab: BUNDLE_FILE_PATH,
        json_key: PLAY_STORE_KEY_PATH,
        package_name: PACKAGE_NAME,
-       version_name: options[:version]
-       skip_upload_metadata: true
-       skip_upload_images: true
+       version_name: options[:version],
+       skip_upload_metadata: true,
+       skip_upload_images: true,
        skip_upload_screenshots: true
       )
   end
