@@ -64,8 +64,8 @@ platform :android do
    end
 
   desc "Responsible for fetching version code from play console and incrementing version code."
-  private_lane :get_play_store_version_code_and_increment do
-    get_play_store_version_code
+  private_lane :get_play_store_version_code_and_increment do |options|
+    get_play_store_version_code(track: options[:track])
     increment_version_code(
       gradle_file_path: GRADLE_FILE_PATH,
       version_code: UPDATED_VERSION_CODE.to_i + 1
