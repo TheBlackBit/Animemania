@@ -66,6 +66,14 @@ platform :android do
       )
   end
 
+  desc "Set app version name."
+  lane :set_version_name do |options|
+  setup_ci if ENV['CI']
+    android_set_version_name(
+        version_name: options[:version],
+        gradle_file: GRADLE_FILE_PATH)
+  end
+
   desc "Generate bundle"
   lane :generate_aab do
    setup_ci if ENV['CI']
