@@ -34,7 +34,9 @@ jobs:
       - run: mkdir -p ${{github.workspace}}/fastlane/metadata/android/en-US/changelogs/
       - run: |
           # Create what's new section
-          echo $CHANGE_LOG > ${{github.workspace}}/fastlane/metadata/android/en-US/changelogs/default.txt
+          CHANGE_LOG_CONTENT=${{ env.CHANGE_LOG }}
+          echo "$CHANGE_LOG_CONTENT" > ${{github.workspace}}/fastlane/metadata/android/en-US/changelogs/default.txt
+          cat ${{github.workspace}}/fastlane/metadata/android/en-US/changelogs/default.txt
       - run: fastlane increment_app_version_code track:"beta"
       - run: fastlane set_version_name version:${{ env.RELEASE_VERSION }}
       - run: fastlane generate_aab
