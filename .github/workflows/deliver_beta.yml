@@ -36,6 +36,6 @@ jobs:
       - run: fastlane generate_aab
       - run: |
           # Create what's new section
-          echo "${{env.CHANGE_LOG}}" > ${{github.workspace}}/fastlane/metadata/android/en-US/changelogs/${{ env.RELEASE_VERSION }}.txt
+          echo "$CHANGE_LOG" > ${{github.workspace}}/fastlane/metadata/android/en-US/changelogs/default.txt
       - run: fastlane deliver_aab version:"${{ env.RELEASE_VERSION }}" track:"beta"
         
