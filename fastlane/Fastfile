@@ -54,6 +54,7 @@ platform :android do
 
   desc "Increment app version code."
   lane :increment_app_version_code do |options|
+  setup_ci if ENV['CI']
      version_code_from_play_store_strings = google_play_track_version_codes(
        track: options[:track],
        package_name: PACKAGE_NAME,
@@ -65,11 +66,15 @@ platform :android do
       )
   end
 
+  desc "Generate bundle"
+  lane :generate_abb do
+   setup_ci if ENV['CI']
+     gradle(task: "bundleRelease")
+  end
 
   desc "Upload ABB to playStore"
   lane :deliver_abb do |options|
   setup_ci if ENV['CI']
-    gradle(task: "bundleRelease")
     upload_to_play_store(
        track: options[:track],
        aab: BUNDLE_FILE_PATH,
