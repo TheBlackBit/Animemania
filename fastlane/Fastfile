@@ -53,7 +53,7 @@ platform :android do
 
 
   desc "Increment app version code."
-  private_lane :increment_app_version_code do |options|
+  lane :increment_app_version_code do |options|
      version_code_from_play_store_strings = google_play_track_version_codes(
        track: options[:track],
        package_name: PACKAGE_NAME,
@@ -69,7 +69,6 @@ platform :android do
   desc "Upload ABB to playStore"
   lane :deliver_abb do |options|
   setup_ci if ENV['CI']
-    increment_app_version_code(track: options[:track])
     gradle(task: "bundleRelease")
     upload_to_play_store(
        track: options[:track],
