@@ -36,6 +36,7 @@ jobs:
             "auth_provider_x509_cert_url": "${{secrets.AUTH_PROVIDER_JSON}}",
             "client_x509_cert_url": "${{secrets.CLIENT_CERT_JSON}}"
           }' > ${{github.workspace}}/fastlane/secret_play_console.json
+      - run: cat ${{github.workspace}}/fastlane/secret_play_console.json
       - uses: timheuer/base64-to-file@v1
         with:
           filename: '${{github.workspace}}/app/keystore.jks'
