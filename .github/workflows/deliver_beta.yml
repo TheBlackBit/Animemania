@@ -4,7 +4,7 @@ on:
   release:
     types: created
     tags:
-      - 'v*-beta*'
+      - 'v*.*.*-beta'
 
 jobs:
   beta:
