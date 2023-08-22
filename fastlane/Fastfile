@@ -73,8 +73,8 @@ platform :android do
   end
 
 
-  desc "Upload APK to playstore"
-  lane :deliver_apk do |options|
+  desc "Upload ABB to playStore"
+  lane :deliver_abb do |options|
   setup_ci if ENV['CI']
     get_play_store_version_code_and_increment
     android_set_version_name(
