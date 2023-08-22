@@ -32,9 +32,9 @@ jobs:
           base64 -d -i ${{github.workspace}}/fastlane/secret_play_console.json.b64 > ${{github.workspace}}/fastlane/secret_play_console.json
       - run: fastlane supply init --track beta
       - run: fastlane increment_app_version_code track:"beta"
-      - run: fastlane generate_abb
+      - run: fastlane generate_aab
       - run: |
           # Create what's new section
           echo "${{env.CHANGE_LOG}}" > ${{github.workspace}}/fastlane/metadata/android/en-US/changelogs/${{ env.RELEASE_VERSION }}.txt
-      - run: fastlane deliver_abb version:"${{ env.RELEASE_VERSION }}" track:"beta"
+      - run: fastlane deliver_aab version:"${{ env.RELEASE_VERSION }}" track:"beta"
         
