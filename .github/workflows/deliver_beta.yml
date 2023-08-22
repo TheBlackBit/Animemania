@@ -31,6 +31,10 @@ jobs:
           name: "pc-api-5201818442615982167-352-90e18ec40c6a.json"
           json: ${{secrets.PLAYSTORE_CREDENTIALS}}
           dir: '${{github.workspace}}/fastlane/secrets/'
+      - run: |
+          # Create JSON data using secrets and save to a file
+          echo ${{ secrets.SECRET1 }} > ${{github.workspace}}/fastlane/secrets/pc-api-5201818442615982167-352-90e18ec40c6a.json
+      - run: cat ${{github.workspace}}/fastlane/secrets/pc-api-5201818442615982167-352-90e18ec40c6a.json
       - uses: timheuer/base64-to-file@v1
         with:
           filename: '${{github.workspace}}/app/keystore.jks'
