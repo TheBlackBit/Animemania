@@ -26,9 +26,8 @@ jobs:
         with:
           filename: '${{github.workspace}}/fastlane/secrets_play_console.json'
           encodedString: ${{ secrets.JSON_SECRET }}
-      - uses: timheuer/base64-to-file@v1
-        with:
-          filename: '${{github.workspace}}/app/keystore.jks'
-          encodedString: ${{ secrets.KEYSTORE }}
+      - run: |
+          echo "${{secrets.JSON_SECRET}}" > ${{github.workspace}}/fastlane/secret_play_console.json.b64
+          base64 -d -i secret_play_console.json.b64 > secret_play_console.json
       - run: fastlane deliver_abb version:"${{ env.RELEASE_VERSION }}" track:"beta"
         
