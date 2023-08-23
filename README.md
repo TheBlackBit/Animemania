@@ -104,7 +104,7 @@ For delivery we have to create a new Github Release when the tag is pushed in ma
 - `v*.*.*-beta*`
 - `v*.*.*-production*` in progress..
 
-`Ktlint(Format, Verify)` - `Unit test verify` - `Code Coverage(CodeClimate)` - `Code analysis(CodeClimate)` - `Ui Test in develop(FirebaseTest Lab Espresso, Robotest)` - `Deliver to playstore`
+`Unit test verify` - `Ui Test in develop(FirebaseTest Lab Espresso, Robotest)` - `Deliver to playstore`
 
 ## License
 
