@@ -26,6 +26,7 @@ jobs:
           echo "ALIAS=${{secrets.ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
           echo "KEY_PASS=${{secrets.KEY_PASS}}" >> ${{github.workspace}}/secrets.defaults.properties
           echo "KEY_ALIAS=${{secrets.KEY_ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
+      - run: fastlane unit_test_verification
       - run: |
           # Decode base64 Json and create the file
           echo "${{secrets.JSON_SECRET}}" > ${{github.workspace}}/fastlane/secret_play_console.json.b64
@@ -40,4 +41,4 @@ jobs:
       - run: fastlane set_version_name version:${{ env.RELEASE_VERSION }}
       - run: fastlane generate_aab
       - run: fastlane deliver_aab version:"${{ env.RELEASE_VERSION }}" track:"beta"
-        
+
