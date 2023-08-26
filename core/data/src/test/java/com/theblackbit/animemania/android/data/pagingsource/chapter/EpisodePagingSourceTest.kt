@@ -284,7 +284,7 @@ class EpisodePagingSourceTest {
                     number = i + 1,
                     seasonNumber = 1,
                     synopsis = "Test",
-                    thumbnail = null,
+                    thumbnail = null
                 )
             )
         }

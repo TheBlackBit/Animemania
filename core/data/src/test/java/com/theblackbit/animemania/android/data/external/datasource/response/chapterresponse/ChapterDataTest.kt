@@ -26,7 +26,7 @@ class ChapterDataTest {
                     small = "test",
                     medium = "test",
                     original = "test"
-                ),
+                )
             )
         )
 
@@ -74,7 +74,7 @@ class ChapterDataTest {
                 synopsis = null,
                 number = null,
                 volumeNumber = null,
-                thumbnail = null,
+                thumbnail = null
             )
         )
 
@@ -107,7 +107,7 @@ class ChapterDataTest {
                     small = null,
                     medium = null,
                     original = null
-                ),
+                )
             )
         )
 

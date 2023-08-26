@@ -113,7 +113,7 @@ class DataTest {
                 null,
                 null,
                 null,
-                null,
+                null
             )
         )
         val collectionEntity = data.toCollectionEntity(

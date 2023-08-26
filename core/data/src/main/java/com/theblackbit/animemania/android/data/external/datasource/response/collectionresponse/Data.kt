@@ -5,7 +5,7 @@ import com.theblackbit.animemania.android.data.internal.datasource.room.entity.C
 
 data class Data(
     val attributes: Attributes?,
-    val id: String?,
+    val id: String?
 )
 
 fun Data.toCollectionEntity(
