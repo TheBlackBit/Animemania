@@ -5,7 +5,6 @@ import com.theblackbit.animemania.android.data.internal.datasource.room.entity.C
 data class CharacterData(
     val attributes: CharacterAttributes?,
     val id: String?,
-    val type: String?
 )
 
 fun CharacterData.toCharacterEntity(page: Int, collectionId: String): CharacterEntity {

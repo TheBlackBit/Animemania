@@ -3,7 +3,7 @@ package com.theblackbit.animemania.android.data.external.datasource.response.col
 data class Attributes(
     val averageRating: String?,
     val canonicalTitle: String?,
-    val coverImage: CoverImage?,
+    val coverImage: PosterImage?,
     val endDate: String?,
     val posterImage: PosterImage?,
     val startDate: String?,

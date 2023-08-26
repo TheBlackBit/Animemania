@@ -41,8 +41,7 @@ class CharactersByKitsuRepositoryImplTest {
             listOf(
                 CharacterData(
                     attributes = null,
-                    id = null,
-                    type = null
+                    id = null
                 )
             )
         )

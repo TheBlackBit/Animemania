@@ -4,8 +4,7 @@ import com.theblackbit.animemania.android.data.internal.datasource.room.entity.C
 
 data class EpisodeData(
     val attributes: EpisodeAttributes?,
-    val id: String?,
-    val type: String?
+    val id: String?
 )
 
 fun EpisodeData.toChapterEntity(page: Int, collectionId: String): ChapterEntity {

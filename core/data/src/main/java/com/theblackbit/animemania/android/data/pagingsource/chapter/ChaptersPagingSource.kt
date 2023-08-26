@@ -5,11 +5,9 @@ import androidx.paging.rxjava3.RxPagingSource
 import com.theblackbit.animemania.android.data.external.datasource.response.chaptersresponse.ChaptersResponse
 import com.theblackbit.animemania.android.data.external.datasource.response.chaptersresponse.toChapterEntity
 import com.theblackbit.animemania.android.data.external.repository.MangaChaptersByKitsuRepository
-import com.theblackbit.animemania.android.data.internal.datasource.room.entity.ChapterEntity
 import com.theblackbit.animemania.android.data.internal.datasource.room.entity.toChapterModel
 import com.theblackbit.animemania.android.data.internal.repository.ChapterLocalRepository
 import com.theblackbit.animemania.android.data.pagingsource.chapter.ChapterPagingSourceFactory.Companion.CHAPTER_PAGE_LIMIT
-import com.theblackbit.animemania.android.data.pagingsource.collection.CollectionPagingSource.Companion.COLLECTION_PAGE_LIMIT
 import com.theblackbit.animemania.android.model.Chapter
 import com.theblackbit.animemania.android.util.SafeApiRequest
 import io.reactivex.rxjava3.core.Single
@@ -21,8 +19,8 @@ class ChaptersPagingSource(
     private val collectionId: String
 ) : RxPagingSource<Int, Chapter>() {
 
-    override fun getRefreshKey(state: PagingState<Int, Chapter>): Int {
-        return state.anchorPosition ?: 0
+    override fun getRefreshKey(state: PagingState<Int, Chapter>): Int? {
+        return state.anchorPosition
     }
 
     override fun loadSingle(params: LoadParams<Int>): Single<LoadResult<Int, Chapter>> {
@@ -32,7 +30,7 @@ class ChaptersPagingSource(
         return remoteRepository
             .getMangaChapters(
                 collectionId,
-                COLLECTION_PAGE_LIMIT.toString(),
+                CHAPTER_PAGE_LIMIT.toString(),
                 pageOffset.toString()
             )
             .subscribeOn(Schedulers.io())
@@ -43,8 +41,10 @@ class ChaptersPagingSource(
                     pageNumber = currentPage
                 )
             }
-            .map { characterEntities -> toLoadResult(characterEntities, currentPage) }
-            .onErrorReturn { LoadResult.Error(it) }
+            .map { characterEntities ->
+                val chapters = characterEntities.map { it.toChapterModel() }
+                toLoadResult(chapters, currentPage)
+            }
     }
 
     private fun validPageOffset(currentPage: Int): String? {
@@ -67,10 +67,9 @@ class ChaptersPagingSource(
     }
 
     private fun toLoadResult(
-        characterEntity: List<ChapterEntity>,
+        chapters: List<Chapter>,
         currentPage: Int
     ): LoadResult<Int, Chapter> {
-        val chapters = characterEntity.map { it.toChapterModel() }
         return LoadResult.Page(
             data = chapters,
             prevKey = if (currentPage == 1) null else currentPage - 1,

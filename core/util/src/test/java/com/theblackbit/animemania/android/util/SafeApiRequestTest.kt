@@ -18,7 +18,7 @@ class SafeApiRequestTest {
             single
         }.test()
             .assertValue {
-                it is SafeApiRequest.ApiResultHandle.Success
+                (it as SafeApiRequest.ApiResultHandle.Success).value == responseData
             }
     }
 

@@ -1,7 +1,6 @@
 package com.theblackbit.animemania.android.data.datatest
 
 import com.theblackbit.animemania.android.data.external.datasource.response.collectionresponse.Attributes
-import com.theblackbit.animemania.android.data.external.datasource.response.collectionresponse.CoverImage
 import com.theblackbit.animemania.android.data.external.datasource.response.collectionresponse.Data
 import com.theblackbit.animemania.android.data.external.datasource.response.collectionresponse.PosterImage
 
@@ -10,7 +9,7 @@ val collectionDataList = listOf(
         Attributes(
             "4.75",
             "Title 1",
-            CoverImage("cover1_large", "cover1_original", "cover1_small", "cover1_tiny", "test"),
+            PosterImage("cover1_large", "cover1_original", "cover1_small", "cover1_tiny", "test"),
             "2023-08-01",
             PosterImage(
                 "poster1_large",
@@ -25,14 +24,13 @@ val collectionDataList = listOf(
             1000,
             "videoId1"
         ),
-        "id1",
-        "type1"
+        "id1"
     ),
     Data(
         Attributes(
             "4.50",
             "Title 2",
-            CoverImage("cover2_large", "cover2_original", "cover2_small", "cover2_tiny", "test"),
+            PosterImage("cover2_large", "cover2_original", "cover2_small", "cover2_tiny", "test"),
             "2023-09-15",
             PosterImage(
                 "poster2_large",
@@ -47,14 +45,13 @@ val collectionDataList = listOf(
             750,
             "videoId2"
         ),
-        "id2",
-        "type2"
+        "id2"
     ),
     Data(
         Attributes(
             "4.20",
             "Title 3",
-            CoverImage("cover3_large", "cover3_original", "cover3_small", "cover3_tiny", "test"),
+            PosterImage("cover3_large", "cover3_original", "cover3_small", "cover3_tiny", "test"),
             "2023-10-20",
             PosterImage(
                 "poster3_large",
@@ -69,14 +66,13 @@ val collectionDataList = listOf(
             900,
             "videoId3"
         ),
-        "id3",
-        "type3"
+        "id3"
     ),
     Data(
         Attributes(
             "2.65",
             "Title 4",
-            CoverImage("cover4_large", "cover4_original", "cover4_small", "cover4_tiny", "test"),
+            PosterImage("cover4_large", "cover4_original", "cover4_small", "cover4_tiny", "test"),
             "2023-11-04",
             PosterImage(
                 "poster4_large",
@@ -91,14 +87,13 @@ val collectionDataList = listOf(
             210,
             "videoId4"
         ),
-        "id4",
-        "type4"
+        "id4"
     ),
     Data(
         Attributes(
             "2.60",
             "Title 5",
-            CoverImage("cover5_large", "cover5_original", "cover5_small", "cover5_tiny", "test"),
+            PosterImage("cover5_large", "cover5_original", "cover5_small", "cover5_tiny", "test"),
             "2023-11-05",
             PosterImage(
                 "poster5_large",
@@ -113,14 +108,13 @@ val collectionDataList = listOf(
             430,
             "videoId5"
         ),
-        "id5",
-        "type5"
+        "id5"
     ),
     Data(
         Attributes(
             "2.55",
             "Title 6",
-            CoverImage("cover6_large", "cover6_original", "cover6_small", "cover6_tiny", "test"),
+            PosterImage("cover6_large", "cover6_original", "cover6_small", "cover6_tiny", "test"),
             "2023-11-06",
             PosterImage(
                 "poster6_large",
@@ -135,14 +129,13 @@ val collectionDataList = listOf(
             80,
             "videoId6"
         ),
-        "id6",
-        "type6"
+        "id6"
     ),
     Data(
         Attributes(
             "2.50",
             "Title 7",
-            CoverImage("cover7_large", "cover7_original", "cover7_small", "cover7_tiny", "test"),
+            PosterImage("cover7_large", "cover7_original", "cover7_small", "cover7_tiny", "test"),
             "2023-11-07",
             PosterImage(
                 "poster7_large",
@@ -157,14 +150,13 @@ val collectionDataList = listOf(
             150,
             "videoId7"
         ),
-        "id7",
-        "type7"
+        "id7"
     ),
     Data(
         Attributes(
             "2.45",
             "Title 8",
-            CoverImage("cover8_large", "cover8_original", "cover8_small", "cover8_tiny", "test"),
+            PosterImage("cover8_large", "cover8_original", "cover8_small", "cover8_tiny", "test"),
             "2023-11-08",
             PosterImage(
                 "poster8_large",
@@ -179,14 +171,13 @@ val collectionDataList = listOf(
             300,
             "videoId8"
         ),
-        "id8",
-        "type8"
+        "id8"
     ),
     Data(
         Attributes(
             "2.40",
             "Title 9",
-            CoverImage("cover9_large", "cover9_original", "cover9_small", "cover9_tiny", "test"),
+            PosterImage("cover9_large", "cover9_original", "cover9_small", "cover9_tiny", "test"),
             "2023-11-09",
             PosterImage(
                 "poster9_large",
@@ -201,14 +192,13 @@ val collectionDataList = listOf(
             120,
             "videoId9"
         ),
-        "id9",
-        "type9"
+        "id9"
     ),
     Data(
         Attributes(
             "2.35",
             "Title 10",
-            CoverImage("cover10_large", "cover10_original", "cover10_small", "cover10_tiny", "test"),
+            PosterImage("cover10_large", "cover10_original", "cover10_small", "cover10_tiny", "test"),
             "2023-11-10",
             PosterImage(
                 "poster10_large",
@@ -223,14 +213,13 @@ val collectionDataList = listOf(
             180,
             "videoId10"
         ),
-        "id10",
-        "type10"
+        "id10"
     ),
     Data(
         Attributes(
             "3.30",
             "Title 11",
-            CoverImage("cover11_large", "cover11_original", "cover11_small", "cover11_tiny", "test"),
+            PosterImage("cover11_large", "cover11_original", "cover11_small", "cover11_tiny", "test"),
             "2023-11-11",
             PosterImage(
                 "poster11_large",
@@ -245,14 +234,13 @@ val collectionDataList = listOf(
             110,
             "videoId11"
         ),
-        "id11",
-        "type11"
+        "id11"
     ),
     Data(
         Attributes(
             "3.20",
             "Title 12",
-            CoverImage("cover12_large", "cover12_original", "cover12_small", "cover12_tiny", "test"),
+            PosterImage("cover12_large", "cover12_original", "cover12_small", "cover12_tiny", "test"),
             "2023-11-12",
             PosterImage(
                 "poster12_large",
@@ -267,14 +255,13 @@ val collectionDataList = listOf(
             80,
             "videoId12"
         ),
-        "id12",
-        "type12"
+        "id12"
     ),
     Data(
         Attributes(
             "3.10",
             "Title 13",
-            CoverImage("cover13_large", "cover13_original", "cover13_small", "cover13_tiny", "test"),
+            PosterImage("cover13_large", "cover13_original", "cover13_small", "cover13_tiny", "test"),
             "2023-11-13",
             PosterImage(
                 "poster13_large",
@@ -289,14 +276,13 @@ val collectionDataList = listOf(
             250,
             "videoId13"
         ),
-        "id13",
-        "type13"
+        "id13"
     ),
     Data(
         Attributes(
             "3.05",
             "Title 14",
-            CoverImage("cover14_large", "cover14_original", "cover14_small", "cover14_tiny", "test"),
+            PosterImage("cover14_large", "cover14_original", "cover14_small", "cover14_tiny", "test"),
             "2023-11-14",
             PosterImage(
                 "poster14_large",
@@ -311,14 +297,13 @@ val collectionDataList = listOf(
             50,
             "videoId14"
         ),
-        "id14",
-        "type14"
+        "id14"
     ),
     Data(
         Attributes(
             "2.95",
             "Title 15",
-            CoverImage("cover15_large", "cover15_original", "cover15_small", "cover15_tiny", "test"),
+            PosterImage("cover15_large", "cover15_original", "cover15_small", "cover15_tiny", "test"),
             "2023-11-15",
             PosterImage(
                 "poster15_large",
@@ -333,14 +318,13 @@ val collectionDataList = listOf(
             130,
             "videoId15"
         ),
-        "id15",
-        "type15"
+        "id15"
     ),
     Data(
         Attributes(
             "2.90",
             "Title 16",
-            CoverImage("cover16_large", "cover16_original", "cover16_small", "cover16_tiny", "test"),
+            PosterImage("cover16_large", "cover16_original", "cover16_small", "cover16_tiny", "test"),
             "2023-11-16",
             PosterImage(
                 "poster16_large",
@@ -355,14 +339,13 @@ val collectionDataList = listOf(
             200,
             "videoId16"
         ),
-        "id16",
-        "type16"
+        "id16"
     ),
     Data(
         Attributes(
             "2.85",
             "Title 17",
-            CoverImage("cover17_large", "cover17_original", "cover17_small", "cover17_tiny", "test"),
+            PosterImage("cover17_large", "cover17_original", "cover17_small", "cover17_tiny", "test"),
             "2023-11-17",
             PosterImage(
                 "poster17_large",
@@ -377,14 +360,13 @@ val collectionDataList = listOf(
             90,
             "videoId17"
         ),
-        "id17",
-        "type17"
+        "id17"
     ),
     Data(
         Attributes(
             "2.80",
             "Title 18",
-            CoverImage("cover18_large", "cover18_original", "cover18_small", "cover18_tiny", "test"),
+            PosterImage("cover18_large", "cover18_original", "cover18_small", "cover18_tiny", "test"),
             "2023-11-18",
             PosterImage(
                 "poster18_large",
@@ -399,14 +381,13 @@ val collectionDataList = listOf(
             150,
             "videoId18"
         ),
-        "id18",
-        "type18"
+        "id18"
     ),
     Data(
         Attributes(
             "2.75",
             "Title 19",
-            CoverImage("cover19_large", "cover19_original", "cover19_small", "cover19_tiny", "test"),
+            PosterImage("cover19_large", "cover19_original", "cover19_small", "cover19_tiny", "test"),
             "2023-11-19",
             PosterImage(
                 "poster19_large",
@@ -421,14 +402,13 @@ val collectionDataList = listOf(
             320,
             "videoId19"
         ),
-        "id19",
-        "type19"
+        "id19"
     ),
     Data(
         Attributes(
             "2.70",
             "Title 20",
-            CoverImage("cover20_large", "cover20_original", "cover20_small", "cover20_tiny", "test"),
+            PosterImage("cover20_large", "cover20_original", "cover20_small", "cover20_tiny", "test"),
             "2023-11-20",
             PosterImage(
                 "poster20_large",
@@ -443,7 +423,6 @@ val collectionDataList = listOf(
             420,
             "videoId20"
         ),
-        "id20",
-        "type20"
+        "id20"
     )
 )

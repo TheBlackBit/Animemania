@@ -43,7 +43,6 @@ class EpisodePagingSource(
                 )
             }
             .map { characterEntities -> toLoadResult(characterEntities, currentPage) }
-            .onErrorReturn { LoadResult.Error(it) }
     }
 
     private fun validPageOffset(currentPage: Int): String? {
