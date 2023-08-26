@@ -8,6 +8,6 @@ data class ThumbnailChapter(
     val original: String?
 )
 
-fun ThumbnailChapter.validImage(): String {
-    return original ?: medium ?: large ?: small ?: tiny ?: ""
+fun ThumbnailChapter.validImage(): String? {
+    return original ?: medium ?: large ?: small ?: tiny
 }

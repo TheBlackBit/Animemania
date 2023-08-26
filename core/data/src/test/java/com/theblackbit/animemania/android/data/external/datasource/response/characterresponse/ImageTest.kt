@@ -1,87 +1,87 @@
-package com.theblackbit.animemania.android.data.external.datasource.response.chapterresponse
+package com.theblackbit.animemania.android.data.external.datasource.response.characterresponse
 
-import com.theblackbit.animemania.android.data.external.datasource.response.chaptersresponse.ThumbnailChapter
-import com.theblackbit.animemania.android.data.external.datasource.response.chaptersresponse.validImage
-import org.junit.Assert.assertEquals
+import com.theblackbit.animemania.android.data.external.datasource.response.charactersresponse.Image
+import com.theblackbit.animemania.android.data.external.datasource.response.charactersresponse.validImage
+import org.junit.Assert
 import org.junit.Test
 
-class ThumbnailChapterTest {
+class ImageTest {
 
     @Test
     fun `test validImage() with all image sizes`() {
-        val thumbnail = ThumbnailChapter(
+        val image = Image(
             tiny = "tiny.jpg",
             large = "large.jpg",
             small = "small.jpg",
             medium = "medium.jpg",
             original = "original.jpg"
         )
-        val result = thumbnail.validImage()
-        assertEquals("original.jpg", result)
+        val result = image.validImage()
+        Assert.assertEquals("original.jpg", result)
     }
 
     @Test
     fun `test validImage() with original size missing`() {
-        val thumbnail = ThumbnailChapter(
+        val image = Image(
             tiny = "tiny.jpg",
             medium = "medium.jpg",
             original = null,
             large = "large.jpg",
             small = "small.jpg"
         )
-        val result = thumbnail.validImage()
-        assertEquals("medium.jpg", result)
+        val result = image.validImage()
+        Assert.assertEquals("medium.jpg", result)
     }
 
     @Test
     fun `test validImage() with original and medium size missing`() {
-        val thumbnail = ThumbnailChapter(
+        val image = Image(
             tiny = "tiny.jpg",
             medium = null,
             original = null,
             large = "large.jpg",
             small = "small.jpg"
         )
-        val result = thumbnail.validImage()
-        assertEquals("large.jpg", result)
+        val result = image.validImage()
+        Assert.assertEquals("large.jpg", result)
     }
 
     @Test
     fun `test validImage() with original, medium and large size missing`() {
-        val thumbnail = ThumbnailChapter(
+        val image = Image(
             tiny = "tiny.jpg",
             medium = null,
             original = null,
             large = null,
             small = "small.jpg"
         )
-        val result = thumbnail.validImage()
-        assertEquals("small.jpg", result)
+        val result = image.validImage()
+        Assert.assertEquals("small.jpg", result)
     }
 
     @Test
     fun `test validImage() with original, medium, large small size missing`() {
-        val thumbnail = ThumbnailChapter(
+        val image = Image(
             tiny = "tiny.jpg",
             medium = null,
             original = null,
             large = null,
             small = null
         )
-        val result = thumbnail.validImage()
-        assertEquals("tiny.jpg", result)
+        val result = image.validImage()
+        Assert.assertEquals("tiny.jpg", result)
     }
 
     @Test
     fun `test validImage() with no image sizes available`() {
-        val thumbnail = ThumbnailChapter(
+        val image = Image(
             tiny = null,
             large = null,
             small = null,
             medium = null,
             original = null
         )
-        val result = thumbnail.validImage()
-        assertEquals(null, result)
+        val result = image.validImage()
+        Assert.assertEquals(null, result)
     }
 }

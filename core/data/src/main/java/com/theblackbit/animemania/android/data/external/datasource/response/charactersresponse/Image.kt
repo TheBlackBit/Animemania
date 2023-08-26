@@ -8,6 +8,6 @@ data class Image(
     val tiny: String?
 )
 
-fun Image.validImage(): String {
-    return original ?: medium ?: large ?: small ?: tiny ?: ""
+fun Image.validImage(): String? {
+    return original ?: medium ?: large ?: small ?: tiny
 }
