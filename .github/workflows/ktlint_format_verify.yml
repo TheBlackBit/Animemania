@@ -23,5 +23,4 @@ jobs:
           echo "ALIAS=${{secrets.ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
           echo "KEY_PASS=${{secrets.KEY_PASS}}" >> ${{github.workspace}}/secrets.defaults.properties
           echo "KEY_ALIAS=${{secrets.KEY_ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
-      - run: fastlane lint_format
       - run: fastlane lint_verification
