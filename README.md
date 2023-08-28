@@ -93,7 +93,6 @@ For CI/CD we use [Fastlane](https://fastlane.tools/) in order to create the lane
 ### Pipeline for develop branch:
 
 `Ktlint(Format, Verify)` - `Unit Test verify` - `Code Coverage(Jacoco)` - `Ui Test in develop(Firebase Test Lab Espresso)`
-Note: Robolectric is in develop in order to increase code coverage for Android framework.
 
 ### Pipeline for master branch:
 `Ktlint(Format, Verify)` - `Unit test verify` - `Code Coverage(CodeClimate)` - `Code analysis(CodeClimate)` - `Ui Test in develop(Firebase Test Lab Espresso, Robotest)`
