@@ -4,6 +4,7 @@ import com.theblackbit.animemania.android.data.external.datasource.response.char
 import com.theblackbit.animemania.android.data.external.datasource.response.charactersresponse.CharacterData
 import com.theblackbit.animemania.android.data.external.datasource.response.charactersresponse.Image
 import com.theblackbit.animemania.android.data.external.datasource.response.charactersresponse.toCharacterEntity
+import com.theblackbit.animemania.android.data.external.datasource.response.charactersresponse.validImage
 import org.junit.Assert
 import org.junit.Test
 
@@ -15,7 +16,6 @@ class CharacterDataTest {
         val collectionId = "1"
         val characterData = CharacterData(
             id = "1",
-            type = "Anime",
             attributes = CharacterAttributes(
                 canonicalName = "Test",
                 description = "Description test",
@@ -25,10 +25,7 @@ class CharacterDataTest {
                     small = "test",
                     medium = "test",
                     original = "test"
-                ),
-                createdAt = "test",
-                updatedAt = "test",
-                slug = "slug"
+                )
             )
         )
 
@@ -38,7 +35,10 @@ class CharacterDataTest {
         Assert.assertEquals(characterEntity.characterId, characterData.id)
         Assert.assertEquals(characterEntity.page, page)
         Assert.assertEquals(characterEntity.collectionId, collectionId)
-        Assert.assertEquals(characterEntity.imageUrl, characterData.attributes?.image?.original)
+        Assert.assertEquals(
+            characterEntity.imageUrl,
+            characterData.attributes?.image!!.validImage()
+        )
         Assert.assertEquals(characterEntity.name, characterData.attributes?.canonicalName)
         Assert.assertEquals(characterEntity.overView, characterData.attributes?.description)
     }
@@ -49,7 +49,6 @@ class CharacterDataTest {
         val collectionId = "1"
         val characterData = CharacterData(
             id = null,
-            type = null,
             attributes = null
         )
 
@@ -70,11 +69,7 @@ class CharacterDataTest {
         val collectionId = "1"
         val characterData = CharacterData(
             id = null,
-            type = null,
             attributes = CharacterAttributes(
-                null,
-                null,
-                null,
                 null,
                 null,
                 null
@@ -90,5 +85,30 @@ class CharacterDataTest {
         Assert.assertEquals(characterEntity.imageUrl, "")
         Assert.assertEquals(characterEntity.name, "")
         Assert.assertEquals(characterEntity.overView, "")
+    }
+
+    @Test
+    fun testCharacterDataToCharacterEntityImagesAreNull() {
+        val page = 1
+        val collectionId = "1"
+        val characterData = CharacterData(
+            id = null,
+            attributes = CharacterAttributes(
+                "Test",
+                Image(
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ),
+                "Test"
+            )
+        )
+
+        val characterEntity =
+            characterData.toCharacterEntity(page = page, collectionId = collectionId)
+
+        Assert.assertEquals(characterEntity.imageUrl, "")
     }
 }

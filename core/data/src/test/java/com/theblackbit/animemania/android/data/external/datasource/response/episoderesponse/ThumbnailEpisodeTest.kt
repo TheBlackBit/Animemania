@@ -82,6 +82,6 @@ class ThumbnailEpisodeTest {
             original = null
         )
         val result = thumbnail.validImage()
-        Assert.assertEquals("", result)
+        Assert.assertEquals(null, result)
     }
 }

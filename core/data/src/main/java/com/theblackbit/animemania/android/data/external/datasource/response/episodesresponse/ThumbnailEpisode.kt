@@ -8,6 +8,6 @@ data class ThumbnailEpisode(
     val original: String?
 )
 
-fun ThumbnailEpisode.validImage(): String {
-    return original ?: medium ?: large ?: small ?: tiny ?: ""
+fun ThumbnailEpisode.validImage(): String? {
+    return original ?: medium ?: large ?: small ?: tiny
 }
