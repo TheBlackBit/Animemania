@@ -1,8 +1,7 @@
 name: Upload code coverage to Code Climate 🌡
 run-name: ${{ github.actor }} Generating and upload your coverage report 📊
 on:
-  pull_request:
-    types: [opened, reopened]
+  push:
     branches:
       - 'master'
 
