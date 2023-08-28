@@ -10,18 +10,15 @@ import com.theblackbit.animemania.android.model.CollectionType
 import io.reactivex.rxjava3.core.Flowable
 
 class CollectChaptersUseCaseImpl(
-    private val chapterPagingSourceFactory: ChapterPagingSourceFactory
+    private val chapterPagingSourceFactory: ChapterPagingSourceFactory,
+    private val pagingConfig: PagingConfig
 ) : CollectChaptersUseCase {
     override fun collect(
         collectionId: String,
         collectionType: CollectionType
     ): Flowable<PagingData<Chapter>> {
         return Pager(
-            config = PagingConfig(
-                pageSize = ChapterPagingSourceFactory.CHAPTER_PAGE_LIMIT,
-                prefetchDistance = ChapterPagingSourceFactory.CHAPTER_PAGE_LIMIT / 2,
-                enablePlaceholders = true
-            ),
+            config = pagingConfig,
             pagingSourceFactory = {
                 chapterPagingSourceFactory.getChapterPagingSourceCollectionId(
                     collectionId = collectionId,
