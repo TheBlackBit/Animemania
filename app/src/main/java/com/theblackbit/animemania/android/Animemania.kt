@@ -33,47 +33,74 @@ import com.theblackbit.animemania.android.home.di.homeViewModelModule
 import com.theblackbit.animemania.android.util.di.safeApiRequestModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.startKoin
+import org.koin.core.module.Module
 
 class Animemania : Application() {
+
+    private val viewModelModules = listOf(
+        homeViewModelModule,
+        chapterTabViewModelModule,
+        characterTabViewModelModule
+    )
+
+    private val remoteRepositoryModules = listOf(
+        animeRepositoryModule,
+        mangaRepositoryModule,
+        animeEpisodesRepositoryModule,
+        mangaChaptersRepositoryModule,
+        charactersRepositoryModule,
+    )
+
+    private val localRepositoryModules = listOf(
+        collectionRoomRepositoryModule,
+        chapterRoomRepositoryModule,
+        characterRoomRepositoryModule,
+    )
+
+    private val pagingSourceModule = listOf(
+        animePagingSourceFactoryModule,
+        mangaPagingSourceFactoryModule,
+        characterFactoryPagingSourceModule,
+        chapterPagingSourceFactoryModule,
+    )
+
+    private val useCaseModules = listOf(
+        collectAnimeUseCaseModule,
+        collectMangaUseCaseModule,
+        collectChaptersUseCaseModule,
+        collectCharactersUseCaseModule,
+    )
+
+    private val dataModules = listOf(
+        safeApiRequestModule,
+        loggingInterceptorModule,
+        kitsuAnimeDataSourceModule,
+        kitsuMangaDataSourceModule,
+        kitsuEpisodesDataSourceModule,
+        kitsuChaptersDataSourceModule,
+        kitsuCharacterDataSourceModule,
+        roomDbModule,
+        chapterDaoModule,
+        collectionDaoModule,
+        characterDaoModule,
+    )
+
     override fun onCreate() {
         super.onCreate()
 
+        val modules: MutableList<Module> = ArrayList()
+
+        modules.addAll(dataModules)
+        modules.addAll(remoteRepositoryModules)
+        modules.addAll(localRepositoryModules)
+        modules.addAll(pagingSourceModule)
+        modules.addAll(useCaseModules)
+        modules.addAll(viewModelModules)
+
         startKoin {
             androidContext(this@Animemania)
-
             modules(
-                listOf(
-                    safeApiRequestModule,
-                    loggingInterceptorModule,
-                    kitsuAnimeDataSourceModule,
-                    kitsuMangaDataSourceModule,
-                    kitsuEpisodesDataSourceModule,
-                    kitsuChaptersDataSourceModule,
-                    kitsuCharacterDataSourceModule,
-                    animeRepositoryModule,
-                    mangaRepositoryModule,
-                    animeEpisodesRepositoryModule,
-                    mangaChaptersRepositoryModule,
-                    charactersRepositoryModule,
-                    roomDbModule,
-                    chapterDaoModule,
-                    collectionDaoModule,
-                    characterDaoModule,
-                    collectionRoomRepositoryModule,
-                    chapterRoomRepositoryModule,
-                    characterRoomRepositoryModule,
-                    animePagingSourceFactoryModule,
-                    mangaPagingSourceFactoryModule,
-                    characterFactoryPagingSourceModule,
-                    chapterPagingSourceFactoryModule,
-                    collectAnimeUseCaseModule,
-                    collectMangaUseCaseModule,
-                    collectChaptersUseCaseModule,
-                    collectCharactersUseCaseModule,
-                    homeViewModelModule,
-                    chapterTabViewModelModule,
-                    characterTabViewModelModule
-                )
+                modules
             )
         }
     }
