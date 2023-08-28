@@ -9,7 +9,7 @@ espresso = "3.5.1"
 androidGradlePlugin = "8.0.2"
 material = "1.9.0"
 rxJava = "3.1.5"
-koin = "3.4.2"
+koin = "3.4.3"
 koinTest = "3.4.1"
 paging3 = "3.2.0"
 navigation-component = "2.5.3"
@@ -61,13 +61,14 @@ okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor",
 #Test dependencies
 junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
 paging-common = { group = "androidx.paging", name = "paging-common", version.ref = "paging3" }
-
 paging-testing = { group = "androidx.paging", name = "paging-testing", version.ref = "paging3" }
 mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
 mockito-inline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockitoInline" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest" }
 room-testing = { group = "androidx.room", name = "room-testing", version.ref = "room" }
 core-testing = { group = "androidx.arch.core", name = "core-testing", version.ref = "coreTesting" }
+koin-test = { group = "io.insert-koin", name = "koin-test", version.ref = "koin"}
+koin-test-junit4 = { group = "io.insert-koin", name = "koin-test-junit4", version.ref = "koin"}
 #Instrumentation test dependencies
 androidtest-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestExt" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }

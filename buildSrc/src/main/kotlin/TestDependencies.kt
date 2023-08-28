@@ -8,5 +8,7 @@ internal fun Project.testDependencies() {
         "testImplementation"(libsCatalog.findLibrary("mockito.core").get())
         "testImplementation"(libsCatalog.findLibrary("kotlinx.coroutines.test").get())
         "testImplementation"(libsCatalog.findLibrary("mockito.inline").get())
+        "testImplementation"(libsCatalog.findLibrary("koin.test").get())
+        "testImplementation"(libsCatalog.findLibrary("koin.test.junit4").get())
     }
 }

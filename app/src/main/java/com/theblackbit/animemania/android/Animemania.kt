@@ -5,9 +5,9 @@ import com.theblackbit.animemania.android.data.di.external.animeEpisodesReposito
 import com.theblackbit.animemania.android.data.di.external.animeRepositoryModule
 import com.theblackbit.animemania.android.data.di.external.charactersRepositoryModule
 import com.theblackbit.animemania.android.data.di.external.kitsuAnimeDataSourceModule
-import com.theblackbit.animemania.android.data.di.external.kitsuChaptersDataSource
-import com.theblackbit.animemania.android.data.di.external.kitsuCharacterDataSource
-import com.theblackbit.animemania.android.data.di.external.kitsuEpisodesDataSource
+import com.theblackbit.animemania.android.data.di.external.kitsuChaptersDataSourceModule
+import com.theblackbit.animemania.android.data.di.external.kitsuCharacterDataSourceModule
+import com.theblackbit.animemania.android.data.di.external.kitsuEpisodesDataSourceModule
 import com.theblackbit.animemania.android.data.di.external.kitsuMangaDataSourceModule
 import com.theblackbit.animemania.android.data.di.external.loggingInterceptorModule
 import com.theblackbit.animemania.android.data.di.external.mangaChaptersRepositoryModule
@@ -47,9 +47,9 @@ class Animemania : Application() {
                     loggingInterceptorModule,
                     kitsuAnimeDataSourceModule,
                     kitsuMangaDataSourceModule,
-                    kitsuEpisodesDataSource,
-                    kitsuChaptersDataSource,
-                    kitsuCharacterDataSource,
+                    kitsuEpisodesDataSourceModule,
+                    kitsuChaptersDataSourceModule,
+                    kitsuCharacterDataSourceModule,
                     animeRepositoryModule,
                     mangaRepositoryModule,
                     animeEpisodesRepositoryModule,
