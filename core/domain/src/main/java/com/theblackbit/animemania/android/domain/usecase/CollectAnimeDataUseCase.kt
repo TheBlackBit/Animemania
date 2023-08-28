@@ -14,7 +14,7 @@ class CollectAnimeDataUseCase(
     private val pagingConfig: PagingConfig
 ) : CollectCollectionDataUseCase {
     override fun collectByCategory(
-        requestType: RequestType,
+        requestType: RequestType
 
     ): Flowable<PagingData<Collection>> {
         return Pager(

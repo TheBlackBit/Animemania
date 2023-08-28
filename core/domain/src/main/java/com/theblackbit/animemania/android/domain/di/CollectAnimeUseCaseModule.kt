@@ -16,7 +16,7 @@ val collectAnimeUseCaseModule = module {
             PagingConfig(
                 pageSize = CollectionPagingSource.COLLECTION_PAGE_LIMIT,
                 prefetchDistance = CollectionPagingSource.COLLECTION_PAGE_LIMIT / 2
-            ),
+            )
         )
     }
 }
