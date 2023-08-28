@@ -49,7 +49,11 @@ class CharactersTabFragment : FragmentBindingCreator<FragmentTabCharactersBindin
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRecyclerView()
-        startToCollectChapters()
+        startToCollectCharacters()
+        adapterLoadListener()
+    }
+
+    private fun adapterLoadListener() {
         adapter.addLoadStateListener { loadState ->
             if (loadState.append.endOfPaginationReached) {
                 if (adapter.itemCount < 1) {
@@ -62,7 +66,7 @@ class CharactersTabFragment : FragmentBindingCreator<FragmentTabCharactersBindin
         }
     }
 
-    private fun startToCollectChapters() {
+    private fun startToCollectCharacters() {
         arguments?.apply {
             val collectionId = getString(COLLECTION_ID, "")
             val collectionType = getString(COLLECTION_TYPE, "")

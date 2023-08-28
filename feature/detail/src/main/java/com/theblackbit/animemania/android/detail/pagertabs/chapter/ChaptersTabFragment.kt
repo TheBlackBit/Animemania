@@ -49,6 +49,10 @@ class ChaptersTabFragment : FragmentBindingCreator<FragmentTabChaptersBinding>()
         super.onViewCreated(view, savedInstanceState)
         initRecyclerView()
         startToCollectChapters()
+        chaptersAdapterLoadListener()
+    }
+
+    private fun chaptersAdapterLoadListener() {
         adapter.addLoadStateListener { loadState ->
             if (loadState.append.endOfPaginationReached) {
                 if (adapter.itemCount < 1) {
