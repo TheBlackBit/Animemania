@@ -8,7 +8,7 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-val kitsuEpisodesDataSource = module {
+val kitsuEpisodesDataSourceModule = module {
     single<KitsuEpisodesDataSource> {
         Retrofit.Builder()
             .baseUrl(BuildConfig.KITSU_API_URL)
