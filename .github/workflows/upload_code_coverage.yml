@@ -3,6 +3,8 @@ run-name: ${{ github.actor }} Generating and upload your coverage report 📊
 on:
   pull_request:
     types: [ opened, reopened, edited ]
+    branches:
+      - 'master'
   push:
     branches:
       - 'master'
