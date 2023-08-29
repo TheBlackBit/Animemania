@@ -47,51 +47,81 @@ class DetailFragment : Fragment(), OnBackNavigation {
             it.lifecycleOwner = viewLifecycleOwner
         }
 
-        initView()
+        configAnimationTransition()
+        configBindingProperties()
+        configViewPagerWithTabs()
+        configTabLayout()
 
         return binding.root
     }
 
-    private fun initView() {
+    private fun configAnimationTransition() {
         val animation =
             TransitionInflater.from(context).inflateTransition(android.R.transition.move)
         sharedElementEnterTransition = animation
-
         sharedElementReturnTransition = animation
-
         arguments?.apply {
             val transitionName = getString(TRANSITION_NAME, "")
-            val collectionId = getString(COLLECTION_ID, "")
+            binding.apply {
+                imageCover.transitionName = transitionName
+            }
+        }
+    }
+
+    private fun configBindingProperties() {
+        arguments?.apply {
             val coverImageVal = getString(COVER_IMAGE, "")
             val posterImageVal = getString(POSTER_IMAGE, "")
             val titleVal = getString(TITLE, "")
             val ratingVal = getString(RATING, "")
-            val state = getString(STATE, "")
-            val startDate = getString(START_DATE, "")
-            val endDate = getString(END_DATE, "")
-            val genres = getString(GENRES, "")
-            val overview = getString(SYNOPSIS, "")
-            val collectionType = getString(COLLECTION_TYPE, "")
 
             binding.apply {
-                imageCover.transitionName = transitionName
                 coverImage = coverImageVal
                 posterImage = posterImageVal
                 title = titleVal
                 rating = ratingVal
                 bacKNavigation = this@DetailFragment
             }
-            configViewPagerWithTabs(
-                collectionId = collectionId,
-                state = state,
-                startDate = startDate,
-                endDate = endDate,
-                genres = genres,
-                overview = overview,
-                collectionType = getValidCollectionType(collectionType)
-            )
-            configTabLayout()
         }
+    }
+
+    private fun configViewPagerWithTabs() {
+        arguments?.apply {
+            val collectionId = getString(COLLECTION_ID, "")
+            val state = getString(STATE, "")
+            val startDate = getString(START_DATE, "")
+            val endDate = getString(END_DATE, "")
+            val genres = getString(GENRES, "")
+            val synopsis = getString(SYNOPSIS, "")
+            val collectionType = getString(COLLECTION_TYPE, "")
+            val validCollectionType = getValidCollectionType(collectionType)
+
+            val map: Map<String, String> = mapOf(
+                STATE to state,
+                START_DATE to startDate,
+                END_DATE to endDate,
+                GENRES to genres,
+                SYNOPSIS to synopsis
+            )
+
+            configTabAdapter(map, collectionId, validCollectionType)
+        }
+    }
+
+    private fun configTabAdapter(
+        map: Map<String, String>,
+        collectionId: String,
+        validCollectionType: CollectionType
+    ) {
+        detailTabAdapter = DetailTabAdapter(
+            this@DetailFragment,
+            listOf<Fragment>(
+                OverviewTabFragment.createFragment(map),
+                ChaptersTabFragment.createFragment(collectionId, validCollectionType),
+                CharactersTabFragment.createFragment(collectionId, validCollectionType)
+            )
+        )
+        binding.vpInfo.adapter = detailTabAdapter
     }
 
     private fun getValidCollectionType(collectionType: String?): CollectionType {
@@ -99,33 +129,6 @@ class DetailFragment : Fragment(), OnBackNavigation {
             CollectionType.MANGA.name -> CollectionType.MANGA
             else -> CollectionType.ANIME
         }
-    }
-
-    private fun configViewPagerWithTabs(
-        collectionId: String,
-        collectionType: CollectionType,
-        state: String,
-        startDate: String,
-        endDate: String,
-        genres: String,
-        overview: String
-
-    ) {
-        detailTabAdapter = DetailTabAdapter(
-            this,
-            listOf<Fragment>(
-                OverviewTabFragment.createFragment(
-                    state = state,
-                    startDate = startDate,
-                    endDate = endDate,
-                    genres = genres,
-                    synopsis = overview
-                ),
-                ChaptersTabFragment.createFragment(collectionId, collectionType),
-                CharactersTabFragment.createFragment(collectionId, collectionType)
-            )
-        )
-        binding.vpInfo.adapter = detailTabAdapter
     }
 
     private fun configTabLayout() {

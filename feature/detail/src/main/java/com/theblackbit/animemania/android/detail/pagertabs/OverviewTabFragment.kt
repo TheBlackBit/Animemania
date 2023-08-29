@@ -19,12 +19,14 @@ class OverviewTabFragment : FragmentBindingCreator<FragmentTabOverviewBinding>()
     companion object {
 
         fun createFragment(
-            state: String,
-            startDate: String,
-            endDate: String,
-            genres: String,
-            synopsis: String
+            generaDescription: Map<String, String>
         ): OverviewTabFragment {
+            val state = generaDescription[STATE]
+            val startDate = generaDescription[START_DATE]
+            val endDate = generaDescription[END_DATE]
+            val genres = generaDescription[GENRES]
+            val synopsis = generaDescription[SYNOPSIS]
+
             val bundle = Bundle()
 
             bundle.apply {
