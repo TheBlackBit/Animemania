@@ -14,39 +14,51 @@ class AnimePagingSourceFactory(
 
     fun getAnimePagingSource(requestType: RequestType): RxPagingSource<Int, Collection> {
         return when (requestType) {
-            RequestType.TRENDING_ANIME -> TrendingAnimePagingSource(
-                localRepository = localRepository,
-                request = { pageLimit, pageOffset ->
-                    animeRemoteRepository.collectTrending(pageLimit, pageOffset)
-                },
-                requestType = requestType
-            )
-
-            RequestType.MOST_ANTICIPATED_ANIME -> MostAnticipatedAnimePagingSource(
-                localRepository = localRepository,
-                request = { pageLimit, pageOffset ->
-                    animeRemoteRepository.getMostAnticipated(pageLimit, pageOffset)
-                },
-                requestType = requestType
-            )
-
-            RequestType.TOP_RATED_ANIME -> TopRatedAnimePagingSource(
-                localRepository = localRepository,
-                request = { pageLimit, pageOffset ->
-                    animeRemoteRepository.getTopRated(pageLimit, pageOffset)
-                },
-                requestType = requestType
-            )
-
-            RequestType.POPULAR_ANIME -> PopularAnimePagingSource(
-                localRepository = localRepository,
-                request = { pageLimit, pageOffset ->
-                    animeRemoteRepository.getPopular(pageLimit, pageOffset)
-                },
-                requestType = requestType
-            )
-
+            RequestType.TRENDING_ANIME -> trendingAnimePagingSource()
+            RequestType.MOST_ANTICIPATED_ANIME -> mostAnticipatedAnimePagingSource()
+            RequestType.TOP_RATED_ANIME -> topRatedAnimePagingSource()
+            RequestType.POPULAR_ANIME -> popularAnimePagingSource()
             else -> EmptyCollectionPagingSource()
         }
+    }
+
+    private fun trendingAnimePagingSource(): RxPagingSource<Int, Collection> {
+        return TrendingAnimePagingSource(
+            localRepository = localRepository,
+            request = { pageLimit, pageOffset ->
+                animeRemoteRepository.collectTrending(pageLimit, pageOffset)
+            },
+            requestType = RequestType.TRENDING_ANIME
+        )
+    }
+
+    private fun mostAnticipatedAnimePagingSource(): RxPagingSource<Int, Collection> {
+        return MostAnticipatedAnimePagingSource(
+            localRepository = localRepository,
+            request = { pageLimit, pageOffset ->
+                animeRemoteRepository.getMostAnticipated(pageLimit, pageOffset)
+            },
+            requestType = RequestType.MOST_ANTICIPATED_ANIME
+        )
+    }
+
+    private fun topRatedAnimePagingSource(): RxPagingSource<Int, Collection> {
+        return TopRatedAnimePagingSource(
+            localRepository = localRepository,
+            request = { pageLimit, pageOffset ->
+                animeRemoteRepository.getTopRated(pageLimit, pageOffset)
+            },
+            requestType = RequestType.TOP_RATED_ANIME
+        )
+    }
+
+    private fun popularAnimePagingSource(): RxPagingSource<Int, Collection> {
+        return PopularAnimePagingSource(
+            localRepository = localRepository,
+            request = { pageLimit, pageOffset ->
+                animeRemoteRepository.getPopular(pageLimit, pageOffset)
+            },
+            requestType = RequestType.POPULAR_ANIME
+        )
     }
 }

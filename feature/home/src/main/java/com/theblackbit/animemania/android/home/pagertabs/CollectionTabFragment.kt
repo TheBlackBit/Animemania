@@ -83,11 +83,21 @@ abstract class CollectionTabFragment(
         imageView: ImageView,
         requestTypeName: String
     ) {
-        val bundle = Bundle()
         val transitionName = collection.collectionId.plus(requestTypeName)
+        val bundle = getBundleOfProperties(collection, transitionName = transitionName)
         val extras = FragmentNavigatorExtras(
             imageView to transitionName
         )
+        findNavController().navigate(
+            resId = R.id.action_homeFragment_to_detailFragment,
+            args = bundle,
+            navOptions = null,
+            navigatorExtras = extras
+        )
+    }
+
+    private fun getBundleOfProperties(collection: Collection, transitionName: String): Bundle {
+        val bundle = Bundle()
         bundle
             .apply {
                 putString(TRANSITION_NAME, transitionName)
@@ -107,12 +117,7 @@ abstract class CollectionTabFragment(
                 putString(COLLECTION_TYPE, collectionType.name)
             }
 
-        findNavController().navigate(
-            resId = R.id.action_homeFragment_to_detailFragment,
-            args = bundle,
-            navOptions = null,
-            navigatorExtras = extras
-        )
+        return bundle
     }
 
     protected fun submitDataIntoAdapter(

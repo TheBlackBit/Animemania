@@ -1,6 +1,6 @@
 package com.theblackbit.animemania.android.data.pagingsource.collection.manga
 
-import androidx.paging.PagingSource
+import androidx.paging.rxjava3.RxPagingSource
 import com.theblackbit.animemania.android.data.external.datasource.RequestType
 import com.theblackbit.animemania.android.data.external.repository.MangaRemoteRepository
 import com.theblackbit.animemania.android.data.internal.repository.CollectionLocalRepository
@@ -12,41 +12,53 @@ class MangaPagingSourceFactory(
     private val mangaRemoteRepository: MangaRemoteRepository
 ) {
 
-    fun getMangaPagingSource(requestType: RequestType): PagingSource<Int, Collection> {
+    fun getMangaPagingSource(requestType: RequestType): RxPagingSource<Int, Collection> {
         return when (requestType) {
-            RequestType.TRENDING_MANGA -> TrendingMangaPagingSource(
-                localRepository = localRepository,
-                request = { pageLimit, pageOffset ->
-                    mangaRemoteRepository.collectTrending(pageLimit, pageOffset)
-                },
-                requestType = requestType
-            )
-
-            RequestType.MOST_ANTICIPATED_MANGA -> MostAnticipatedMangaPagingSource(
-                localRepository = localRepository,
-                request = { pageLimit, pageOffset ->
-                    mangaRemoteRepository.getMostAnticipated(pageLimit, pageOffset)
-                },
-                requestType = requestType
-            )
-
-            RequestType.TOP_RATED_MANGA -> TopRatedMangaPagingSource(
-                localRepository = localRepository,
-                request = { pageLimit, pageOffset ->
-                    mangaRemoteRepository.getTopRated(pageLimit, pageOffset)
-                },
-                requestType = requestType
-            )
-
-            RequestType.POPULAR_MANGA -> PopularMangaPagingSource(
-                localRepository = localRepository,
-                request = { pageLimit, pageOffset ->
-                    mangaRemoteRepository.getPopular(pageLimit, pageOffset)
-                },
-                requestType = requestType
-            )
-
+            RequestType.TRENDING_MANGA -> trendingMangaPagingSource()
+            RequestType.MOST_ANTICIPATED_MANGA -> mostAnticipatedMangaPagingSource()
+            RequestType.TOP_RATED_MANGA -> topRatedMangaPagingSource()
+            RequestType.POPULAR_MANGA -> popularMangaPagingSource()
             else -> EmptyCollectionPagingSource()
         }
+    }
+
+    private fun trendingMangaPagingSource(): RxPagingSource<Int, Collection> {
+        return TrendingMangaPagingSource(
+            localRepository = localRepository,
+            request = { pageLimit, pageOffset ->
+                mangaRemoteRepository.collectTrending(pageLimit, pageOffset)
+            },
+            requestType = RequestType.TRENDING_MANGA
+        )
+    }
+
+    private fun mostAnticipatedMangaPagingSource(): RxPagingSource<Int, Collection> {
+        return MostAnticipatedMangaPagingSource(
+            localRepository = localRepository,
+            request = { pageLimit, pageOffset ->
+                mangaRemoteRepository.getMostAnticipated(pageLimit, pageOffset)
+            },
+            requestType = RequestType.MOST_ANTICIPATED_MANGA
+        )
+    }
+
+    private fun topRatedMangaPagingSource(): RxPagingSource<Int, Collection> {
+        return TopRatedMangaPagingSource(
+            localRepository = localRepository,
+            request = { pageLimit, pageOffset ->
+                mangaRemoteRepository.getTopRated(pageLimit, pageOffset)
+            },
+            requestType = RequestType.TOP_RATED_MANGA
+        )
+    }
+
+    private fun popularMangaPagingSource(): RxPagingSource<Int, Collection> {
+        return PopularMangaPagingSource(
+            localRepository = localRepository,
+            request = { pageLimit, pageOffset ->
+                mangaRemoteRepository.getPopular(pageLimit, pageOffset)
+            },
+            requestType = RequestType.POPULAR_MANGA
+        )
     }
 }
