@@ -48,27 +48,27 @@ class Animemania : Application() {
         mangaRepositoryModule,
         animeEpisodesRepositoryModule,
         mangaChaptersRepositoryModule,
-        charactersRepositoryModule,
+        charactersRepositoryModule
     )
 
     private val localRepositoryModules = listOf(
         collectionRoomRepositoryModule,
         chapterRoomRepositoryModule,
-        characterRoomRepositoryModule,
+        characterRoomRepositoryModule
     )
 
     private val pagingSourceModule = listOf(
         animePagingSourceFactoryModule,
         mangaPagingSourceFactoryModule,
         characterFactoryPagingSourceModule,
-        chapterPagingSourceFactoryModule,
+        chapterPagingSourceFactoryModule
     )
 
     private val useCaseModules = listOf(
         collectAnimeUseCaseModule,
         collectMangaUseCaseModule,
         collectChaptersUseCaseModule,
-        collectCharactersUseCaseModule,
+        collectCharactersUseCaseModule
     )
 
     private val dataModules = listOf(
@@ -82,7 +82,7 @@ class Animemania : Application() {
         roomDbModule,
         chapterDaoModule,
         collectionDaoModule,
-        characterDaoModule,
+        characterDaoModule
     )
 
     override fun onCreate() {
