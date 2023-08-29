@@ -92,26 +92,36 @@ class DetailFragment : Fragment(), OnBackNavigation {
             val startDate = getString(START_DATE, "")
             val endDate = getString(END_DATE, "")
             val genres = getString(GENRES, "")
-            val overview = getString(SYNOPSIS, "")
+            val synopsis = getString(SYNOPSIS, "")
             val collectionType = getString(COLLECTION_TYPE, "")
             val validCollectionType = getValidCollectionType(collectionType)
 
-            detailTabAdapter = DetailTabAdapter(
-                this@DetailFragment,
-                listOf<Fragment>(
-                    OverviewTabFragment.createFragment(
-                        state = state,
-                        startDate = startDate,
-                        endDate = endDate,
-                        genres = genres,
-                        synopsis = overview
-                    ),
-                    ChaptersTabFragment.createFragment(collectionId, validCollectionType),
-                    CharactersTabFragment.createFragment(collectionId, validCollectionType)
-                )
+            val map: Map<String, String> = mapOf(
+                STATE to state,
+                START_DATE to startDate,
+                END_DATE to endDate,
+                GENRES to genres,
+                SYNOPSIS to synopsis
             )
-            binding.vpInfo.adapter = detailTabAdapter
+
+            configTabAdapter(map, collectionId, validCollectionType)
         }
+    }
+
+    private fun configTabAdapter(
+        map: Map<String, String>,
+        collectionId: String,
+        validCollectionType: CollectionType
+    ) {
+        detailTabAdapter = DetailTabAdapter(
+            this@DetailFragment,
+            listOf<Fragment>(
+                OverviewTabFragment.createFragment(map),
+                ChaptersTabFragment.createFragment(collectionId, validCollectionType),
+                CharactersTabFragment.createFragment(collectionId, validCollectionType)
+            )
+        )
+        binding.vpInfo.adapter = detailTabAdapter
     }
 
     private fun getValidCollectionType(collectionType: String?): CollectionType {
