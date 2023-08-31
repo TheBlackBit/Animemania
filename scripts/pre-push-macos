@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ..
+
 echo "Running Instrumented test..."
 ./gradlew connectedAndroidTest --daemon
 

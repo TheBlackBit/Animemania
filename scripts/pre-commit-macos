@@ -1,9 +1,11 @@
 #!/bin/bash
 
+cd ..
+
 echo "Formatting code..."
-../gradlew ktlintFormat --daemon
+./gradlew ktlintFormat --daemon
 echo "Running unit test.."
-../gradlew check --daemon
+./gradlew testDebugUnitTest --daemon
 
 status=$?
 
