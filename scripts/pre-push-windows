@@ -1,7 +1,5 @@
 #!C:/Program\ Files/Git/usr/bin/sh.exe
 
-cd ..
-
 echo "Running Instrumented test..."
 ./gradlew connectedAndroidTest --daemon
 

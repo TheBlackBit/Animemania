@@ -1,7 +1,5 @@
 #!C:/Program\ Files/Git/usr/bin/sh.exe
 
-cd ..
-
 echo "Formatting code..."
 ./gradlew ktlintFormat --daemon
 echo "Running unit test.."
