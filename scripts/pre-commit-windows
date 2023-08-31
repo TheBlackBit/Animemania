@@ -1,0 +1,12 @@
+#!C:/Program\ Files/Git/usr/bin/sh.exe
+
+echo "Formatting code..."
+./gradlew ktlintFormat --daemon
+echo "Running unit test.."
+./gradlew testDebugUnitTest --daemon
+
+status=$?
+
+# return 1 exit code if running checks fails
+[ $status -ne 0 ] && exit 1
+exit 0
