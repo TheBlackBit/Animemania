@@ -40,7 +40,7 @@ class Animemania : Application() {
     private val viewModelModules = listOf(
         homeViewModelModule,
         chapterTabViewModelModule,
-        characterTabViewModelModule,
+        characterTabViewModelModule
     )
 
     private val remoteRepositoryModules = listOf(
