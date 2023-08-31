@@ -2,6 +2,8 @@ plugins {
     id("theblackbit.animemania.android.application")
 }
 
+apply(from = "../git-hook.gradle.kts")
+
 android {
     namespace = "com.theblackbit.animemania.android"
 
