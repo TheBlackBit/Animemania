@@ -11,7 +11,6 @@ android {
         applicationId = "com.theblackbit.animemania.android"
         versionCode = 1
         versionName = "0.0.0"
-
     }
 }
 

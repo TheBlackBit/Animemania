@@ -1,4 +1,4 @@
-!C:/Program\ Files/Git/usr/bin/sh.exe
+#!C:/Program\ Files/Git/usr/bin/sh.exe
 
 echo "Running Instrumented test..."
 ./gradlew connectedAndroidTest --daemon
