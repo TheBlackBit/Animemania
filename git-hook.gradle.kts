@@ -15,7 +15,7 @@ tasks.register("installGitHook", Copy::class) {
     rename("pre-push-$suffix", "pre-push")
 
     eachFile {
-        fileMode = 775
+        fileMode = 0b111101101
     }
 }
 
