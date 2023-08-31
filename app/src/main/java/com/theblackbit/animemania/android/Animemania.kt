@@ -41,6 +41,7 @@ class Animemania : Application() {
         homeViewModelModule,
         chapterTabViewModelModule,
         characterTabViewModelModule
+
     )
 
     private val remoteRepositoryModules = listOf(
