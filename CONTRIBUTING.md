@@ -3,6 +3,7 @@ We'd love to accept your contributions to this App. There are just a few steps y
 
 > [!IMPORTANT]
 > You must point your PR to the `develop` Branch.
+> Update your branch develop in your local repository before push
 
 ## Branching
 * fix/ -> Bugs, small fixes like typos.
@@ -19,8 +20,8 @@ When you clone this repository a git hook is going to be installed in your local
 
 > [!NOTE]
 > If you are using a Windows maching review the scripts:
-> * scripts/pre-commit-windows.
-> * scripts/pre-push-windows.
+> * [pre-commit-windows](https://github.com/TheBlackBit/Animemania/blob/master/scripts/pre-commit-windows).
+> * [pre-push-windows](https://github.com/TheBlackBit/Animemania/blob/master/scripts/pre-push-windows).
 
 
 #### Pre-commit
