@@ -22,6 +22,9 @@ After cloning the repository you have to create the file `secrets.defaults.prope
 
 The ALIAS, KEY_PASS, KEY_ALIAS keys are if you want to run the app in build type release but you have to generate a keystore and store it in app module with the name `keystore.jks` and when you generate your keystore.jks add the keys that you store in `secrets.defaults.properties`
 
+## Contributing
+Follow [this](https://github.com/TheBlackBit/Animemania/blob/master/CONTRIBUTING.md) guidelines
+
 ## Architecture
 
 It follows a clean architecture with modularization in order to have this principles:
