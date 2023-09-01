@@ -171,7 +171,7 @@ class DetailFragmentTest : KoinTest {
     }
 
     private fun launchFragment(collection: Collection) {
-        launchFragmentInContainer<DetailFragbment>(
+        launchFragmentInContainer<DetailFragment>(
             themeResId = R.style.Theme_Animemania,
             fragmentArgs = Bundle()
                 .apply {
