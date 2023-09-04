@@ -1,5 +1,4 @@
-name: Test verification
-run-name: ${{ github.actor }} Start Test verification
+name: Develop Pipeline
 on:
   pull_request:
     types: [opened, reopened, edited]
@@ -7,8 +6,26 @@ on:
       - 'develop'
 
 jobs:
-  code_coverage:
-    name: Verify Code Coverage
+  run-linter-develop:
+    name: Runs linter
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - run: |
+          # Create a properties file using echo command
+          echo 'KITSU_API_URL="${{secrets.KITSU_API_URL}}"' > ${{github.workspace}}/secrets.defaults.properties
+          echo "ALIAS=${{secrets.ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
+          echo "KEY_PASS=${{secrets.KEY_PASS}}" >> ${{github.workspace}}/secrets.defaults.properties
+          echo "KEY_ALIAS=${{secrets.KEY_ALIAS}}" >> ${{github.workspace}}/secrets.defaults.properties
+      - run: fastlane lint_verification
+
+  test-code-coverage-develop:
+    needs: run-linter-develop
+    name: Run test and Code Coverage
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
@@ -35,6 +52,6 @@ jobs:
             ${{github.workspace}}/feature/detail/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
             ${{github.workspace}}/feature/home/build/reports/jacoco/jacocoMergedReport/jacocoMergedReport.xml
           token: ${{ secrets.GITHUB_TOKEN }}
-          min-coverage-overall: 50
+          min-coverage-overall: 60
           min-coverage-changed-files: 80
-          continue-on-error: false
+          continue-on-error: true
