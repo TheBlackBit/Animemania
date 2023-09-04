@@ -24,6 +24,7 @@ jobs:
       - run: fastlane lint_verification
 
   test-code-coverage-develop:
+    needs: run-linter-develop
     name: Run test and Code Coverage
     runs-on: macos-latest
     steps:
