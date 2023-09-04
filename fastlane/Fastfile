@@ -47,6 +47,7 @@ platform :android do
    desc 'Generate coverage report'
    lane :coverage_report do
    setup_ci if ENV['CI']
+     gradle(task: "clean")
      gradle(task: "jacocoMergedReport")
    end
 
