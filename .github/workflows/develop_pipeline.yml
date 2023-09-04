@@ -7,7 +7,7 @@ on:
 
 jobs:
   run-linter-develop:
-    name: Runs linter
+    name: Runs linter develop
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
@@ -25,7 +25,7 @@ jobs:
 
   test-code-coverage-develop:
     needs: run-linter-develop
-    name: Run test and Code Coverage
+    name: Run test and code coverage
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
