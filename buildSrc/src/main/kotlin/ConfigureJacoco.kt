@@ -34,13 +34,6 @@ internal fun Project.configureJacoco() {
     }
 
     tasks.create("jacocoMergedReport", JacocoReport::class.java) {
-        dependsOn("testDebugUnitTest")
-
-       /* Android Test code coverage disable
-        if(hasAndroidTest()) {
-            dependsOn("createDebugCoverageReport")
-        }*/
-
         reports {
             xml.required.set(true)
             html.required.set(true)
