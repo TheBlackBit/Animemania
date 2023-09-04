@@ -1,16 +1,13 @@
 name: Master Pipeline
 on:
   pull_request:
-    types: [ opened, reopened, edited ]
-    branches:
-      - 'master'
-  push:
+    types: [opened, reopened, edited ]
     branches:
       - 'master'
 
 jobs:
   run-linter-master:
-    name: Runs linter
+    name: Runs linter master
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
@@ -28,7 +25,7 @@ jobs:
 
   test-cc-code-climate-master:
     needs: run-linter-master
-    name: Unite test and Code climate Coverage report 🌡📊
+    name: Unite test and code climate coverage report 🌡📊
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
